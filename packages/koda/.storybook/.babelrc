@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-class-properties",
+    [
+      "styled-components",
+      { "ssr": false, "displayName": true, "preprocess": false }
+    ]
+  ]
+}

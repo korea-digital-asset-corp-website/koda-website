@@ -1,0 +1,4 @@
+__generate__/
+static/
+public/
+jest.config.js
