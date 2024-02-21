@@ -135,7 +135,7 @@ const Footer = (props: Props) => {
           <Content>
             <MediaQuery minWidth={desktopWidth}>
               <Description>
-                {`사업자 등록번호 : 618-81-36254 | 대표: 문건기
+                {`사업자 등록번호 : 618-81-36254 | 대표: 조진석
 서울특별시 강남구 테헤란로 27길 8, 13층 (역삼동, 다온빌딩)`}
               </Description>
             </MediaQuery>
