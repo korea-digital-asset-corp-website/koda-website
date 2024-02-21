@@ -124,7 +124,7 @@ const FooterView = styled(Footer)`
   `}
 `;
 
-const PrivacyPolicyPage = (props: Props) => {
+const PrivacyPolicyPage2023 = (props: Props) => {
   return (
     <React.Fragment>
       <Container id="outer-container">
@@ -313,7 +313,7 @@ const PrivacyPolicyPage = (props: Props) => {
             <Divider32 />
             <DescriptionTitle>{`개인정보 보호책임자`}</DescriptionTitle>
             <Description>{`• 이름 : 조진석
-• 직급: 대표이사
+• 직급: 이사
 • 이메일: support@kodax.com`}</Description>
             <Divider32 />
             <Description>{`② 이용자가 회사의 서비스를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 회사는 이용자의 문의 사항에 대해 지체 없이 답변 및 처리해드릴 것입니다.`}</Description>
@@ -351,8 +351,6 @@ const PrivacyPolicyPage = (props: Props) => {
             <PrivacyPolicy href="/old-privacy-policy-20210101">{`(2021.01.01일 시행) 개인정보 처리방침 v0`}</PrivacyPolicy>
             <br></br>
             <PrivacyPolicy href="/old-privacy-policy-20220325">{`(2022.03.25일 시행) 개인정보 처리방침 v1`}</PrivacyPolicy>
-            <br></br>
-            <PrivacyPolicy href="/old-privacy-policy-20230616">{`(2023.06.16일 시행) 개인정보 처리방침 v2`}</PrivacyPolicy>
           </Section>
           <FooterView />
         </Content>
@@ -361,4 +359,4 @@ const PrivacyPolicyPage = (props: Props) => {
   );
 };
 
-export default PrivacyPolicyPage;
+export default PrivacyPolicyPage2023;
