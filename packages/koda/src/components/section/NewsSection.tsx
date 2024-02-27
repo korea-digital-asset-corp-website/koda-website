@@ -92,18 +92,60 @@ const NewsSection = (props: Props) => {
       <Inner>
         <Title>{`언론 보도`}</Title>
         <Content>
+        <CardItem
+            thumnailImage={images.news10Src}
+            title={
+              <React.Fragment>
+                {`인터넷컴퓨터 코리아허브(ICP.Hub Korea), 코다와 가상자산 생태계 신뢰도를 높히기 위한 업무협약 체결`}
+              </React.Fragment>
+            }
+            caption={"토큰포스트, 2024.01"}
+            uri={"https://www.tokenpost.kr/article-161939"}
+            onClick={_.partial(
+              onLink,
+              `인터넷컴퓨터 코리아허브(ICP.Hub Korea), 코다와 가상자산 생태계 신뢰도를 높히기 위한 업무협약 체결"`
+            )}
+          />
+          <CardItem
+            thumnailImage={images.news11Src}
+            title={
+              <React.Fragment>
+                {`아이피버스, 한국디지털에셋과 가상자산 수탁 협약 체결`}
+              </React.Fragment>
+            }
+            caption={"아이비티즈, 2024.01"}
+            uri={"https://www.it-b.co.kr/news/articleView.html?idxno=73412"}
+            onClick={_.partial(
+              onLink,
+              `아이피버스, 한국디지털에셋과 가상자산 수탁 협약 체결`
+            )}
+          />
+          <LastCardItem
+            thumnailImage={images.news12Src}
+            title={`캐리버스, 한국디지털에셋와 파트너십 체결 "안전성+투명성 제고"`}
+            caption={"머니투데이, 2024.01"}
+            uri={
+              "https://news.mt.co.kr/mtview.php?no=2024012217022690953"
+            }
+            onClick={_.partial(
+              onLink,
+              `캐리버스, 한국디지털에셋와 파트너십 체결 "안전성+투명성 제고"`
+            )}
+          />
+        </Content>
+        <Content>
           <CardItem
             thumnailImage={images.news5Src}
             title={
               <React.Fragment>
-                {`한국디지털에셋(KODA), 폴리곤랩스와 맞손…커스터디 서비스 제공"`}
+                {`한국디지털에셋(KODA), 폴리곤랩스와 맞손…커스터디 서비스 제공`}
               </React.Fragment>
             }
             caption={"한경닷컴, 2023.04"}
             uri={"https://www.hankyung.com/finance/article/202304248119B"}
             onClick={_.partial(
               onLink,
-              `한국디지털에셋(KODA), 폴리곤랩스와 맞손…커스터디 서비스 제공"`
+              `한국디지털에셋(KODA), 폴리곤랩스와 맞손…커스터디 서비스 제공`
             )}
           />
           <CardItem
