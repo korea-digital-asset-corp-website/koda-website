@@ -92,7 +92,7 @@ const NewsSection = (props: Props) => {
       <Inner>
         <Title>{`언론 보도`}</Title>
         <Content>
-        <CardItem
+          <CardItem
             thumnailImage={images.news10Src}
             title={
               <React.Fragment>
@@ -124,9 +124,7 @@ const NewsSection = (props: Props) => {
             thumnailImage={images.news12Src}
             title={`캐리버스, 한국디지털에셋와 파트너십 체결 "안전성+투명성 제고"`}
             caption={"머니투데이, 2024.01"}
-            uri={
-              "https://news.mt.co.kr/mtview.php?no=2024012217022690953"
-            }
+            uri={"https://news.mt.co.kr/mtview.php?no=2024012217022690953"}
             onClick={_.partial(
               onLink,
               `캐리버스, 한국디지털에셋와 파트너십 체결 "안전성+투명성 제고"`
