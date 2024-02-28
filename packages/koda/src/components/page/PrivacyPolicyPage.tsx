@@ -344,8 +344,8 @@ const PrivacyPolicyPage = (props: Props) => {
           </Section>
           <Section>
             <DescriptionTitle>{`<부칙>`}</DescriptionTitle>
-            <Description>{`(시행일) 이 개인정보처리방침은 2023년 6월 16일부터 적용됩니다.`}</Description>
-            <DescriptionHighlight>{`*변경 내역: [가상자산 수탁 서비스 등 제공 관련 개인정보(대리인 포함)의 항목 추가]`}</DescriptionHighlight>
+            <Description>{`(시행일) 이 개인정보처리방침은 2024년 2월 21일부터 적용됩니다.`}</Description>
+            <DescriptionHighlight>{`*변경 내역: [개인정보 보호 책임자 사항 변경]`}</DescriptionHighlight>
             <Description>{`
 [이전 개인정보 처리방침 목록]`}</Description>
             <PrivacyPolicy href="/old-privacy-policy-20210101">{`(2021.01.01일 시행) 개인정보 처리방침 v0`}</PrivacyPolicy>
