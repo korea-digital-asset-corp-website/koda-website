@@ -150,7 +150,9 @@ const Footer = (props: Props) => {
           </Content>
         </LeftGroup>
         <Contact>
-          <PrivacyPolicy href="/privacy-policy">개인정보처리방침</PrivacyPolicy>
+          <PrivacyPolicy href="/privacy-policy">
+            <b>개인정보처리방침</b>
+          </PrivacyPolicy>
           <Email
             target="_blank"
             href="mailto:hello@kodax.com"
