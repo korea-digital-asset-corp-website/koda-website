@@ -1,4 +1,4 @@
-# Haechi Website
+# KODA Website
 
 ## Installing / Getting started
 
@@ -13,7 +13,3 @@ npm install
 ```shell
 npm run build
 ```
-
-## haechi.io 배포하기
-
-[./packages/haechi/README.md](./packages/haechi/README.md)에서 확인합니다.
