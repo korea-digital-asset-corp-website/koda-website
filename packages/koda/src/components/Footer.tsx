@@ -136,14 +136,16 @@ const Footer = (props: Props) => {
             <MediaQuery minWidth={desktopWidth}>
               <Description>
                 {`사업자 등록번호 : 618-81-36254 | 대표: 조진석
-서울특별시 강남구 테헤란로 27길 8, 13층 (역삼동, 다온빌딩)`}
+서울특별시 강남구 테헤란로 27길 8, 13층 (역삼동, 다온빌딩)
+대표번호 : 02-561-4762`}
               </Description>
             </MediaQuery>
             <MediaQuery maxWidth={mobileWidth}>
               <Description>
                 {`사업자 등록번호 : 618-81-36254 | 대표: 조진석
 서울특별시 강남구 테헤란로 27길 8, 13층
-(역삼동, 다온빌딩)`}
+(역삼동, 다온빌딩)
+대표번호 : 02-561-4762`}
               </Description>
             </MediaQuery>
             <CompanyName>{`© Korea Digital Asset Co., Ltd.`}</CompanyName>
