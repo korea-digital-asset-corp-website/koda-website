@@ -23,8 +23,8 @@ const Container = styled(Layout)`
 const PrivacyPolicy = styled.a`
   font-size: 14px;
   &:hover {
-    color: #0060B6;
-  },
+    color: #0060b6;
+  }
 `;
 
 const Content = styled.article`

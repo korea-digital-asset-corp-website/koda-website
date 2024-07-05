@@ -10,6 +10,12 @@ export const Pre = styled.pre`
   word-break: keep-all;
   -webkit-font-smoothing: antialiased;
 `;
+export const Li = styled.li`
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+`;
 
 export const h1CSS = css`
   font-family: ${titleFontFamily};
@@ -202,6 +208,10 @@ export const Body2A = styled.a`
 `;
 
 export const Body2Pre = styled(Pre)`
+  ${body2CSS};
+`;
+
+export const Body2Li = styled(Li)`
   ${body2CSS};
 `;
 
