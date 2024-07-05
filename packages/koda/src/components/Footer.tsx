@@ -90,13 +90,19 @@ const Contact = styled(Caption)`
   color: ${colors.text2.dark};
 `;
 
-const PrivacyPolicy = styled(CaptionA)`
+const Link = styled(CaptionA)`
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 24px;
   color: ${colors.text2.dark};
-  margin-right: 72px;
+`;
+const PrivacyPolicy = styled(Link)`
+  margin-right: 48px;
+`;
+
+const EthicalManagement = styled(Link)`
+  margin-right: 60px;
 `;
 
 const Email = styled(CaptionA)`
@@ -155,6 +161,9 @@ const Footer = (props: Props) => {
           <PrivacyPolicy href="/privacy-policy">
             <b>개인정보처리방침</b>
           </PrivacyPolicy>
+          <EthicalManagement href="/ethical-management">
+            <b>윤리경영</b>
+          </EthicalManagement>
           <Email
             target="_blank"
             href="mailto:hello@kodax.com"

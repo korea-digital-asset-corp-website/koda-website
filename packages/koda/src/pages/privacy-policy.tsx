@@ -1,11 +1,9 @@
 import { PageRendererProps } from "gatsby";
 import React, { Component } from "react";
-import i18n from "i18next";
 import styled from "styled-components";
 
 import Layout from "src/components/Layout";
 import { colors } from "src/styles/colors";
-import { storage } from "src/configs/cookieStorage";
 import SEO from "src/components/SEO";
 import PrivacyPolicyPage from "src/components/page/PrivacyPolicyPage";
 
