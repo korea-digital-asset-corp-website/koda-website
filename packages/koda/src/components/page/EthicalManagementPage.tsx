@@ -276,9 +276,7 @@ const EthicalManagementPage = (props: Props) => {
             <DescriptionTitle>{`제 8조 (대외활동 기준)`}</DescriptionTitle>
             <OrderedList>
               <ListItem>
-                {`모든 임직원은 외부강연이나 기고, 언론매체 접촉, Social Network Service(SNS) 등 전자통신수단을 이용한 대외활동을 하는 경우 다음 각 호의 사항을 준수하여야 한다.
-
-`}
+                {`모든 임직원은 외부강연이나 기고, 언론매체 접촉, Social Network Service(SNS) 등 전자통신수단을 이용한 대외활동을 하는 경우 다음 각 호의 사항을 준수하여야 한다.`}
                 <OrderedList>
                   <ListItem>{`모회사의 공식의견이 아닌 사견임을 명확히 표현하여야 한다.`}</ListItem>
                   <ListItem>{`대외활동으로 인하여 회사의 주된 업무수행에 지장을 주어서는 아니된다.`}</ListItem>
@@ -293,8 +291,43 @@ const EthicalManagementPage = (props: Props) => {
             <OrderedList>
               <ListItem>{`모든 임직원은 회사를 퇴직하는 경우 업무관련 자료의 반납 등 적절한 후속 조치를 취하여야 하며, 퇴직 이후에도 회사와 고객의 이익을 해하는 행위를 하여서는 아니 된다.`}</ListItem>
             </OrderedList>
+          </Section>
+
+          <Section>
+            <SubTitle>{`제 8장 가상자산 수탁업자로서의 윤리`}</SubTitle>
+
+            <DescriptionTitle>{`제 1조 (수탁자산의 안전한 보관)`}</DescriptionTitle>
+            <OrderedList>
+              <ListItem>
+                {`회사는 위험관리 및 사고 예방을 위해 각 호의 사항을 준수하여야 한다.`}
+                <OrderedList>
+                  <ListItem>{`고객의 가상자산은 인터넷과 완전히 분리되어 오프라인 상태인 월렛(이하”콜드월렛”)에 안전하게 100% 보관한다.`}</ListItem>
+                  <ListItem>{`콜드월렛은 물리적으로 차단된 장소에 안전하게 보관하여야 하며,  콜드월렛 운영 등 모든 절차는 관련 내부 규정에 따른다.`}</ListItem>
+                  <ListItem>{`콜드월렛은 화재 등 자연적·환경적 위협 및 비인가자에 의한 접근·도난 등으로부터 안전하게 관리될 수 있도록  관련 내부 규정에 따른다.`}</ListItem>
+                </OrderedList>
+              </ListItem>
+            </OrderedList>
+            <Divider32 />
+
+            <DescriptionTitle>{`제 2조 (이해상충 방지)`}</DescriptionTitle>
+            <OrderedList>
+              <ListItem>
+                {`회사는 수탁업자의 책임을 충실히 이행함에 있어 이해상충 가능성을 최소화하기 위해 아래 각 호의 사항을 준수하여야 한다.`}
+                <OrderedList>
+                  <ListItem>{`회사는 이해상충 발생 가능성이 있는 경우 준법감시인과 사전에 협의하여 고객 보호 등에 문제가 발생하지 않도록 확인·점검하여야 한다.`}</ListItem>
+                  <ListItem>{`준법감시인은 직무를 수행함에 있어 업무 수행 절차와 적용 기준 등이 법규 또는 내부 규정 등을 위반 할 가능성이 없는지 확인·점검 하여야 한다.`}</ListItem>
+                </OrderedList>
+              </ListItem>
+            </OrderedList>
+            <Divider32 />
+
+            <DescriptionTitle>{`제 3조 (수탁자산의 재위탁 금지)`}</DescriptionTitle>
+            <OrderedList>
+              <ListItem>{`회사는 위탁받은 고객의 가상자산과 동일한 종류와 수량의 가상자산을 실질적으로 보유 하여야 하며, 다른 기관에 재위탁을 하여서는 아니 된다.`}</ListItem>
+            </OrderedList>
             <Divider32 />
           </Section>
+
           <FooterView />
         </Content>
       </Container>
