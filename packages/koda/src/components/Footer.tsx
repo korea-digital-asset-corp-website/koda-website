@@ -97,11 +97,11 @@ const Link = styled(CaptionA)`
   height: 24px;
   color: ${colors.text2.dark};
 `;
-const PrivacyPolicy = styled(Link)`
+
+const AtagMR48 = styled(Link)`
   margin-right: 48px;
 `;
-
-const EthicalManagement = styled(Link)`
+const AtagMR60 = styled(Link)`
   margin-right: 60px;
 `;
 
@@ -158,12 +158,15 @@ const Footer = (props: Props) => {
           </Content>
         </LeftGroup>
         <Contact>
-          <PrivacyPolicy href="/privacy-policy">
+          <AtagMR48 href="/privacy-policy">
             <b>개인정보처리방침</b>
-          </PrivacyPolicy>
-          <EthicalManagement href="/ethical-management">
+          </AtagMR48>
+          <AtagMR48 href="/ethical-management">
             <b>윤리경영</b>
-          </EthicalManagement>
+          </AtagMR48>
+          <AtagMR60 href="/work-guidelines">
+            <b>업무지침</b>
+          </AtagMR60>
           <Email
             target="_blank"
             href="mailto:hello@kodax.com"
