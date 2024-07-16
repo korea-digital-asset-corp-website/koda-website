@@ -1,5 +1,3 @@
-import { action } from "@storybook/addon-actions";
-import { storiesOf } from "@storybook/react";
 import React from "react";
 
 import IntroSection from "src/components/section/IntroSection";
@@ -17,32 +15,76 @@ import ProceedingSection from "src/components/section/ProceedingSection";
 import DealingSection from "src/components/section/DealingSection";
 import ISMSSection from "src/components/section/ISMSSection";
 
-const stories = storiesOf("@Component/Section", module);
+export default {
+  title: "@Component/Section",
+};
 
-stories.add("IntroSection", () => <IntroSection />);
+const _IntroSection = () => <IntroSection />;
+_IntroSection.story = {
+  name: "IntroSection",
+};
 
-stories.add("PartnerSection", () => <PartnerSection />);
+const _PartnerSection = () => <PartnerSection />;
+_PartnerSection.story = {
+  name: "PartnerSection",
+};
 
-stories.add("Feature1Section", () => <Feature1Section />);
+const _Feature1Section = () => <Feature1Section />;
+_Feature1Section.story = {
+  name: "Feature1Section",
+};
 
-stories.add("Feature2Section", () => <Feature2Section />);
+const _Feature2Section = () => <Feature2Section />;
+_Feature2Section.story = {
+  name: "Feature2Section",
+};
 
-stories.add("Feature3Section", () => <Feature3Section />);
+const _Feature3Section = () => <Feature3Section />;
+_Feature3Section.story = {
+  name: "Feature3Section",
+};
 
-stories.add("KBBankSection", () => <KBBankSection />);
+const _KBBankSection = () => <KBBankSection />;
+_KBBankSection.story = {
+  name: "KBBankSection",
+};
 
-stories.add("ConsignmentSection", () => <ConsignmentSection />);
+const _ConsignmentSection = () => <ConsignmentSection />;
+_ConsignmentSection.story = {
+  name: "ConsignmentSection",
+};
 
-stories.add("ServiceADSection", () => <ServiceADSection />);
+const _ServiceADSection = () => <ServiceADSection />;
+_ServiceADSection.story = {
+  name: "ServiceADSection",
+};
 
-stories.add("NewsSection", () => <NewsSection />);
+const _NewsSection = () => <NewsSection />;
+_NewsSection.story = {
+  name: "NewsSection",
+};
 
-stories.add("QASection", () => <QASection />);
+const _QASection = () => <QASection />;
+_QASection.story = {
+  name: "QASection",
+};
 
-stories.add("StructureSection", () => <StructureSection />);
+const _StructureSection = () => <StructureSection />;
+_StructureSection.story = {
+  name: "StructureSection",
+};
 
-stories.add("ProceedingSection", () => <ProceedingSection />);
+const _ProceedingSection = () => <ProceedingSection />;
+_ProceedingSection.story = {
+  name: "ProceedingSection",
+};
 
-stories.add("DealingSection", () => <DealingSection />);
+const _DealingSection = () => <DealingSection />;
+_DealingSection.story = {
+  name: "DealingSection",
+};
 
-stories.add("ISMSSection", () => <ISMSSection />);
+const _ISMSSection = () => <ISMSSection />;
+_ISMSSection.story = {
+  name: "ISMSSection",
+};

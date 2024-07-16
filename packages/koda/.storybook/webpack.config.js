@@ -13,9 +13,9 @@ module.exports = ({ config }) => {
     require.resolve("@babel/preset-env"),
   ];
 
-  // use @babel/plugin-proposal-class-properties for class arrow functions
+  // use @babel/plugin-transform-class-properties for class arrow functions
   config.module.rules[0].use[0].options.plugins = [
-    require.resolve("@babel/plugin-proposal-class-properties"),
+    require.resolve("@babel/plugin-transform-class-properties"),
   ];
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint

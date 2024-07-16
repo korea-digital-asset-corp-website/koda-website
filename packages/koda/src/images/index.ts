@@ -1,31 +1,31 @@
 const makeSrcSet = (src: string) => {
-  return `${require(`${src}.jpg`)} 600w,
-  ${require(`${src}@2x.jpg`)} 1024w,
-  ${require(`${src}@3x.jpg`)} 1440w`;
+  return `${require(`${src}.jpg`).default} 600w,
+  ${require(`${src}@2x.jpg`).default} 1024w,
+  ${require(`${src}@3x.jpg`).default} 1440w`;
 };
 
 const makeSrcSetMAX2x = (src: string) => {
-  return `${require(`${src}.jpg`)} 600w,
-  ${require(`${src}@2x.jpg`)} 1024w,
-  ${require(`${src}@2x.jpg`)} 1440w`;
+  return `${require(`${src}.jpg`).default} 600w,
+  ${require(`${src}@2x.jpg`).default} 1024w,
+  ${require(`${src}@2x.jpg`).default} 1440w`;
 };
 
 const makeSrcSetSVG = (src: string) => {
-  return `${require(`${src}.svg`)} 600w,
-  ${require(`${src}.svg`)} 1024w,
-  ${require(`${src}.svg`)} 1440w`;
+  return `${require(`${src}.svg`).default} 600w,
+  ${require(`${src}.svg`).default} 1024w,
+  ${require(`${src}.svg`).default} 1440w`;
 };
 
 const makeSrcSVG = (src: string) => {
-  return require(`${src}.svg`);
+  return require(`${src}.svg`).default;
 };
 
 const makeSrcJPG = (src: string) => {
-  return require(`${src}@2x.jpg`);
+  return require(`${src}@2x.jpg`).default;
 };
 
 const makeSrcPNG = (src: string) => {
-  return require(`${src}@2x.png`);
+  return require(`${src}@2x.png`).default;
 };
 
 const images = {

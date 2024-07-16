@@ -1,30 +1,38 @@
 import { action } from "@storybook/addon-actions";
-import { storiesOf } from "@storybook/react";
 import React from "react";
 
 import KodaModal from "src/components/modal/KodaModal";
 import ISMSModal from "src/components/modal/ISMSModal";
 import CustomerConfirmationSystemModal from "src/components/modal/CustomerConfirmationSystemModal";
 
-const stories = storiesOf("Modal", module);
+export default {
+  title: "Modal",
+};
 
-stories.add("KodaModal", () => (
+const _KodaModal = () => (
   <KodaModal
     isOpen={true}
     onClose={action("onMenuClick")}
     onSubmit={action("onSubmit")}
   />
-));
+);
+_KodaModal.story = {
+  name: "KodaModal",
+};
 
-stories.add("ISMSModal", () => (
+const _ISMSModal = () => (
   <ISMSModal isOpen={true} onSubmit={action("onSubmit")} />
-));
+);
+_ISMSModal.story = {
+  name: "ISMSModal",
+};
 
-stories.add("CustomerConfirmationSystemModal", () => {
-  return (
-    <CustomerConfirmationSystemModal
-      isOpen={true}
-      onSubmit={action("onSubmit")}
-    />
-  );
-});
+const _CustomerConfirmationSystemModal = () => (
+  <CustomerConfirmationSystemModal
+    isOpen={true}
+    onSubmit={action("onSubmit")}
+  />
+);
+_CustomerConfirmationSystemModal.story = {
+  name: "CustomerConfirmationSystemModal",
+};
