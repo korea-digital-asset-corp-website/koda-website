@@ -1,9 +1,14 @@
-import { action } from "@storybook/addon-actions";
-import { storiesOf } from "@storybook/react";
 import React from "react";
+import { action } from "@storybook/addon-actions";
 
 import DropDownMenu from "src/components/menu/DropDownMenu";
 
-storiesOf("Menu", module).add("DropDownMenu", () => (
+export default {
+  title: "Menu",
+};
+const _DropDownMenu = () => (
   <DropDownMenu onMenuClick={action("onMenuClick")} />
-));
+);
+_DropDownMenu.story = {
+  name: "DropDownMenu",
+};

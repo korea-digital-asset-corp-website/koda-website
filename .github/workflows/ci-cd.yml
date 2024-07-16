@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          npm install
+          npm install --legacy-peer-deps
           npm run test && npm run type-check
       - name: Notification Slack
         uses: 8398a7/action-slack@v3

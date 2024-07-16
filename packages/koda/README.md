@@ -5,7 +5,7 @@
 ## Installing / Getting started
 
 ```shell
-npm install
+npm install --legacy-peer-deps
 ```
 
 ## Developing
@@ -22,7 +22,7 @@ npm run build
 
 ### Prerequisites
 
-node version 10.15.3
+node version 20.12.0
 
 ### Deploying / Publishing
 

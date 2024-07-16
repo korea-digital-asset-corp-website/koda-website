@@ -1,5 +1,4 @@
 import React from "react";
-import { addDecorator } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs";
 import i18n from "i18next";
 import { I18nextProvider } from "react-i18next";
