@@ -7,11 +7,11 @@ export default {
   title: "@Component/Button",
 };
 
-const _LinkButton = () => <LinkButton name="문의하기" />;
+export const _LinkButton = () => <LinkButton name="문의하기" />;
 _LinkButton.story = {
   name: "LinkButton",
 };
-const _FloatingButton = () => <FloatingButton />;
+export const _FloatingButton = () => <FloatingButton />;
 _FloatingButton.story = {
   name: "FloatingButton",
 };

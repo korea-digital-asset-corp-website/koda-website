@@ -86,6 +86,7 @@ const NewsSection = (props: Props) => {
       label: uri.substring(0, 30),
     });
   };
+  console.log(images.news10Src);
 
   return (
     <Container>

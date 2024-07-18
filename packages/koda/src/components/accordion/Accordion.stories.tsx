@@ -6,7 +6,7 @@ import QAAccordion from "./QAAccordion";
 export default {
   title: "@Component/Accordion",
 };
-const _Accordion = () => (
+export const _Accordion = () => (
   <Accordion trigger="Start here">
     <p>
       This is the collapsible content. It can be any element or React component
@@ -21,7 +21,7 @@ _Accordion.story = {
   name: "Accordion",
 };
 
-const _QAAccordion = () => (
+export const _QAAccordion = () => (
   <QAAccordion
     title={"수탁 가능한 가상자산의 종류는 어떻게 되나요?"}
     content={`국내 법인이 합법적으로 비트코인 구매할 수 있습니다. 또한, 국내 법인이 비트코인을 구매하는 것은 원칙적으로 신고하거나 인허가를 받는 사항은 아닙니다. 
