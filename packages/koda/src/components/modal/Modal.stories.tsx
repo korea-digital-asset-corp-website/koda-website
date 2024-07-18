@@ -9,7 +9,7 @@ export default {
   title: "Modal",
 };
 
-const _KodaModal = () => (
+export const _KodaModal = () => (
   <KodaModal
     isOpen={true}
     onClose={action("onMenuClick")}
@@ -20,14 +20,14 @@ _KodaModal.story = {
   name: "KodaModal",
 };
 
-const _ISMSModal = () => (
+export const _ISMSModal = () => (
   <ISMSModal isOpen={true} onSubmit={action("onSubmit")} />
 );
 _ISMSModal.story = {
   name: "ISMSModal",
 };
 
-const _CustomerConfirmationSystemModal = () => (
+export const _CustomerConfirmationSystemModal = () => (
   <CustomerConfirmationSystemModal
     isOpen={true}
     onSubmit={action("onSubmit")}

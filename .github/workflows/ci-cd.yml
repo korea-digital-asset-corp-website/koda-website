@@ -43,7 +43,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: Storybook Build
         run: |
-          npm ci
+          npm ci --legacy-peer-deps
           npm run storybook:build
       - name: Storybook Deployment (audit)
         uses: peaceiris/actions-gh-pages@v3

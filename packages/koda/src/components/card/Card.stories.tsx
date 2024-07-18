@@ -6,7 +6,7 @@ export default {
   title: "@Component/Card",
 };
 
-const _NewsCard = () => (
+export const _NewsCard = () => (
   <NewsCard
     thumnailImage={images.newsMaekyungSrc}
     title={`KB국민은행, 디지털자산관리 기업에 

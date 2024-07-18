@@ -17,7 +17,7 @@ export default {
   title: "@Design Token/Typography",
 };
 
-const _Typography = () => {
+export const _Typography = () => {
   return (
     <div>
       <H1>H1: Hello World 안녕하세요</H1>

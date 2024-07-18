@@ -11,17 +11,16 @@ const Container = styled.div`
 const Box = styled.div<{ $bgColor: string }>`
   width: 100px;
   height: 100px;
-  ${({ $bgColor }) =>
-    css`
-      background-color: ${$bgColor};
-    `}
+  ${({ $bgColor }) => css`
+    background-color: ${$bgColor};
+  `}
 `;
 
 export default {
   title: "@Design Token/Colors",
 };
 
-const _Colors = () => {
+export const _Colors = () => {
   return (
     <Container>
       <Box $bgColor={colors.primary} />
