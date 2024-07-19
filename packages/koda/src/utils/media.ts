@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { css, CSSObject, SimpleInterpolation } from "styled-components";
+import { css, CSSObject, Interpolation } from "styled-components";
+
+type SimpleInterpolation = Interpolation<object>;
 
 export const desktopWidth = 600;
 export const mobileWidth = 599;
