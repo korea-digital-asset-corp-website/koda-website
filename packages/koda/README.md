@@ -5,7 +5,7 @@
 ## Installing / Getting started
 
 ```shell
-npm install --legacy-peer-deps
+npm install
 ```
 
 ## Developing

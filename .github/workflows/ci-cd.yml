@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          npm install --legacy-peer-deps
+          npm install
           npm run test && npm run type-check
       - name: Notification Slack
         uses: 8398a7/action-slack@v3
@@ -43,7 +43,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: Storybook Build
         run: |
-          npm ci --legacy-peer-deps
+          npm ci
           npm run storybook:build
       - name: Storybook Deployment (audit)
         uses: peaceiris/actions-gh-pages@v3
