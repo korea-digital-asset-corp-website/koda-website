@@ -26,15 +26,17 @@ export const getValue = <T>(func: () => T, defaultValue: T) => {
   }
 };
 
-export const mergeRefs = <T>(...refs: Array<React.Ref<T>>) => (ref: T) => {
-  refs.forEach((resolvableRef) => {
-    if (typeof resolvableRef === "function") {
-      resolvableRef(ref);
-    } else {
-      (resolvableRef as any).current = ref;
-    }
-  });
-};
+export const mergeRefs =
+  <T>(...refs: Array<React.Ref<T>>) =>
+  (ref: T) => {
+    refs.forEach((resolvableRef) => {
+      if (typeof resolvableRef === "function") {
+        resolvableRef(ref);
+      } else {
+        (resolvableRef as any).current = ref;
+      }
+    });
+  };
 
 export function getEnumKeyByEnumValue(myEnum: any, enumValue: any) {
   const keys = Object.keys(myEnum).filter((x) => myEnum[x] == enumValue);

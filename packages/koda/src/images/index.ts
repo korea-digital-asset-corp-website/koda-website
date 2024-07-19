@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const makeSrcSet = (src: string) => {
   return `${require(`${src}.jpg`).default} 600w,
   ${require(`${src}@2x.jpg`).default} 1024w,
