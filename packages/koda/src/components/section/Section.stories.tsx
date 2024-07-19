@@ -19,7 +19,6 @@ import images from "src/images";
 export default {
   title: "@Component/Section",
 };
-console.log(images);
 export const _IntroSection = () => <IntroSection />;
 _IntroSection.story = {
   name: "IntroSection",

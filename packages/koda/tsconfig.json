@@ -3,9 +3,6 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "paths": {
-      "src/*": ["src/*"]
-    },
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "jsx": "react",
