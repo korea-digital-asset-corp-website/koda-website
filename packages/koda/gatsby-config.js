@@ -23,7 +23,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-    `gatsby-plugin-transition-link`,
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-filesystem",
