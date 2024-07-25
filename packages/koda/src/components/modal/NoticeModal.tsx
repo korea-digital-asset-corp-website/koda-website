@@ -122,16 +122,17 @@ const SubmitButton = styled.button`
 const customStyles: any = {
   overlay: {
     position: "fixed",
-    top: 20,
+    padding: "20px 0",
+    top: 0,
     left: 0,
     right: 0,
-    bottom: 20,
+    bottom: 0,
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgba(255, 255, 255, 0.40)",
-    zIndex: 10,
+    zIndex: 150,
   },
   content: {
     height: "100%",
