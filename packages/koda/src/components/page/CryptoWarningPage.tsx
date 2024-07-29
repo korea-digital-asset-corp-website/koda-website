@@ -123,7 +123,7 @@ const CryptoWarningPage = () => {
                 {`'전기통신금융사기, 유사수신 및 다단계, 피싱 사기'를 주의하시기 바랍니다.`}
                 <UnorderedList>
                   <ListItem>{`금융기관이나 수사기관을 사칭하며 송금을 요청하거나 계정 대여를 요구하는 행위, 에어드랍등을 이유로 투자를 유인하는 행위는 전기통신금융사기, 유사수신 및 다단계에 해당할 수 있으므로 주의가 필요합니다.`}</ListItem>
-                  <ListItem>{`KODA는 고객의 비밀번호, OTP., SMS/ARS인증 등을 절대 요구하지 않으며, 고객을 대신해 로그인을 하지 않습니다.`}</ListItem>
+                  <ListItem>{`KODA는 고객의 비밀번호, OTP, SMS/ARS인증 등을 절대 요구하지 않으며, 고객을 대신해 로그인을 하지 않습니다.`}</ListItem>
                   <ListItem>{`전기통신금융사기, 유사수신 및 다단계, 피싱사기 피해 예방을 위하여 각별히 주의해 주시길 당부드립니다.`}</ListItem>
                 </UnorderedList>
               </ListItem>
