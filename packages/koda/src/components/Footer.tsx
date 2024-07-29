@@ -88,6 +88,11 @@ const Contact = styled(Caption)`
   display: flex;
   flex-direction: row;
   color: ${colors.text2.dark};
+
+  ${media.mobile`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  `}
 `;
 
 const Link = styled(CaptionA)`
@@ -100,9 +105,15 @@ const Link = styled(CaptionA)`
 
 const AtagMR48 = styled(Link)`
   margin-right: 48px;
+  ${media.mobile`
+    margin-right: 0px;
+  `}
 `;
 const AtagMR60 = styled(Link)`
   margin-right: 60px;
+  ${media.mobile`
+    margin-right: 0px;
+  `}
 `;
 
 const Email = styled(CaptionA)`
@@ -111,6 +122,10 @@ const Email = styled(CaptionA)`
   align-items: center;
   height: 24px;
   color: ${colors.text2.dark};
+
+  ${media.mobile`
+    margin-top: 16px;
+  `}
 `;
 
 const EmailLogo = styled.img`
@@ -164,8 +179,11 @@ const Footer = (props: Props) => {
           <AtagMR48 href="/ethical-management">
             <b>윤리경영</b>
           </AtagMR48>
-          <AtagMR60 href="/work-guidelines">
+          <AtagMR48 href="/work-guidelines">
             <b>업무지침</b>
+          </AtagMR48>
+          <AtagMR60 href="/crypto-warning">
+            <b>가상자산 거래에 관한 유의사항</b>
           </AtagMR60>
           <Email
             target="_blank"
