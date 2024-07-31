@@ -5,7 +5,7 @@ import {
 } from "src/decorators/createInjectDecorator";
 
 export function gTagTracking<IProps, IStates>(
-  getData: MakeData<IProps, IStates, EventParams>
+  getData: MakeData<IProps, IStates, EventParams>,
 ): any {
   const func = async (props: IProps, state: IStates, args: any[]) => {
     const data = await getData(props, state, args);

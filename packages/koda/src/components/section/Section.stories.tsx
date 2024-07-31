@@ -19,72 +19,73 @@ import images from "src/images";
 export default {
   title: "@Component/Section",
 };
-export const _IntroSection = () => <IntroSection />;
-_IntroSection.story = {
-  name: "IntroSection",
+
+export const _IntroSection = {
+  render: () => <IntroSection />,
+  name: "Intro Section",
 };
 
-export const _PartnerSection = () => <PartnerSection />;
-_PartnerSection.story = {
+export const _PartnerSection = {
+  render: () => <PartnerSection />,
   name: "PartnerSection",
 };
 
-export const _Feature1Section = () => <Feature1Section />;
-_Feature1Section.story = {
+export const _Feature1Section = {
+  render: () => <Feature1Section />,
   name: "Feature1Section",
 };
 
-export const _Feature2Section = () => <Feature2Section />;
-_Feature2Section.story = {
+export const _Feature2Section = {
+  render: () => <Feature2Section />,
   name: "Feature2Section",
 };
 
-export const _Feature3Section = () => <Feature3Section />;
-_Feature3Section.story = {
+export const _Feature3Section = {
+  render: () => <Feature3Section />,
   name: "Feature3Section",
 };
 
-export const _KBBankSection = () => <KBBankSection />;
-_KBBankSection.story = {
+export const _KBBankSection = {
+  render: () => <KBBankSection />,
   name: "KBBankSection",
 };
 
-export const _ConsignmentSection = () => <ConsignmentSection />;
-_ConsignmentSection.story = {
+export const _ConsignmentSection = {
+  render: () => <ConsignmentSection />,
   name: "ConsignmentSection",
 };
 
-export const _ServiceADSection = () => <ServiceADSection />;
-_ServiceADSection.story = {
+export const _ServiceADSection = {
+  render: () => <ServiceADSection />,
   name: "ServiceADSection",
 };
 
-export const _NewsSection = () => <NewsSection />;
-_NewsSection.story = {
+export const _NewsSection = {
+  render: () => <NewsSection />,
   name: "NewsSection",
 };
 
-export const _QASection = () => <QASection />;
-_QASection.story = {
+export const _QASection = {
+  render: () => <QASection />,
   name: "QASection",
 };
 
-export const _StructureSection = () => <StructureSection />;
-_StructureSection.story = {
+export const _StructureSection = {
+  render: () => <StructureSection />,
   name: "StructureSection",
 };
 
-export const _ProceedingSection = () => <ProceedingSection />;
-_ProceedingSection.story = {
+export const _ProceedingSection = {
+  render: () => <ProceedingSection />,
   name: "ProceedingSection",
 };
 
-export const _DealingSection = () => <DealingSection />;
-_DealingSection.story = {
+export const _DealingSection = {
+  render: () => <DealingSection />,
   name: "DealingSection",
 };
 
-export const _ISMSSection = () => <ISMSSection />;
-_ISMSSection.story = {
+export const _ISMSSection = {
+  render: () => <ISMSSection />,
   name: "ISMSSection",
 };

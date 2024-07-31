@@ -42,8 +42,10 @@ const Inner = styled.div`
   background: #ffffff;
   /* Evaluation/level5 */
 
-  box-shadow: 0px 10px 15px rgba(54, 62, 76, 0.3),
-    0px 10px 15px rgba(54, 62, 76, 0.1), 0px 15px 40px rgba(54, 62, 76, 0.2);
+  box-shadow:
+    0px 10px 15px rgba(54, 62, 76, 0.3),
+    0px 10px 15px rgba(54, 62, 76, 0.1),
+    0px 15px 40px rgba(54, 62, 76, 0.2);
   border-radius: 2px;
   ${media.mobile`
     max-width: 400px;

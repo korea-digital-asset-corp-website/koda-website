@@ -8,7 +8,7 @@ type StorageType = "lang";
 function storageFactory(
   setItem: (key: string, value: string) => void,
   getItem: (key: string) => string,
-  clear: () => void
+  clear: () => void,
 ) {
   const setStorageItem = (key: StorageType, value: string) => {
     return setItem(key, value);
@@ -16,7 +16,7 @@ function storageFactory(
 
   const getStringWithDefault = (
     key: StorageType,
-    defaultItem: string
+    defaultItem: string,
   ): string => {
     try {
       const itemString = getItem(key);
@@ -28,7 +28,7 @@ function storageFactory(
 
   const getBooleanWithDefault = (
     key: StorageType,
-    defaultItem: boolean
+    defaultItem: boolean,
   ): boolean => {
     try {
       const itemString = getItem(key);
@@ -40,7 +40,7 @@ function storageFactory(
 
   const getNumberWithDefault = (
     key: StorageType,
-    defaultItem: number
+    defaultItem: number,
   ): number => {
     try {
       const itemString = getItem(key);

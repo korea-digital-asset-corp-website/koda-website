@@ -1,7 +1,6 @@
 import _ from "lodash";
 import React from "react";
 import styled from "styled-components";
-import { withTranslation, WithTranslation } from "react-i18next";
 
 import { translate } from "src/locales";
 import { Caption, CaptionPre, CaptionA } from "src/components/Typography";
@@ -11,7 +10,7 @@ import { colors } from "src/styles/colors";
 import MediaQuery from "react-responsive";
 import { CategoryType, ActionType, gTagEvent } from "src/configs/analytics";
 
-type Props = { className?: string } & WithTranslation;
+type Props = { className?: string };
 
 const Container = styled.div`
   display: flex;
@@ -135,7 +134,7 @@ const EmailLogo = styled.img`
 `;
 
 const Footer = (props: Props) => {
-  const { className, t } = props;
+  const { className } = props;
 
   const onEmail = () => {
     gTagEvent({
@@ -203,4 +202,4 @@ const Footer = (props: Props) => {
   );
 };
 
-export default withTranslation()(Footer);
+export default Footer;

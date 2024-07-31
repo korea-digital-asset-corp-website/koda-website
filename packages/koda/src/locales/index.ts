@@ -15,7 +15,7 @@ const convertLocale = (language: string) => {
 
 const translate = (
   names: Paths<typeof ko.translation>,
-  t?: TFunction
+  t?: TFunction,
 ): string => {
   const key = names.join(".");
   if (!t) {

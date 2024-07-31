@@ -2,11 +2,11 @@
 export type MakeData<IProps, IStates, T> = (
   props: IProps,
   state: IStates,
-  args: any
+  args: any,
 ) => T | Promise<T>;
 
 export function createInjectDecorator<IProps, IStates, T>(
-  func: MakeData<IProps, IStates, T>
+  func: MakeData<IProps, IStates, T>,
 ): any {
   return function InjectFunc(__: any, propName: any, descriptor: any) {
     const isArrowFunction = !!descriptor.initializer;
@@ -21,7 +21,7 @@ export function createInjectDecorator<IProps, IStates, T>(
 function injectFuncInArrow<IProps, IStates, T>(
   propName: string,
   descriptor: any,
-  func: MakeData<IProps, IStates, T>
+  func: MakeData<IProps, IStates, T>,
 ) {
   function initializerProp($this: React.Component<IProps, IStates>) {
     return (...args: any[]) => {
@@ -42,7 +42,7 @@ function injectFuncInArrow<IProps, IStates, T>(
 function injectFuncInMethod<IProps, IStates, T>(
   propsName: string,
   descriptor: any,
-  func: MakeData<IProps, IStates, T>
+  func: MakeData<IProps, IStates, T>,
 ) {
   return {
     ...descriptor,

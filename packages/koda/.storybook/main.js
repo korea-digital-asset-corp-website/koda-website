@@ -5,6 +5,8 @@ module.exports = {
     "@storybook/addon-actions",
     "@storybook/addon-links",
     "@storybook/addon-knobs",
+    "@storybook/addon-webpack5-compiler-babel",
+    "@chromatic-com/storybook",
   ],
 
   framework: {
@@ -16,4 +18,5 @@ module.exports = {
     check: false,
     reactDocgen: "react-docgen",
   },
+  staticDirs: [{ from: "../src/images", to: "/images" }],
 };

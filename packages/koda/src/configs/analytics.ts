@@ -38,7 +38,7 @@ const EVENT_TYPE_MAX_LENGTH = 40;
 
 export function logEvent(
   eventData: EventParams,
-  func: (action: ActionType, param: Record<string, unknown>) => void
+  func: (action: ActionType, param: Record<string, unknown>) => void,
 ) {
   const { action } = eventData;
 
@@ -52,7 +52,7 @@ export function logEvent(
 
   const isAllKeysUnderLength40 = traverseObjectKeys(
     _.omit(eventData, ["action"]),
-    (key: string) => key.length <= EVENT_TYPE_MAX_LENGTH
+    (key: string) => key.length <= EVENT_TYPE_MAX_LENGTH,
   );
 
   if (!isAllKeysUnderLength40) {
@@ -61,7 +61,7 @@ export function logEvent(
 
   const parameters = traverseObjectSliceStr(
     _.omit(eventData, ["action"]),
-    100
+    100,
   ) as Omit<EventParams, "action">;
   func(eventData.action, {
     event_category: parameters.category,

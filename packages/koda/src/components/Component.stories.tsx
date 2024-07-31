@@ -7,16 +7,17 @@ export default {
   title: "@Component/Component",
 };
 
-export const _Header = () => <Header />;
-_Header.story = {
+export const _Header = {
+  render: () => <Header />,
   name: "Header",
 };
 
-export const _Footer = () => <Footer />;
-_Footer.story = {
+export const _Footer = {
+  render: () => <Footer />,
   name: "Footer",
 };
-export const _IndexPage = () => <IndexPage />;
-_IndexPage.story = {
+
+export const _IndexPage = {
+  render: () => <IndexPage />,
   name: "IndexPage",
 };

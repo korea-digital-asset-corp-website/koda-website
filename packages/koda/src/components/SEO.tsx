@@ -11,21 +11,19 @@ type Props = {
 };
 
 function SEO({ description, lang, keywords, thumnail, title }: Props) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            titleTemplate
-            description
-            siteUrl
-            og_image
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          titleTemplate
+          description
+          siteUrl
+          og_image
         }
       }
-    `
-  );
+    }
+  `);
   const metaTitle = title || site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description;
   const metaUrl = site.siteMetadata.siteUrl;
