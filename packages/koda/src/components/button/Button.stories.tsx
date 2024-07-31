@@ -7,11 +7,12 @@ export default {
   title: "@Component/Button",
 };
 
-export const _LinkButton = () => <LinkButton name="문의하기" />;
-_LinkButton.story = {
+export const _LinkButton = {
+  render: () => <LinkButton name="문의하기" />,
   name: "LinkButton",
 };
-export const _FloatingButton = () => <FloatingButton />;
-_FloatingButton.story = {
+
+export const _FloatingButton = {
+  render: () => <FloatingButton />,
   name: "FloatingButton",
 };

@@ -23,7 +23,7 @@ export const noInfoIfZero = (price: string | null) => {
 
 export const traverseObjectKeys = (
   o: { [key: string]: any },
-  predicate: (key: string) => boolean
+  predicate: (key: string) => boolean,
 ) => {
   const keys = Object.keys(o);
   for (const key of keys) {
@@ -44,7 +44,7 @@ export const traverseObjectKeys = (
 
 export const traverseObjectSliceStr = (
   o: { [key: string]: any },
-  maxLength: number
+  maxLength: number,
 ) => {
   const keys = Object.keys(o);
   for (const key of keys) {

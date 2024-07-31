@@ -20,15 +20,16 @@ export default {
   title: "@Design Token/Colors",
 };
 
-export const _Colors = () => {
-  return (
-    <Container>
-      <Box $bgColor={colors.primary} />
-      <Box $bgColor={colors.secondary} />
-      <Box $bgColor={colors.third} />
-    </Container>
-  );
-};
-_Colors.story = {
+export const _Colors = {
+  render: () => {
+    return (
+      <Container>
+        <Box $bgColor={colors.primary} />
+        <Box $bgColor={colors.secondary} />
+        <Box $bgColor={colors.third} />
+      </Container>
+    );
+  },
+
   name: "default",
 };

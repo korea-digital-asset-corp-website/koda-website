@@ -128,7 +128,7 @@ const QASection = (props: Props) => {
               content={`고객확인제도 시행 전 점검 시점(별도 공지)부터 기존 고객사의 로그인 세션이 만료되며 가상 자산 출금이 중단 됩니다. 고객 확인 절차를 완료한 고객사는 수탁자산의 출금 서비스 이용이 다시 가능합니다`}
               onToggle={_.partial(
                 onToggle,
-                "고객 확인 미완료시 거래제한은 어떻게 되나요?"
+                "고객 확인 미완료시 거래제한은 어떻게 되나요?",
               )}
             />
             <QAAccordion
@@ -136,7 +136,7 @@ const QASection = (props: Props) => {
               content={`신규로 가입하신 고객사는 고객확인제도 시행 이후 고객 확인을 완료하시면 정상적인 가상자산의 수탁 서비스를 이용할 수 있습니다.`}
               onToggle={_.partial(
                 onToggle,
-                "신규 가입한 회원은 어떻게 해야 하나요?"
+                "신규 가입한 회원은 어떻게 해야 하나요?",
               )}
             />
             <QAAccordion
@@ -144,7 +144,7 @@ const QASection = (props: Props) => {
               content={`기존 가입법인 고객사들도 대면으로 고객확인 절차를 수행해야 합니다(필요한 서류 및 절차는 별도 안내)`}
               onToggle={_.partial(
                 onToggle,
-                "기존 고객 확인절차는 어떻게 해야 하나요?"
+                "기존 고객 확인절차는 어떻게 해야 하나요?",
               )}
             />
             <QAAccordion
@@ -152,7 +152,7 @@ const QASection = (props: Props) => {
               content={`ㅇ 고객확인제도 시행일 : 2021.12.17(00:00) 적용`}
               onToggle={_.partial(
                 onToggle,
-                "한국디지털에셋은 언제부터 고객확인제도 적용되나요?"
+                "한국디지털에셋은 언제부터 고객확인제도 적용되나요?",
               )}
             />
             <Link typeformUri={typeformUri} onClick={onLink}>

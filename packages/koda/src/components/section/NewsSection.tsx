@@ -103,7 +103,7 @@ const NewsSection = (props: Props) => {
             uri={"https://www.tokenpost.kr/article-161939"}
             onClick={_.partial(
               onLink,
-              `인터넷컴퓨터 코리아허브(ICP.Hub Korea), 코다와 가상자산 생태계 신뢰도를 높히기 위한 업무협약 체결"`
+              `인터넷컴퓨터 코리아허브(ICP.Hub Korea), 코다와 가상자산 생태계 신뢰도를 높히기 위한 업무협약 체결"`,
             )}
           />
           <CardItem
@@ -117,7 +117,7 @@ const NewsSection = (props: Props) => {
             uri={"https://www.it-b.co.kr/news/articleView.html?idxno=73412"}
             onClick={_.partial(
               onLink,
-              `아이피버스, 한국디지털에셋과 가상자산 수탁 협약 체결`
+              `아이피버스, 한국디지털에셋과 가상자산 수탁 협약 체결`,
             )}
           />
           <LastCardItem
@@ -127,7 +127,7 @@ const NewsSection = (props: Props) => {
             uri={"https://news.mt.co.kr/mtview.php?no=2024012217022690953"}
             onClick={_.partial(
               onLink,
-              `캐리버스, 한국디지털에셋와 파트너십 체결 "안전성+투명성 제고"`
+              `캐리버스, 한국디지털에셋와 파트너십 체결 "안전성+투명성 제고"`,
             )}
           />
         </Content>
@@ -143,7 +143,7 @@ const NewsSection = (props: Props) => {
             uri={"https://www.hankyung.com/finance/article/202304248119B"}
             onClick={_.partial(
               onLink,
-              `한국디지털에셋(KODA), 폴리곤랩스와 맞손…커스터디 서비스 제공`
+              `한국디지털에셋(KODA), 폴리곤랩스와 맞손…커스터디 서비스 제공`,
             )}
           />
           <CardItem
@@ -157,7 +157,7 @@ const NewsSection = (props: Props) => {
             uri={"https://www.asiae.co.kr/article/2023020315140699312"}
             onClick={_.partial(
               onLink,
-              `팬시토큰(fanC), 한국디지털에셋(KODA)과 커스터디 계약 체결"`
+              `팬시토큰(fanC), 한국디지털에셋(KODA)과 커스터디 계약 체결"`,
             )}
           />
           <LastCardItem
@@ -169,7 +169,7 @@ const NewsSection = (props: Props) => {
             }
             onClick={_.partial(
               onLink,
-              "KODA, 쟁글과 투명한 가상자산 거래 위한 업무협약"
+              "KODA, 쟁글과 투명한 가상자산 거래 위한 업무협약",
             )}
           />
         </Content>
@@ -185,7 +185,7 @@ const NewsSection = (props: Props) => {
             uri={"https://www.fnnews.com/news/202105170917477041"}
             onClick={_.partial(
               onLink,
-              `가상자산 1500억 보유 위메이드 "KODA에 맡겨 관리"`
+              `가상자산 1500억 보유 위메이드 "KODA에 맡겨 관리"`,
             )}
           />
           <CardItem
@@ -195,7 +195,7 @@ const NewsSection = (props: Props) => {
             uri={"https://www.sedaily.com/NewsView/22M7T2LDX9"}
             onClick={_.partial(
               onLink,
-              `국내 기업도 테슬라처럼...비트코인 투자 길 열렸다`
+              `국내 기업도 테슬라처럼...비트코인 투자 길 열렸다`,
             )}
           />
           <LastCardItem
@@ -205,7 +205,7 @@ const NewsSection = (props: Props) => {
             uri={"https://www.hankyung.com/economy/article/2020112662211"}
             onClick={_.partial(
               onLink,
-              "국민은행, 은행권 첫 ‘디지털 자산 보관사업’ 시동"
+              "국민은행, 은행권 첫 ‘디지털 자산 보관사업’ 시동",
             )}
           />
         </Content>

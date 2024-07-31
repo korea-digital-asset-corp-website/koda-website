@@ -137,6 +137,7 @@ const KBPartnerTitle = styled.div`
 type LogoType = "kbBank" | "haechilabs" | "hashed";
 
 const PartnerSection = (props: Props) => {
+  console.log("why!!!!");
   const { i18n, t } = props;
   const language = i18n.language;
 
@@ -154,7 +155,7 @@ const PartnerSection = (props: Props) => {
 
   const renderPartnerItemByLanguageAndType = (
     language: string,
-    type: LogoType
+    type: LogoType,
   ) => {
     const byLanguage: Record<
       LogoType,

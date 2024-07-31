@@ -1,9 +1,9 @@
 import React from "react";
 import { withKnobs } from "@storybook/addon-knobs";
-import i18n from "i18next";
 import { I18nextProvider } from "react-i18next";
 
 import { initialize as initializeI18next } from "src/configs/locale";
+import i18n from "./i18n";
 
 import "src/styles/global.css";
 import "./global.css";
@@ -21,3 +21,4 @@ export const decorators = [
   ),
   (Story) => <Story />,
 ];
+export const tags = ["autodocs"];
