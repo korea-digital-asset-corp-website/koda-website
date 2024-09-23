@@ -22,7 +22,7 @@ npm run build
 
 ### Prerequisites
 
-node version 20.16.0
+node version 20.17.0
 
 ### Deploying / Publishing
 
