@@ -154,7 +154,7 @@ const ISMSModal = (props: Props) => {
               {`한국디지털에셋이 2021년 9월 1일자로 정보보호 관리체계 인증(ISMS)을 획득하였습니다. 국내 가상자산 법규를 철저하게 준수하는 한국디지털에셋에서 안심하고 서비스를 이용하세요.`}
             </Description>
             <Caption>{`ISMS 인증범위: 가상자산 수탁 서비스(심사받지 않은 물리적 인프라 제외)
-유효기간: 2021-09-01 ~ 2024-08-31 `}</Caption>
+유효기간: 2024-09-01 ~ 2027-08-31 `}</Caption>
           </Content>
           <Footer>
             <SubmitButton onClick={onSubmit}>확인</SubmitButton>
