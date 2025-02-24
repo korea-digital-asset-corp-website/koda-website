@@ -7,7 +7,16 @@ import OtherHeader from "src/components/OtherHeader";
 import Footer from "src/components/Footer";
 import { H3, H4, H5, Body2Pre } from "src/components/Typography";
 import { media } from "src/utils/media";
-import { Table, TBody, Td, TdBold, THead, THeadRow, TRow } from "../Table";
+import {
+  Table,
+  TableWrapper,
+  TBody,
+  Td,
+  TdBold,
+  THead,
+  THeadRow,
+  TRow,
+} from "../Table";
 
 const Container = styled(Layout)`
   background-color: ${colors.white};
@@ -172,43 +181,45 @@ const PrivacyPolicyPage = () => {
             <Description>{`③ 제2항에도 불구하고, 다음 각호의 경우에는 해당 사유의 종료시까지 개인정보처리 및 보유를 할 수 있습니다.`}</Description>
             <Divider32 />
 
-            <Table>
-              <THeadRow>
-                <THead>구분</THead>
-                <THead>관련법률</THead>
-                <THead>보유기간</THead>
-              </THeadRow>
-              <TBody>
-                <TRow>
-                  <Td>고객확인 및 거래정보에 관한 기록</Td>
-                  <Td>특정금융거래정보의 보고 및 이용등에 관한 법률</Td>
-                  <Td>5년</Td>
-                </TRow>
-                <TRow>
-                  <Td>계약등에 관한 기록</Td>
-                  <Td rowSpan={3}>
-                    전자상거래 등에서의 소비자 보호에 관한 법률
-                  </Td>
-                  <Td rowSpan={3}>5년</Td>
-                </TRow>
-                <TRow>
-                  <Td>대금결제 및 재화등의 공급에 관한 기록</Td>
-                </TRow>
-                <TRow>
-                  <Td>소비자불만, 분쟁처리에 관한 기록</Td>
-                </TRow>
-                <TRow>
-                  <Td>로그인 기록</Td>
-                  <Td>통신비밀보호법</Td>
-                  <Td>3개월이상</Td>
-                </TRow>
-                <TRow>
-                  <Td>가상자산 거래기록</Td>
-                  <Td>가상자산 이용자 보호등에 관한 법률</Td>
-                  <Td>15년</Td>
-                </TRow>
-              </TBody>
-            </Table>
+            <TableWrapper>
+              <Table>
+                <THeadRow>
+                  <THead>구분</THead>
+                  <THead>관련법률</THead>
+                  <THead>보유기간</THead>
+                </THeadRow>
+                <TBody>
+                  <TRow>
+                    <Td>고객확인 및 거래정보에 관한 기록</Td>
+                    <Td>특정금융거래정보의 보고 및 이용등에 관한 법률</Td>
+                    <Td>5년</Td>
+                  </TRow>
+                  <TRow>
+                    <Td>계약등에 관한 기록</Td>
+                    <Td rowSpan={3}>
+                      전자상거래 등에서의 소비자 보호에 관한 법률
+                    </Td>
+                    <Td rowSpan={3}>5년</Td>
+                  </TRow>
+                  <TRow>
+                    <Td>대금결제 및 재화등의 공급에 관한 기록</Td>
+                  </TRow>
+                  <TRow>
+                    <Td>소비자불만, 분쟁처리에 관한 기록</Td>
+                  </TRow>
+                  <TRow>
+                    <Td>로그인 기록</Td>
+                    <Td>통신비밀보호법</Td>
+                    <Td>3개월이상</Td>
+                  </TRow>
+                  <TRow>
+                    <Td>가상자산 거래기록</Td>
+                    <Td>가상자산 이용자 보호등에 관한 법률</Td>
+                    <Td>15년</Td>
+                  </TRow>
+                </TBody>
+              </Table>
+            </TableWrapper>
           </Section>
 
           <Section>
@@ -222,209 +233,211 @@ const PrivacyPolicyPage = () => {
             </Description>
             <Divider32 />
 
-            <Table>
-              <THeadRow>
-                <THead>목적</THead>
-                <THead>제공 받는 자</THead>
-                <THead>제공 항목</THead>
-                <THead>보유기간</THead>
-                <THead>제공근거</THead>
-              </THeadRow>
-              <TBody>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>업비트 (Upbit)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+            <TableWrapper>
+              <Table>
+                <THeadRow>
+                  <THead>목적</THead>
+                  <THead>제공 받는 자</THead>
+                  <THead>제공 항목</THead>
+                  <THead>보유기간</THead>
+                  <THead>제공근거</THead>
+                </THeadRow>
+                <TBody>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>업비트 (Upbit)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>빗썸 (Bithumb)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>빗썸 (Bithumb)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>코인원 (coinone)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>코인원 (coinone)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>코빗 (korbit)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>코빗 (korbit)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>헥슬란트 (Hexlant)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>헥슬란트 (Hexlant)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>한국디지털자산수탁 (KDAC)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>한국디지털자산수탁 (KDAC)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>플라이빗 (Flybit)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>플라이빗 (Flybit)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>고팍스 (Gopax)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>고팍스 (Gopax)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>비블록 (Beeblock)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>비블록 (Beeblock)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>프라뱅 (Pravang)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>프라뱅 (Pravang)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>플랫타익스체인지 (FlataExchange)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>플랫타익스체인지 (FlataExchange)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>포블게이트 (FOBLGATE)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  </TRow>
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>포블게이트 (FOBLGATE)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
+                  </TRow>
 
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>보라비트 (Borabit)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>보라비트 (Borabit)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
+                  </TRow>
 
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>코어닥스 (COREDAX)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>코어닥스 (COREDAX)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
+                  </TRow>
 
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>페이코인 (PayCoin)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>페이코인 (PayCoin)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
+                  </TRow>
 
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>오아시스 (OASIS)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>오아시스 (OASIS)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
+                  </TRow>
 
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>인피닛블록 (InfiniteBlock)</Td>
-                  <Td>
-                    {`암호화된 이름, 
+                  <TRow>
+                    <Td>거래 정보에 관한 기록 제공</Td>
+                    <Td>인피닛블록 (InfiniteBlock)</Td>
+                    <Td>
+                      {`암호화된 이름, 
 가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
+                    </Td>
+                    <Td>탈퇴 후 5년</Td>
+                    <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-              </TBody>
-            </Table>
+                  </TRow>
+                </TBody>
+              </Table>
+            </TableWrapper>
             <Divider32 />
             <Description>
               {`② 법령에 따른 개인정보 제3자 제공현황
@@ -438,45 +451,47 @@ const PrivacyPolicyPage = () => {
             <Description>{`회사는 편리하고 더 나은 서비스를 제공하기 위해 업무 중 일부를 외부 전문업체에 위탁하고 있습니다. 그리고 위탁받은 업체가 관계법령을 위반하지 않도록 관리/감독을 하고 있습니다. 또한 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.`}</Description>
             <DescriptionDivider />
 
-            <Table>
-              <THeadRow>
-                <THead>수탁업체</THead>
-                <THead>위탁목적</THead>
-                <THead>위탁항목</THead>
-                <THead>위탁국가</THead>
-                <THead>위탁방법</THead>
-                <THead>이용기간</THead>
-              </THeadRow>
-              <TBody>
-                <TRow>
-                  <TdBold>Google LLC</TdBold>
-                  <Td>{`서비스 운영을 위한 Japan Region Cloud 서비스`}</Td>
-                  <Td>{`이름, 주소, 이메일, 서비스이용기록, 접속로그, 접속IP정보`}</Td>
-                  <Td>{`일본,
+            <TableWrapper>
+              <Table>
+                <THeadRow>
+                  <THead>수탁업체</THead>
+                  <THead>위탁목적</THead>
+                  <THead>위탁항목</THead>
+                  <THead>위탁국가</THead>
+                  <THead>위탁방법</THead>
+                  <THead>이용기간</THead>
+                </THeadRow>
+                <TBody>
+                  <TRow>
+                    <TdBold>Google LLC</TdBold>
+                    <Td>{`서비스 운영을 위한 Japan Region Cloud 서비스`}</Td>
+                    <Td>{`이름, 주소, 이메일, 서비스이용기록, 접속로그, 접속IP정보`}</Td>
+                    <Td>{`일본,
 연락처 : googlekrsupport@google.com`}</Td>
-                  <Td rowSpan={3}>{`서비스 이용시,
+                    <Td rowSpan={3}>{`서비스 이용시,
 네트워크를 통해 전송`}</Td>
-                  <Td>{`회원탈퇴시 
+                    <Td>{`회원탈퇴시 
 또는 위탁계약종료시까지`}</Td>
-                </TRow>
-                <TRow>
-                  <TdBold>Type Form</TdBold>
-                  <Td>{`홈페이지설문조사`}</Td>
-                  <Td>{`이름, 이메일, 휴대폰번호`}</Td>
-                  <Td>{`스페인, 
+                  </TRow>
+                  <TRow>
+                    <TdBold>Type Form</TdBold>
+                    <Td>{`홈페이지설문조사`}</Td>
+                    <Td>{`이름, 이메일, 휴대폰번호`}</Td>
+                    <Td>{`스페인, 
 연락처 : support@typeform.com`}</Td>
-                  <Td>{`설문조사 완료 및 위탁계약 종료시까지`}</Td>
-                </TRow>
-                <TRow>
-                  <TdBold>CODE</TdBold>
-                  <Td>{`가상자산트래블룰(자금이동규칙) 수행`}</Td>
-                  <Td>{`송금인/수취인 성명, 가상자산 지갑주소`}</Td>
-                  <Td>{`대한민국, 
+                    <Td>{`설문조사 완료 및 위탁계약 종료시까지`}</Td>
+                  </TRow>
+                  <TRow>
+                    <TdBold>CODE</TdBold>
+                    <Td>{`가상자산트래블룰(자금이동규칙) 수행`}</Td>
+                    <Td>{`송금인/수취인 성명, 가상자산 지갑주소`}</Td>
+                    <Td>{`대한민국, 
 연락처 : support@codevasp.com`}</Td>
-                  <Td>{`위탁계약 종료시까지`}</Td>
-                </TRow>
-              </TBody>
-            </Table>
+                    <Td>{`위탁계약 종료시까지`}</Td>
+                  </TRow>
+                </TBody>
+              </Table>
+            </TableWrapper>
           </Section>
           <Section>
             <SubTitle>{`5. 이용자 및 법정대리인의 권리·의무와 행사방법`}</SubTitle>

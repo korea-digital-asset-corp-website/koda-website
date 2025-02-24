@@ -1,6 +1,16 @@
 import { colors } from "src/styles/colors";
 import styled from "styled-components";
 
+export const TableWrapper = styled.div`
+  width: 100%;
+  flex: 1;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
 export const Table = styled.table`
   display: table;
   width: 100%;
