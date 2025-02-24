@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { Element } from "react-scroll";
 
 import Layout from "src/components/Layout";
 import { colors } from "src/styles/colors";
 import OtherHeader from "src/components/OtherHeader";
 import Footer from "src/components/Footer";
-import { H3, H4, H5, Body2Pre } from "src/components/Typography";
+import { H2, H3, H4, H5, Body2Pre, CaptionA } from "src/components/Typography";
 import { media } from "src/utils/media";
-import { Table, TBody, Td, TdBold, THead, THeadRow, TRow } from "../Table";
+
+type Props = any;
 
 const Container = styled(Layout)`
   background-color: ${colors.white};
@@ -80,11 +82,22 @@ const Description = styled(Body2Pre)`
   word-break: break-word;
 `;
 
+const DescriptionBold = styled(Body2Pre)`
+  font-weight: 900;
+  color: ${colors.text2.dark};
+  word-break: break-word;
+`;
+
 const DescriptionHighlight = styled(Body2Pre)`
   font-weight: 1000;
   font-size: 19px;
   color: ${colors.text2.dark};
   word-break: break-word;
+`;
+
+const Divider16 = styled.div`
+  width: 100%;
+  height: 16px;
 `;
 
 const Divider32 = styled.div`
@@ -111,7 +124,7 @@ const FooterView = styled(Footer)`
   `}
 `;
 
-const PrivacyPolicyPage = () => {
+const PrivacyPolicyPage20240221 = (props: Props) => {
   return (
     <React.Fragment>
       <Container id="outer-container">
@@ -126,17 +139,16 @@ const PrivacyPolicyPage = () => {
 
 1. 개인정보의 처리 목적
 2. 개인정보의 처리 및 보유기간
-3. 개인정보의 제3자 제공
-4. 개인정보처리의 위탁
-5. 이용자 및 법정대리인의 권리·의무와 행사방법
-6. 처리하는 개인정보의 항목
-7. 개인정보의 파기
-8. 개인정보의 안전성 확보 조치
-9. 개인정보 자동수집 장치의 설치·운영 및 거부에 관한 사항
-10. 개인정보 보호 책임자
-11. 개인정보 열람청구
-12. 권익침해 구제방법
-13. 개인정보 처리방침 변경`}
+3. 개인정보처리의 위탁
+4. 이용자 및 법정대리인의 권리·의무와 행사방법
+5. 처리하는 개인정보의 항목
+6. 개인정보의 파기
+7. 개인정보의 안전성 확보 조치
+8. 개인정보 자동수집 장치의 설치·운영 및 거부에 관한 사항
+9. 개인정보 보호 책임자
+10. 개인정보 열람청구
+11. 권익침해 구제방법
+12. 개인정보 처리방침 변경`}
             </Description>
           </ContentHeader>
           <Section>
@@ -171,315 +183,50 @@ const PrivacyPolicyPage = () => {
             <Divider32 />
             <Description>{`③ 제2항에도 불구하고, 다음 각호의 경우에는 해당 사유의 종료시까지 개인정보처리 및 보유를 할 수 있습니다.`}</Description>
             <Divider32 />
-
-            <Table>
-              <THeadRow>
-                <THead>구분</THead>
-                <THead>관련법률</THead>
-                <THead>보유기간</THead>
-              </THeadRow>
-              <TBody>
-                <TRow>
-                  <Td>고객확인 및 거래정보에 관한 기록</Td>
-                  <Td>특정금융거래정보의 보고 및 이용등에 관한 법률</Td>
-                  <Td>5년</Td>
-                </TRow>
-                <TRow>
-                  <Td>계약등에 관한 기록</Td>
-                  <Td rowSpan={3}>
-                    전자상거래 등에서의 소비자 보호에 관한 법률
-                  </Td>
-                  <Td rowSpan={3}>5년</Td>
-                </TRow>
-                <TRow>
-                  <Td>대금결제 및 재화등의 공급에 관한 기록</Td>
-                </TRow>
-                <TRow>
-                  <Td>소비자불만, 분쟁처리에 관한 기록</Td>
-                </TRow>
-                <TRow>
-                  <Td>로그인 기록</Td>
-                  <Td>통신비밀보호법</Td>
-                  <Td>3개월이상</Td>
-                </TRow>
-                <TRow>
-                  <Td>가상자산 거래기록</Td>
-                  <Td>가상자산 이용자 보호등에 관한 법률</Td>
-                  <Td>15년</Td>
-                </TRow>
-              </TBody>
-            </Table>
-          </Section>
-
-          <Section>
-            <SubTitle>{`3. 개인정보의 제3자 제공`}</SubTitle>
-            <Description>
-              {`회사는 고객의 개인정보를 고객에게 고지한 수집 범위 또는 서비스 이용약관에 명시한 범위를 넘어 이용하거나 제3자에게 제공하지 않습니다. 다만, 고객의 동의가 있거나 다음에 해당하는 경우에는 예외로 합니다.`}
-            </Description>
-            <DescriptionDivider />
-            <Description>
-              {`① 트래블룰: 특정 금융거래정보의 보고 및 이용 등에 관한 법률 준수 및 고객 자산 보호를 위하여 가상자산 출금 시 다음과 같은 개인정보를 국내·외 VASP(Virtual Asset Service Provider)에게 제공할 수 있습니다.`}
-            </Description>
+            <DescriptionTitle>{`고객 확인 기록`}</DescriptionTitle>
+            <Description>{`• 관련 법률: 특정금융거래정보의 보고 및 이용 등에 관한 법률
+• 보유 기간: 5년`}</Description>
             <Divider32 />
-
-            <Table>
-              <THeadRow>
-                <THead>목적</THead>
-                <THead>제공 받는 자</THead>
-                <THead>제공 항목</THead>
-                <THead>보유기간</THead>
-                <THead>제공근거</THead>
-              </THeadRow>
-              <TBody>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>업비트 (Upbit)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>빗썸 (Bithumb)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>코인원 (coinone)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>코빗 (korbit)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>헥슬란트 (Hexlant)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>한국디지털자산수탁 (KDAC)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>플라이빗 (Flybit)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>고팍스 (Gopax)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>비블록 (Beeblock)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>프라뱅 (Pravang)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>플랫타익스체인지 (FlataExchange)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>포블게이트 (FOBLGATE)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>보라비트 (Borabit)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>코어닥스 (COREDAX)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>페이코인 (PayCoin)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>오아시스 (OASIS)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-
-                <TRow>
-                  <Td>거래 정보에 관한 기록 제공</Td>
-                  <Td>인피닛블록 (InfiniteBlock)</Td>
-                  <Td>
-                    {`암호화된 이름, 
-가상자산 주소`}
-                  </Td>
-                  <Td>탈퇴 후 5년</Td>
-                  <Td>{`특정 금융거래정보의 
-보고 및 이용 등에 관한 법률`}</Td>
-                </TRow>
-              </TBody>
-            </Table>
+            <DescriptionTitle>{`계약 등에 관련된 기록`}</DescriptionTitle>
+            <Description>{`• 관련 법률: 전자상거래 등에서의 소비자보호에 관한 법률
+• 보유 기간: 5년`}</Description>
             <Divider32 />
-            <Description>
-              {`② 법령에 따른 개인정보 제3자 제공현황
-
-법원, 수사기관, 국세청 등 정해진 법령상 의무이행을 위하여 해당 법령에 정해진 절차와 방법에 따라 관계기관에 이용자 개인정보를 포함한 문서제출명령 또는 영장내 기재된 정보를 제공할 수 있습니다.`}
-            </Description>
+            <DescriptionTitle>{`대금결제 및 재화 등의 공급에 관한 기록`}</DescriptionTitle>
+            <Description>{`• 관련 법률: 전자상거래 등에서의 소비자보호에 관한 법률
+• 보유 기간: 5년`}</Description>
+            <Divider32 />
+            <DescriptionTitle>{`소비자의 불만 또는 분쟁처리에 관한 기록`}</DescriptionTitle>
+            <Description>{`• 관련 법률: 전자상거래 등에서의 소비자보호에 관한 법률
+• 보유 기간: 3년`}</Description>
+            <Divider32 />
+            <DescriptionTitle>{`로그인 기록`}</DescriptionTitle>
+            <Description>{`• 관련 법률: 통신비밀보호법
+• 보유 기간: 3개월 이상`}</Description>
           </Section>
-
           <Section>
-            <SubTitle>{`4. 개인정보처리의 위탁`}</SubTitle>
+            <SubTitle>{`3. 개인정보처리의 위탁`}</SubTitle>
             <Description>{`회사는 편리하고 더 나은 서비스를 제공하기 위해 업무 중 일부를 외부 전문업체에 위탁하고 있습니다. 그리고 위탁받은 업체가 관계법령을 위반하지 않도록 관리/감독을 하고 있습니다. 또한 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.`}</Description>
             <DescriptionDivider />
-
-            <Table>
-              <THeadRow>
-                <THead>수탁업체</THead>
-                <THead>위탁목적</THead>
-                <THead>위탁항목</THead>
-                <THead>위탁국가</THead>
-                <THead>위탁방법</THead>
-                <THead>이용기간</THead>
-              </THeadRow>
-              <TBody>
-                <TRow>
-                  <TdBold>Google LLC</TdBold>
-                  <Td>{`서비스 운영을 위한 Japan Region Cloud 서비스`}</Td>
-                  <Td>{`이름, 주소, 이메일, 서비스이용기록, 접속로그, 접속IP정보`}</Td>
-                  <Td>{`일본,
-연락처 : googlekrsupport@google.com`}</Td>
-                  <Td rowSpan={3}>{`서비스 이용시,
-네트워크를 통해 전송`}</Td>
-                  <Td>{`회원탈퇴시 
-또는 위탁계약종료시까지`}</Td>
-                </TRow>
-                <TRow>
-                  <TdBold>Type Form</TdBold>
-                  <Td>{`홈페이지설문조사`}</Td>
-                  <Td>{`이름, 이메일, 휴대폰번호`}</Td>
-                  <Td>{`스페인, 
-연락처 : support@typeform.com`}</Td>
-                  <Td>{`설문조사 완료 및 위탁계약 종료시까지`}</Td>
-                </TRow>
-                <TRow>
-                  <TdBold>CODE</TdBold>
-                  <Td>{`가상자산트래블룰(자금이동규칙) 수행`}</Td>
-                  <Td>{`송금인/수취인 성명, 가상자산 지갑주소`}</Td>
-                  <Td>{`대한민국, 
-연락처 : support@codevasp.com`}</Td>
-                  <Td>{`위탁계약 종료시까지`}</Td>
-                </TRow>
-              </TBody>
-            </Table>
+            <DescriptionTitle>{`개인정보처리 수탁업체(국외)`}</DescriptionTitle>
+            <Divider16 />
+            <DescriptionBold>{`Google LLC.`}</DescriptionBold>
+            <Description>{`• 위탁 내용: 서비스 운영을 위한 Japan Region Cloud 서비스
+• 위탁 항목: 이름, 주소, 이메일, 서비스 이용 기록, 접속 로그, 접속 IP 정보
+• 위탁 국가, 연락처: 일본, googlekrsupport@google.com
+• 위탁 방법: 서비스 이용시, 네트워크를 통해 전송
+• 이용 기간: 회원탈퇴 시 혹은 위탁계약 종료 시까지
+• 이전을 거부하는 방법 및 효과: 안전한 서비스 제공을 위해 중요정보를 백업하기 위해 국외에 이전하고 있으며, 거부하실경우 서비스 계약 종료를 요청해주시기 바랍니다.`}</Description>
+            <Divider16 />
+            <DescriptionBold>{`Type Form`}</DescriptionBold>
+            <Description>{`• 위탁 내용: 홈페이지 문의 페이지 구현
+• 위탁 항목: 이름, 이메일, 핸드폰번호
+• 위탁 국가, 연락처: 스페인, support@typeform.com
+• 위탁 방법: 서비스 이용시, 네트워크를 통해 전송
+• 이용 기간: 문의 처리 완료 후 즉시 폐기
+• 이전을 거부하는 방법 및 효과 : 홈페이지 문의 서비스 제공을 위해 국외에 이전하고 있습니다. 거부하실경우 유선상으로 문의주시기 바라며, 문의하신 경우 데이터 삭제를 요청해주시기 바랍니다.`}</Description>
           </Section>
           <Section>
-            <SubTitle>{`5. 이용자 및 법정대리인의 권리·의무와 행사방법`}</SubTitle>
+            <SubTitle>{`4. 이용자 및 법정대리인의 권리·의무와 행사방법`}</SubTitle>
             <Description>{`① 이용자는 회사에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다. 다만, 개인정보 보호법 제35조 제4항, 제36조 제1항, 제37조 제2항 등 관계 법령에서 정하는 바에 따라 이용자의 개인정보 열람·정정·삭제·처리정지 요구 등의 권리 행사가 제한 될 수 있습니다
 
 ② 이용자의 권리 행사는  「개인정보 보호법」 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 회사는 이에 대해 지체 없이 조치하겠습니다.
@@ -491,7 +238,7 @@ const PrivacyPolicyPage = () => {
 ⑤ 회사는 이용자 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.`}</Description>
           </Section>
           <Section>
-            <SubTitle>{`6. 처리하는 개인정보의 항목`}</SubTitle>
+            <SubTitle>{`5. 처리하는 개인정보의 항목`}</SubTitle>
             <Description>{`회사는 가상자산 수탁서비스를 제공하기 위해 다음의 개인정보 항목을 수집하고 있습니다. `}</Description>
             <Divider32 />
             <DescriptionTitle>{`서비스 등 문의`}</DescriptionTitle>
@@ -500,10 +247,10 @@ const PrivacyPolicyPage = () => {
             <DescriptionTitle>{`가상자산 수탁 서비스 등 제공 `}</DescriptionTitle>
             <Description>{`• 필수항목 : 법인단체 거래신청서 및 고객거래확인서(성명(한글/영문), 생년월일, 거주지(주소), 국적, 이메일주소, 휴대전화번호), 대표자/대리인 권한 위임장(성명, 주민등록번호, 거주지(주소), 휴대폰번호), 법인인감증명서(대표자명, 대표자 주민등록번호), 주주명부(대표자명, 거주지(주소), 주민등록번호), 대표자/대리인 신분증`}</Description>
             <br></br>
-            <Description>{`• 자산이동 수집항목 : 송금인/수취인 성명, 송금인/수취인 주소, 송금인 전화번호`}</Description>
+            <Description>{`• 자산이동 수집항목 : 성명, 주소, 전화번호`}</Description>
           </Section>
           <Section>
-            <SubTitle>{`7. 개인정보의 파기`}</SubTitle>
+            <SubTitle>{`6. 개인정보의 파기`}</SubTitle>
             <Description>{`① 회사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.
 
 ② 이용자로 부터 동의 받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.
@@ -518,7 +265,7 @@ const PrivacyPolicyPage = () => {
 • 파기 방법: 전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다. 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.`}</Description>
           </Section>
           <Section>
-            <SubTitle>{`8. 개인정보의 안전성 확보 조치`}</SubTitle>
+            <SubTitle>{`7. 개인정보의 안전성 확보 조치`}</SubTitle>
             <Description>{`회사는 개인정보 보호법 제29조에 따라 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.
 
 ① 정기적인 자체 감사 실시
@@ -549,7 +296,7 @@ const PrivacyPolicyPage = () => {
 개인정보를 보관하고 있는 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립, 운영하고 있습니다.`}</Description>
           </Section>
           <Section>
-            <SubTitle>{`9. 개인정보 자동 수집 장치의 설치︎・운영 및 거부에 관한 사항`}</SubTitle>
+            <SubTitle>{`8. 개인정보 자동 수집 장치의 설치︎・운영 및 거부에 관한 사항`}</SubTitle>
             <Description>
               {`① 회사는 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다. 이에 더해, 회사는 Typeform을 이용하여 사용자의 웹사이트 사용 행태를 분석함으로써 서비스 개선에 활용합니다.
 
@@ -563,7 +310,7 @@ const PrivacyPolicyPage = () => {
             </Description>
           </Section>
           <Section>
-            <SubTitle>{`10. 개인정보 보호책임자`}</SubTitle>
+            <SubTitle>{`9. 개인정보 보호책임자`}</SubTitle>
             <Description>
               {`① 회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 이용자의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.`}
             </Description>
@@ -576,7 +323,7 @@ const PrivacyPolicyPage = () => {
             <Description>{`② 이용자가 회사의 서비스를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 회사는 이용자의 문의 사항에 대해 지체 없이 답변 및 처리해드릴 것입니다.`}</Description>
           </Section>
           <Section>
-            <SubTitle>{`11. 개인정보 열람청구`}</SubTitle>
+            <SubTitle>{`10. 개인정보 열람청구`}</SubTitle>
             <Description>{`이용자는 ｢개인정보 보호법｣ 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다.
 회사는 이용자의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.`}</Description>
             <Divider32 />
@@ -587,7 +334,7 @@ const PrivacyPolicyPage = () => {
 • 이메일 : support@kodax.com`}</Description>
           </Section>
           <Section>
-            <SubTitle>{`12. 권익침해 구제방법`}</SubTitle>
+            <SubTitle>{`11. 권익침해 구제방법`}</SubTitle>
             <Description>{`개인정보 침해에 대한 피해구제, 상담 등이 필요한 경우 다음 기관에 문의하실 수 있습니다.
 
 • 개인정보분쟁조정위원회 : (국번없이) 1833-6972 (www.kopico.go.kr)
@@ -596,13 +343,13 @@ const PrivacyPolicyPage = () => {
 • 경찰청 사이버수사국 : (국번없이) 182 (ecrm.police.go.kr/minwon/main)`}</Description>
           </Section>
           <Section>
-            <SubTitle>{`13. 개인정보 처리방침 변경`}</SubTitle>
+            <SubTitle>{`12. 개인정보 처리방침 변경`}</SubTitle>
             <Description>{`회사가 개인정보 처리방침을 변경하는 경우에는 변경 및 시행의 시기, 변경된 내용을 지속적으로 공개하며, 변경된 내용은 이용자가 쉽게 확인 할 수 있도록 변경 전·후를 비교하여 공개합니다.`}</Description>
           </Section>
           <Section>
             <DescriptionTitle>{`<부칙>`}</DescriptionTitle>
-            <Description>{`(시행일) 이 개인정보처리방침은 2025년 3월 4일부터 적용됩니다.`}</Description>
-            <DescriptionHighlight>{`*변경 내역: [개인정보 제3자 제공 추가 - CODE]`}</DescriptionHighlight>
+            <Description>{`(시행일) 이 개인정보처리방침은 2024년 2월 21일부터 적용됩니다.`}</Description>
+            <DescriptionHighlight>{`*변경 내역: [개인정보 보호 책임자 사항 변경]`}</DescriptionHighlight>
             <Description>{`
 [이전 개인정보 처리방침 목록]`}</Description>
             <PrivacyPolicy href="/old-privacy-policy-20210101">{`(2021.01.01일 시행) 개인정보 처리방침 v0`}</PrivacyPolicy>
@@ -610,8 +357,6 @@ const PrivacyPolicyPage = () => {
             <PrivacyPolicy href="/old-privacy-policy-20220325">{`(2022.03.25일 시행) 개인정보 처리방침 v1`}</PrivacyPolicy>
             <br></br>
             <PrivacyPolicy href="/old-privacy-policy-20230616">{`(2023.06.16일 시행) 개인정보 처리방침 v2`}</PrivacyPolicy>
-            <br></br>
-            <PrivacyPolicy href="/old-privacy-policy-20240221">{`(2024.02.21일 시행) 개인정보 처리방침 v3`}</PrivacyPolicy>
           </Section>
           <FooterView />
         </Content>
@@ -620,4 +365,4 @@ const PrivacyPolicyPage = () => {
   );
 };
 
-export default PrivacyPolicyPage;
+export default PrivacyPolicyPage20240221;
