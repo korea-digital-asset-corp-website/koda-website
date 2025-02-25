@@ -616,7 +616,7 @@ const PrivacyPolicyPage = () => {
           </Section>
           <Section>
             <DescriptionTitle>{`<부칙>`}</DescriptionTitle>
-            <Description>{`(시행일) 이 개인정보처리방침은 2025년 3월 4일부터 적용됩니다.`}</Description>
+            <Description>{`(시행일) 이 개인정보처리방침은 2025년 2월 25일부터 적용됩니다.`}</Description>
             <DescriptionHighlight>{`*변경 내역: [개인정보 제3자 제공 추가 - CODE]`}</DescriptionHighlight>
             <Description>{`
 [이전 개인정보 처리방침 목록]`}</Description>
