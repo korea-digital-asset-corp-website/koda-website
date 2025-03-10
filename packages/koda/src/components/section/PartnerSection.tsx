@@ -269,8 +269,8 @@ const PartnerSection = (props: Props) => {
           <Title>{translate(["partnerSection", "title"], t)}</Title>
           <RowContainer>
             {renderPartnerItemByLanguageAndType(language, "kbBank")}
-            {renderPartnerItemByLanguageAndType(language, "haechilabs")}
             {renderPartnerItemByLanguageAndType(language, "hashed")}
+            {renderPartnerItemByLanguageAndType(language, "haechilabs")}
           </RowContainer>
         </Inner>
       </MediaQuery>
