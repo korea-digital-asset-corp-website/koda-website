@@ -93,83 +93,133 @@ const NewsSection = (props: Props) => {
         <Title>{`언론 보도`}</Title>
         <Content>
           <CardItem
-            thumnailImage={images.news10Src}
+            thumnailImage={images.news18Src}
             title={
               <React.Fragment>
-                {`인터넷컴퓨터 코리아허브(ICP.Hub Korea), 코다와 가상자산 생태계 신뢰도를 높히기 위한 업무협약 체결`}
+                {`에덤-KODA 전략적 MOU체결, 교육분야 가상자산의 보안성 강화 협력`}
               </React.Fragment>
             }
-            caption={"토큰포스트, 2024.01"}
-            uri={"https://www.tokenpost.kr/article-161939"}
+            caption={"매일경제, 2025.03"}
+            uri={"https://www.mk.co.kr/news/business/11257685"}
             onClick={_.partial(
               onLink,
-              `인터넷컴퓨터 코리아허브(ICP.Hub Korea), 코다와 가상자산 생태계 신뢰도를 높히기 위한 업무협약 체결"`,
+              `에덤-KODA 전략적 MOU체결, 교육분야 가상자산의 보안성 강화 협력`,
             )}
           />
           <CardItem
-            thumnailImage={images.news11Src}
+            thumnailImage={images.news15Src}
             title={
               <React.Fragment>
-                {`아이피버스, 한국디지털에셋과 가상자산 수탁 협약 체결`}
+                {`KODA, 가상자산사업자 갱신신고 수리 완료…커스터디 기업 최초`}
               </React.Fragment>
             }
-            caption={"아이비티즈, 2024.01"}
-            uri={"https://www.it-b.co.kr/news/articleView.html?idxno=73412"}
+            caption={"뉴스1, 2025.02"}
+            uri={"https://www.news1.kr/finance/blockchain-fintech/5704266"}
             onClick={_.partial(
               onLink,
-              `아이피버스, 한국디지털에셋과 가상자산 수탁 협약 체결`,
+              `KODA, 가상자산사업자 갱신신고 수리 완료…커스터디 기업 최초`,
             )}
           />
           <LastCardItem
-            thumnailImage={images.news12Src}
-            title={`캐리버스, 한국디지털에셋와 파트너십 체결 "안전성+투명성 제고"`}
-            caption={"머니투데이, 2024.01"}
-            uri={"https://news.mt.co.kr/mtview.php?no=2024012217022690953"}
+            thumnailImage={images.news17Src}
+            title={
+              <React.Fragment>
+                {`KODA, 국내 최초 가상자산 이용자 보호법 보안 기준 충족`}
+              </React.Fragment>
+            }
+            caption={"매일경제, 2025.02"}
+            uri={"https://www.mk.co.kr/news/it/11251597"}
             onClick={_.partial(
               onLink,
-              `캐리버스, 한국디지털에셋와 파트너십 체결 "안전성+투명성 제고"`,
+              `KODA, 국내 최초 가상자산 이용자 보호법 보안 기준 충족`,
             )}
           />
         </Content>
         <Content>
           <CardItem
-            thumnailImage={images.news5Src}
+            thumnailImage={images.news13Src}
             title={
               <React.Fragment>
-                {`한국디지털에셋(KODA), 폴리곤랩스와 맞손…커스터디 서비스 제공`}
+                {`비트맥스-한국디지털에셋, 업무협약 체결…비트코인 전략 자산 본격화`}
               </React.Fragment>
             }
-            caption={"한경닷컴, 2023.04"}
-            uri={"https://www.hankyung.com/finance/article/202304248119B"}
+            caption={"이투데이, 2025.02"}
+            uri={"https://www.etoday.co.kr/news/view/2447415"}
             onClick={_.partial(
               onLink,
-              `한국디지털에셋(KODA), 폴리곤랩스와 맞손…커스터디 서비스 제공`,
+              `비트맥스-한국디지털에셋, 업무협약 체결…비트코인 전략 자산 본격화`,
             )}
           />
           <CardItem
-            thumnailImage={images.news4Src}
+            thumnailImage={images.news21Src}
             title={
               <React.Fragment>
-                {`팬시토큰(fanC), 한국디지털에셋(KODA)과 커스터디 계약 체결"`}
+                {`"금융산업 경쟁력 위해 가상자산 ETF 도입해야"`}
               </React.Fragment>
             }
-            caption={"아시아경제, 2023.02"}
-            uri={"https://www.asiae.co.kr/article/2023020315140699312"}
+            caption={"뉴시스, 2024.12"}
+            uri={"https://www.newsis.com/view/NISX20241220_0003005184"}
             onClick={_.partial(
               onLink,
-              `팬시토큰(fanC), 한국디지털에셋(KODA)과 커스터디 계약 체결"`,
+              `금융산업 경쟁력 위해 가상자산 ETF 도입해야`,
             )}
           />
           <LastCardItem
-            thumnailImage={images.news6Src}
-            title={`KODA, 쟁글과 투명한 가상자산 거래 위한 업무협약`}
-            caption={"공감언론 뉴시스, 2022.03"}
-            uri={
-              "https://mobile.newsis.com/view.html?ar_id=NISX20220302_0001778723#_PA"
+            thumnailImage={images.news19Src}
+            title={
+              <React.Fragment>
+                {`오덜리 네트워크, 코다와 전략적 파트너십 체결로 한국 웹3 도입 가속화`}
+              </React.Fragment>
             }
+            caption={"토큰포스트, 2024.11"}
+            uri={"https://www.tokenpost.kr/article-206171"}
             onClick={_.partial(
               onLink,
-              "KODA, 쟁글과 투명한 가상자산 거래 위한 업무협약",
+              `오덜리 네트워크, 코다와 전략적 파트너십 체결로 한국 웹3 도입 가속화`,
+            )}
+          />
+        </Content>
+        <Content>
+          <CardItem
+            thumnailImage={images.news20Src}
+            title={
+              <React.Fragment>
+                {`스틸리언, 한국디지털에셋에 보안진단서비스 수행`}
+              </React.Fragment>
+            }
+            caption={"보안뉴스, 2024.06"}
+            uri={"https://www.boannews.com/media/view.asp?idx=130295"}
+            onClick={_.partial(
+              onLink,
+              `스틸리언, 한국디지털에셋에 보안진단서비스 수행`,
+            )}
+          />
+          <CardItem
+            thumnailImage={images.news16Src}
+            title={
+              <React.Fragment>
+                {`가상자산 수탁 기업 '코다', 프리 시리즈 A 투자 유치`}
+              </React.Fragment>
+            }
+            caption={"토큰포스트, 2024.05"}
+            uri={"https://www.tokenpost.kr/article-179186"}
+            onClick={_.partial(
+              onLink,
+              `가상자산 수탁 기업 '코다', 프리 시리즈 A 투자 유치`,
+            )}
+          />
+          <LastCardItem
+            thumnailImage={images.news15Src}
+            title={
+              <React.Fragment>
+                {`KODA, 가상자산 수탁고 8조 달성…시장 점유율 80% 이상`}
+              </React.Fragment>
+            }
+            caption={"전자신문, 2024.02"}
+            uri={"https://www.etnews.com/20240222000131"}
+            onClick={_.partial(
+              onLink,
+              `KODA, 가상자산 수탁고 8조 달성…시장 점유율 80% 이상`,
             )}
           />
         </Content>
@@ -189,7 +239,7 @@ const NewsSection = (props: Props) => {
             )}
           />
           <CardItem
-            thumnailImage={images.news2Src}
+            thumnailImage={images.news14Src}
             title={`국내 기업도 테슬라처럼...비트코인 투자 길 열렸다`}
             caption={"서울경제, 2021.05"}
             uri={"https://www.sedaily.com/NewsView/22M7T2LDX9"}

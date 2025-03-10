@@ -27,7 +27,7 @@ const Thumnail = styled.div`
   justify-content: center;
   align-items: center;
   width: 368px;
-  height: 245px;
+  height: 220px;
   background: #154640;
   ${media.mobile`
     width: 327px;

@@ -29,7 +29,7 @@ function SEO({ description, lang, keywords, thumnail, title }: Props) {
   const metaUrl = site.siteMetadata.siteUrl;
   const metaImage = thumnail || site.siteMetadata.og_image;
   const metaKeywords = (
-    keywords || ["koda", "henesis", "blockchain", "haechilabs"]
+    keywords || ["koda", "한국디지털에셋", "가상자산", "블록체인", "비트코인", "기관", "법인", "커스터디", "수탁"]
   ).join(",");
 
   return (
