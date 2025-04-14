@@ -174,7 +174,7 @@ const ConsignmentSection = (props: Props) => {
               </Value>
             </Item>
             <Item>
-              <Label>멀티시그 시스템</Label>
+              <Label>MPC 시스템</Label>
               <Value>{`하나의 키를 분실하거나 유출되어도 자산이 탈취되지 않으며
 복구가 가능합니다.`}</Value>
             </Item>
