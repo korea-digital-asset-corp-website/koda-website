@@ -620,13 +620,13 @@ const PrivacyPolicyPage20240225 = () => {
             <DescriptionHighlight>{`*변경 내역: [개인정보 제3자 제공 추가 - CODE]`}</DescriptionHighlight>
             <Description>{`
 [이전 개인정보 처리방침 목록]`}</Description>
-            <PrivacyPolicy href="/old-privacy-policy-20210101">{`(2021.01.01일 시행) 개인정보 처리방침 v0`}</PrivacyPolicy>
-            <br></br>
-            <PrivacyPolicy href="/old-privacy-policy-20220325">{`(2022.03.25일 시행) 개인정보 처리방침 v1`}</PrivacyPolicy>
+            <PrivacyPolicy href="/old-privacy-policy-20240221">{`(2024.02.21일 시행) 개인정보 처리방침 v3`}</PrivacyPolicy>
             <br></br>
             <PrivacyPolicy href="/old-privacy-policy-20230616">{`(2023.06.16일 시행) 개인정보 처리방침 v2`}</PrivacyPolicy>
             <br></br>
-            <PrivacyPolicy href="/old-privacy-policy-20240221">{`(2024.02.21일 시행) 개인정보 처리방침 v3`}</PrivacyPolicy>
+            <PrivacyPolicy href="/old-privacy-policy-20220325">{`(2022.03.25일 시행) 개인정보 처리방침 v1`}</PrivacyPolicy>
+            <br></br>
+            <PrivacyPolicy href="/old-privacy-policy-20210101">{`(2021.01.01일 시행) 개인정보 처리방침 v0`}</PrivacyPolicy>
           </Section>
           <FooterView />
         </Content>

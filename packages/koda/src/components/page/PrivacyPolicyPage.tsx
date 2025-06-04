@@ -136,7 +136,7 @@ const PrivacyPolicyPage = () => {
 1. 개인정보의 처리 목적
 2. 개인정보의 처리 및 보유기간
 3. 개인정보의 제3자 제공
-4. 개인정보처리의 위탁
+4. 개인정보처리의 위탁 및 국외 이전
 5. 이용자 및 법정대리인의 권리·의무와 행사방법
 6. 처리하는 개인정보의 항목
 7. 개인정보의 파기
@@ -622,18 +622,18 @@ const PrivacyPolicyPage = () => {
           <Section>
             <DescriptionTitle>{`<부칙>`}</DescriptionTitle>
             <Description>{`(시행일) 이 개인정보처리방침은 2025년 6월 4일부터 적용됩니다.`}</Description>
-            <DescriptionHighlight>{`*변경 내역: [개인정보 처리 위탁 및 국외 이전 추가 - CODE]`}</DescriptionHighlight>
+            <DescriptionHighlight>{`*변경 내역: [개인정보 처리 위탁 및 국외 이전 추가]`}</DescriptionHighlight>
             <Description>{`
 [이전 개인정보 처리방침 목록]`}</Description>
-            <PrivacyPolicy href="/old-privacy-policy-20210101">{`(2021.01.01일 시행) 개인정보 처리방침 v0`}</PrivacyPolicy>
-            <br></br>
-            <PrivacyPolicy href="/old-privacy-policy-20220325">{`(2022.03.25일 시행) 개인정보 처리방침 v1`}</PrivacyPolicy>
-            <br></br>
-            <PrivacyPolicy href="/old-privacy-policy-20230616">{`(2023.06.16일 시행) 개인정보 처리방침 v2`}</PrivacyPolicy>
+            <PrivacyPolicy href="/old-privacy-policy-20240225">{`(2024.02.25일 시행) 개인정보 처리방침 v4`}</PrivacyPolicy>
             <br></br>
             <PrivacyPolicy href="/old-privacy-policy-20240221">{`(2024.02.21일 시행) 개인정보 처리방침 v3`}</PrivacyPolicy>
             <br></br>
-            <PrivacyPolicy href="/old-privacy-policy-20240225">{`(2024.02.25일 시행) 개인정보 처리방침 v4`}</PrivacyPolicy>
+            <PrivacyPolicy href="/old-privacy-policy-20230616">{`(2023.06.16일 시행) 개인정보 처리방침 v2`}</PrivacyPolicy>
+            <br></br>
+            <PrivacyPolicy href="/old-privacy-policy-20220325">{`(2022.03.25일 시행) 개인정보 처리방침 v1`}</PrivacyPolicy>
+            <br></br>
+            <PrivacyPolicy href="/old-privacy-policy-20210101">{`(2021.01.01일 시행) 개인정보 처리방침 v0`}</PrivacyPolicy>
           </Section>
           <FooterView />
         </Content>

@@ -348,9 +348,9 @@ const PrivacyPolicyPage2023 = (props: Props) => {
             <DescriptionHighlight>{`*변경 내역: [가상자산 수탁 서비스 등 제공 관련 개인정보(대리인 포함)의 항목 추가]`}</DescriptionHighlight>
             <Description>{`
 [이전 개인정보 처리방침 목록]`}</Description>
-            <PrivacyPolicy href="/old-privacy-policy-20210101">{`(2021.01.01일 시행) 개인정보 처리방침 v0`}</PrivacyPolicy>
-            <br></br>
             <PrivacyPolicy href="/old-privacy-policy-20220325">{`(2022.03.25일 시행) 개인정보 처리방침 v1`}</PrivacyPolicy>
+            <br></br>
+            <PrivacyPolicy href="/old-privacy-policy-20210101">{`(2021.01.01일 시행) 개인정보 처리방침 v0`}</PrivacyPolicy>
           </Section>
           <FooterView />
         </Content>
