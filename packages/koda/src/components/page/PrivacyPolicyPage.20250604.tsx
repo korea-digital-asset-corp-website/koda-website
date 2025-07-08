@@ -120,7 +120,7 @@ const FooterView = styled(Footer)`
   `}
 `;
 
-const PrivacyPolicyPage20240225 = () => {
+const PrivacyPolicyPage20250604 = () => {
   return (
     <React.Fragment>
       <Container id="outer-container">
@@ -136,7 +136,7 @@ const PrivacyPolicyPage20240225 = () => {
 1. 개인정보의 처리 목적
 2. 개인정보의 처리 및 보유기간
 3. 개인정보의 제3자 제공
-4. 개인정보처리의 위탁
+4. 개인정보처리의 위탁 및 국외 이전
 5. 이용자 및 법정대리인의 권리·의무와 행사방법
 6. 처리하는 개인정보의 항목
 7. 개인정보의 파기
@@ -447,19 +447,24 @@ const PrivacyPolicyPage20240225 = () => {
           </Section>
 
           <Section>
-            <SubTitle>{`4. 개인정보처리의 위탁`}</SubTitle>
-            <Description>{`회사는 편리하고 더 나은 서비스를 제공하기 위해 업무 중 일부를 외부 전문업체에 위탁하고 있습니다. 그리고 위탁받은 업체가 관계법령을 위반하지 않도록 관리/감독을 하고 있습니다. 또한 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.`}</Description>
+            <SubTitle>{`4. 개인정보처리의 위탁 및 국외 이전`}</SubTitle>
+            <Description>
+              {`회사는 편리하고 더 나은 서비스를 제공하기 위해 업무 중 일부를 외부 전문업체에 위탁하고 있습니다. 그리고 위탁받은 업체가 관계법령을 위반하지 않도록 관리/감독을 하고 있습니다. 또한 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.
+
+원활한 서비스 제공을 위해 일부 개인정보를 국외 사업자에 위탁하여 처리하고 있습니다.
+고객은 회사의 개인정보 보호책임자에게 이메일(support@kodax.com) 또는 서면 요청을 통해 개인정보 국외 이전을 거부할 수 있으나, 거부할 경우 해당 서비스 이용이 제한됩니다.`}
+            </Description>
             <DescriptionDivider />
 
             <TableWrapper>
               <Table>
                 <THeadRow>
                   <THead>수탁업체</THead>
-                  <THead>위탁목적</THead>
-                  <THead>위탁항목</THead>
-                  <THead>위탁국가</THead>
-                  <THead>위탁방법</THead>
-                  <THead>이용기간</THead>
+                  <THead>위탁 및 이전 목적</THead>
+                  <THead>위탁 및 이전 항목</THead>
+                  <THead>위탁 및 이전 국가</THead>
+                  <THead>위탁 및 이전 방법</THead>
+                  <THead>이용 및 보유 기간</THead>
                 </THeadRow>
                 <TBody>
                   <TRow>
@@ -616,10 +621,12 @@ const PrivacyPolicyPage20240225 = () => {
           </Section>
           <Section>
             <DescriptionTitle>{`<부칙>`}</DescriptionTitle>
-            <Description>{`(시행일) 이 개인정보처리방침은 2025년 2월 25일부터 적용됩니다.`}</Description>
-            <DescriptionHighlight>{`*변경 내역: [개인정보 처리위탁 - CODE]`}</DescriptionHighlight>
+            <Description>{`(시행일) 이 개인정보처리방침은 2025년 6월 4일부터 적용됩니다.`}</Description>
+            <DescriptionHighlight>{`*변경 내역: [개인정보 처리 위탁 및 국외 이전 추가]`}</DescriptionHighlight>
             <Description>{`
 [이전 개인정보 처리방침 목록]`}</Description>
+            <PrivacyPolicy href="/old-privacy-policy-20250225">{`(2025.02.25일 시행) 개인정보 처리방침 v4`}</PrivacyPolicy>
+            <br></br>
             <PrivacyPolicy href="/old-privacy-policy-20240221">{`(2024.02.21일 시행) 개인정보 처리방침 v3`}</PrivacyPolicy>
             <br></br>
             <PrivacyPolicy href="/old-privacy-policy-20230616">{`(2023.06.16일 시행) 개인정보 처리방침 v2`}</PrivacyPolicy>
@@ -635,4 +642,4 @@ const PrivacyPolicyPage20240225 = () => {
   );
 };
 
-export default PrivacyPolicyPage20240225;
+export default PrivacyPolicyPage20250604;

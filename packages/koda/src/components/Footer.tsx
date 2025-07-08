@@ -176,13 +176,13 @@ const Footer = (props: Props) => {
             <b>개인정보처리방침</b>
           </AtagMR48>
           <AtagMR48 href="/ethical-management">
-            <b>윤리경영</b>
+            <p>윤리경영</p>
           </AtagMR48>
           <AtagMR48 href="/work-guidelines">
-            <b>업무지침</b>
+            <p>업무지침</p>
           </AtagMR48>
           <AtagMR60 href="/crypto-warning">
-            <b>가상자산 거래에 관한 유의사항</b>
+            <p>가상자산 거래에 관한 유의사항</p>
           </AtagMR60>
           <Email
             target="_blank"

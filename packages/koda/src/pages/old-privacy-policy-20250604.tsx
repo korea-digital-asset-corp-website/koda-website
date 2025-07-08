@@ -1,7 +1,7 @@
 import { PageRendererProps } from "gatsby";
 import React, { Component } from "react";
 import SEO from "src/components/SEO";
-import PrivacyPolicyPage20240225 from "src/components/page/PrivacyPolicyPage.20240225";
+import PrivacyPolicyPage20250604 from "src/components/page/PrivacyPolicyPage.20250604";
 
 type Props = PageRendererProps;
 
@@ -10,7 +10,7 @@ class PrivacyPolicy extends Component<Props> {
     return (
       <React.Fragment>
         <SEO />
-        <PrivacyPolicyPage20240225 />
+        <PrivacyPolicyPage20250604 />
       </React.Fragment>
     );
   }

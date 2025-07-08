@@ -120,7 +120,7 @@ const FooterView = styled(Footer)`
   `}
 `;
 
-const PrivacyPolicyPage = () => {
+const PrivacyPolicyPage20250225 = () => {
   return (
     <React.Fragment>
       <Container id="outer-container">
@@ -136,7 +136,7 @@ const PrivacyPolicyPage = () => {
 1. 개인정보의 처리 목적
 2. 개인정보의 처리 및 보유기간
 3. 개인정보의 제3자 제공
-4. 개인정보처리의 위탁 및 국외 이전
+4. 개인정보처리의 위탁
 5. 이용자 및 법정대리인의 권리·의무와 행사방법
 6. 처리하는 개인정보의 항목
 7. 개인정보의 파기
@@ -191,15 +191,13 @@ const PrivacyPolicyPage = () => {
                 <TBody>
                   <TRow>
                     <Td>고객확인 및 거래정보에 관한 기록</Td>
-                    <Td>
-                      특정금융거래정보의 보고 및 이용등에 관한 법률 제 5 조의 4
-                    </Td>
+                    <Td>특정금융거래정보의 보고 및 이용등에 관한 법률</Td>
                     <Td>5년</Td>
                   </TRow>
                   <TRow>
                     <Td>계약등에 관한 기록</Td>
                     <Td rowSpan={3}>
-                      전자상거래 등에서의 소비자 보호에 관한 법률 제 6 조
+                      전자상거래 등에서의 소비자 보호에 관한 법률
                     </Td>
                     <Td rowSpan={3}>5년</Td>
                   </TRow>
@@ -211,12 +209,12 @@ const PrivacyPolicyPage = () => {
                   </TRow>
                   <TRow>
                     <Td>로그인 기록</Td>
-                    <Td>통신비밀보호법 제 15 조의 2</Td>
+                    <Td>통신비밀보호법</Td>
                     <Td>3개월이상</Td>
                   </TRow>
                   <TRow>
                     <Td>가상자산 거래기록</Td>
-                    <Td>가상자산 이용자 보호등에 관한 법률 제 9 조</Td>
+                    <Td>가상자산 이용자 보호등에 관한 법률</Td>
                     <Td>15년</Td>
                   </TRow>
                 </TBody>
@@ -241,6 +239,7 @@ const PrivacyPolicyPage = () => {
                   <THead>목적</THead>
                   <THead>제공 받는 자</THead>
                   <THead>제공 항목</THead>
+                  <THead>보유기간</THead>
                   <THead>제공근거</THead>
                 </THeadRow>
                 <TBody>
@@ -251,6 +250,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -261,6 +261,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -271,6 +272,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -281,6 +283,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -291,6 +294,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -301,6 +305,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -311,6 +316,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -321,6 +327,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -331,6 +338,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -341,6 +349,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -351,6 +360,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -361,6 +371,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -372,6 +383,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -383,6 +395,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -394,6 +407,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -405,6 +419,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -416,6 +431,7 @@ const PrivacyPolicyPage = () => {
                       {`암호화된 이름, 
 가상자산 주소`}
                     </Td>
+                    <Td>탈퇴 후 5년</Td>
                     <Td>{`특정 금융거래정보의 
 보고 및 이용 등에 관한 법률`}</Td>
                   </TRow>
@@ -431,32 +447,26 @@ const PrivacyPolicyPage = () => {
           </Section>
 
           <Section>
-            <SubTitle>{`4. 개인정보처리의 위탁 및 국외 이전`}</SubTitle>
-            <Description>
-              {`회사는 편리하고 더 나은 서비스를 제공하기 위해 업무 중 일부를 외부 전문업체에 위탁하고 있습니다. 그리고 위탁받은 업체가 관계법령을 위반하지 않도록 관리/감독을 하고 있습니다. 또한 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.
-
-원활한 서비스 제공을 위해 일부 개인정보를 국외 사업자에 위탁하여 처리하고 있습니다.
-고객은 회사의 개인정보 보호책임자에게 이메일(support@kodax.com) 또는 서면 요청을 통해 개인정보 국외 이전을 거부할 수 있으나, 거부할 경우 해당 서비스 이용이 제한됩니다.`}
-            </Description>
+            <SubTitle>{`4. 개인정보처리의 위탁`}</SubTitle>
+            <Description>{`회사는 편리하고 더 나은 서비스를 제공하기 위해 업무 중 일부를 외부 전문업체에 위탁하고 있습니다. 그리고 위탁받은 업체가 관계법령을 위반하지 않도록 관리/감독을 하고 있습니다. 또한 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.`}</Description>
             <DescriptionDivider />
 
             <TableWrapper>
               <Table>
                 <THeadRow>
                   <THead>수탁업체</THead>
-                  <THead>위탁 및 이전 목적</THead>
-                  <THead>위탁 및 이전 항목</THead>
-                  <THead>위탁 및 이전 국가</THead>
-                  <THead>위탁 및 이전 방법</THead>
-                  <THead>이용 및 보유 기간</THead>
+                  <THead>위탁목적</THead>
+                  <THead>위탁항목</THead>
+                  <THead>위탁국가</THead>
+                  <THead>위탁방법</THead>
+                  <THead>이용기간</THead>
                 </THeadRow>
                 <TBody>
                   <TRow>
                     <TdBold>Google LLC</TdBold>
                     <Td>{`서비스 운영을 위한 Japan Region Cloud 서비스`}</Td>
                     <Td>{`이름, 주소, 이메일, 서비스이용기록, 접속로그, 접속IP정보`}</Td>
-                    <Td>{`일본, 
-한국(asia-northeast3) 리전,
+                    <Td>{`일본,
 연락처 : googlekrsupport@google.com`}</Td>
                     <Td rowSpan={3}>{`서비스 이용시,
 네트워크를 통해 전송`}</Td>
@@ -466,7 +476,7 @@ const PrivacyPolicyPage = () => {
                   <TRow>
                     <TdBold>Type Form</TdBold>
                     <Td>{`홈페이지설문조사`}</Td>
-                    <Td>{`이메일, 휴대전화번호, 이름, 직책, 회사명`}</Td>
+                    <Td>{`이름, 이메일, 휴대폰번호`}</Td>
                     <Td>{`스페인, 
 연락처 : support@typeform.com`}</Td>
                     <Td>{`설문조사 완료 및 위탁계약 종료시까지`}</Td>
@@ -606,14 +616,10 @@ const PrivacyPolicyPage = () => {
           </Section>
           <Section>
             <DescriptionTitle>{`<부칙>`}</DescriptionTitle>
-            <Description>{`(시행일) 이 개인정보처리방침은 2025년 7월 8일부터 적용됩니다.`}</Description>
-            <DescriptionHighlight>{`*변경 내역: [ISMS 인증심사 결함 조치]`}</DescriptionHighlight>
+            <Description>{`(시행일) 이 개인정보처리방침은 2025년 2월 25일부터 적용됩니다.`}</Description>
+            <DescriptionHighlight>{`*변경 내역: [개인정보 처리위탁 - CODE]`}</DescriptionHighlight>
             <Description>{`
 [이전 개인정보 처리방침 목록]`}</Description>
-            <PrivacyPolicy href="/old-privacy-policy-20250604">{`(2025.06.04일 시행) 개인정보 처리방침 v5`}</PrivacyPolicy>
-            <br></br>
-            <PrivacyPolicy href="/old-privacy-policy-20250225">{`(2025.02.25일 시행) 개인정보 처리방침 v4`}</PrivacyPolicy>
-            <br></br>
             <PrivacyPolicy href="/old-privacy-policy-20240221">{`(2024.02.21일 시행) 개인정보 처리방침 v3`}</PrivacyPolicy>
             <br></br>
             <PrivacyPolicy href="/old-privacy-policy-20230616">{`(2023.06.16일 시행) 개인정보 처리방침 v2`}</PrivacyPolicy>
@@ -629,4 +635,4 @@ const PrivacyPolicyPage = () => {
   );
 };
 
-export default PrivacyPolicyPage;
+export default PrivacyPolicyPage20250225;
