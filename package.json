@@ -1,39 +1,29 @@
 {
-  "name": "haechi-website",
+  "name": "Koda",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Koda",
+  "private": true,
   "scripts": {
-    "bootstrap": "lerna exec npm install",
-    "ci:bootstrap": "lerna exec 'npm ci --prefer-offline --no-audit --loglevel silent'",
-    "build": "lerna run build --parallel",
-    "storybook:build": "lerna run storybook:build --parallel",
-    "storybook:deploy": "lerna run storybook:deploy --parallel",
-    "prettier": "lerna run prettier --parallel",
-    "eslint": "lerna run eslint --parallel",
-    "eslint:fix": "lerna run eslint:fix --parallel",
-    "test": "lerna run test --parallel",
-    "type-check": "lerna run type-check --parallel",
-    "prepush": "lerna run prepush --parallel"
-  },
-  "devDependencies": {
-    "husky": "9.1.4",
-    "lerna": "8.1.7",
-    "lint-staged": "^15.2.7",
-    "prettier": "^3.3.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.com:rnapp/rnapp/rnapp.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run prepush"
-    }
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
-    "react-ga": "^3.3.1"
+    "next": "15.5.2",
+    "next-intl": "^4.3.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
