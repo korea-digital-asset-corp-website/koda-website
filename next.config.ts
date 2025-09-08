@@ -8,7 +8,16 @@ const withNextIntl = createNextIntlPlugin({
 });
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    rules: {
+      // SVG를 React 컴포넌트로 변환
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
+  // react 개발자 모드 비활성
   reactStrictMode: false,
 };
 
