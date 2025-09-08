@@ -20,7 +20,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main className="min-h-screen">{children}</main>
+          <main>{children}</main>
           {/* todo footer 컴포넌트 추가  */}
         </NextIntlClientProvider>
       </body>
