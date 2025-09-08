@@ -1,16 +1,17 @@
 import { NextIntlClientProvider } from 'next-intl';
-import './globals.css';
 
-// todo Metadata 설정
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+
   return (
-    <html lang="ko">
-      <body className="antialiased">
+    <html lang={locale || 'ko'}>
+      <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
