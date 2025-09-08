@@ -1,8 +1,4 @@
-import { getTranslations } from 'next-intl/server';
-import React from 'react';
-
 const page = async () => {
-  const t = await getTranslations('test');
   return (
     <div className="">
       <h1 className="text-display-lg">큰 제목</h1>

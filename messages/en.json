@@ -1,5 +1,14 @@
 {
-  "test": {
-    "title": "test translation"
+  "header": {
+    "navigation": {
+      "about": "about",
+      "services": "services",
+      "notice": "notice",
+      "faq": "faq",
+      "press": "press"
+    },
+    "button": {
+      "contact": "contact"
+    }
   }
 }

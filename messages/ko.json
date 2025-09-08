@@ -1,5 +1,14 @@
 {
-  "test": {
-    "title": "번역 테스트"
+  "header": {
+    "navigation": {
+      "about": "소개",
+      "services": "서비스",
+      "notice": "공지사항",
+      "faq": "자주 묻는 질문",
+      "press": "언론 보도"
+    },
+    "button": {
+      "contact": "서비스 문의"
+    }
   }
 }
