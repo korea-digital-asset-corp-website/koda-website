@@ -1,4 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
+import './globals.css';
+import { getMessages } from 'next-intl/server';
 
 export default async function RootLayout({
   children,
@@ -8,11 +10,14 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const messages = await getMessages();
+
+  const fontClass = locale === 'ko' ? 'font-korean' : 'font-english';
 
   return (
-    <html lang={locale || 'ko'}>
+    <html lang={locale || 'ko'} className={fontClass}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
   );
