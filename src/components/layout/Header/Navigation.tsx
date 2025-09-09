@@ -12,7 +12,7 @@ const navItems = [
 const Navigation = async () => {
   const t = await getTranslations('header.navigation');
   return (
-    <nav role="navigation" aria-label="주요 메뉴">
+    <nav className="hidden lg:block" role="navigation" aria-label="주요 메뉴">
       <ul className="flex items-center gap-14">
         {navItems.map((item) => (
           <li key={item.key}>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import KodaLogo from '@/public/assets/logo/koda.svg';
+import KodaLogo from '@/public/assets/icons/koda.svg';
 
 const KodaMainLogo = () => {
   return (
