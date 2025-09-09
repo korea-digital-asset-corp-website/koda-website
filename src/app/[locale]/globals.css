@@ -84,6 +84,14 @@
   --letter-spacing-normal: 0px;
   --letter-spacing-wide-sm: 0.1px;
   --letter-spacing-wide-md: 0.15px;
+
+  --breakpoint-xs: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xl2: 1300px;
+  --breakpoint-2xl: 1536px;
 }
 
 @font-face {
@@ -154,25 +162,25 @@ body {
 
 /* ========== HEADLINE 타이포그래피 (공통) ========== */
 
-.text-headline-lg {
+@utility text-headline-lg {
   font-size: var(--font-size-headline-lg);
   line-height: var(--line-height-125);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-headline-md {
+@utility text-headline-md {
   font-size: var(--font-size-headline-md);
   line-height: var(--line-height-130);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-headline-sm {
+@utility text-headline-sm {
   font-size: var(--font-size-headline-sm);
   line-height: var(--line-height-130);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-headline-xs {
+@utility text-headline-xs {
   font-size: var(--font-size-headline-xs);
   line-height: var(--line-height-130);
   letter-spacing: var(--letter-spacing-normal);
@@ -180,19 +188,19 @@ body {
 
 /* ========== TITLE 타이포그래피 (공통) ========== */
 
-.text-title-lg {
+@utility text-title-lg {
   font-size: var(--font-size-title-lg);
   line-height: var(--line-height-130);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-title-md {
+@utility text-title-md {
   font-size: var(--font-size-title-md);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-wide-md);
 }
 
-.text-title-sm {
+@utility text-title-sm {
   font-size: var(--font-size-title-sm);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-wide-sm);
@@ -200,19 +208,19 @@ body {
 
 /* ========== LABEL 타이포그래피 (공통) ========== */
 
-.text-label-lg {
+@utility text-label-lg {
   font-size: var(--font-size-label-lg);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-label-md {
+@utility text-label-md {
   font-size: var(--font-size-label-md);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-label-sm {
+@utility text-label-sm {
   font-size: var(--font-size-label-sm);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-normal);
@@ -220,25 +228,25 @@ body {
 
 /* ========== BODY 타이포그래피 (공통) ========== */
 
-.text-body-xl {
+@utility text-body-xl {
   font-size: var(--font-size-body-xl);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-body-lg {
+@utility text-body-lg {
   font-size: var(--font-size-body-lg);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-body-md {
+@utility text-body-md {
   font-size: var(--font-size-body-md);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-body-sm {
+@utility text-body-sm {
   font-size: var(--font-size-body-sm);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-normal);
@@ -246,13 +254,13 @@ body {
 
 /* ========== CAPTION 타이포그래피 (공통) ========== */
 
-.text-caption-lg {
+@utility text-caption-lg {
   font-size: var(--font-size-caption-lg);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.text-caption-sm {
+@utility text-caption-sm {
   font-size: var(--font-size-caption-sm);
   line-height: var(--line-height-150);
   letter-spacing: var(--letter-spacing-normal);
