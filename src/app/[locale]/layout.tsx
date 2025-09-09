@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import './globals.css';
 import { getMessages } from 'next-intl/server';
 import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 
 export default async function RootLayout({
   children,
@@ -17,11 +18,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale || 'ko'} className={fontClass}>
-      <body>
+      <body className="flex flex-col min-h-screen">
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main>{children}</main>
-          {/* todo footer 컴포넌트 추가  */}
+          <main className="flex-1">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
