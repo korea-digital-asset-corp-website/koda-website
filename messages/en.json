@@ -10,5 +10,42 @@
     "button": {
       "contact": "contact"
     }
+  },
+  "footer": {
+    "company": {
+      "name": "Korea Digital Asset Co., Ltd.",
+      "address": "13F, M Tower, 8, Teheran-ro 27-gil, Gangnam-gu, Seoul",
+      "ceo": "CEO: Jin Seok Cho",
+      "businessNumber": "Business Registration No.: 618-81-36254",
+      "virtualAssetNumber": "Virtual Asset Business Registration No.: 2025-04",
+      "phone": "Tel: 02-561-4762",
+      "logoAlt": "Go to Koda homepage",
+      "infoTitle": "Company Information"
+    },
+    "menu": {
+      "terms": {
+        "title": "Terms & Policies",
+        "privacy": "Privacy Policy",
+        "privacyAria": "View Privacy Policy",
+        "ethics": "Business Ethics",
+        "guidelines": "Guidelines",
+        "cryptoNotice": "Cryptocurrency Trading Notice"
+      },
+      "support": {
+        "title": "Support & Information",
+        "notice": "Notice",
+        "faq": "FAQ",
+        "press": "Press"
+      },
+      "contact": {
+        "title": "Contact",
+        "emailAria": "Contact via email"
+      }
+    },
+    "certifications": {
+      "isms": "ISMS Information Security Management System Certification Mark",
+      "other": "Other Certification Mark"
+    },
+    "copyright": "Copyright © 2020 - {year} Korea Digital Asset Co., Ltd. All rights reserved."
   }
 }
