@@ -1,22 +1,35 @@
 'use client';
 
+import { useState } from 'react';
 import HamburgerIcon from '@/public/assets/icons/hamburger.svg';
+import CloseIcon from '@/public/assets/icons/close.svg';
+import MobileSidebar from './MobileSidebar';
 
 const MobileMenuButton = () => {
-  const handleMenuToggle = () => {
-    // todo: 사이드바 토글 기능 나중에 추가
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
   };
 
   return (
-    <button
-      className="lg:hidden w-11 h-11 flex items-center justify-center gap-3"
-      onClick={handleMenuToggle}
-      aria-label="메뉴 열기"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <HamburgerIcon />
-    </button>
+    <>
+      <button
+        className="lg:hidden w-11 h-11 flex items-center justify-center gap-3 hover:bg-gray-50 rounded-md transition-colors"
+        onClick={handleToggle}
+        aria-label={isOpen ? '메뉴 닫기' : '메뉴 열기'}
+        aria-expanded={isOpen}
+        aria-controls="mobile-menu"
+      >
+        {isOpen ? <CloseIcon /> : <HamburgerIcon />}
+      </button>
+
+      <MobileSidebar isOpen={isOpen} onClose={handleClose} />
+    </>
   );
 };
 
