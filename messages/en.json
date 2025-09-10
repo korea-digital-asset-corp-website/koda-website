@@ -47,5 +47,12 @@
       "other": "Other Certification Mark"
     },
     "copyright": "Copyright © 2020 - {year} Korea Digital Asset Co., Ltd. All rights reserved."
+  },
+  "notice": {
+    "title": "Notice",
+    "empty": "No notices registered.",
+    "detail": {
+      "backToList": "View List"
+    }
   }
 }
