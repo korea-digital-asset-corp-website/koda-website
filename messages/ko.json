@@ -5,7 +5,7 @@
       "services": "서비스",
       "notice": "공지사항",
       "faq": "자주 묻는 질문",
-      "press": "언론 보도"
+      "news": "언론 보도"
     },
     "button": {
       "contact": "서비스 문의"
@@ -35,7 +35,7 @@
         "title": "안내 및 지원",
         "notice": "공지사항",
         "faq": "자주 묻는 질문",
-        "press": "언론보도"
+        "news": "언론보도"
       },
       "contact": {
         "title": "문의",
@@ -57,5 +57,9 @@
   },
   "faq": {
     "title": "자주 묻는 질문"
+  },
+  "news": {
+    "title": "언론 보도",
+    "moreListView": "더보기"
   }
 }

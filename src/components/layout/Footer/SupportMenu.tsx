@@ -4,7 +4,7 @@ import Link from 'next/link';
 const SupportMenu = async () => {
   const t = await getTranslations('footer');
 
-  const menuItems = ['notice', 'faq', 'press'];
+  const menuItems = ['notice', 'faq', 'news'];
 
   return (
     <nav aria-labelledby="support-heading" className="w-auto lg:w-[190px]">
