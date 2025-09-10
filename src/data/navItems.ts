@@ -8,5 +8,5 @@ export const navItems: NavItem[] = [
   { key: 'services', href: '/services' },
   { key: 'notice', href: '/notice' },
   { key: 'faq', href: '/faq' },
-  { key: 'press', href: '/press' },
+  { key: 'news', href: '/news' },
 ];

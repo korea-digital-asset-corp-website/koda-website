@@ -5,7 +5,7 @@
       "services": "services",
       "notice": "notice",
       "faq": "faq",
-      "press": "press"
+      "news": "news"
     },
     "button": {
       "contact": "contact"
@@ -35,7 +35,7 @@
         "title": "Support & Information",
         "notice": "Notice",
         "faq": "FAQ",
-        "press": "Press"
+        "news": "News"
       },
       "contact": {
         "title": "Contact",
@@ -57,5 +57,9 @@
   },
   "faq": {
     "title": "FAQ"
+  },
+  "news": {
+    "title": "News",
+    "moreListView": "View More"
   }
 }
