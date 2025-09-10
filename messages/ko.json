@@ -54,5 +54,8 @@
     "detail": {
       "backToList": "목록 보기"
     }
+  },
+  "faq": {
+    "title": "자주 묻는 질문"
   }
 }

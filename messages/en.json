@@ -54,5 +54,8 @@
     "detail": {
       "backToList": "View List"
     }
+  },
+  "faq": {
+    "title": "FAQ"
   }
 }
