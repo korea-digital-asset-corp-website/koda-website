@@ -1,0 +1,70 @@
+'use client';
+
+import { useState, useCallback } from 'react';
+import ArrowIcon from '@/public/assets/icons/arrow.svg';
+import { faqData } from '@/data/faqItems';
+
+const FaqAccordion = () => {
+  const [openItems, setOpenItems] = useState<Set<number>>(new Set());
+
+  const toggleItem = useCallback((id: number) => {
+    setOpenItems((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(id)) {
+        newSet.delete(id);
+      } else {
+        newSet.add(id);
+      }
+      return newSet;
+    });
+  }, []);
+
+  return (
+    <section className="space-y-0" aria-labelledby="faq-heading">
+      {faqData.map((item) => {
+        const isOpen = openItems.has(item.id);
+        const contentId = `faq-content-${item.id}`;
+        const buttonId = `faq-button-${item.id}`;
+
+        return (
+          <article key={item.id} className="border-b border-gray-50">
+            <header>
+              <button
+                id={buttonId}
+                onClick={() => toggleItem(item.id)}
+                className="w-full flex items-center justify-between py-6 lg:py-8 text-left cursor-pointer"
+                aria-expanded={isOpen}
+                aria-controls={contentId}
+              >
+                <h3 className="text-headline-xs lg:text-headline-sm font-bold pr-4">{item.question}</h3>
+                <span
+                  className={`transform transition-transform duration-300 ease-in-out ${
+                    isOpen ? 'rotate-180' : 'rotate-0'
+                  }`}
+                  aria-hidden="true"
+                >
+                  <ArrowIcon />
+                </span>
+              </button>
+            </header>
+
+            <div
+              id={contentId}
+              role="region"
+              aria-labelledby={buttonId}
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isOpen ? 'max-h-96 pb-4 lg:pb-8' : 'max-h-0'
+              }`}
+            >
+              <p className="text-body-md lg:text-body-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                {item.answer}
+              </p>
+            </div>
+          </article>
+        );
+      })}
+    </section>
+  );
+};
+
+export default FaqAccordion;
