@@ -61,5 +61,8 @@
   "news": {
     "title": "언론 보도",
     "moreListView": "더보기"
+  },
+  "privacyPolicy": {
+    "title": "개인정보처리방침"
   }
 }
