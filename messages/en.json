@@ -61,5 +61,8 @@
   "news": {
     "title": "News",
     "moreListView": "View More"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy"
   }
 }
