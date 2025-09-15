@@ -96,7 +96,7 @@
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: 'Pretendard Variable';
   src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');
   font-weight: 45 920;
   font-style: normal;
@@ -112,19 +112,25 @@
 }
 
 body {
-  font-family: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: 'Pretendard Variable', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 .font-korean body {
-  font-family: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: 'Pretendard Variable', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 .font-english body {
-  font-family: 'Inter', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: 'Inter', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 /* 한국어 Display */
 .font-korean .text-display-lg {
+  font-size: var(--font-size-display-lg-ko);
+  line-height: var(--line-height-120);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+@utility text-display-lg {
   font-size: var(--font-size-display-lg-ko);
   line-height: var(--line-height-120);
   letter-spacing: var(--letter-spacing-tight);
@@ -136,7 +142,19 @@ body {
   letter-spacing: var(--letter-spacing-normal);
 }
 
+@utility text-display-md {
+  font-size: var(--font-size-display-md-ko);
+  line-height: var(--line-height-120);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
 .font-korean .text-display-sm {
+  font-size: var(--font-size-display-sm-ko);
+  line-height: var(--line-height-120);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+@utility text-display-sm {
   font-size: var(--font-size-display-sm-ko);
   line-height: var(--line-height-120);
   letter-spacing: var(--letter-spacing-normal);
