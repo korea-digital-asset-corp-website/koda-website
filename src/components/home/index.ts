@@ -1,0 +1,9 @@
+export { default as HeroSection } from './HeroSection';
+export { default as AchievementSection } from './AchievementSection';
+export { default as InvestorsSection } from './InvestorsSection';
+export { default as MarketStatsSection } from './MarketStatsSection';
+export { default as SecuritySection } from './SecuritySection';
+export { default as InsuranceSection } from './InsuranceSection';
+export { default as SolutionsSection } from './SolutionsSection';
+export { default as MediaSection } from './MediaSection';
+export { default as ContactSection } from './ContactSection';
