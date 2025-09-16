@@ -2,15 +2,24 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useModal } from '@/contexts/ModalContext';
+import { DepositWithdrawNoticeModal } from '@/components/modal/DepositWithdrawNoticeModal';
 import SplineScene from '../common/SplineScene';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const { openModal } = useModal();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (isMounted) {
+      openModal(<DepositWithdrawNoticeModal />);
+    }
+  }, [isMounted, openModal]);
 
   const handleSplineLoaded = () => {
     setIsLoaded(true);
