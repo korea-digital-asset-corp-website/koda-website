@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import SplineScene from '../common/SplineScene';
+import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -19,7 +19,6 @@ const HeroSection = () => {
   if (!isMounted) {
     return null;
   }
-
   return (
     <div className="max-w-[1440px] w-full px-10 mx-auto">
       <section className="mx-auto overflow-x-hidden">
@@ -30,16 +29,14 @@ const HeroSection = () => {
         >
           <div className="space-y-6 order-2 lg:order-1">
             <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold">
-              법인·기관을 위한
+              안전한 보관부터 스테이킹,
               <br className="hidden lg:block" />
-              가장 신뢰할 수 있는
+              법인 맞춤 기능까지
               <br className="hidden lg:block" />
-              디지털 자산 파트너
+              디지털 자산 종합 솔루션
             </h1>
             <p className="text-center text-body-md lg:text-left lg:text-body-lg">
-              비트코인부터 스테이블 코인, 자체 발행 코인 등 법인·기관 투자자를 위한
-              <br />
-              디지털 자산 관리 종합 서비스를 제공합니다
+              가장 안전하고 편리하게 디지털 자산을 관리하세요
             </p>
             <Link
               href="/"
@@ -48,8 +45,9 @@ const HeroSection = () => {
               서비스 문의
             </Link>
           </div>
+
           <SplineScene
-            scene="https://prod.spline.design/H3gqptL5Dz0k641R/scene.splinecode"
+            scene="https://prod.spline.design/O4BKSZb0nUY-tmcM/scene.splinecode"
             className="order-1 lg:order-2 [&_canvas]:!w-full [&_canvas]:!h-auto pointer-events-none [&_canvas]:!scale-[1.0] lg:[&_canvas]:!scale-[1.2]"
             onSplineLoaded={handleSplineLoaded}
           />
