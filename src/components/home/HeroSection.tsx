@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useModal } from '@/contexts/ModalContext';
 import { DepositWithdrawNoticeModal } from '@/components/modal/DepositWithdrawNoticeModal';
 import SplineScene from '../common/SplineScene';
+import { PopupButton } from '@typeform/embed-react';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -50,12 +51,12 @@ const HeroSection = () => {
               <br />
               디지털 자산 관리 종합 서비스를 제공합니다
             </p>
-            <Link
-              href="/"
-              className="text-white flex justify-center lg:max-w-[180px] w-full px-5 lg:px-[22px] py-4 lg:py-5 bg-[var(--color-primary-800)] hover:bg-[var(--color-primary-900)] transition-colors rounded-[4px]"
+            <PopupButton
+              id="bZKbfTne"
+              className="text-white flex justify-center lg:max-w-[180px] w-full px-5 lg:px-[22px] py-4 lg:py-5 bg-[var(--color-primary-800)] hover:bg-[var(--color-primary-900)] transition-colors rounded-[4px] cursor-pointer"
             >
               서비스 문의
-            </Link>
+            </PopupButton>
           </div>
           <SplineScene
             scene="https://prod.spline.design/H3gqptL5Dz0k641R/scene.splinecode"

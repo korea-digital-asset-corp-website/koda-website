@@ -1,6 +1,7 @@
 'use client';
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { PopupButton } from '@typeform/embed-react';
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -18,9 +19,12 @@ const ContactSection = () => {
             가장 신뢰할 수 있는 KODA와 함께 <br className="hidden lg:block" />
             디지털 자산을 안전하게 보관·관리하세요
           </h2>
-          <button className="w-full lg:w-[165px] px-5 py-4 lg:px-[22px] lg:py-[20px] bg-[var(--color-gray-900)] text-label-md lg:text-label-lg rounded-[4px] text-white hover:bg-[var(--color-gray-700)] transition-colors cursor-pointer">
+          <PopupButton
+            id="bZKbfTne"
+            className="w-full lg:w-[165px] px-5 py-4 lg:px-[22px] lg:py-[20px] bg-[var(--color-gray-900)] text-label-md lg:text-label-lg rounded-[4px] text-white hover:bg-[var(--color-gray-700)] transition-colors cursor-pointer"
+          >
             서비스 문의
-          </button>
+          </PopupButton>
         </div>
       </div>
     </section>
