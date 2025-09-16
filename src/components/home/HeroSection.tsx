@@ -1,11 +1,33 @@
-import Spline from '@splinetool/react-spline/next';
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import SplineScene from '../common/SplineScene';
 
 const HeroSection = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const handleSplineLoaded = () => {
+    setIsLoaded(true);
+  };
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div className="max-w-[1440px] w-full px-10 mx-auto">
       <section className="mx-auto overflow-x-hidden">
-        <div className="grid lg:grid-cols-2 items-center lg:pt-10">
+        <div
+          className={`grid lg:grid-cols-2 items-center lg:pt-10 transition-opacity duration-500 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           <div className="space-y-6 order-2 lg:order-1">
             <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold">
               법인·기관을 위한
@@ -26,9 +48,10 @@ const HeroSection = () => {
               서비스 문의
             </Link>
           </div>
-          <Spline
-            className="order-1 lg:order-2 [&_canvas]:!w-full [&_canvas]:!h-auto pointer-events-none [&_canvas]:!scale-[1.0] lg:[&_canvas]:!scale-[1.2]"
+          <SplineScene
             scene="https://prod.spline.design/H3gqptL5Dz0k641R/scene.splinecode"
+            className="order-1 lg:order-2 [&_canvas]:!w-full [&_canvas]:!h-auto pointer-events-none [&_canvas]:!scale-[1.0] lg:[&_canvas]:!scale-[1.2]"
+            onSplineLoaded={handleSplineLoaded}
           />
         </div>
       </section>

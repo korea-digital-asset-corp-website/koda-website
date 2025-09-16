@@ -10,7 +10,7 @@ import {
   SolutionsSection,
 } from '@/components/home';
 
-const page = async () => {
+const page = () => {
   return (
     <>
       <HeroSection />
