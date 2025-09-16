@@ -44,7 +44,8 @@
     },
     "certifications": {
       "isms": "ISMS 정보보호 관리체계 인증 마크",
-      "other": "기타 인증 마크"
+      "other": "기타 인증 마크",
+      "venture": "벤처 확인 기업 마크"
     },
     "copyright": "Copyright © 2020 - {year} Korea Digital Asset Co., Ltd. All rights reserved."
   },

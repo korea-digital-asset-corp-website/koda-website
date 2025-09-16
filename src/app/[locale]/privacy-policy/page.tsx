@@ -5,7 +5,7 @@ import { H2, H3, Li, Ol, P, TableContainer, Tbody, Td, Th, Thead, Tr, Ul } from 
 const PrivacyPolicyPage = async () => {
   const t = await getTranslations('privacyPolicy');
   return (
-    <section className="max-w-[1440px] w-full mt-32 px-5 lg:px-[200px] mx-auto whitespace-pre-line">
+    <section className="max-w-[1440px] w-full mt-32 mb-20 lg:mb-[180px] px-5 lg:px-[200px] mx-auto whitespace-pre-line">
       <h1 className="text-headline-sm lg:text-headline-lg mb-14 lg:mb-[120px] font-bold">{t('title')}</h1>
       <P>
         (주)한국디지털에셋은 이용자의 개인정보를 매우 중요하게 생각하며, 이용자가 회사의 서비스(디지털자산 수탁서비스)를
