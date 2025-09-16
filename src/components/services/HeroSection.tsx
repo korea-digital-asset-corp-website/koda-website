@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import SplineScene from '../common/SplineScene';
 import { useEffect, useState } from 'react';
+import { PopupButton } from '@typeform/embed-react';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -38,12 +39,12 @@ const HeroSection = () => {
             <p className="text-center text-body-md lg:text-left lg:text-body-lg">
               가장 안전하고 편리하게 디지털 자산을 관리하세요
             </p>
-            <Link
-              href="/"
-              className="text-white flex justify-center lg:max-w-[180px] w-full px-5 lg:px-[22px] py-4 lg:py-5 bg-[var(--color-primary-800)] hover:bg-[var(--color-primary-900)] transition-colors rounded-[4px]"
+            <PopupButton
+              id="bZKbfTne"
+              className="text-white flex justify-center lg:max-w-[180px] w-full px-5 lg:px-[22px] py-4 lg:py-5 bg-[var(--color-primary-800)] hover:bg-[var(--color-primary-900)] transition-colors rounded-[4px] cursor-pointer"
             >
               서비스 문의
-            </Link>
+            </PopupButton>
           </div>
 
           <SplineScene

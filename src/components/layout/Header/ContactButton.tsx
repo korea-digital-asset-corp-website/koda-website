@@ -1,16 +1,18 @@
-import Link from 'next/link';
-import { getTranslations } from 'next-intl/server';
+'use client';
 
-const ContactButton = async () => {
-  const t = await getTranslations('header.button');
+import { useTranslations } from 'next-intl';
+import { PopupButton } from '@typeform/embed-react';
+
+const ContactButton = () => {
+  const t = useTranslations('header.button');
   return (
     <div className="flex items-center gap-12">
-      <Link
-        href=""
-        className="gap-2.5 px-4 py-3 rounded bg-[var(--color-gray-900)] hover:bg-[var(--color-gray-700)] transition-colors text-white"
+      <PopupButton
+        id="bZKbfTne"
+        className="gap-2.5 px-4 py-3 rounded bg-[var(--color-gray-900)] hover:bg-[var(--color-gray-700)] transition-colors text-white cursor-pointer"
       >
         {t('contact')}
-      </Link>
+      </PopupButton>
     </div>
   );
 };
