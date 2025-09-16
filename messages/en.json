@@ -39,7 +39,8 @@
       },
       "contact": {
         "title": "Contact",
-        "emailAria": "Contact via email"
+        "emailAria": "Contact via email",
+        "venture": "벤처 확인 기업 마크"
       }
     },
     "certifications": {
