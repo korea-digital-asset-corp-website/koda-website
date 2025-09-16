@@ -92,7 +92,7 @@ export const DepositWithdrawNoticeModal = () => {
           </address>
           <button
             onClick={closeModal}
-            className="max-w-[80px] lg:max-w-[120px] w-full px-[22px] py-3.5 border rounded-[4px] border-[var(--color-primary-700)] text-label-lg font-semibold text-[var(--color-primary-800)] hover:bg-[var(--color-primary-50)] transition-colors"
+            className="cursor-pointer max-w-[80px] lg:max-w-[120px] w-full px-[22px] py-3.5 border rounded-[4px] border-[var(--color-primary-700)] text-label-lg font-semibold text-[var(--color-primary-800)] hover:bg-[var(--color-primary-50)] transition-colors"
           >
             확인
           </button>
