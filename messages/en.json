@@ -39,13 +39,13 @@
       },
       "contact": {
         "title": "Contact",
-        "emailAria": "Contact via email",
-        "venture": "벤처 확인 기업 마크"
+        "emailAria": "Contact via email"
       }
     },
     "certifications": {
       "isms": "ISMS Information Security Management System Certification Mark",
-      "other": "Other Certification Mark"
+      "other": "Other Certification Mark",
+      "venture": "벤처 확인 기업 마크"
     },
     "copyright": "Copyright © 2020 - {year} Korea Digital Asset Co., Ltd. All rights reserved."
   },
@@ -65,5 +65,14 @@
   },
   "privacyPolicy": {
     "title": "Privacy Policy"
+  },
+  "ethicalManagement": {
+    "title": "Ethical Management"
+  },
+  "workGuidelines": {
+    "title": "주요 업무지침"
+  },
+  "cryptoWarning": {
+    "title": "가상자산 거래에 관한 유의사항"
   }
 }
