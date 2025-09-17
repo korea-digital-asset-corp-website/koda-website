@@ -285,6 +285,82 @@ body {
   letter-spacing: var(--letter-spacing-normal);
 }
 
+@counter-style circled-decimal {
+  system: fixed;
+  symbols: '①' '②' '③' '④' '⑤' '⑥' '⑦' '⑧' '⑨' '⑩' '⑪' '⑫' '⑬' '⑭' '⑮' '⑯' '⑰' '⑱' '⑲' '⑳' '㉑' '㉒' '㉓' '㉔' '㉕' '㉖'
+    '㉗' '㉘' '㉙' '㉚' '㉛' '㉜' '㉝' '㉞' '㉟' '㊱' '㊲' '㊳' '㊴' '㊵' '㊶' '㊷' '㊸' '㊹' '㊺' '㊻' '㊼' '㊽' '㊾'
+    '㊿';
+  suffix: ' ';
+  fallback: decimal;
+}
+
+.k-ol {
+  counter-reset: item 0;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.k-circleol {
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  padding-inline-start: 40px;
+}
+
+.k-ol > li {
+  counter-increment: item 1;
+}
+
+/* ===== 서브 OL: 첫 항목만 1.1, 그 다음부터 2, 3… ===== */
+/* 두 칼럼 폭을 변수로 고정: 부모번호칸 + 간격 */
+.k-subol {
+  --parent-col: 0.5em; /* '1.' 칼럼 폭(폰트에 맞게 조정) */
+  --gap: 0.2em; /* 점 다음 간격 */
+  counter-reset: sub 0 tail 0;
+}
+.k-subol > li {
+  counter-increment: sub 1 tail 1;
+  position: relative;
+  /* 왼쪽 패딩 = 부모칼럼 + 간격 + 서브숫자 칼럼(대략 1.2em 가정) */
+  padding-left: calc(var(--parent-col) + var(--gap) + 1em);
+}
+
+/* 공통: 두 칼럼을 각각 절대좌표로 고정 */
+.k-subol > li::before,
+.k-subol > li::after {
+  position: absolute;
+  top: 0;
+  line-height: inherit;
+}
+
+/* 첫 서브 li: '1.'을 before 칼럼(왼쪽 0)에, 서브숫자(=1)를 after 칼럼에 */
+.k-subol > li:first-child::before {
+  content: counter(item) '.';
+  left: 0; /* 부모번호 칼럼 */
+}
+.k-subol > li:first-child::after {
+  content: counter(sub);
+  left: calc(var(--parent-col) + var(--gap)); /* 서브숫자 칼럼 */
+}
+
+/* 두 번째 서브부터: 부모번호 칼럼은 비우고, 서브숫자 칼럼에 tail(=2,3,...) */
+.k-subol > li:not(:first-child)::before {
+  content: ''; /* 부모번호 칼럼은 공백(자리만 보존) */
+  left: 0;
+}
+
+.k-subol > li:not(:first-child)::after {
+  content: counter(tail);
+  left: calc(var(--parent-col) + var(--gap)); /* 서브숫자 칼럼 */
+}
+
+.k-subcircled-li::marker {
+  content: counter(list-item, circled-decimal) ' ';
+}
+
 /* 
 === 사용법 ===
 // todo 사용 이후 README 에 옮기기
