@@ -14,7 +14,7 @@ const SupportMenu = async () => {
       <ul className="space-y-1" role="list">
         {menuItems.map((item) => (
           <li key={item}>
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link href={`/${item}`} className="hover:text-white transition-colors">
               {t(`menu.support.${item}`)}
             </Link>
           </li>

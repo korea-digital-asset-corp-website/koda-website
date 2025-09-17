@@ -65,5 +65,14 @@
   },
   "privacyPolicy": {
     "title": "개인정보처리방침"
+  },
+  "ethicalManagement": {
+    "title": "윤리경영 방침"
+  },
+  "workGuidelines": {
+    "title": "주요 업무지침"
+  },
+  "cryptoWarning": {
+    "title": "가상자산 거래에 관한 유의사항"
   }
 }
