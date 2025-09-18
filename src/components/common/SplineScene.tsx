@@ -67,8 +67,10 @@ const SplineScene = ({ scene, className, onSplineLoaded }: SplineSceneProps) => 
   }, []);
 
   return (
-    <div ref={splineRef} className={className}>
+    <div ref={splineRef} className={`relative ${className}`}>
       <Spline scene={scene} onLoad={onLoad} />
+
+      <div className="absolute bottom-0 right-0 w-[160px] h-[57px] bg-white z-[9] pointer-events-none rounded-[4px] opacity-100" />
     </div>
   );
 };
