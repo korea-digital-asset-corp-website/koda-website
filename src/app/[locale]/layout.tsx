@@ -1,9 +1,78 @@
 import { NextIntlClientProvider } from 'next-intl';
 import './globals.css';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ModalProvider } from '@/contexts/ModalContext';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+
+  return {
+    title: {
+      template: `%s | ${t('siteName')}`,
+      default: t('siteName'),
+    },
+    description: t('home.description'),
+    keywords: t.raw('home.keywords'),
+
+    openGraph: {
+      type: 'website',
+      title: t('home.title'),
+      description: t('home.description'),
+      url: `https://kodax.com/${locale}`,
+      siteName: t('siteName'),
+      locale: locale,
+      images: [
+        {
+          url: 'https://kodax.com/assets/images/favicon.png',
+          width: 140,
+          height: 140,
+          alt: t('home.title'),
+        },
+      ],
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title: t('home.title'),
+      description: t('home.description'),
+      images: ['https://kodax.com/assets/images/favicon.png'],
+    },
+
+    alternates: {
+      canonical: `https://kodax.com/${locale}`,
+      languages: {
+        ko: 'https://kodax.com/ko',
+        en: 'https://kodax.com/en',
+        'x-default': 'https://kodax.com/ko',
+      },
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+
+    icons: {
+      icon: [
+        {
+          url: '/assets/icons/favicon.svg',
+          type: 'image/svg+xml',
+        },
+        {
+          url: '/assets/icons/favicon.svg',
+          sizes: '32x32',
+          type: 'image/svg+xml',
+        },
+      ],
+      shortcut: '/assets/icons/favicon.svg',
+      apple: '/assets/icons/favicon.svg',
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
