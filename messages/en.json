@@ -74,5 +74,22 @@
   },
   "cryptoWarning": {
     "title": "가상자산 거래에 관한 유의사항"
+  },
+  "meta": {
+    "siteName": "Korea Digital Asset(KODA) | Digital Asset Partner for Corporate and Institutional Investors",
+    "home": {
+      "title": "Korea Digital Asset(KODA) | Digital Asset Partner for Corporate and Institutional Investors",
+      "description": "Korea Digital Asset (KODA) is a company directly invested by KB Kookmin Bank, providing one-stop digital asset services including Bitcoin custody for corporate and institutional investors.",
+      "keywords": [
+        "KODA",
+        "Korea Digital Asset",
+        "blockchain",
+        "digital asset",
+        "virtual asset",
+        "cryptocurrency",
+        "Bitcoin custody",
+        "custody"
+      ]
+    }
   }
 }
