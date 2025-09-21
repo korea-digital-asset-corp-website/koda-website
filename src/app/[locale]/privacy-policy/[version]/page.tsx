@@ -17,9 +17,9 @@ export async function generateStaticParams() {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     version: string;
-  };
+  }>;
 }
 
 const VersionedPrivacyPolicyPage = async ({ params }: PageProps) => {
