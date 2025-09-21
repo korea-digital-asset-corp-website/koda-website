@@ -1,4 +1,4 @@
-import { getVersionByNumber, getAllVersions } from '@/data/privacy-policy/versions';
+import { getVersionByNumber } from '@/data/privacy-policy/versions';
 import V5PrivacyPolicyContent from '@/data/privacy-policy/content/v5';
 import V4PrivacyPolicyContent from '@/data/privacy-policy/content/v4';
 import V3PrivacyPolicyContent from '@/data/privacy-policy/content/v3';
@@ -9,17 +9,10 @@ import AdditionalProvisions from '@/components/privacy-policy/AdditionalProvisio
 import PreviousVersionsList from '@/components/privacy-policy/PreviousVersionsList';
 import { getTranslations } from 'next-intl/server';
 
-export async function generateStaticParams() {
-  const versions = getAllVersions();
-  return versions.map((version) => ({
-    version: version.version,
-  }));
-}
-
 interface PageProps {
-  params: {
+  params: Promise<{
     version: string;
-  };
+  }>;
 }
 
 const VersionedPrivacyPolicyPage = async ({ params }: PageProps) => {

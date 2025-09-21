@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { H3 } from '@/components/typography';
 import { getAllVersions } from '@/data/privacy-policy/versions';
