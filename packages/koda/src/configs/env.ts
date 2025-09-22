@@ -12,10 +12,10 @@ const ENV_TYPE = process.env.GATSBY_ENV || "staging";
 // tslint:disable:object-literal-sort-keys
 const byEnv: IEnvironment = {
   production: {
-    GA_KEY: "G-S9G6KVCJVK",
+    GA_KEY: "G-TVNN5JBNRP",
   },
   staging: {
-    GA_KEY: "G-S9G6KVCJVK",
+    GA_KEY: "G-TVNN5JBNRP",
   },
 };
 
