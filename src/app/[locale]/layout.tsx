@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ModalProvider } from '@/contexts/ModalContext';
 import type { Metadata } from 'next';
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -89,6 +90,7 @@ export default async function RootLayout({
   return (
     <html lang={locale || 'ko'} className={fontClass}>
       <body className="flex flex-col min-h-screen">
+        <GoogleAnalytics />
         <ModalProvider>
           <NextIntlClientProvider messages={messages}>
             <Header />
