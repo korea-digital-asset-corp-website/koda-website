@@ -329,7 +329,23 @@
     "title": "주요 업무지침"
   },
   "cryptoWarning": {
-    "title": "가상자산 거래에 관한 유의사항"
+    "title": "Precautions Regarding Virtual Asset Transactions",
+    "introduction": "Recently, interest in virtual assets has been increasing, along with concerns about excessive investment and related crimes. This notice is intended to inform clients of the representative risks that may arise when trading or holding virtual assets.",
+    "risks": [
+      "Virtual assets are not legal tender, and no specific entity guarantees their value.",
+      "Virtual assets are traded 24 hours a day, 365 days a year, worldwide. Their prices may fluctuate sharply due to various factors such as market supply and demand, policies of each virtual asset, national laws and regulations, and network conditions.",
+      "Virtual assets are not subject to price fluctuation limits, and customers should be especially aware of the possibility of principal loss.",
+      "Virtual assets are not protected under the Depositor Protection Act."
+    ],
+    "fraud": {
+      "warning": "Be cautious of 'telecommunications financial fraud, illegal fundraising, pyramid schemes, and phishing scams.'",
+      "details": [
+        "Be cautious of acts that impersonate financial institutions or investigative agencies to request remittances, demand account lending, or induce investment under the pretext of airdrops, as these may constitute telecommunications financial fraud, illegal fundraising, or pyramid schemes.",
+        "KODA will never request clients' passwords, OTPs, SMS/ARS authentication, nor will it log in on behalf of customers.",
+        "Please exercise particular caution to prevent damage from telecommunications financial fraud, illegal fundraising and pyramid schemes, and phishing scams."
+      ]
+    },
+    "disclaimer": "The above items briefly describe certain risks accompanying virtual asset transactions but do not cover all risks related to virtual asset trading. Please also note that this notice does not take precedence over relevant domestic or international laws and regulations."
   },
   "meta": {
     "siteName": "Korea Digital Asset(KODA) | Digital Asset Partner for Corporate and Institutional Investors",
