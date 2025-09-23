@@ -91,13 +91,13 @@ export default async function RootLayout({
     <html lang={locale || 'ko'} className={fontClass}>
       <body className="flex flex-col min-h-screen">
         <GoogleAnalytics />
-        <ModalProvider>
-          <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages}>
+          <ModalProvider>
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
-          </NextIntlClientProvider>
-        </ModalProvider>
+          </ModalProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
