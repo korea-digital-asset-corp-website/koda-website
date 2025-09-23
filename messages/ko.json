@@ -49,6 +49,153 @@
     },
     "copyright": "Copyright © 2020 - {year} Korea Digital Asset Co., Ltd. All rights reserved."
   },
+  "home": {
+    "hero": {
+      "title": "법인·기관을 위한\n가장 신뢰할 수 있는\n디지털 자산 파트너",
+      "description": "비트코인부터 스테이블 코인, 자체 발행 코인 등 법인·기관 투자자를 위한\n 디지털 자산 관리 종합 서비스를 제공합니다",
+      "cta": {
+        "inquiry": "서비스 문의"
+      }
+    },
+    "achievement": {
+      "title": "가상자산사업자 1호 벤처기업 확인 획득",
+      "description": "「벤처기업육성에 관한 특별법 시행령」 개정 기조에 따른\n 가상자산사업자 최초로 중소벤처기업부의 '벤처기업 확인' 획득",
+      "badge": {
+        "alt": "벤처기업 확인서"
+      }
+    },
+    "investors": {
+      "title": "업계 최고의 주주 구성으로\n가장 신뢰할 수 있는 서비스를 제공합니다",
+      "list": [
+        {
+          "description": "국내 1위 은행"
+        },
+        {
+          "description": "글로벌 탑티어 및 국내 1위 블록체인 VC"
+        },
+        {
+          "description": "탑티어 유명 VC"
+        },
+        {
+          "description": "블록체인 기술 기업"
+        }
+      ]
+    },
+    "marketStats": {
+      "title": "압도적으로 시장을 선도하는\nNo.1 커스터디입니다",
+      "description": "24년 상반기 수탁고 기준 90% 이상의 시장점유율로 압도적인 1위*",
+      "stats": {
+        "total": {
+          "label": "전체 수탁고",
+          "amount": "13.7조 원"
+        },
+        "koda": {
+          "label": "KODA 수탁고",
+          "amount": "13.2조 원"
+        }
+      },
+      "chart": {
+        "alt": "시장 점유율 그래프"
+      },
+      "source": "*출처 : 2024년 상반기 금융위원회 실태조사"
+    },
+    "security": {
+      "title": "철저한 내부 통제 체계와\n보안 기준을 갖추었습니다",
+      "certifications": {
+        "isms": {
+          "alt": "ISMS 인증"
+        }
+      },
+      "features": {
+        "compliance": {
+          "title": "금융 기관 수준의 컴플라이언스",
+          "description": "ISMS 인증, VASP(가상자산보관사업자 취득), 이용자 보호법상 대통령령으로 정하는 보안 기준 충족"
+        },
+        "team": {
+          "title": "은행 부장급 이상의 운영 인력",
+          "description": "CISO, 준법감시인, 내부통제 등"
+        }
+      }
+    },
+    "insurance": {
+      "title": "삼성화재와 함께 약 300억원* 한도의\n보험으로 고객 자산을 안전하게 보호합니다",
+      "description": "국내 최고 수준의 디지털 자산 보험 가입\n가상자산사업자 중 의무 보험을 제외한 국내 최초 보험",
+      "coverage": {
+        "amount": "$20M"
+      },
+      "image": {
+        "alt": "보험 보장 안내"
+      },
+      "disclaimer": "* 현재 보험 보장 한도는 $20,000,000이며, 자산 규모에 따라 한도 증액 가능"
+    },
+    "solutions": {
+      "title": "디지털 자산의 안전한 보관부터 스테이킹, 법인 맞춤형 기능까지\n모두 제공하는 종합 솔루션입니다",
+      "sections": {
+        "secureStorage": {
+          "title": "안전한 보관",
+          "features": {
+            "coldWallet": {
+              "title": "콜드월렛",
+              "description": "네트워크와 완전히 단절된 콜드월렛에서 모든 자산을 안전하게 보관"
+            },
+            "mpc": {
+              "title": "MPC 시스템",
+              "description": "하나의 키를 분실하거나 유출되어도 자산이 탈취되지 않으며 복구 가능"
+            }
+          }
+        },
+        "features": {
+          "title": "다양한 기능 제공",
+          "list": {
+            "custody": {
+              "title": "보관",
+              "description": "자산을 안전하게 보관할 수 있고, 출금 시 올바른 요청인지 검증 후 처리"
+            },
+            "staking": {
+              "title": "스테이킹",
+              "description": "자산을 위임하여 블록체인 네트워크 참여 보상 획득"
+            },
+            "backup": {
+              "title": "유통량/백업관리",
+              "description": "발행 코인의 유통량, 투자 코인의 락업 스케줄 관리"
+            }
+          }
+        },
+        "enterprise": {
+          "title": "법인 맞춤 기능",
+          "list": {
+            "authorization": {
+              "title": "권한분리",
+              "description": "법인 구조에 맞게 권한을 부여하고, 결재선으로 다중 승인 구조 설정 가능"
+            },
+            "certification": {
+              "title": "각종 증명",
+              "description": "법률, 회계, 세무를 위한 각종 증명서 발급"
+            },
+            "security": {
+              "title": "다중 보안",
+              "description": "OTP 인증, IP 주소 화이트리스팅 등 다양한 보안 인증 장치 적용"
+            }
+          }
+        }
+      },
+      "cta": {
+        "learnMore": "서비스 더 알아보기"
+      }
+    },
+    "media": {
+      "title": "언론 속의 KODA",
+      "cta": {
+        "viewMore": "언론보도 더 보기"
+      }
+    },
+    "contact": {
+      "title": "가장 신뢰할 수 있는 KODA와 함께\n디지털 자산을 안전하게 보관·관리하세요",
+      "cta": {
+        "contact": "서비스 문의"
+      }
+    }
+  },
   "notice": {
     "title": "공지사항",
     "empty": "등록된 공지사항이 없습니다.",

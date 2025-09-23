@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { useModal } from '@/contexts/ModalContext';
 import { DepositWithdrawNoticeModal } from '@/components/modal/DepositWithdrawNoticeModal';
 import SplineScene from '../common/SplineScene';
@@ -11,6 +11,7 @@ const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const { openModal } = useModal();
+  const t = useTranslations('home.hero');
 
   useEffect(() => {
     setIsMounted(true);
@@ -39,23 +40,19 @@ const HeroSection = () => {
           }`}
         >
           <div className="space-y-6 order-2 lg:order-1">
-            <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold">
-              법인·기관을 위한
-              <br className="hidden lg:block" />
-              가장 신뢰할 수 있는
-              <br className="hidden lg:block" />
-              디지털 자산 파트너
+            <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold lg:whitespace-pre-line">
+              {t('title')}
             </h1>
-            <p className="text-center text-body-md lg:text-left lg:text-body-lg">
-              비트코인부터 스테이블 코인, 자체 발행 코인 등 법인·기관 투자자를 위한
-              <br />
-              디지털 자산 관리 종합 서비스를 제공합니다
+
+            <p className="text-center text-body-md lg:text-left lg:text-body-lg lg:whitespace-pre-line">
+              {t('description')}
             </p>
+
             <PopupButton
               id="bZKbfTne"
               className="text-white flex justify-center lg:max-w-[180px] w-full px-5 lg:px-[22px] py-4 lg:py-5 bg-[var(--color-primary-800)] hover:bg-[var(--color-primary-900)] transition-colors rounded-[4px] cursor-pointer"
             >
-              서비스 문의
+              {t('cta.inquiry')}
             </PopupButton>
           </div>
           <SplineScene
