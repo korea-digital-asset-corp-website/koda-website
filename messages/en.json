@@ -284,8 +284,8 @@
     }
   },
   "notice": {
-    "title": "Notice",
-    "empty": "No notices registered.",
+    "title": "Announcements",
+    "empty": "There is no announcement.",
     "detail": {
       "backToList": "View List"
     }
