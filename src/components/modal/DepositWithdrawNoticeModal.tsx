@@ -10,7 +10,6 @@ export const DepositWithdrawNoticeModal = () => {
   const t = useTranslations('modal.depositWithdraw');
   const locale = useLocale();
 
-  console.log(locale);
   const renderNotice = (index: number) => {
     const notice = t.raw(`notices.${index}`);
 
