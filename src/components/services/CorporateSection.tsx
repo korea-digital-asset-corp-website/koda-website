@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import AauthorizationIcon from '@/public/assets/icons/services_authorization.svg';
 import ProofIcon from '@/public/assets/icons/services_proof.svg';
 import SecurityIcon from '@/public/assets/icons/services_security.svg';
@@ -7,22 +8,23 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const CorporateSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const t = useTranslations('service.corporate');
 
   const features = [
     {
       icon: AauthorizationIcon,
-      title: '권한 분리',
-      description: '법인 구조에 맞게 구성원의 권한을 부여하고, 결재선을 설정하여 다중 승인 구조를 만들 수 있습니다.',
+      titleKey: 'features.0.title',
+      descriptionKey: 'features.0.description',
     },
     {
       icon: ProofIcon,
-      title: '각종 증명',
-      description: '법률, 회계, 세무에 필요한 각종 증명 자료를 발급할 수 있습니다.',
+      titleKey: 'features.1.title',
+      descriptionKey: 'features.1.description',
     },
     {
       icon: SecurityIcon,
-      title: '다중 보안',
-      description: 'OTP 인증, IP 주소 화이트리스팅 등 다양한 보안 장치로 안전하게 관리할 수 있습니다.',
+      titleKey: 'features.2.title',
+      descriptionKey: 'features.2.description',
     },
   ];
 
@@ -36,7 +38,7 @@ const CorporateSection = () => {
       <div className="flex flex-col lg:flex-row lg:gap-8">
         <div className="lg:flex-1">
           <h2 className="text-center lg:text-left text-headline-sm lg:text-headline-lg font-bold mb-14 lg:mb-0">
-            법인 맞춤형 서비스를 제공합니다
+            {t('title')}
           </h2>
         </div>
 
@@ -50,8 +52,8 @@ const CorporateSection = () => {
                 <feature.icon />
               </div>
               <div className="flex flex-col space-y-2">
-                <h3 className="text-headline-xs lg:text-headline-sm font-bold">{feature.title}</h3>
-                <p className="text-body-md lg:text-body-xl text-gray-600">{feature.description}</p>
+                <h3 className="text-headline-xs lg:text-headline-sm font-bold">{t(feature.titleKey)}</h3>
+                <p className="text-body-md lg:text-body-xl text-gray-600">{t(feature.descriptionKey)}</p>
               </div>
             </div>
           ))}

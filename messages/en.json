@@ -196,6 +196,93 @@
       }
     }
   },
+  "service": {
+    "hero": {
+      "title": "Comprehensive Digital Asset Management Solution",
+      "description": "Manage your digital assets with the highest level of security and convenience",
+      "cta": {
+        "contact": "Contact Us"
+      }
+    },
+    "custody": {
+      "title": "Safely Manage Your Digital Assets\nwith KODA Custody",
+      "coldWallet": {
+        "title": "Cold Wallet",
+        "alt": "Cold wallet service",
+        "features": [
+          "100% of digital assets are stored in cold wallets.",
+          "Assets are managed in cold wallets that are completely offline and physically isolated."
+        ]
+      },
+      "mpc": {
+        "title": "MPC",
+        "alt": "MPC system",
+        "features": [
+          "Multi-signature authentication ensures that even if a single key is compromised, assets cannot be stolen.",
+          "Backup keys ensure recoverability in case of key loss."
+        ]
+      }
+    },
+    "dashboard": {
+      "title": "Manage Digital Assets in Multiple Ways",
+      "image": {
+        "alt": "Digital asset management dashboard"
+      },
+      "features": [
+        {
+          "title": "Custody",
+          "description": "Secure storage of digital assets."
+        },
+        {
+          "title": "Withdrawal",
+          "description": "Withdrawals are processed only after proper request verification."
+        },
+        {
+          "title": "Staking",
+          "description": "Delegate assets to participate in blockchain networks and earn rewards."
+        },
+        {
+          "title": "Circulation Management",
+          "description": "Issued and reserved tokens under custody can be effectively managed for circulation."
+        },
+        {
+          "title": "Lock-up Management",
+          "description": "Lock-up assets are securely managed according to their lock-up schedules."
+        }
+      ]
+    },
+    "corporate": {
+      "title": "Tailored Services for Enterprises",
+      "features": [
+        {
+          "title": "Access Control",
+          "description": "Assign permissions aligned with corporate structures and establish multi-approval workflows."
+        },
+        {
+          "title": "Comprehensive Certification",
+          "description": "Issuance of required certificates for legal, accounting, and tax purposes."
+        },
+        {
+          "title": "Multi-Layered Security",
+          "description": "Enhanced security with OTP authentication, IP whitelisting, and more."
+        }
+      ]
+    },
+    "assets": {
+      "title": "Supporting a Wide Range of Assets",
+      "description": "Custody for assets issued on over 15 mainnets",
+      "mainnets": {
+        "more": "More Mainnets"
+      },
+      "notice": "Non-supported mainnets are supported quickly - within 1 week for EVM compatible chains, and within 2-3 weeks for others."
+    },
+    "contact": {
+      "title": "Securely Manage Your Digital Assets\nwith the Most Trusted Partner KODA",
+      "cta": {
+        "contact": "Contact Us"
+      }
+    }
+  },
   "notice": {
     "title": "Notice",
     "empty": "No notices registered.",
