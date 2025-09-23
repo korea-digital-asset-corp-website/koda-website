@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { newsData } from '@/data/newsItems';
 import Link from 'next/link';
@@ -7,6 +8,7 @@ import IcArrowIcon from '@/public/assets/icons/main_ic_arrow.svg';
 
 const MediaSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const t = useTranslations('home.media');
 
   const displayedNews = newsData.slice(0, 5);
 
@@ -19,7 +21,7 @@ const MediaSection = () => {
     >
       <div className="max-w-[1440px] w-full px-10 mx-auto">
         <div className="space-y-14 lg:space-y-[120px]">
-          <h2 className="text-headline-sm lg:text-headline-lg font-bold">언론 속의 KODA</h2>
+          <h2 className="text-headline-sm lg:text-headline-lg font-bold">{t('title')}</h2>
           <div className="space-y-0">
             {displayedNews.map((item, index) => (
               <div key={index}>
@@ -37,9 +39,9 @@ const MediaSection = () => {
         </div>
         <Link
           href="/news"
-          className="mt-12 lg:mt-20 w-full lg:w-[180px] flex flex-row justify-center items-center text-[var(--color-primary-800)] text-label-md lg:text-label-lg  font-semibold px-[22px] py-5 border border-[var(--color-primary-700)] rounded-[4px] hover:bg-[var(--color-primary-50)] transition-colors"
+          className="mt-12 lg:mt-20 text-label-lg w-full lg:max-w-[200px] justify-center flex items-center text-[var(--color-primary-800)] font-semibold pl-[32px] pr-[22px] py-4 lg:py-[22px]  border border-[var(--color-primary-700)] rounded-[4px] hover:bg-[var(--color-primary-50)] transition-colors"
         >
-          언론보도 더 보기
+          {t('cta.viewMore')}
           <IcArrowIcon />
         </Link>
       </div>

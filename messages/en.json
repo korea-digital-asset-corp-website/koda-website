@@ -1,23 +1,23 @@
 {
   "header": {
     "navigation": {
-      "about": "about",
-      "services": "services",
-      "notice": "notice",
-      "faq": "faq",
-      "news": "news"
+      "about": "About",
+      "services": "Services",
+      "notice": "Announcements",
+      "faq": "FAQ",
+      "news": "Newsroom"
     },
     "button": {
-      "contact": "contact"
+      "contact": "Contact Us"
     }
   },
   "footer": {
     "company": {
       "name": "Korea Digital Asset Co., Ltd.",
-      "address": "13F, M Tower, 8, Teheran-ro 27-gil, Gangnam-gu, Seoul",
+      "address": "13F, 8, Teheran-ro 27-gil, Gangnam-gu, Seoul, Republic of Korea",
       "ceo": "CEO: Jin Seok Cho",
-      "businessNumber": "Business Registration No.: 618-81-36254",
-      "virtualAssetNumber": "Virtual Asset Business Registration No.: 2025-04",
+      "businessNumber": "Business Registration No. 618-81-36254",
+      "virtualAssetNumber": "VASP Registration No. 2025-04",
       "phone": "Tel: 02-561-4762",
       "logoAlt": "Go to Koda homepage",
       "infoTitle": "Company Information"
@@ -27,15 +27,15 @@
         "title": "Terms & Policies",
         "privacy": "Privacy Policy",
         "privacyAria": "View Privacy Policy",
-        "ethics": "Business Ethics",
-        "guidelines": "Guidelines",
-        "cryptoNotice": "Cryptocurrency Trading Notice"
+        "ethics": "Ethical Management",
+        "guidelines": "Operational Guidelines",
+        "cryptoNotice": "Risk Disclosure on Virtual Asset Transactions"
       },
       "support": {
-        "title": "Support & Information",
-        "notice": "Notice",
+        "title": "Support",
+        "notice": "Notices",
         "faq": "FAQ",
-        "news": "News"
+        "news": "Press"
       },
       "contact": {
         "title": "Contact",
@@ -48,6 +48,153 @@
       "venture": "벤처 확인 기업 마크"
     },
     "copyright": "Copyright © 2020 - {year} Korea Digital Asset Co., Ltd. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "title": "The Most Trusted\nDigital Asset Partner\nfor Institutions",
+      "description": "From Bitcoin to Stablecoins and other tokens,\n we provide comprehensive digital asset management services",
+      "cta": {
+        "inquiry": "Contact Us"
+      }
+    },
+    "achievement": {
+      "title": "The First VASP Certified\nas a Venture Business",
+      "description": "The first Virtual Asset Service Provider certified as a Venture Business\n by the Ministry of SMEs and Startups — recognized for innovation and reliability.",
+      "badge": {
+        "alt": "Venture Business Certificate"
+      }
+    },
+    "investors": {
+      "title": "With the industry's most reputable shareholder base,\nwe deliver the most trusted services.",
+      "list": [
+        {
+          "description": "The Largest Bank in Korea"
+        },
+        {
+          "description": "Global Top-Tier and Leading Blockchain VC"
+        },
+        {
+          "description": "Global Top-Tier VC"
+        },
+        {
+          "description": "Blockchain Technology Company"
+        }
+      ]
+    },
+    "marketStats": {
+      "title": "The Undisputed\n No.1 Digital Asset Custody Provider",
+      "description": "Holding over 90% market share in assets under custody as of H1 2024,\nwe stand as the clear market leader.*",
+      "stats": {
+        "total": {
+          "label": "Total Market AUC",
+          "amount": "$9.9B"
+        },
+        "koda": {
+          "label": "KODA AUC",
+          "amount": "$9.5B"
+        }
+      },
+      "chart": {
+        "alt": "Market share chart"
+      },
+      "source": "*Source: Results of '1H 2024 Virtual Asset Service Provider Survey',\nFinancial Services Commission"
+    },
+    "security": {
+      "title": "Robust Internal Control\nand Security Standards",
+      "certifications": {
+        "isms": {
+          "alt": "ISMS Certification"
+        }
+      },
+      "features": {
+        "compliance": {
+          "title": "Bank-Grade Compliance Standards",
+          "description": "ISMS Certification, VASP License, Compliance with Presidential Decree Security Standards under the User Protection Act,\nSOC Audit in Progress (by Samil PwC)"
+        },
+        "team": {
+          "title": "Senior Operations Team with Former Bank Executives",
+          "description": "CISO, Compliance Officer, and Internal Control Officer"
+        }
+      }
+    },
+    "insurance": {
+      "title": "$20M* Insurance Protection for Your Asset\nwith Samsung Fire & Marine Insurance",
+      "description": "Korea's Highest Level of Digital Asset Insurance\nThe First Digital Asset Insurance among VASPs in Korea",
+      "coverage": {
+        "amount": "$20M"
+      },
+      "image": {
+        "alt": "Insurance coverage information"
+      },
+      "disclaimer": "* The coverage limit can be increased depending on the asset size."
+    },
+    "solutions": {
+      "title": "A Comprehensive Solution Covering Everything from Secure Custody\nto Staking and Enterprise-Customized Features",
+      "sections": {
+        "secureStorage": {
+          "title": "Secure Custody",
+          "features": {
+            "coldWallet": {
+              "title": "Cold Wallet",
+              "description": "All assets securely stored in fully offline cold wallets"
+            },
+            "mpc": {
+              "title": "MPC (Multi-Party Computation) System",
+              "description": "Even if a single key is lost or compromised, assets remain safe and recoverable"
+            }
+          }
+        },
+        "features": {
+          "title": "Comprehensive Features",
+          "list": {
+            "custody": {
+              "title": "Custody",
+              "description": "Assets securely stored, with withdrawals processed only after proper validation"
+            },
+            "staking": {
+              "title": "Staking",
+              "description": "Delegate assets to earn rewards from blockchain network participation"
+            },
+            "backup": {
+              "title": "Circulation & Lock-up Management",
+              "description": "Manage token circulation and lock-up schedules for issued or invested coins"
+            }
+          }
+        },
+        "enterprise": {
+          "title": "Enterprise-Customized Features",
+          "list": {
+            "authorization": {
+              "title": "Access Control",
+              "description": "Customizable permission assignments and multi-approval workflows"
+            },
+            "certification": {
+              "title": "Comprehensive Certification",
+              "description": "Issuance of compliance certificates for legal, accounting, and tax purposes"
+            },
+            "security": {
+              "title": "Multi-layered Security",
+              "description": "Enhanced security with OTP verification, IP whitelisting, and more"
+            }
+          }
+        }
+      },
+      "cta": {
+        "learnMore": "Learn More"
+      }
+    },
+    "media": {
+      "title": "KODA in the News",
+      "cta": {
+        "viewMore": "View More"
+      }
+    },
+    "contact": {
+      "title": "Securely Manage Your Digital Assets\nwith the Most Trusted Partner KODA",
+      "cta": {
+        "contact": "Contact Us"
+      }
+    }
   },
   "notice": {
     "title": "Notice",

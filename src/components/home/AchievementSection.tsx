@@ -1,11 +1,14 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
 import Venture_Enterprise_badge from '@/public/assets/images/img_venture_badge_d.png';
 
 const AchievementSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const t = useTranslations('home.achievement');
+
   return (
     <section
       ref={ref}
@@ -17,7 +20,7 @@ const AchievementSection = () => {
         <div className="absolute -top-[105px] lg:-top-[157px] right-10 lg:right-20">
           <Image
             src={Venture_Enterprise_badge}
-            alt="벤처기업 확인서"
+            alt={t('badge.alt')}
             width={244}
             height={274}
             className="lg:w-[288px] lg:h-[354px]"
@@ -27,11 +30,8 @@ const AchievementSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10 pt-28">
           <div className="space-y-6 mt-32 max-lg:mt-40 lg:mt-0">
-            <h2 className="text-headline-lg font-bold">가상자산사업자 1호 벤처기업 확인 획득</h2>
-            <p className="text-left text-body-md lg:text-body-lg">
-              「벤처기업육성에 관한 특별법 시행령」 개정 기조에 따른 가상자산사업자 최초로 중소벤처기업부의
-              &apos;벤처기업 확인&apos; 획득
-            </p>
+            <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
+            <p className="text-left text-body-md lg:text-body-lg lg:whitespace-pre-line">{t('description')}</p>
           </div>
         </div>
       </div>
