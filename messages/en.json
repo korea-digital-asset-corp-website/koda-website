@@ -316,7 +316,7 @@
     ]
   },
   "news": {
-    "title": "News",
+    "title": "Newsroom",
     "moreListView": "View More"
   },
   "privacyPolicy": {
@@ -346,6 +346,81 @@
         "Bitcoin custody",
         "custody"
       ]
+    }
+  },
+  "modal": {
+    "depositWithdraw": {
+      "title": "Notice on Virtual Asset Deposits and Withdrawals",
+      "notices": [
+        {
+          "before": "Virtual assets may carry ",
+          "highlight": "the risk of permanent loss in the event of an incorrect deposit.",
+          "after": ""
+        },
+        {
+          "before": "Even if recovery is technically feasible, ",
+          "highlight": "it is often impossible due to recovery costs and security concerns.",
+          "after": ""
+        },
+        {
+          "highlight": "Once a withdrawal request is completed, it cannot be canceled due to the nature of virtual assets.",
+          "after": " Please verify the address and amount carefully before submitting."
+        },
+        {
+          "before": "For custody deposits, ",
+          "highlight": "please ensure that you should use the deposit address issued by our company.",
+          "after": "",
+          "newline": true,
+          "additional": "It is essential to confirm both the address format and the blockchain network before making a deposit."
+        },
+        {
+          "before": "For large-value deposits or withdrawals, ",
+          "highlight": "we strongly recommend conducting a test transaction with the minimum amount (e.g., 0.001 BTC, 0.01 ETH)",
+          "after": " before executing the full transfer."
+        },
+        {
+          "highlight1": "Even if blockchain address formats appear identical, incorrect deposits can occur",
+          "middle": " if the withdrawal network differs from the deposit network. ",
+          "after": "(e.g., Ethereum-based USDT vs. Solana-based USDT)"
+        },
+        {
+          "before": "After a withdrawal request is completed, ",
+          "highlight": "the transfer is processed on the blockchain network, and withdrawal times may be delayed depending on network conditions.",
+          "after": ""
+        },
+        {
+          "highlight": "Withdrawals may be restricted if suspicious activity is detected.",
+          "after": ""
+        },
+        {
+          "highlight": "Accounts without completed KYC cannot withdraw ",
+          "after": "virtual assets."
+        },
+        {
+          "highlight": "If you have any concerns about incorrect transfers or other inquiries, please contact us",
+          "after": " before proceeding with deposits or withdrawals."
+        }
+      ],
+      "table": {
+        "supportedNetworks": {
+          "label": "Supported Networks",
+          "value": "Bitcoin, Ethereum, Solana, Polygon, Binance Smart Chain, Arbitrum One, Base, Kaia, Xpla, Over, Story, Core, BizAuto, and others"
+        },
+        "depositProcess": {
+          "label": "Deposit Process",
+          "value": "Verify deposit address and network → Make a test deposit → Confirm deposit (via dashboard or inquiry with our company) → Proceed with full deposit"
+        },
+        "withdrawalProcess": {
+          "label": "Withdrawal Process",
+          "value": "Register client withdrawal address → Company verifies address validity → Test withdrawal → Confirm withdrawal (via client or inquiry with our company) → Proceed with full withdrawal"
+        }
+      },
+      "contact": {
+        "label": "Contact"
+      },
+      "buttons": {
+        "confirm": "Confirm"
+      }
     }
   }
 }
