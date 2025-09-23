@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import ArrowIcon from '@/public/assets/icons/arrow.svg';
 import { faqData } from '@/data/faqItems';
 
 const FaqAccordion = () => {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set());
+  const t = useTranslations('faq');
 
   const toggleItem = useCallback((id: number) => {
     setOpenItems((prev) => {
@@ -36,7 +38,7 @@ const FaqAccordion = () => {
                 aria-expanded={isOpen}
                 aria-controls={contentId}
               >
-                <h3 className="text-headline-xs lg:text-headline-sm font-bold pr-4">{item.question}</h3>
+                <h3 className="text-headline-xs lg:text-headline-sm font-bold pr-4">{t(item.questionKey)}</h3>
                 <span
                   className={`transform transition-transform duration-300 ease-in-out ${
                     isOpen ? 'rotate-180' : 'rotate-0'
@@ -57,7 +59,7 @@ const FaqAccordion = () => {
               }`}
             >
               <p className="text-body-md lg:text-body-lg text-gray-700 leading-relaxed whitespace-pre-line">
-                {item.answer}
+                {t(item.answerKey)}
               </p>
             </div>
           </article>

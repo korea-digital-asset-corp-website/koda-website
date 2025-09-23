@@ -291,7 +291,29 @@
     }
   },
   "faq": {
-    "title": "FAQ"
+    "title": "FAQ",
+    "items": [
+      {
+        "question": "What is the Customer Due Diligence (CDD) process?",
+        "answer": "Under Article 5-2 of the Act on Reporting and Using Specified Financial Transaction Information, the CDD process ensures that KODA's products and services are not used for money laundering or other illegal activities. This involves verifying the customer's identity (legal name, address, contact information), transaction purpose, source of funds, and beneficial ownership."
+      },
+      {
+        "question": "What happens if the CDD process is not completed?",
+        "answer": "From the inspection date prior to CDD implementation (as separately announced), existing client login sessions will expire, and virtual asset withdrawals will be suspended. Once the CDD process is completed, clients may resume using withdrawal services for their custodied assets."
+      },
+      {
+        "question": "Do new clients need to complete the CDD process?",
+        "answer": "Newly registered clients must complete the CDD process after its implementation to fully access custody services for virtual assets."
+      },
+      {
+        "question": "What is the CDD procedure for existing clients?",
+        "answer": "Existing corporate clients are also required to complete the CDD process through in-person verification. The required documents and procedures will be provided separately."
+      },
+      {
+        "question": "When did KODA implement the CDD process?",
+        "answer": "ㅇ CDD Implementation Date: December 17, 2021 (00:00 KST)"
+      }
+    ]
   },
   "news": {
     "title": "News",
