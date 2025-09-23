@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import SplineScene from '../common/SplineScene';
 import { useEffect, useState } from 'react';
 import { PopupButton } from '@typeform/embed-react';
@@ -8,6 +8,7 @@ import { PopupButton } from '@typeform/embed-react';
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const t = useTranslations('service.hero');
 
   useEffect(() => {
     setIsMounted(true);
@@ -20,6 +21,7 @@ const HeroSection = () => {
   if (!isMounted) {
     return null;
   }
+
   return (
     <div className="max-w-[1440px] w-full px-10 mx-auto">
       <section className="mx-auto overflow-x-hidden">
@@ -29,21 +31,15 @@ const HeroSection = () => {
           }`}
         >
           <div className="space-y-6 order-2 lg:order-1">
-            <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold">
-              안전한 보관부터 스테이킹,
-              <br className="hidden lg:block" />
-              법인 맞춤 기능까지
-              <br className="hidden lg:block" />
-              디지털 자산 종합 솔루션
+            <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold lg:whitespace-pre-line">
+              {t('title')}
             </h1>
-            <p className="text-center text-body-md lg:text-left lg:text-body-lg">
-              가장 안전하고 편리하게 디지털 자산을 관리하세요
-            </p>
+            <p className="text-center text-body-md lg:text-left lg:text-body-lg">{t('description')}</p>
             <PopupButton
               id="bZKbfTne"
               className="text-white flex justify-center lg:max-w-[180px] w-full px-5 lg:px-[22px] py-4 lg:py-5 bg-[var(--color-primary-800)] hover:bg-[var(--color-primary-900)] transition-colors rounded-[4px] cursor-pointer"
             >
-              서비스 문의
+              {t('cta.contact')}
             </PopupButton>
           </div>
 

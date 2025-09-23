@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import BitcoinIcon from '@/public/assets/icons/services_bitcoin.svg';
 import EthereumIcon from '@/public/assets/icons/services_ethereum.svg';
@@ -16,6 +17,7 @@ import MoreMainnetsIcon from '@/public/assets/icons/services_mainnets.svg';
 
 const AssetsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const t = useTranslations('service.assets');
 
   const mainnetAssets = [
     { icon: BitcoinIcon, name: 'Bitcoin' },
@@ -29,7 +31,7 @@ const AssetsSection = () => {
     { icon: KaiaIcon, name: 'Kaia' },
     { icon: StoryIcon, name: 'Story' },
     { icon: CoreIcon, name: 'Core' },
-    { icon: MoreMainnetsIcon, name: 'More Mainnets' },
+    { icon: MoreMainnetsIcon, name: t('mainnets.more') },
   ];
 
   return (
@@ -42,11 +44,9 @@ const AssetsSection = () => {
       <div className="max-w-[1440px] w-full px-[40px] mx-auto">
         <div className="lg:flex-1">
           <div className="space-y-4 mb-14 lg:mb-[120px]">
-            <h2 className="text-center lg:text-left text-headline-sm lg:text-headline-lg font-bold">
-              다양한 자산을 지원합니다
-            </h2>
+            <h2 className="text-center lg:text-left text-headline-sm lg:text-headline-lg font-bold">{t('title')}</h2>
             <p className="text-center lg:text-left text-body-md lg:text-body-xl font-normal lg:font-medium">
-              15개 이상의 메인넷에 발행된 자산을 보관하세요
+              {t('description')}
             </p>
           </div>
 
@@ -64,10 +64,8 @@ const AssetsSection = () => {
             ))}
           </div>
 
-          <p className="text-center lg:text-right text-caption-lg font-medium text-[var(--color-gray-500)]">
-            현재 지원하지 않는 메인넷도 신속하게 지원됩니다.
-            <br />
-            (EVM 계열은 1주 이내, 그외는 2~3주 이내로 지원)
+          <p className="text-center lg:text-right text-caption-lg font-medium text-[var(--color-gray-500)] lg:whitespace-pre-line">
+            {t('notice')}
           </p>
         </div>
       </div>

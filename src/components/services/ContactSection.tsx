@@ -1,10 +1,12 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { PopupButton } from '@typeform/embed-react';
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const t = useTranslations('service.contact');
 
   return (
     <section
@@ -15,15 +17,14 @@ const ContactSection = () => {
     >
       <div className="max-w-[1440px] w-full px-10 mx-auto">
         <div className="flex flex-col justify-center items-center space-y-8 lg:space-y-11">
-          <h2 className="text-headline-lg lg:text-display-md font-bold text-center">
-            가장 신뢰할 수 있는 KODA와 함께 <br className="hidden lg:block" />
-            디지털 자산을 안전하게 보관·관리하세요
+          <h2 className="text-headline-lg lg:text-display-md font-bold text-center lg:whitespace-pre-line">
+            {t('title')}
           </h2>
           <PopupButton
             id="bZKbfTne"
             className="w-full lg:w-[165px] px-5 py-4 lg:px-[22px] lg:py-[20px] bg-[var(--color-gray-900)] text-label-md lg:text-label-lg rounded-[4px] text-white hover:bg-[var(--color-gray-700)] transition-colors cursor-pointer"
           >
-            서비스 문의
+            {t('cta.contact')}
           </PopupButton>
         </div>
       </div>
