@@ -323,7 +323,171 @@
     "title": "Privacy Policy"
   },
   "ethicalManagement": {
-    "title": "Ethical Management"
+    "title": "Ethical Management Policy",
+    "introduction": "Korea Digital Asset Co., Ltd. (hereinafter referred to as the \"Company\") emphasizes the importance of ethical management and has established this Code of Ethics to reflect the spirit of the Charter of Ethics. The Company pledges that all executives and employees shall adhere to proper ethical judgment standards and occupational ethics, and shall faithfully practice them.",
+
+    "chapter1": {
+      "title": "Chapter 1. General Provisions",
+      "article1": {
+        "title": "Article 1 (Purpose)",
+        "content": "The purpose of this Code of Ethics (hereinafter referred to as the \"Code\") is to provide employees of virtual asset service providers, as defined under Article 2(1) of the Act on Reporting and Using Specified Financial Transaction Information, with standards for practicing ethical management, making proper ethical decisions, and ensuring ethical judgment. By faithfully carrying out their responsibilities and duties as professionals in the virtual asset industry, employees shall contribute to the protection of customers, enhancement of corporate value, and ultimately to the development of society."
+      },
+      "article2": {
+        "title": "Article 2 (Scope of Application)",
+        "content1": "This Code applies to all executives and employees of the Company, including contract and temporary staff.",
+        "content2": "Both the Company and its employees shall endeavor to comply with this Code, and detailed provisions necessary for compliance may be specified in internal regulations."
+      }
+    },
+
+    "chapter2": {
+      "title": "Chapter 2. Ethics Toward Clients",
+      "article1": {
+        "title": "Article 1 (Client First)",
+        "content": "The Company recognizes clients as the top priority in all actions, always thinking and acting from the client's perspective, and striving to provide better virtual asset services."
+      },
+      "article2": {
+        "title": "Article 2 (Client Protection)",
+        "content": "The Company shall securely protect clients' assets and information and shall not engage in any immoral or unethical acts that infringe upon clients' rights and interests."
+      },
+      "article3": {
+        "title": "Article 3 (Respect for Clients)",
+        "content": "All executives and employees shall always listen to clients' opinions and suggestions with humility, and promptly and fairly handle any client complaints."
+      }
+    },
+
+    "chapter3": {
+      "title": "Chapter 3. Ethics Toward Shareholders and Investors",
+      "article1": {
+        "title": "Article 1 (Protection of Shareholders' and Investors' Rights and Interests)",
+        "content1": "The Company protects the rights of shareholders and investors and ensures the accuracy and reliability of accounting data by adhering to transparent and reasonable decision-making processes and procedures.",
+        "content2": "The Company respects the legitimate demands and proposals of shareholders and investors, providing necessary information accurately and in a timely manner in accordance with relevant laws and internal regulations to enable rational decision-making.",
+        "content3": "The Company treats all shareholders fairly and equally, making management decisions with consideration of the interests of all shareholders, ensuring that no shareholder's rights or interests are unjustly infringed."
+      }
+    },
+
+    "chapter4": {
+      "title": "Chapter 4. Ethics Toward the Nation and Society",
+      "article1": {
+        "title": "Article 1 (Contribution to National Economy and Social Development)",
+        "content1": "As a member of the nation and local community, the Company strives to contribute to economic growth and job creation, and promotes various initiatives that add socio-economic value to communities and their members, thereby fulfilling its social responsibilities.",
+        "content2": "The Company and all employees shall enhance society by achieving technological innovation and business advancement, providing convenient and efficient services, and practicing reasonable and responsible management to improve the quality of life of customers."
+      },
+      "article2": {
+        "title": "Article 2 (Disaster Prevention and Environmental Protection)",
+        "content": "The Company recognizes environmental issues as an important element of management, complies with domestic and international environmental laws and regulations, and adheres to all safety-related laws and standards to make every effort to prevent disasters and manage risks."
+      },
+      "article3": {
+        "title": "Article 3 (Prohibition of Political Participation)",
+        "content1": "The Company shall not express opinions or take actions in support of specific political parties or candidates that may compromise political neutrality. Donations to political or charitable organizations shall be made in compliance with relevant laws.",
+        "content2": "All employees shall refrain from engaging in political activities during working hours and from using Company personnel or assets for political purposes.",
+        "content3": "The political rights and opinions of individual employees shall be respected, but they must ensure that their personal political activities are not misconstrued as representing the Company's position."
+      }
+    },
+
+    "chapter5": {
+      "title": "Chapter 5. Ethics Toward Competitors and Business Partners",
+      "article1": {
+        "title": "Article 1 (Compliance with Domestic and International Laws)",
+        "content": "The Company complies with laws related to the prevention of corruption, bribery, and money laundering, both domestically and internationally, and respects international agreements, regulations, and local laws, cultures, and customs as a member of the global community."
+      },
+      "article2": {
+        "title": "Article 2 (Fair Competition and Transactions)",
+        "content1": "The Company respects the principles of free competition and fair market order, competes fairly with peers based on mutual respect, and complies with relevant fair trade laws.",
+        "content2": "Through fair and transparent business practices, the Company builds trust and cooperation with business partners, pursues mutual growth, and refrains from making any unfair demands by exploiting a superior position. The Company enters into and complies with fair and clean contracts."
+      }
+    },
+
+    "chapter6": {
+      "title": "Chapter 6. Ethics Toward Executives and Employees",
+      "article1": {
+        "title": "Article 1 (Respect and Fair Treatment)",
+        "content": "The Company respects the fundamental human rights and privacy of all employees, prohibits unfair discrimination on the basis of gender, education, region of origin, family background, alma mater, religion, age, disability, or marital status, and provides equal opportunities based on ability and aptitude, offering reasonable rewards based on fair performance evaluation."
+      },
+      "article2": {
+        "title": "Article 2 (Talent Development and Support)",
+        "content1": "The Company respects employees' autonomy and creativity, provides fair job opportunities to enhance their capabilities, and supports employees' self-realization by fostering talent and increasing job satisfaction.",
+        "content2": "The Company supports employees in achieving their goals, actively provides necessary training opportunities, and strives to create a work environment and organizational culture that enables employees to maximize their abilities."
+      },
+      "article3": {
+        "title": "Article 3 (Improvement of Quality of Life)",
+        "content1": "The Company regards all employees as its most valuable asset, establishes systems enabling them to perform duties fairly, and endeavors to create a pleasant working environment.",
+        "content2": "The Company respects employees' independence and fundamental rights, fostering a mature organizational culture where employees can freely make suggestions and proposals based on mutual trust."
+      }
+    },
+
+    "chapter7": {
+      "title": "Chapter 7. Work Ethics of Executives and Employees",
+      "article1": {
+        "title": "Article 1 (Basic Ethics and Compliance with Laws)",
+        "content1": "All employees shall share the Company's management philosophy and vision, faithfully fulfill their duties to realize the Company's goals and values, and perform their assigned missions with integrity and sincerity.",
+        "content2": "Employees shall uphold honesty and trust as core values, faithfully performing duties in accordance with the principle of good faith.",
+        "content3": "Employees shall not engage in conduct that damages the Company's dignity or social credibility, and shall continually strive for self-innovation with creative thinking to adapt flexibly to changes in the management environment.",
+        "content4": "Employees shall comply with all relevant laws and regulations related to their duties, uphold social values and conscience, and faithfully perform their responsibilities."
+      },
+      "article2": {
+        "title": "Article 2 (Prohibition of Conflicts of Interest)",
+        "content1": "Employees shall prioritize the Company's interests over personal or departmental interests when conflicts arise.",
+        "content2": "Any business opportunities discovered during employment must be reported to and belong primarily to the Company.",
+        "content3": "Employees must ensure that their personal interests do not conflict with those of the Company, shareholders, or customers, and must disclose in advance any potential conflicts of interest."
+      },
+      "article3": {
+        "title": "Article 3 (Prohibition of Insider Trading and Unfair Transactions)",
+        "content1": "Employees shall not engage in unfair trading for personal gain, such as buying or selling securities or virtual assets, or manipulating prices using insider information obtained in the course of work.",
+        "content2": "Employees shall not disclose non-public material information that could affect stock or virtual asset prices to third parties without following lawful procedures."
+      },
+      "article4": {
+        "title": "Article 4 (Protection of Company Assets)",
+        "content1": "Employees shall use all tangible and intangible assets of the Company solely for legitimate business purposes to enhance Company value and shall not pursue private interests.",
+        "content2": "Company funds and assets shall be used transparently and reasonably for approved purposes only, in accordance with prescribed uses."
+      },
+      "article5": {
+        "title": "Article 5 (Protection and Security of Information)",
+        "content1": "Employees shall not provide Company information or undisclosed information to external parties through unlawful means and shall take responsibility for preventing leaks to unauthorized third parties.",
+        "content2": "When providing information to media organizations such as newspapers or broadcasters, employees must follow lawful procedures through properly authorized personnel."
+      },
+      "article6": {
+        "title": "Article 6 (Prohibition of Workplace Harassment and Sexual Harassment)",
+        "content1": "Employees shall not engage in unwanted sexual contact, jokes, or actions that cause sexual humiliation.",
+        "content2": "Employees shall treat one another with respect and consideration, refraining from verbal, physical, or psychological abuse that causes humiliation, insult, or intimidation."
+      },
+      "article7": {
+        "title": "Article 7 (Compliance with Ethical Standards)",
+        "content": "Employees shall faithfully comply with all ethical standards and bear responsibility for any violations."
+      },
+      "article8": {
+        "title": "Article 8 (Standards for External Activities)",
+        "content1": "When engaging in external activities such as public speaking, writing, media interaction, or use of electronic communication such as Social Network Services (SNS), employees shall comply with the following:",
+        "subcontent1": "Clearly state that the opinion expressed is personal and not the official opinion of the Company.",
+        "subcontent2": "Ensure that external activities do not interfere with the Company's primary business operations.",
+        "subcontent3": "Strive to maintain fair market order and foster a sound investment culture.",
+        "subcontent4": "Avoid making definitive statements on uncertain matters or disparaging other virtual asset service providers."
+      },
+      "article9": {
+        "title": "Article 9 (Obligations After Termination of Employment)",
+        "content": "When resigning, employees shall return all work-related materials and take appropriate follow-up measures, and shall not engage in acts that harm the interests of the Company or its clients even after leaving the Company."
+      }
+    },
+
+    "chapter8": {
+      "title": "Chapter 8. Ethics as a Virtual Asset Custodian",
+      "article1": {
+        "title": "Article 1 (Secure Custody of Client Assets)",
+        "content1": "The Company shall comply with the following provisions for risk management and accident prevention:",
+        "subcontent1": "Client virtual assets shall be securely stored 100% in wallets completely separated from the Internet and maintained offline (hereinafter \"cold wallets\").",
+        "subcontent2": "Cold wallets shall be securely stored in physically isolated locations, and all procedures related to cold wallet operation shall comply with internal regulations.",
+        "subcontent3": "Cold wallets shall be managed securely against natural or environmental threats such as fire, as well as unauthorized access or theft, in accordance with internal regulations."
+      },
+      "article2": {
+        "title": "Article 2 (Prevention of Conflicts of Interest)",
+        "content1": "The Company shall comply with the following provisions to minimize potential conflicts of interest in fulfilling its responsibilities as a custodian:",
+        "subcontent1": "If there is a possibility of conflict of interest, the Company shall consult in advance with the Compliance Officer to ensure that no issues arise in client protection.",
+        "subcontent2": "The Compliance Officer shall confirm and review whether business procedures and applicable standards may potentially violate laws or internal regulations in the course of duty."
+      },
+      "article3": {
+        "title": "Article 3 (Prohibition of Re-delegation of Custodied Assets)",
+        "content": "The Company shall hold in substance the same type and quantity of virtual assets entrusted by clients and shall not re-delegate such assets to other institutions."
+      }
+    }
   },
   "workGuidelines": {
     "title": "Key Business Guidelines",
