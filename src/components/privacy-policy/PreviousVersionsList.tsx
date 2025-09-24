@@ -41,13 +41,16 @@ const PreviousVersionsList = ({}: PreviousVersionsListProps) => {
 
   return (
     <>
-      <H3 className="font-bold mb-3">{t('title')}</H3>
+      <H3 className="text-headline-xs font-bold mb-3">{t('title')}</H3>
       <div className="space-y-1">
         {allVersions.map((version) => {
           const linkUrl = version.isLatest ? `/privacy-policy` : `/privacy-policy/${version.version}`;
           return (
             <div key={version.version} className="flex items-center">
-              <Link href={linkUrl} className="text-body-lg text-primary-700 underline underline-offset-4">
+              <Link
+                href={linkUrl}
+                className="text-body-sm lg:text-body-lg text-primary-700 underline underline-offset-4"
+              >
                 {renderVersionLink(version)}
               </Link>
             </div>
