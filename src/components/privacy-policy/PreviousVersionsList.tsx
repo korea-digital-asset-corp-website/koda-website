@@ -1,33 +1,55 @@
 import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 import { H3 } from '@/components/typography';
-import { getAllVersions } from '@/data/privacy-policy/versions';
+import { getAllVersions, PrivacyPolicyVersion } from '@/data/privacy-policy/versions';
 
 interface PreviousVersionsListProps {
   currentVersion?: string;
 }
 
-const PreviousVersionsList = ({ currentVersion }: PreviousVersionsListProps) => {
+const PreviousVersionsList = ({}: PreviousVersionsListProps) => {
+  const t = useTranslations('privacyPolicy.previousVersions');
+  const locale = useLocale();
   const allVersions = getAllVersions();
 
   const formatDate = (dateString: string) => {
-    return `${dateString}일 시행`;
+    const [year, month, day] = dateString.split('.');
+    const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+
+    if (locale === 'en') {
+      const formattedDate = date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+      return `Effective ${formattedDate}`;
+    } else {
+      return `${dateString}일 시행`;
+    }
+  };
+
+  const renderVersionLink = (version: PrivacyPolicyVersion): string => {
+    const policyTitle = t('policyTitle', { version: version.version });
+    const formattedDate = formatDate(version.effectiveDate);
+
+    if (locale === 'en') {
+      return `${policyTitle} (${formattedDate})`;
+    } else {
+      return `(${formattedDate}) ${policyTitle}`;
+    }
   };
 
   return (
     <>
-      <H3 className="font-bold mb-3">[이전 개인정보 처리방침 목록]</H3>
+      <H3 className="font-bold mb-3">{t('title')}</H3>
       <div className="space-y-1">
         {allVersions.map((version) => {
-          // const isCurrentVersion = currentVersion === version.version;
           const linkUrl = version.isLatest ? `/privacy-policy` : `/privacy-policy/${version.version}`;
           return (
             <div key={version.version} className="flex items-center">
               <Link href={linkUrl} className="text-body-lg text-primary-700 underline underline-offset-4">
-                ({formatDate(version.effectiveDate)}) 개인정보처리방침 {version.version}
+                {renderVersionLink(version)}
               </Link>
-              {/* {isCurrentVersion && (
-                <span className="ml-2 px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">현재 보기</span>
-              )} */}
             </div>
           );
         })}

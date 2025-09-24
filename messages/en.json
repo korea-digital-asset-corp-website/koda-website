@@ -320,7 +320,308 @@
     "moreListView": "View More"
   },
   "privacyPolicy": {
-    "title": "Privacy Policy"
+    "title": "Privacy Policy",
+    "introduction1": "Korea Digital Asset Co., Ltd. (the \"Company\") places the utmost importance on the protection of users' personal information and makes every effort to safeguard the personal information provided by users in order to use the Company's services (digital asset custody services). The Company complies with the \"Personal Information Protection Act\" and other applicable laws and regulations relating to personal information.",
+    "introduction2": "The Company discloses this Privacy Policy on its website so that users may easily review it at any time.",
+
+    "tableOfContents": {
+      "item1": "Purpose of Processing Personal Information",
+      "item2": "Retention and Use Period of Personal Information",
+      "item3": "Provision of Personal Information to Third Parties",
+      "item4": "Outsourcing of Personal Information Processing and Cross-border Transfer",
+      "item5": "Rights, Obligations, and Exercise Methods of Users and Their Legal Representatives",
+      "item6": "Items of Personal Information Processed",
+      "item7": "Destruction of Personal Information",
+      "item8": "Measures to Ensure Security of Personal Information",
+      "item9": "Installation, Operation, and Rejection of Automatic Collection Devices of Personal Information",
+      "item10": "Personal Information Protection Officer",
+      "item11": "Requests for Access to Personal Information",
+      "item12": "Remedies for Rights Infringement",
+      "item13": "Changes to the Privacy Policy"
+    },
+
+    "section1": {
+      "title": "1. Purpose of Processing Personal Information",
+      "introduction": "The Company processes personal information for the following purposes. The personal information processed will not be used for purposes other than those specified below. In the event of a change in purpose, the Company will take necessary measures such as obtaining separate consent in accordance with Article 18 of the Personal Information Protection Act.",
+      "serviceInquiry": {
+        "title": "Service inquiries",
+        "item1": "Provision of service information and customized services"
+      },
+      "custodyService": {
+        "title": "Provision of Custody Services",
+        "item1": "User identification and management of user information",
+        "item2": "Establishment, maintenance, and termination of digital asset custody transaction relationships, and other matters related to overall service provision"
+      }
+    },
+
+    "section2": {
+      "title": "2. Retention and Use Period of Personal Information",
+      "paragraph1": "① The Company processes and retains personal information within the retention and use period consented to by users at the time of collection, or within the period prescribed by law.",
+      "paragraph2": "② The specific retention and use periods for personal information are as follows:",
+      "serviceInquiry": {
+        "title": "Service inquiries",
+        "period": "Destroyed without delay once the purpose of the inquiry has been achieved"
+      },
+      "custodyService": {
+        "title": "Custody services",
+        "userManagement": "User Management : Until user withdrawal",
+        "serviceProvision": "Service Provision : Until completion of service supply and related settlement of fees"
+      },
+      "paragraph3": "③ Notwithstanding Paragraph ②, the Company may process and retain personal information until the end of the following periods:",
+      "legalRetention": {
+        "tableHeaders": {
+          "category": "Category",
+          "law": "Relevant Law",
+          "period": "Period"
+        },
+        "records": {
+          "customerDueDiligence": {
+            "category": "Records of customer due diligence and transaction information",
+            "law": "Act on Reporting and Using Specified Financial Transaction Information, Article 5-4",
+            "period": "5 years"
+          },
+          "contracts": {
+            "category": "Records relating to contracts",
+            "law": "Act on Consumer Protection in Electronic Commerce, Article 6",
+            "period": "5 years"
+          },
+          "payments": {
+            "category": "Records of payments and supply of goods",
+            "law": "Act on Consumer Protection in Electronic Commerce, Article 6",
+            "period": "5 years"
+          },
+          "complaints": {
+            "category": "Records of consumer complaints, and dispute resolution",
+            "law": "Act on Consumer Protection in Electronic Commerce, Article 6",
+            "period": "5 years"
+          },
+          "loginRecords": {
+            "category": "Records of login",
+            "law": "Protection of Communications Secrets Act, Article 15-2",
+            "period": "At least 3 months"
+          },
+          "virtualAssetTransactions": {
+            "category": "Records of digital asset transaction",
+            "law": "Act on the Protection of Users of Virtual Assets, Article 9",
+            "period": "15 years"
+          }
+        }
+      }
+    },
+
+    "section3": {
+      "title": "3. Provision of Personal Information to Third Parties",
+      "introduction": "The Company does not use users' personal information beyond the scope notified to users or stated in the Terms of Service, nor does it provide such information to third parties. However, exceptions are made where the user consents or in the following cases:",
+      "travelRule": {
+        "title": "① Travel Rule",
+        "description": "To comply with the Act on Reporting and Using Specified Financial Transaction Information and to protect users' assets, the Company may provide certain personal information to domestic and foreign Virtual Asset Service Providers (VASPs) when processing virtual asset withdrawals.",
+        "tableHeaders": {
+          "purpose": "Purpose",
+          "recipient": "Recipients",
+          "information": "Information Provided",
+          "legalBasis": "Legal Basis for Provision"
+        },
+        "commonPurpose": "Provision of Transaction Information Records",
+        "commonInformation": "Encrypted Name, Virtual Asset Address",
+        "commonLegalBasis": "Act on Reporting and Use of Specific Financial Transaction Information",
+        "recipients": {
+          "upbit": "Upbit",
+          "bithumb": "Bithumb",
+          "coinone": "Coinone",
+          "korbit": "Korbit",
+          "hexlant": "Hexlant",
+          "kdac": "KDAC",
+          "flybit": "Flybit",
+          "gopax": "Gopax",
+          "beeblock": "Beeblock",
+          "pravang": "Pravang",
+          "flataexchange": "FlataExchange",
+          "foblgate": "FOBLGATE",
+          "borabit": "Borabit",
+          "coredax": "COREDAX",
+          "paycoin": "PayCoin",
+          "oasis": "OASIS",
+          "infiniteblock": "InfiniteBlock"
+        }
+      },
+      "legalProvision": {
+        "title": "② Provision under Law",
+        "description": "The Company may provide documents including users' personal information to courts, investigative agencies, the National Tax Service, and other authorities pursuant to orders of document submission or warrants issued under applicable laws and procedures."
+      }
+    },
+    "section4": {
+      "title": "4. Outsourcing of Personal Information Processing and Cross-border Transfer",
+      "paragraph1": "To provide more convenient and improved services, the Company outsources part of its business to professional external service providers and supervises them to prevent violations of applicable laws. In the event of any changes in the details of outsourced tasks or service providers, such changes will be disclosed without delay through this Privacy Policy.",
+      "paragraph2": "To ensure smooth service delivery, some personal information is also entrusted to foreign service providers for processing. Users may refuse cross-border transfers of their personal information by submitting a written or email request (support@kodax.com) to the Company's Personal Information Protection Officer. However, such refusal may restrict the user's ability to use the related services.",
+      "outsourcing": {
+        "tableHeaders": {
+          "provider": "Provider",
+          "purpose": "Purpose",
+          "items": "Items",
+          "country": "Country",
+          "method": "Method",
+          "period": "Period"
+        },
+        "commonMethod": "Transmitted via network upon service use",
+        "providers": {
+          "googleLLC": {
+            "name": "Google LLC",
+            "purpose": "Japan Region Cloud Service for Service Operation",
+            "items": "Name, Address, Email, Service Usage Records, Access Logs, Access IP",
+            "country": "Japan, Korea(asia-northeast3) region, Contact : googlekrsupport@google.com",
+            "period": "Until user withdrawal or termination of outsourcing contract"
+          },
+          "typeForm": {
+            "name": "TypeForm",
+            "purpose": "For conducting website surveys",
+            "items": "Email, Mobile Phone Number, Name, Company Name, Position",
+            "country": "Spain, Contact : support@typeform.com",
+            "period": "Until survey completion or termination of outsourcing contract"
+          },
+          "code": {
+            "name": "VerifyVASP",
+            "purpose": "For virtual asset Travel Rule",
+            "items": "Sender/Recipient Name, Virtual Asset Wallet Address",
+            "country": "Republic of Korea, Contact : support@codevasp.com",
+            "period": "Until termination of outsourcing contract"
+          }
+        }
+      }
+    },
+    "section5": {
+      "title": "5. Rights and Obligations of Users and Legal Representatives",
+      "paragraph1": "① Users may at any time exercise rights such as requesting access, correction, deletion, or suspension of processing of personal information. However, these rights may be restricted under Articles 35(4), 36(1), and 37(2) of the Personal Information Protection Act.",
+      "paragraph2": "② Requests may be made in writing, by email, or fax as prescribed by Article 41(1) of the Enforcement Decree of the Act, and the Company will promptly take action.",
+      "paragraph3": "③ The exercise of rights under Paragraph 1 may be carried out through the user's legal representative or an authorized agent. In such cases, a power of attorney in the form prescribed in Annex Form No. 11 of the \"Notice on the Methods of Processing Personal Information (No. 2020-7)\" must be submitted.",
+      "paragraph4": "④ A request for the correction or deletion of personal information may not be made if the personal information is expressly specified as a subject of collection under other applicable laws or regulations.",
+      "paragraph5": "⑤ When a user exercises the right to request access, correction or deletion, or suspension of processing, the Company shall verify whether the person making the request is the data subject themselves or a duly authorized representative."
+    },
+
+    "section6": {
+      "title": "6. Items of Personal Information Processed",
+      "introduction": "The Company collects the following personal information items to provide digital asset custody services.",
+      "serviceInquiry": {
+        "title": "Service Inquiries",
+        "required": "Required items: Email, mobile phone number, name, company name, title"
+      },
+      "custodyService": {
+        "title": "Provision of Digital Asset Custody Services",
+        "required": "Required items: Corporate transaction application form and customer transaction confirmation form (name in Korean/English, date of birth, residence address, nationality, email address, mobile phone number), Power of attorney for representative/agent (name, resident registration number, residence address, mobile phone number), Corporate seal certificate (representative's name, representative's resident registration number), Shareholder register (representative's name, residence address, resident registration number), Representative/agent identification card",
+        "assetTransfer": "Collected items for asset transfers: Name of sender/beneficiary, address of sender/beneficiary, mobile phone number of sender"
+      }
+    },
+
+    "section7": {
+      "title": "7. Destruction of Personal Information",
+      "paragraph1": "① The Company destroys personal information without delay when the retention period has expired, the processing purpose has been achieved, or the personal information otherwise becomes unnecessary.",
+      "paragraph2": "② If the retention period of personal information agreed upon by the user has expired, or the processing purpose has been achieved, but preservation is required under other laws, the relevant personal information will be stored in a separate database (DB) or preserved in a different storage location.",
+      "legalBasis": "Legal basis: Act on Reporting and Using Specified Financial Transaction Information",
+      "scope": "Scope: Personal information of withdrawn members with transaction records",
+      "items": "Items collected: Email, name, company name",
+      "paragraph3": "③ The procedures and methods for destroying personal information are as follows:",
+      "procedures": "Destruction procedures: The Company selects personal information for which destruction reasons have arisen and destroys it with the approval of the Company's Personal Information Protection Officer.",
+      "methods": "Destruction methods: Information in electronic file form is destroyed using technical methods that make record reproduction impossible. Printed personal information is shredded with a shredder or incinerated."
+    },
+
+    "section8": {
+      "title": "8. Measures to Ensure the Security of Personal Information",
+      "introduction": "In accordance with Article 29 of the Personal Information Protection Act, the Company takes the following measures to ensure the security of personal information:",
+      "measure1": {
+        "title": "① Regular internal audits",
+        "content": "The Company conducts quarterly internal audits to ensure the stability of personal information handling."
+      },
+      "measure2": {
+        "title": "② Minimization and training of staff handling personal information",
+        "content": "The Company designates specific staff to handle personal information and restricts access to such staff, implementing measures to minimize the number of personnel with access."
+      },
+      "measure3": {
+        "title": "③ Establishment and implementation of an internal control plan",
+        "content": "The Company has established and implemented an internal control plan to ensure safe processing of personal information."
+      },
+      "measure4": {
+        "title": "④ Technical measures against hacking, etc.",
+        "content": "To prevent leakage and damage of personal information caused by hacking or computer viruses, the Company installs security programs, performs regular updates and inspections, installs systems in areas with restricted external access, and employs technical and physical monitoring and blocking measures."
+      },
+      "measure5": {
+        "title": "⑤ Encryption of personal information",
+        "content": "Users' personal information and passwords are stored and managed in encrypted form, accessible only by the user. Important data is protected using additional security measures such as file and transmission encryption or file locking functions."
+      },
+      "measure6": {
+        "title": "⑥ Retention and prevention of falsification of access records",
+        "content": "The Company retains and manages records of access to the personal information processing system for at least one year and uses security functions to prevent alteration, theft, or loss of such records."
+      },
+      "measure7": {
+        "title": "⑦ Access restriction to personal information",
+        "content": "The Company takes necessary measures to control access to personal information by granting, changing, or revoking access rights to the database system processing personal information and controls unauthorized external access using intrusion prevention systems."
+      },
+      "measure8": {
+        "title": "⑧ Use of locking devices for document security",
+        "content": "Documents and auxiliary storage media containing personal information are stored in secure locations with locking devices."
+      },
+      "measure9": {
+        "title": "⑨ Access control for unauthorized persons",
+        "content": "The Company has designated physical storage locations for personal information and has established and operates access control procedures."
+      }
+    },
+
+    "section9": {
+      "title": "9. Matters Concerning the Installation, Operation, and Refusal of Automatic Collection Devices of Personal Information",
+      "paragraph1": "① The Company uses \"cookies\" that store and retrieve user information to provide personalized services. In addition, the Company uses Typeform to analyze users' website usage behavior for service improvement.",
+      "paragraph2": "② A cookie is a small piece of information sent from the server(http) operating the website to the user's web browser and is sometimes stored on the hard disk of the user's PC.",
+      "cookiePurpose": "A. Purpose and types of cookies:",
+      "generalCookie": "General cookies: Used to understand the user's visit and usage patterns of services and websites, popular search terms, secure connection status, etc., in order to provide optimized information to the user.",
+      "typeformCookie": "Typeform cookies: Used to analyze user service usage patterns and preferences to provide personalized services and improve user experience.",
+      "cookieRefusal": "B. Installation, operation, and refusal of cookies: Users can refuse cookie storage by adjusting the options in the Privacy menu under Tools > Internet Options in the web browser.",
+      "cookieRefusalEffect": "C. If cookie storage is refused, difficulties may arise in using personalized services."
+    },
+
+    "section10": {
+      "title": "10. Chief Privacy Officer",
+      "paragraph1": "① The Company designates the following Chief Privacy Officer who is responsible for the overall management of personal information processing and handles user complaints and remedies related to personal information processing.",
+      "officer": {
+        "title": "Chief Privacy Officer",
+        "name": "Name : Jinseok Cho",
+        "position": "Position : CEO",
+        "email": "Email : support@kodax.com"
+      },
+      "paragraph2": "② Users may contact the Chief Privacy Officer and the relevant department for all inquiries, complaints, and remedies related to personal information protection that arise while using the Company's services. The Company will respond to and handle user inquiries without delay."
+    },
+
+    "section11": {
+      "title": "11. Request for Access to Personal Information",
+      "paragraph1": "Pursuant to Article 35 of the Personal Information Protection Act, users may request access to their personal information from the department listed below. The Company will make every effort to ensure that users' requests for access are processed promptly.",
+      "department": {
+        "title": "Department for Receiving and Processing Requests for Access to Personal Information",
+        "name": "Department Name : Compliance",
+        "contact": "Contact Number: +82-2-561-4762",
+        "email": "Email: support@kodax.com"
+      }
+    },
+
+    "section12": {
+      "title": "12. Remedies for Rights Infringement",
+      "introduction": "For assistance with remedies and consultation regarding personal information infringement, please contact the following organizations:",
+      "organizations": {
+        "kopico": "Personal Information Dispute Mediation Committee : 1833-6972 (www.kopico.go.kr)",
+        "kisa": "Personal Information Infringement Report Center : 118 (privacy.kisa.or.kr)",
+        "spo": "Supreme Prosecutors' Office Cyber Investigation Department : 1301 (www.spo.go.kr)",
+        "police": "National Police Agency Cyber Bureau : 182 (ecrm.police.go.kr/minwon/main)"
+      }
+    },
+    "section13": {
+      "title": "13. Changes to the Privacy Policy",
+      "content": "When the Company changes its Privacy Policy, it will continuously disclose the timing of the changes and implementation, as well as the revised content. The Company will also make it easy for users to confirm the changes by comparing the content before and after revision."
+    },
+    "supplementaryProvisions": {
+      "title": "Supplementary Provisions",
+      "effectiveDate": "(Effective Date) This Privacy Policy shall apply from {effectiveDate}.",
+      "changeDetails": "Change Details: {changeReason}"
+    },
+    "previousVersions": {
+      "title": "[Previous Versions of the Privacy Policy]",
+      "dateFormat": "Effective {date}",
+      "policyTitle": "Privacy Policy {version}"
+    }
   },
   "ethicalManagement": {
     "title": "Ethical Management Policy",
