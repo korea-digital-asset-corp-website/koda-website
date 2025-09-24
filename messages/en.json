@@ -326,7 +326,163 @@
     "title": "Ethical Management"
   },
   "workGuidelines": {
-    "title": "주요 업무지침"
+    "title": "Key Business Guidelines",
+    "sections": {
+      "riskManagement": {
+        "title": "1. Risk Management and Accident Prevention Guidelines (Internal Control and Audit Guidelines)",
+        "committee": {
+          "title": "(Risk Management Committee)",
+          "items": [
+            "The Company may establish a Risk Management Committee.",
+            "If the Company establishes a Risk Management Committee pursuant to the preceding paragraph, the Committee shall deliberate and resolve on the following matters:"
+          ],
+          "subItems": [
+            "Establishment of basic policies and strategies for risk management",
+            "Deliberation and approval of newly entrusted virtual assets",
+            "Formulation and revision of risk management standards",
+            "Other matters necessary for risk management"
+          ]
+        },
+        "standards": {
+          "title": "(Risk Management Standards)",
+          "items": [
+            "The Company may establish standards and procedures (hereinafter \"Risk Management Standards\") for timely identification, evaluation, monitoring, and control of risks arising from the operation of virtual assets or proprietary assets, the performance of business, and other transactions.",
+            "Details to be specified in the Risk Management Standards and other necessary matters may include the following:"
+          ],
+          "subItems": [
+            "Basic policy of risk management",
+            "Structure and division of responsibilities of the organization dedicated to risk management",
+            "Procedures for risk management to be observed by employees in the performance of their duties",
+            "Procedures and methods for verifying employees' compliance with the Risk Management Standards",
+            "Formulation or amendment of the Risk Management Standards",
+            "Appointment and dismissal of the Risk Management Officer",
+            "Emergency risk management plan for incidents related to virtual assets and other contingencies",
+            "Internal reporting and approval systems"
+          ]
+        },
+        "composition": {
+          "title": "(Composition of the Risk Management Committee, etc.)",
+          "items": [
+            "The Company may appoint one or more Risk Management Officers to inspect and manage risks arising from asset operations, business performance, and other transactions.",
+            "Separate regulations shall be established regarding the appointment, dismissal, and tenure of the Risk Management Officer. In this case, the \"Compliance Officer\" shall be deemed the \"Risk Management Officer.\"",
+            "Members of the Risk Management Committee shall be directors of the Board.",
+            "The Company shall organize and maintain an organization dedicated to risk management, staffed with an appropriate number of personnel with sufficient experience and competence, to support the following duties of the Risk Management Officer:"
+          ],
+          "subItems": [
+            "Inspection and analysis of risk limit operations",
+            "Timely provision of risk management information to the Risk Management Committee and executives",
+            "Other matters necessary for risk management"
+          ]
+        },
+        "accidentPrevention": {
+          "title": "(Accident Prevention – Purpose of Business Inspection)",
+          "description": "By self-assessing and monitoring compliance with internal control procedures, the purpose is to identify and rectify deficiencies immediately during the course of business execution, thereby contributing to rational business operations, prevention of accidents, and early detection of any incidents.",
+          "definitions": {
+            "title": "Definitions of Terms",
+            "items": [
+              "Business Inspection: Internal self-inspection conducted under the supervision of the internal controller on whether all company business complies with external laws, regulations, guidelines, manuals, and directives. It is divided into daily and monthly inspections.",
+              "Issues: Matters identified during business inspections where external laws, regulations, guidelines, or manuals were not complied with, and which require corrective measures.",
+              "Advisory Matters: Cases identified during business inspections where external laws, regulations, guidelines, or manuals were not complied with, but the non-compliance was minor and did not require corrective measures, or corrective measures were completed within 5 business days from the date of identification."
+            ]
+          },
+          "principles": {
+            "title": "Principles of Business Inspection",
+            "items": [
+              "Independence of Business Inspectors: Inspectors shall faithfully verify, from an independent standpoint, whether business was conducted properly in accordance with internal standards and procedures.",
+              "Right to Request Document Submission: Inspectors may request submission of documents necessary for performing inspection duties.",
+              "Obligation of Document Submission by Responsible Staff: Business staff must comply with requests for submission of materials by inspectors and faithfully provide materials related to inspections if their business is subject to inspection."
+            ]
+          },
+          "activities": {
+            "title": "Accident Prevention Activities",
+            "description": "- Internal Control Checklists (daily, monthly, quarterly): The internal controller carries out accident prevention activities based on checklists, subject to approval by the Compliance Officer and CEO."
+          }
+        }
+      },
+      "conflictOfInterest": {
+        "title": "2. Conflict of Interest Prevention Guidelines (Internal Control Regulations)",
+        "customerPriority": {
+          "title": "(Priority of Customer Interests)",
+          "items": [
+            "Clients' interests shall take precedence over those of the Company, its shareholders, and its employees.",
+            "The Company's interests shall take precedence over those of its employees.",
+            "All clients' interests shall be treated equally."
+          ]
+        },
+        "blocking": {
+          "title": "(Blocking Conflict of Interest Issues)",
+          "items": [
+            "Employees must not pursue their own interests or rewards through unlawful or improper means in the course of performing their duties.",
+            "Where an employee engages in external activities outside company duties with prior Company approval, they shall not use the Company's or clients' assets, personnel, or information acquired through their work for personal benefit."
+          ]
+        },
+        "management": {
+          "title": "(Identification, Assessment, and Management of Conflicts of Interest)",
+          "items": [
+            "If employees are in or are likely to be in a conflict of interest between the Company and clients, or between clients, they shall consult with the Compliance Officer in advance and take measures to ensure that no client protection issues arise.",
+            "If a transaction has potential for conflict of interest, employees shall take measures to minimize such risk to ensure clients' interests are not harmed. Where minimizing such risks is deemed difficult, the fact shall be disclosed to the client, and such transaction shall be discontinued."
+          ]
+        },
+        "concurrentBusiness": {
+          "title": "(Prevention of Conflicts of Interest Arising from Concurrent Business Operations)",
+          "description": "If the Company engages in business activities other than virtual asset services, it shall comply with the following:",
+          "items": [
+            "Where concurrent business may give rise to conflicts of interest, office spaces shall be separated.",
+            "Confirm and manage the exchange of information between concurrent business divisions and divisions that produce or acquire undisclosed internal information related to virtual assets.",
+            "Ensure that undisclosed internal information related to virtual assets is not used in concurrent business operations."
+          ]
+        }
+      },
+      "reEntrustmentProhibition": {
+        "title": "3. Guidelines on Prohibition of Re-Entrustment of Virtual Assets (Internal Control Regulations)",
+        "custody": {
+          "title": "(Custody and Management of Client-Deposited Assets)",
+          "items": [
+            "The Company shall safely keep the same type and quantity of virtual assets entrusted by clients and shall not re-entrust them to another institution.",
+            "The Company shall establish and operate a separate policy to ensure that client-deposited virtual assets are stored in cold wallets.",
+            "The Company shall conduct regular reconciliations between the Company's total holdings and the client's virtual asset records to verify consistency in type and quantity, and shall perform due diligence on the status of virtual asset holdings."
+          ]
+        }
+      },
+      "secureStorage": {
+        "title": "4. Guidelines for Secure Custody of Virtual Assets (Wallet Guidelines)",
+        "coldWalletSecurity": {
+          "title": "(Cold Wallet Operation Security)",
+          "items": [
+            "Cold wallets shall be stored securely in physically isolated locations.",
+            "Access and usage history of cold wallets shall be logged and securely managed, with regular inspections.",
+            "Cold wallets shall be controlled so that withdrawals can only occur through predefined procedures and methods."
+          ],
+          "note": "- Internal controls and approval procedures, multi-signature, MPC, etc."
+        },
+        "coldWalletManagement": {
+          "title": "(Cold Wallet Management Security)",
+          "items": [
+            "Establish and implement safe backup and recovery measures for cold wallets.",
+            "Establish measures to minimize damage in case of theft or loss of cold wallets.",
+            "Establish security measures to prevent leakage, theft, or loss of cold wallet private keys."
+          ]
+        },
+        "assetSecurity": {
+          "title": "(Virtual Asset Security)",
+          "items": [
+            "For newly entrusted virtual assets, verify safety and reliability through separate procedures.",
+            "When purchasing cold wallet hardware, ensure products are purchased with established reputation and stability in the market.",
+            "Disable unnecessary peripherals and interfaces of cold wallet hardware such as USB, speakers, microphones, networks, and CD drives."
+          ]
+        },
+        "operationProcedures": {
+          "title": "(Cold Wallet Operation Procedures)",
+          "description": "Cold wallets shall be kept in a secure state as follows to ensure safe management from natural and environmental threats such as fire and unauthorized access or theft:",
+          "items": [
+            "Cold wallets shall be kept completely disconnected from all forms of networks.",
+            "Cold wallets shall be safeguarded against natural and environmental threats such as fire, and managed to prevent theft or unauthorized access.",
+            "Cold wallet access shall always be performed by at least two personnel together.",
+            "Locations storing cold wallets shall be designated as critical control zones, with enhanced access control and 24-hour video surveillance with no blind spots."
+          ]
+        }
+      }
+    }
   },
   "cryptoWarning": {
     "title": "Precautions Regarding Virtual Asset Transactions",
