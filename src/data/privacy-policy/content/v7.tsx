@@ -1,6 +1,6 @@
 import { H2, H3, Li, Ol, P, TableContainer, Tbody, Td, Th, Thead, Tr, Ul } from '@/components/typography';
 
-const V5PrivacyPolicyContent = () => {
+const V7PrivacyPolicyContent = () => {
   return (
     <>
       <P>
@@ -66,12 +66,12 @@ const V5PrivacyPolicyContent = () => {
         <Tbody>
           <Tr>
             <Td>고객확인 및 거래정보에 관한 기록</Td>
-            <Td>특정금융거래정보의 보고 및 이용등에 관한 법률</Td>
+            <Td>특정금융거래정보의 보고 및 이용등에 관한 법률 제 5 조의 4</Td>
             <Td>5년</Td>
           </Tr>
           <Tr>
             <Td>계약등에 관한 기록</Td>
-            <Td rowSpan={3}>전자상거래 등에서의 소비자 보호에 관한 법률</Td>
+            <Td rowSpan={3}>전자상거래 등에서의 소비자 보호에 관한 법률 제 6 조</Td>
             <Td rowSpan={3}>5년</Td>
           </Tr>
           <Tr>
@@ -87,7 +87,7 @@ const V5PrivacyPolicyContent = () => {
           </Tr>
           <Tr>
             <Td>가상자산 거래기록</Td>
-            <Td>가상자산 이용자 보호등에 관한 법률</Td>
+            <Td>가상자산 이용자 보호등에 관한 법률 제 9 조</Td>
             <Td>15년</Td>
           </Tr>
         </Tbody>
@@ -107,7 +107,6 @@ const V5PrivacyPolicyContent = () => {
             <Th>목적</Th>
             <Th>제공 받는 자</Th>
             <Th>제공 항목</Th>
-            <Th>보유기간</Th>
             <Th>제공근거</Th>
           </Tr>
         </Thead>
@@ -116,119 +115,102 @@ const V5PrivacyPolicyContent = () => {
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>업비트 (Upbit)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>빗썸 (Bithumb)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>코인원 (coinone)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>코빗 (korbit)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>헥슬란트 (Hexlant)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>한국디지털자산수탁 (KDAC)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>플라이빗 (Flybit)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>고팍스 (Gopax)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>비블록 (Beeblock)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>프라뱅 (Pravang)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>플랫타익스체인지 (FlataExchange)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>포블게이트 (FOBLGATE)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>보라비트 (Borabit)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>코어닥스 (COREDAX)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>페이코인 (PayCoin)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 정보에 관한 기록 제공</Td>
             <Td>오아시스 (OASIS)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
           <Tr>
             <Td>거래 관한 기록 제공</Td>
             <Td>인피닛블록 (InfiniteBlock)</Td>
             <Td>암호화된 이름, 가상자산 주소</Td>
-            <Td>탈퇴 후 5년</Td>
             <Td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</Td>
           </Tr>
         </Tbody>
@@ -265,7 +247,7 @@ const V5PrivacyPolicyContent = () => {
             <Td className="font-bold">Google LLC</Td>
             <Td>서비스 운영을 위한 Japan Region Cloud 서비스</Td>
             <Td>이름, 주소, 이메일, 서비스이용기록, 접속로그, 접속IP정보</Td>
-            <Td>일본, 연락처 : googlekrsupport@google.com</Td>
+            <Td>일본, 한국(asia-northeast3) 리전, 연락처 : googlekrsupport@google.com</Td>
             <Td rowSpan={3}>서비스 이용시, 네트워크를 통해 전송</Td>
             <Td>회원탈퇴시 또는 위탁계약종료시까지</Td>
           </Tr>
@@ -448,8 +430,7 @@ const V5PrivacyPolicyContent = () => {
       </P>
       <P>개인정보 열람청구 접수·처리 부서</P>
       <Ul>
-        <Li>부서명 : 내부통제</Li>
-        <Li>담당자: 서은진</Li>
+        <Li>부서명 : 컴플라이언스</Li>
         <Li>연락처 : 02-561-4762</Li>
         <Li>이메일 : support@kodax.com</Li>
       </Ul>
@@ -470,4 +451,4 @@ const V5PrivacyPolicyContent = () => {
   );
 };
 
-export default V5PrivacyPolicyContent;
+export default V7PrivacyPolicyContent;

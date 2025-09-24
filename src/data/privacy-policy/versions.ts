@@ -11,12 +11,30 @@ export interface PrivacyPolicyVersion {
 
 export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
   {
+    version: 'v7',
+    versionNumber: 7,
+    effectiveDate: '2025.09.25',
+    releaseDate: '2025.09.25',
+    isLatest: true,
+    changeReason: '개인정보 열람청구 접수 처리 부서 변경 및 영어 문서 지원',
+    title: '개인정보 처리방침 v7',
+  },
+  {
+    version: 'v6',
+    versionNumber: 6,
+    effectiveDate: '2025.07.08',
+    releaseDate: '2025.07.08',
+    isLatest: false,
+    changeReason: 'ISMS 인증심사 결함 조치',
+    title: '개인정보 처리방침 v6',
+  },
+  {
     version: 'v5',
     versionNumber: 5,
     effectiveDate: '2025.06.04',
     releaseDate: '2025.06.04',
-    isLatest: true,
-    changeReason: 'ISMS 인증심사 결함 조치',
+    isLatest: false,
+    changeReason: '[개인정보 처리 위탁 및 국외 이전 추가]',
     title: '개인정보 처리방침 v5',
   },
   {

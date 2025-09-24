@@ -8,6 +8,8 @@ import V0PrivacyPolicyContent from '@/data/privacy-policy/content/v0';
 import AdditionalProvisions from '@/components/privacy-policy/AdditionalProvisions';
 import PreviousVersionsList from '@/components/privacy-policy/PreviousVersionsList';
 import { getTranslations } from 'next-intl/server';
+import V7PrivacyPolicyContent from '@/data/privacy-policy/content/v7';
+import V6PrivacyPolicyContent from '@/data/privacy-policy/content/v6';
 
 interface PageProps {
   params: Promise<{
@@ -22,6 +24,10 @@ const VersionedPrivacyPolicyPage = async ({ params }: PageProps) => {
 
   const getContentComponent = (version: string) => {
     switch (version) {
+      case 'v7':
+        return <V7PrivacyPolicyContent />;
+      case 'v6':
+        return <V6PrivacyPolicyContent />;
       case 'v5':
         return <V5PrivacyPolicyContent />;
       case 'v4':
@@ -35,7 +41,7 @@ const VersionedPrivacyPolicyPage = async ({ params }: PageProps) => {
       case 'v0':
         return <V0PrivacyPolicyContent />;
       default:
-        return <V5PrivacyPolicyContent />;
+        return <V7PrivacyPolicyContent />;
     }
   };
 
