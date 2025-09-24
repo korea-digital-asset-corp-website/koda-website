@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { H2, P } from '@/components/typography';
 import { PrivacyPolicyVersion } from '@/data/privacy-policy/versions';
 
@@ -7,12 +8,14 @@ interface AdditionalProvisionsProps {
 }
 
 const AdditionalProvisions = ({ version }: AdditionalProvisionsProps) => {
+  const t = useTranslations('privacyPolicy.supplementaryProvisions');
+
   return (
     <div>
-      <H2 className="font-bold">&lt;부칙&gt;</H2>
-      <P className="text-gray-700">(시행일) 이 개인정보처리방침은 {version.effectiveDate}일부터 적용됩니다.</P>
+      <H2 className="font-bold">&lt;{t('title')}&gt;</H2>
+      <P className="text-gray-700">{t('effectiveDate', { effectiveDate: version.effectiveDate })}</P>
 
-      <P className="font-bold">변경 내역: {version.changeReason}</P>
+      <P className="font-bold">{t('changeDetails', { changeReason: version.changeReason })}</P>
     </div>
   );
 };
