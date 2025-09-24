@@ -25,7 +25,7 @@ const MarketStatsSection = () => {
       <div className="max-w-[1440px] w-full px-10 mx-auto">
         <div className="flex flex-col lg:flex-row justify-between lg:min-h-[570px] space-y-12 lg:space-y-0">
           <div className="flex flex-col justify-between h-full lg:min-h-[570px] lg:flex-1 lg:pr-8">
-            <div className="space-y-4">
+            <div className="space-y-3 lg:space-y-4">
               <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
               <p className="text-body-md lg:text-body-lg text-gray-600 lg:whitespace-pre-line">{t('description')}</p>
             </div>
@@ -34,7 +34,7 @@ const MarketStatsSection = () => {
               <div className="flex flex-row">
                 <div className="flex-1 bg-white p-6 lg:p-8">
                   <div className="text-center space-y-2">
-                    <h3 className="text-title-sm lg:text-title-lg">{t('stats.total.label')}</h3>
+                    <h3 className="text-title-sm lg:text-title-lg font-semibold">{t('stats.total.label')}</h3>
                     <div className="text-title-lg lg:text-headline-md font-semibold lg:font-bold">
                       {t('stats.total.amount')}
                     </div>
@@ -43,7 +43,7 @@ const MarketStatsSection = () => {
 
                 <div className="flex-1 bg-black p-6 lg:p-8">
                   <div className="text-center space-y-2">
-                    <h3 className="text-white text-title-sm lg:text-title-lg">{t('stats.koda.label')}</h3>
+                    <h3 className="text-white text-title-sm lg:text-title-lg font-semibold">{t('stats.koda.label')}</h3>
                     <div className="text-white text-title-lg lg:text-headline-md font-semibold lg:font-bold">
                       {t('stats.koda.amount')}
                     </div>
@@ -76,7 +76,7 @@ const MarketStatsSection = () => {
             </div>
 
             <div className="text-center mt-4 lg:mt-0">
-              <p className="text-caption-lg lg:text-body-md text-gray-500 font-medium lg:whitespace-pre-line">
+              <p className="mt-6 text-caption-lg lg:text-body-md text-gray-500 font-medium lg:whitespace-pre-line">
                 {t('source')}
               </p>
             </div>

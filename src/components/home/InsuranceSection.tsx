@@ -23,7 +23,7 @@ const InsuranceSection = () => {
           <div className="flex flex-col space-y-8 lg:space-y-0 lg:justify-between h-full lg:min-h-[517px] lg:flex-1 lg:pr-8">
             <div className="space-y-3.5">
               <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
-              <p className="text-body-md lg:text-body-lg font-normal lg:font-medium lg:whitespace-pre-line">
+              <p className="text-body-md lg:text-body-xl font-normal lg:font-medium lg:whitespace-pre-line">
                 {t('description')}
               </p>
             </div>

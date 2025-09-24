@@ -29,7 +29,7 @@ const AchievementSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10 pt-28">
-          <div className="space-y-6 mt-32 max-lg:mt-40 lg:mt-0">
+          <div className="space-y-3 lg:space-y-4 mt-32 max-lg:mt-40 lg:mt-0">
             <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
             <p className="text-left text-body-md lg:text-body-lg lg:whitespace-pre-line">{t('description')}</p>
           </div>

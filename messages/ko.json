@@ -109,7 +109,7 @@
       "features": {
         "compliance": {
           "title": "금융 기관 수준의 컴플라이언스",
-          "description": "ISMS 인증, VASP(가상자산보관사업자 취득), 이용자 보호법상 대통령령으로 정하는 보안 기준 충족"
+          "description": "ISMS 인증, VASP(가상자산보관사업자 취득), 이용자 보호법상 대통령령으로 정하는 보안 기준 충족, SOC 인증심사 중(삼일PwC)"
         },
         "team": {
           "title": "은행 부장급 이상의 운영 인력",

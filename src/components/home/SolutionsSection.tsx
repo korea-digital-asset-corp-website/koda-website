@@ -37,7 +37,7 @@ const SolutionsSection = () => {
                 <div className="flex justify-center items-center mb-4 w-[124px] h-[124px] border border-[var(--color-gray-50)] rounded-[4px] bg-white">
                   <ColdWalletIcon />
                 </div>
-                <h4 className="text-title-md lg:text-body-lg font-semibold">
+                <h4 className="text-title-md lg:text-title-lg font-semibold">
                   {t('sections.secureStorage.features.coldWallet.title')}
                 </h4>
                 <p className="text-body-md lg:text-body-xl">
@@ -49,7 +49,7 @@ const SolutionsSection = () => {
                 <div className="flex justify-center items-center mb-4 w-[124px] h-[124px] border border-[var(--color-gray-50)] rounded-[4px] bg-white">
                   <MpcIcon />
                 </div>
-                <h4 className="text-title-md lg:text-body-lg font-semibold">
+                <h4 className="text-title-md lg:text-title-lg font-semibold">
                   {t('sections.secureStorage.features.mpc.title')}
                 </h4>
                 <p className="text-body-md lg:text-body-xl">{t('sections.secureStorage.features.mpc.description')}</p>
@@ -58,14 +58,14 @@ const SolutionsSection = () => {
           </div>
 
           {/* 다양한 기능 제공 */}
-          <div className="space-y-8">
+          <div className="space-y-8 lg:mt-[104px]">
             <h3 className="text-headline-xs lg:text-headline-md font-bold">{t('sections.features.title')}</h3>
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="flex flex-col space-y-1 w-full lg:w-[432px]">
                 <div className="flex justify-center items-center mb-4 w-[124px] h-[124px] border border-[var(--color-gray-50)] rounded-[4px] bg-white">
                   <StorageIcon />
                 </div>
-                <h4 className="text-title-md lg:text-body-lg font-semibold">
+                <h4 className="text-title-md lg:text-title-lg font-semibold">
                   {t('sections.features.list.custody.title')}
                 </h4>
                 <p className="text-body-md lg:text-body-xl">{t('sections.features.list.custody.description')}</p>
@@ -75,7 +75,7 @@ const SolutionsSection = () => {
                 <div className="flex justify-center items-center mb-4 w-[124px] h-[124px] border border-[var(--color-gray-50)] rounded-[4px] bg-white">
                   <StakingIcon />
                 </div>
-                <h4 className="text-title-md lg:text-body-lg font-semibold">
+                <h4 className="text-title-md lg:text-title-lg font-semibold">
                   {t('sections.features.list.staking.title')}
                 </h4>
                 <p className="text-body-md lg:text-body-xl">{t('sections.features.list.staking.description')}</p>
@@ -85,7 +85,7 @@ const SolutionsSection = () => {
                 <div className="flex justify-center items-center mb-4 w-[124px] h-[124px] border border-[var(--color-gray-50)] rounded-[4px] bg-white">
                   <BackUpIcon />
                 </div>
-                <h4 className="text-title-md lg:text-body-lg font-semibold">
+                <h4 className="text-title-md lg:text-title-lg font-semibold">
                   {t('sections.features.list.backup.title')}
                 </h4>
                 <p className="text-body-md lg:text-body-xl">{t('sections.features.list.backup.description')}</p>
@@ -94,14 +94,14 @@ const SolutionsSection = () => {
           </div>
 
           {/* 법인 맞춤 기능 */}
-          <div className="space-y-8">
+          <div className="space-y-8 lg:mt-[104px] lg:mb-20">
             <h3 className="text-headline-xs lg:text-headline-md font-bold">{t('sections.enterprise.title')}</h3>
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="flex flex-col space-y-1 w-full lg:w-[432px]">
                 <div className="flex justify-center items-center mb-4 w-[124px] h-[124px] border border-[var(--color-gray-50)] rounded-[4px] bg-white">
                   <AuthorizationIcon />
                 </div>
-                <h4 className="text-title-md lg:text-body-lg font-semibold">
+                <h4 className="text-title-md lg:text-title-lg font-semibold">
                   {t('sections.enterprise.list.authorization.title')}
                 </h4>
                 <p className="text-body-md lg:text-body-xl">
@@ -113,7 +113,7 @@ const SolutionsSection = () => {
                 <div className="flex justify-center items-center mb-4 w-[124px] h-[124px] border border-[var(--color-gray-50)] rounded-[4px] bg-white">
                   <SecurityIcon />
                 </div>
-                <h4 className="text-title-md lg:text-body-lg font-semibold">
+                <h4 className="text-title-md lg:text-title-lg font-semibold">
                   {t('sections.enterprise.list.certification.title')}
                 </h4>
                 <p className="text-body-md lg:text-body-xl">
@@ -125,7 +125,7 @@ const SolutionsSection = () => {
                 <div className="flex justify-center items-center mb-4 w-[124px] h-[124px] border border-[var(--color-gray-50)] rounded-[4px] bg-white">
                   <SecurityIcon />
                 </div>
-                <h4 className="text-title-md lg:text-body-lg font-semibold">
+                <h4 className="text-title-md lg:text-title-lg font-semibold">
                   {t('sections.enterprise.list.security.title')}
                 </h4>
                 <p className="text-body-md lg:text-body-xl">{t('sections.enterprise.list.security.description')}</p>

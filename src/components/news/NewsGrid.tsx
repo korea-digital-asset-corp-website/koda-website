@@ -8,13 +8,13 @@ const NewsGrid = ({ items }: { items: NewsItem[] }) => {
       {items?.map((item) => (
         <Link key={item.id} href={item.link || ''} target="_blank">
           <article className="group cursor-pointer flex flex-col">
-            <div className="relative w-full aspect-[2/1] rounded-[4px] mb-[20px] overflow-hidden bg-[var(--color-gray-50)]">
+            <div className="relative w-full aspect-[394/236] rounded-[4px] mb-[20px] overflow-hidden bg-[var(--color-gray-50)]">
               {item.image ? (
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="object-fit"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               ) : (
