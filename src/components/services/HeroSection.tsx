@@ -30,14 +30,14 @@ const HeroSection = () => {
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <div className="space-y-6 order-2 lg:order-1">
+          <div className="space-y-4 lg:space-y-6 order-2 lg:order-1">
             <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold lg:whitespace-pre-line">
               {t('title')}
             </h1>
-            <p className="text-center text-body-md lg:text-left lg:text-body-lg">{t('description')}</p>
+            <p className="text-center text-body-md lg:text-left lg:text-body-lg font-medium">{t('description')}</p>
             <PopupButton
               id="bZKbfTne"
-              className="text-white flex justify-center lg:max-w-[180px] w-full px-5 lg:px-[22px] py-4 lg:py-5 bg-[var(--color-primary-800)] hover:bg-[var(--color-primary-900)] transition-colors rounded-[4px] cursor-pointer"
+              className="text-white flex justify-center lg:max-w-[180px] w-full mt-11 px-5 lg:px-[22px] py-4 lg:py-5 bg-[var(--color-primary-800)] hover:bg-[var(--color-primary-900)] transition-colors rounded-[4px] cursor-pointer"
             >
               {t('cta.contact')}
             </PopupButton>

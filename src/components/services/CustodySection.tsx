@@ -23,7 +23,7 @@ const CustodySection = () => {
 
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-8">
         <div className="flex-1 max-w-[664px]">
-          <div className="mb-4 lg:mb-8">
+          <div className="mb-4 lg:mb-6">
             <Image
               src={ColdWalletImg}
               alt={t('coldWallet.alt')}
@@ -42,7 +42,7 @@ const CustodySection = () => {
         </div>
 
         <div className="flex-1">
-          <div className="mb-4 lg:mb-8">
+          <div className="mb-4 lg:mb-6">
             <Image src={MpcImg} alt={t('mpc.alt')} width={664} height={400} className="w-full max-w-[664px] h-auto" />
           </div>
           <div className="space-y-2">

@@ -29,7 +29,7 @@ const FaqAccordion = () => {
         const buttonId = `faq-button-${item.id}`;
 
         return (
-          <article key={item.id} className="border-b border-gray-50">
+          <article key={item.id} className="border-b border-gray-50 last:border-b-0">
             <header>
               <button
                 id={buttonId}

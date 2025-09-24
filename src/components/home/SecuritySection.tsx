@@ -20,8 +20,8 @@ const SecuritySection = () => {
       }`}
     >
       <div className="max-w-[1440px] w-full px-10 mx-auto">
-        <div className="flex flex-col lg:flex-row lg:min-h-[320px] space-y-12 lg:space-y-0">
-          <div className="flex flex-col gap-6 mb-14 lg:mb-0 lg:gap-0 justify-between lg:min-h-[320px] lg:flex-1">
+        <div className="flex flex-col lg:flex-row lg:min-h-[312px] space-y-12 lg:space-y-0">
+          <div className="flex flex-col gap-6 mb-14 lg:mb-0 lg:gap-0 justify-between lg:min-h-[312px] lg:flex-1">
             <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
 
             <div className="flex flex-row gap-11 items-center">
