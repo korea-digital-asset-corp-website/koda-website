@@ -20,7 +20,7 @@ interface ModalNoticeTableProps {
 
 export const ModalNoticeTable = ({ children }: ModalNoticeTableProps) => {
   return (
-    <table className="w-full">
+    <table className="w-full ml-4">
       <tbody>{children}</tbody>
     </table>
   );
