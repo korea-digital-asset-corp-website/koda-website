@@ -26,7 +26,7 @@ const NewsGrid = ({ items }: { items: NewsItem[] }) => {
               {item.title}
             </h3>
 
-            <div className="text-body-sm lg:text-body-md text-[var(--color-gray-500)]">
+            <div className="text-body-sm font-medium lg:font-normal lg:text-body-md text-[var(--color-gray-500)]">
               <span>
                 {item.publisher}, <time dateTime={item.date}>{item.date}</time>
               </span>

@@ -27,7 +27,7 @@ const MediaSection = () => {
               <div key={index}>
                 <div className="pt-6 pb-4 lg:py-6 flex flex-col space-y-2 lg:space-y-3">
                   <p className="text-headline-xs lg:text-headline-md font-semibold">{item.title}</p>
-                  <div className="flex items-center space-x-1.5 text-[var(--color-gray-500)]">
+                  <div className="flex font-medium lg:font-normal items-center space-x-1.5 text-[var(--color-gray-500)]">
                     <span className="text-body-sm lg:text-body-lg">{item.publisher},</span>
                     <span className="text-body-sm lg:text-body-lg">{item.date}</span>
                   </div>

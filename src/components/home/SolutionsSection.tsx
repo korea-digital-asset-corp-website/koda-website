@@ -90,7 +90,7 @@ const SolutionsSection = () => {
         {icon}
       </div>
       <h4 className="text-title-md lg:text-title-lg font-semibold">{title}</h4>
-      <p className="text-gray-700 text-body-md lg:text-body-xl font-medium whitespace-normal lg:whitespace-pre-line">
+      <p className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl whitespace-normal lg:whitespace-pre-line">
         {description}
       </p>
     </div>
@@ -99,13 +99,13 @@ const SolutionsSection = () => {
   return (
     <section
       ref={ref}
-      className={`pt-[72px] pb-20 lg:py-32 bg-[var(--color-gray-5020)] transition-all duration-800 ease-out ${
+      className={`pt-[72px] pb-20 lg:pt-[170px] lg:pb-[200px] bg-[var(--color-gray-5020)] transition-all duration-800 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
       }`}
     >
       <div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
         <div className="flex flex-col">
-          <div className="space-y-6 mb-2 lg:mb-[120px]">
+          <div className="space-y-6 mb-2 lg:mb-[72px]">
             <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
           </div>
 
@@ -113,7 +113,7 @@ const SolutionsSection = () => {
             <div
               key={section.id}
               className={`space-y-6 lg:space-y-8 ${
-                index === 1 ? 'lg:mt-[104px]' : index === 2 ? 'lg:mt-[104px] lg:mb-20' : ''
+                index === 1 ? 'lg:mt-[56px]' : index === 2 ? 'lg:mt-[56px] lg:mb-20' : ''
               }`}
             >
               <h3 className="mt-12 text-headline-xs lg:text-headline-md font-bold">{section.title}</h3>

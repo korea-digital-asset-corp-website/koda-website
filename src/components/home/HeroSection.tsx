@@ -43,8 +43,7 @@ const HeroSection = () => {
             <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold whitespace-pre-line">
               {t('title')}
             </h1>
-
-            <p className="text-center text-body-md lg:text-left lg:text-body-lg lg:whitespace-pre-line">
+            <p className="text-center text-body-md lg:text-left font-medium lg:font-normal lg:text-body-lg lg:whitespace-pre-line">
               {t('description')}
             </p>
 

@@ -78,7 +78,7 @@ const DashBoardSection = () => {
               </div>
               <div className="flex flex-col">
                 <h3 className="text-headline-xs lg:text-headline-sm font-bold mb-1 lg:mb-2">{t(feature.titleKey)}</h3>
-                <p className="text-gray-700 text-body-md lg:text-body-xl font-medium whitespace-normal lg:whitespace-pre-line">
+                <p className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl whitespace-normal lg:whitespace-pre-line">
                   {t(feature.descriptionKey)}
                 </p>
               </div>

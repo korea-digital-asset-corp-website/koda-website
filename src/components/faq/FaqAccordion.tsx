@@ -38,7 +38,9 @@ const FaqAccordion = () => {
                 aria-expanded={isOpen}
                 aria-controls={contentId}
               >
-                <h3 className="text-headline-xs lg:text-headline-sm font-bold pr-4">{t(item.questionKey)}</h3>
+                <h3 className="text-headline-xs lg:text-headline-sm font-bold pr-4 text-gray-900">
+                  {t(item.questionKey)}
+                </h3>
                 <span
                   className={`transform transition-transform duration-300 ease-in-out ${
                     isOpen ? 'rotate-180' : 'rotate-0'
@@ -58,7 +60,7 @@ const FaqAccordion = () => {
                 isOpen ? 'max-h-96 pb-4 lg:pb-8' : 'max-h-0'
               }`}
             >
-              <p className="text-body-md lg:text-body-lg text-gray-700 leading-relaxed whitespace-pre-line">
+              <p className="text-body-md font-medium lg:font-normal lg:text-body-lg text-gray-700 leading-relaxed whitespace-pre-line">
                 {t(item.answerKey)}
               </p>
             </div>
