@@ -32,7 +32,7 @@ const HeroSection = () => {
   }
 
   return (
-    <div className="max-w-[1440px] w-full px-10 mx-auto">
+    <div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
       <section className="mx-auto overflow-x-hidden">
         <div
           className={`grid lg:grid-cols-2 items-center lg:pt-10 transition-opacity duration-500 ${
@@ -40,7 +40,7 @@ const HeroSection = () => {
           }`}
         >
           <div className="space-y-4 lg:space-y-6 order-2 lg:order-1">
-            <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold lg:whitespace-pre-line">
+            <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold whitespace-pre-line">
               {t('title')}
             </h1>
 

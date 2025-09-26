@@ -48,15 +48,18 @@ const NoticeDetailPage = async ({ params }: NoticeDetailPageProps) => {
   // const notice = notices.find((notice) => notice.id === noticeId);
 
   return (
-    <div className="max-w-[1440px] w-full mt-32 px-5 lg:px-[200px] mx-auto">
-      <header className="mb-12 pb-6 border-b border-[color:var(--color-gray-100)]">
-        <h1 className="text-[24px] lg:text-[32px] font-bold text-gray-900 mb-4">{notices[0].title}</h1>
+    <div className="max-w-[1440px] w-full mt-[72px] mb-20 lg:mt-32 px-5 lg:px-[200px] mx-auto">
+      <header className="pb-4 lg:pb-6 border-b border-[color:var(--color-gray-50)]">
+        <h1 className="text-headline-sm lg:text-headline-lg font-bold text-gray-900 mb-2 lg:mb-3">
+          {notices[0].title}
+        </h1>
         <p className="text-body-md text-[color:var(--color-gray-500)]">{notices[0].date}</p>
       </header>
 
-      <main className="mb-16">
+      <main className="mt-[22px] mb-8 lg:mt-[40px] lg:mb-12">
         <div className="text-body-lg text-gray-900 leading-relaxed whitespace-pre-line">{notices[0].content}</div>
       </main>
+      <hr className="border-gray-50 mb-8 lg:mb-14" />
       <BackToListButton />
     </div>
   );

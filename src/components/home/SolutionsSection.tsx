@@ -90,29 +90,33 @@ const SolutionsSection = () => {
         {icon}
       </div>
       <h4 className="text-title-md lg:text-title-lg font-semibold">{title}</h4>
-      <p className="text-body-md lg:text-body-xl font-medium">{description}</p>
+      <p className="text-gray-700 text-body-md lg:text-body-xl font-medium whitespace-normal lg:whitespace-pre-line">
+        {description}
+      </p>
     </div>
   );
 
   return (
     <section
       ref={ref}
-      className={`mt-20 py-20 lg:py-32 bg-[var(--color-gray-5020)] transition-all duration-800 ease-out ${
+      className={`pt-[72px] pb-20 lg:py-32 bg-[var(--color-gray-5020)] transition-all duration-800 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
       }`}
     >
-      <div className="max-w-[1440px] w-full px-10 mx-auto">
-        <div className="flex flex-col space-y-16">
-          <div className="space-y-6">
+      <div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
+        <div className="flex flex-col">
+          <div className="space-y-6 mb-2 lg:mb-[120px]">
             <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
           </div>
 
           {sections.map((section, index) => (
             <div
               key={section.id}
-              className={`space-y-8 ${index === 1 ? 'lg:mt-[104px]' : index === 2 ? 'lg:mt-[104px] lg:mb-20' : ''}`}
+              className={`space-y-6 lg:space-y-8 ${
+                index === 1 ? 'lg:mt-[104px]' : index === 2 ? 'lg:mt-[104px] lg:mb-20' : ''
+              }`}
             >
-              <h3 className="text-headline-xs lg:text-headline-md font-bold">{section.title}</h3>
+              <h3 className="mt-12 text-headline-xs lg:text-headline-md font-bold">{section.title}</h3>
               <div className="flex flex-col lg:flex-row gap-8">
                 {section.features.map((feature, featureIndex) => (
                   <FeatureCard
@@ -128,7 +132,7 @@ const SolutionsSection = () => {
 
           <Link
             href="/services"
-            className="text-label-lg w-full lg:max-w-[200px] justify-center flex items-center text-[var(--color-primary-800)] font-semibold pl-[32px] pr-[22px] py-4 lg:py-[22px]  border border-[var(--color-primary-700)] rounded-[4px] hover:bg-[var(--color-primary-50)] transition-colors"
+            className="mt-12 lg:mt-0 text-label-lg w-full lg:max-w-[200px] justify-center flex items-center text-[var(--color-primary-800)] font-semibold pl-[32px] pr-[22px] py-4 lg:py-[22px]  border border-[var(--color-primary-700)] rounded-[4px] hover:bg-[var(--color-primary-50)] transition-colors"
           >
             {t('cta.learnMore')}
             <IcArrowIcon />

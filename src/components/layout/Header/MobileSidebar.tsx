@@ -19,7 +19,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
     isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
   }`;
 
-  const sidebarClasses = `fixed top-[72px] left-0 right-0 w-full bg-white lg:hidden shadow-lg z-40 transition-all duration-300 ease-in-out ${
+  const sidebarClasses = `fixed top-[70px] left-0 right-0 w-full bg-white lg:hidden shadow-lg z-40 transition-all duration-300 ease-in-out ${
     isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-full pointer-events-none'
   }`;
 
@@ -28,7 +28,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
       <div className={backdropClasses} onClick={onClose} aria-hidden="true" />
 
       <div className={sidebarClasses} role="navigation" aria-label="모바일 메뉴">
-        <div className="px-6">
+        <div className="">
           <nav>
             <ul className="space-y-1">
               {navItems.map((item) => {
@@ -39,7 +39,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
                     <Link
                       href={item.href}
                       onClick={onClose}
-                      className={`text-label-lg font-semibold px-5 py-4 block ${
+                      className={`text-label-lg font-semibold px-6 py-4 block ${
                         isActive ? 'text-primary-700' : 'text-gray-800'
                       }`}
                     >
@@ -50,7 +50,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
               })}
             </ul>
           </nav>
-          <div className="w-full px-5 py-4">
+          <div className="w-full px-6 py-4">
             <LanguageSwitcher showOnMobile />
           </div>
         </div>

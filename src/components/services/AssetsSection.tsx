@@ -37,24 +37,22 @@ const AssetsSection = () => {
   return (
     <section
       ref={ref}
-      className={`mt-20 py-20 lg:py-32 bg-[var(--color-gray-5020)] transition-all duration-800 ease-out ${
+      className={`pt-[72px] pb-20 lg:py-32 bg-[var(--color-gray-5020)] transition-all duration-800 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
       }`}
     >
-      <div className="max-w-[1440px] w-full px-[40px] mx-auto">
+      <div className="max-w-[1440px] w-full px-5 lg:px-[40px] mx-auto">
         <div className="lg:flex-1">
-          <div className="space-y-4 mb-14 lg:mb-[120px]">
-            <h2 className="text-center lg:text-left text-headline-sm lg:text-headline-lg font-bold">{t('title')}</h2>
-            <p className="text-center lg:text-left text-body-md lg:text-body-xl font-normal lg:font-medium">
-              {t('description')}
-            </p>
+          <div className="space-y-3 lg:space-y-4 mb-14 lg:mb-[120px]">
+            <h2 className="text-left text-headline-sm lg:text-headline-lg font-bold">{t('title')}</h2>
+            <p className="text-left text-body-md lg:text-body-xl font-normal lg:font-medium">{t('description')}</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-6 mb-8 [&>*:last-child_span]:text-gray-300">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-6 mb-3 lg:mb-8 [&>*:last-child_span]:text-gray-300">
             {mainnetAssets.map((asset, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center py-6 px-6 border border-gray-50 rounded-[4px] space-y-2.5"
+                className="flex flex-col items-center pt-8 pb-6 border border-gray-50 rounded-[4px] space-y-2.5"
               >
                 <div className="flex justify-center items-center w-12 h-12 lg:w-14 lg:h-14">
                   <asset.icon className="w-full h-full" />
@@ -64,7 +62,7 @@ const AssetsSection = () => {
             ))}
           </div>
 
-          <p className="text-center lg:text-right text-caption-lg font-medium text-[var(--color-gray-500)] lg:whitespace-pre-line">
+          <p className="text-center lg:text-right text-caption-lg font-medium text-[var(--color-gray-500)] whitespace-pre-line lg:whitespace-normal">
             {t('notice')}
           </p>
         </div>

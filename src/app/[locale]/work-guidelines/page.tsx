@@ -6,7 +6,7 @@ const WorkGuideLinesPage = async () => {
   const t = await getTranslations('workGuidelines');
 
   return (
-    <section className="max-w-[1440px] w-full mt-32 mb-20 lg:mb-[180px] px-5 lg:px-[200px] mx-auto whitespace-pre-line">
+    <section className="max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] px-5 lg:px-[200px] mx-auto whitespace-pre-line">
       <h1 className="text-headline-sm lg:text-headline-lg mb-14 lg:mb-[120px] font-bold">{t('title')}</h1>
 
       {/* 1. 위험관리 및 사고예방 업무지침 */}

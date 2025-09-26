@@ -41,7 +41,7 @@ const CompanyInfo = async () => {
         </h2>
         <address className="not-italic">
           <p className="mb-2">{t('company.name')}</p>
-          <p>{t('company.address')}</p>
+          <p className="whitespace-pre-line lg:whitespace-normal">{t('company.address')}</p>
           <p>
             {t('company.ceo')} | {t('company.businessNumber')}
           </p>

@@ -13,11 +13,11 @@ const CustodySection = () => {
   return (
     <section
       ref={ref}
-      className={`flex flex-col lg:justify-start justify-center items-center lg:items-start max-w-[1440px] w-full px-[40px] mx-auto mt-[170px] mb-[200px] transition-all duration-800 ease-out ${
+      className={`flex flex-col lg:justify-start justify-center items-center lg:items-start max-w-[1440px] w-full px-5 lg:px-[40px] mx-auto mt-[72px] mb-20 lg:mt-[170px] lg:mb-[200px] transition-all duration-800 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
       }`}
     >
-      <h2 className="text-center lg:text-left text-headline-sm lg:text-headline-lg font-bold mb-14 lg:mb-[120px] lg:whitespace-pre-line">
+      <h2 className="lg:text-left text-headline-sm lg:text-headline-lg font-bold mb-14 lg:mb-[120px] lg:whitespace-pre-line">
         {t('title')}
       </h2>
 
@@ -32,11 +32,15 @@ const CustodySection = () => {
               className="w-full max-w-[664px] h-auto"
             />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-1 lg:space-y-2">
             <h3 className="text-headline-xs lg:text-headline-md font-bold">{t('coldWallet.title')}</h3>
             <ul className="space-y-2">
-              <li className="text-body-md lg:text-body-xl list-disc ml-5">{t('coldWallet.features.0')}</li>
-              <li className="text-body-md lg:text-body-xl list-disc ml-5">{t('coldWallet.features.1')}</li>
+              <li className="text-gray-700 text-body-md lg:text-body-xl list-disc ml-5">
+                {t('coldWallet.features.0')}
+              </li>
+              <li className="text-gray-700 text-body-md lg:text-body-xl list-disc ml-5">
+                {t('coldWallet.features.1')}
+              </li>
             </ul>
           </div>
         </div>
@@ -45,11 +49,11 @@ const CustodySection = () => {
           <div className="mb-4 lg:mb-6">
             <Image src={MpcImg} alt={t('mpc.alt')} width={664} height={400} className="w-full max-w-[664px] h-auto" />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-1 lg:space-y-2">
             <h3 className="text-headline-xs lg:text-headline-md font-bold">{t('mpc.title')}</h3>
             <ul className="space-y-2">
-              <li className="text-body-md lg:text-body-xl list-disc ml-5">{t('mpc.features.0')}</li>
-              <li className="text-body-md lg:text-body-xl list-disc ml-5">{t('mpc.features.1')}</li>
+              <li className="text-gray-700 text-body-md lg:text-body-xl list-disc ml-5">{t('mpc.features.0')}</li>
+              <li className="text-gray-700 text-body-md lg:text-body-xl list-disc ml-5">{t('mpc.features.1')}</li>
             </ul>
           </div>
         </div>
