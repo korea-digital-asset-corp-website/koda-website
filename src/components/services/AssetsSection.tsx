@@ -54,7 +54,7 @@ const AssetsSection = () => {
             {mainnetAssets.map((asset, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center pt-8 pb-6 border border-gray-50 rounded-[4px] space-y-2.5"
+                className="flex flex-col items-center pt-8 pb-6 border border-gray-50 bg-white rounded-[4px] space-y-2.5"
               >
                 <div className="flex justify-center items-center w-12 h-12 lg:w-14 lg:h-14">
                   <asset.icon className="w-full h-full" />
