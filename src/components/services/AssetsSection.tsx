@@ -45,7 +45,9 @@ const AssetsSection = () => {
         <div className="lg:flex-1">
           <div className="space-y-3 lg:space-y-4 mb-14 lg:mb-[120px]">
             <h2 className="text-left text-headline-sm lg:text-headline-lg font-bold">{t('title')}</h2>
-            <p className="text-left text-body-md lg:text-body-xl font-normal lg:font-medium">{t('description')}</p>
+            <p className="text-left font-medium lg:font-normal text-gray-700 text-body-md lg:text-body-xl">
+              {t('description')}
+            </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-6 mb-3 lg:mb-8 [&>*:last-child_span]:text-gray-300">
@@ -57,7 +59,7 @@ const AssetsSection = () => {
                 <div className="flex justify-center items-center w-12 h-12 lg:w-14 lg:h-14">
                   <asset.icon className="w-full h-full" />
                 </div>
-                <span className="text-center text-body-sm lg:text-body-lg">{asset.name}</span>
+                <span className="text-center text-gray-800 text-body-sm lg:text-body-lg">{asset.name}</span>
               </div>
             ))}
           </div>

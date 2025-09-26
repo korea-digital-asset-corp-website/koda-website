@@ -43,7 +43,7 @@ const SecuritySection = () => {
               </div>
               <div className="flex flex-col justify-center space-y-1 lg:space-y-2">
                 <h3 className="text-title-md lg:text-title-lg font-semibold">{t('features.compliance.title')}</h3>
-                <p className="text-body-md lg:text-body-xl lg:whitespace-pre-line text-gray-700">
+                <p className="text-body-md lg:text-body-xl lg:whitespace-pre-line text-gray-700 font-medium lg:font-normal">
                   {t('features.compliance.description')}
                 </p>
               </div>

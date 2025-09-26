@@ -35,10 +35,10 @@ const CustodySection = () => {
           <div className="space-y-1 lg:space-y-2">
             <h3 className="text-headline-xs lg:text-headline-md font-bold">{t('coldWallet.title')}</h3>
             <ul className="space-y-2">
-              <li className="text-gray-700 text-body-md lg:text-body-xl list-disc ml-5">
+              <li className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl list-disc ml-5">
                 {t('coldWallet.features.0')}
               </li>
-              <li className="text-gray-700 text-body-md lg:text-body-xl list-disc ml-5">
+              <li className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl list-disc ml-5">
                 {t('coldWallet.features.1')}
               </li>
             </ul>
@@ -52,8 +52,12 @@ const CustodySection = () => {
           <div className="space-y-1 lg:space-y-2">
             <h3 className="text-headline-xs lg:text-headline-md font-bold">{t('mpc.title')}</h3>
             <ul className="space-y-2">
-              <li className="text-gray-700 text-body-md lg:text-body-xl list-disc ml-5">{t('mpc.features.0')}</li>
-              <li className="text-gray-700 text-body-md lg:text-body-xl list-disc ml-5">{t('mpc.features.1')}</li>
+              <li className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl list-disc ml-5">
+                {t('mpc.features.0')}
+              </li>
+              <li className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl list-disc ml-5">
+                {t('mpc.features.1')}
+              </li>
             </ul>
           </div>
         </div>

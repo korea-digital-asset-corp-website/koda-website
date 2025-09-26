@@ -34,7 +34,9 @@ const HeroSection = () => {
             <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold lg:whitespace-pre-line">
               {t('title')}
             </h1>
-            <p className="text-center text-body-md lg:text-left lg:text-body-lg">{t('description')}</p>
+            <p className="text-center font-medium lg:font-normal text-body-md lg:text-left lg:text-body-lg">
+              {t('description')}
+            </p>
             <PopupButton
               id="bZKbfTne"
               className="text-white flex justify-center font-semibold text-label-md lg:text-label-lg lg:max-w-[180px] w-full mt-11 px-5 lg:px-[22px] py-4 lg:py-5 bg-[var(--color-primary-800)] hover:bg-[var(--color-primary-900)] transition-colors rounded-[4px] cursor-pointer"
