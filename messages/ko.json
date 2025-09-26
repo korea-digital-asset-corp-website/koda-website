@@ -165,7 +165,7 @@
           "title": "법인 맞춤 기능",
           "list": {
             "authorization": {
-              "title": "권한분리",
+              "title": "권한 분리",
               "description": "법인 구조에 맞게 권한을 부여하고, 결재선으로 다중 승인 구조 설정 가능"
             },
             "certification": {
