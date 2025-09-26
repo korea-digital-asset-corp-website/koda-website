@@ -8,6 +8,7 @@ import StorageIcon from '@/public/assets/icons/storage.svg';
 import StakingIcon from '@/public/assets/icons/staking.svg';
 import BackUpIcon from '@/public/assets/icons/backup.svg';
 import AuthorizationIcon from '@/public/assets/icons/authorization.svg';
+import ProofIcon from '@/public/assets/icons/proof.svg';
 import SecurityIcon from '@/public/assets/icons/security.svg';
 import IcArrowIcon from '@/public/assets/icons/main_ic_arrow.svg';
 import Link from 'next/link';
@@ -111,7 +112,7 @@ const SolutionsSection = () => {
 
               <div className="flex flex-col space-y-1 w-full lg:w-[432px]">
                 <div className="flex justify-center items-center mb-4 w-[124px] h-[124px] border border-[var(--color-gray-50)] rounded-[4px] bg-white">
-                  <SecurityIcon />
+                  <ProofIcon />
                 </div>
                 <h4 className="text-title-md lg:text-title-lg font-semibold">
                   {t('sections.enterprise.list.certification.title')}
