@@ -34,26 +34,26 @@ const InvestorsSection = () => {
   return (
     <section
       ref={ref}
-      className={`py-20 lg:py-32 transition-all duration-800 ease-out ${
+      className={`pt-[72px] pb-20 lg:py-32 transition-all duration-800 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
       }`}
     >
-      <div className="max-w-[1440px] w-full px-10 mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-16 items-start">
           <div className="space-y-6">
             <h2 className="text-left text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">
               {t('title')}
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-            {investors.map((investor) => (
-              <div key={investor.id} className="bg-white p-7 rounded-lg border border-gray-50 flex flex-col h-40">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 lg:gap-6">
+            {investors.map((investor, index) => (
+              <div key={investor.id} className="bg-white py-7 rounded-lg border border-gray-50 flex flex-col h-40">
                 <div className="flex-1 flex items-center justify-center mb-4">
                   <Image
                     src={investor.image}
                     alt={t(investor.descriptionKey)}
-                    width={200}
+                    width={index === investors.length - 1 ? 166 : 200}
                     height={60}
                     className="object-contain max-w-full max-h-full"
                   />

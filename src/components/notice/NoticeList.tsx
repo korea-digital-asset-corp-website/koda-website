@@ -14,7 +14,7 @@ const NoticeList = ({ notices }: NoticeListProps) => {
   }
 
   return (
-    <div className="mt-[60px] lg:mt-0">
+    <div className="mt-[60px] lg:mt-0 [&>*:last-child_.divider]:hidden">
       {notices.map((notice) => (
         <NoticeItem key={notice.id} notice={notice} />
       ))}

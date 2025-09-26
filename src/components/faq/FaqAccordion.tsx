@@ -34,7 +34,7 @@ const FaqAccordion = () => {
               <button
                 id={buttonId}
                 onClick={() => toggleItem(item.id)}
-                className="w-full flex items-center justify-between py-6 lg:py-8 text-left cursor-pointer"
+                className="w-full flex items-center justify-between pt-4 pb-5 lg:py-8 text-left cursor-pointer"
                 aria-expanded={isOpen}
                 aria-controls={contentId}
               >
@@ -45,7 +45,7 @@ const FaqAccordion = () => {
                   }`}
                   aria-hidden="true"
                 >
-                  <ArrowIcon />
+                  <ArrowIcon className="w-[24px] h-[24px] lg:w-[32px] lg:h-[32px]" />
                 </span>
               </button>
             </header>

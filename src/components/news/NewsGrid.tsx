@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 const NewsGrid = ({ items }: { items: NewsItem[] }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 lg:gap-y-10">
       {items?.map((item) => (
         <Link key={item.id} href={item.link || ''} target="_blank">
           <article className="group cursor-pointer flex flex-col">
-            <div className="relative w-full aspect-[394/236] rounded-[4px] mb-[20px] overflow-hidden bg-[var(--color-gray-50)]">
+            <div className="relative w-full aspect-[394/236] rounded-[4px] mb-4 lg:mb-[20px] overflow-hidden bg-[var(--color-gray-50)]">
               {item.image ? (
                 <Image
                   src={item.image}
@@ -22,7 +22,7 @@ const NewsGrid = ({ items }: { items: NewsItem[] }) => {
               )}
             </div>
 
-            <h3 className="text-headline-xs lg:text-headline-sm font-bold line-clamp-2 text-gray-900 mb-3 group-hover:text-primary-700 transition-colors h-14 lg:h-16 overflow-hidden">
+            <h3 className="text-headline-xs lg:text-headline-sm font-bold line-clamp-2 text-gray-900 mb-1 lg:mb-2 group-hover:text-primary-700 transition-colors h-14 lg:h-16 overflow-hidden">
               {item.title}
             </h3>
 

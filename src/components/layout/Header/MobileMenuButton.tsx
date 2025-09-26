@@ -25,7 +25,7 @@ const MobileMenuButton = () => {
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
       >
-        {isOpen ? <CloseIcon /> : <HamburgerIcon />}
+        {isOpen ? <CloseIcon className="w-[16px] h-[16px]" /> : <HamburgerIcon />}
       </button>
 
       <MobileSidebar isOpen={isOpen} onClose={handleClose} />

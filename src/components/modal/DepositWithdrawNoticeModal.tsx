@@ -33,11 +33,11 @@ export const DepositWithdrawNoticeModal = () => {
 
   return (
     <>
-      <div className="px-12 pt-14 pb-4">
-        <h2 className="text-headline-md font-bold">{t('title')}</h2>
+      <div className="pt-[32px] px-5 pb-5 lg:px-12 lg:pt-14 lg:pb-4">
+        <h2 className="text-headline-sm lg:text-headline-md font-bold">{t('title')}</h2>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-12 pt-6 pb-12">
+      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6 lg:px-12 lg:pt-6 lg:pb-12">
         <ModalNoticeList>
           <ModalNoticeItem>{renderNotice(0)}</ModalNoticeItem>
           <ModalNoticeItem>{renderNotice(1)}</ModalNoticeItem>

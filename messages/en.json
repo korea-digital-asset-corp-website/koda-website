@@ -83,7 +83,7 @@
     },
     "marketStats": {
       "title": "The Undisputed\n No.1 Digital Asset Custody Provider",
-      "description": "Holding over 90% market share in assets under custody as of H1 2024,\nwe stand as the clear market leader.*",
+      "description": "*Holding over 90% market share in assets under custody as of H1 2024,\n we stand as the clear market leader.",
       "stats": {
         "total": {
           "label": "Total Market AUC",
@@ -129,7 +129,7 @@
       "disclaimer": "* The coverage limit can be increased depending on the asset size."
     },
     "solutions": {
-      "title": "A Comprehensive Solution Covering Everything from Secure Custody\nto Staking and Enterprise-Customized Features",
+      "title": "A Comprehensive Solution Covering Everything\n from Secure Custody to Staking and Enterprise-Customized Features",
       "sections": {
         "secureStorage": {
           "title": "Secure Custody",
@@ -166,15 +166,15 @@
           "list": {
             "authorization": {
               "title": "Access Control",
-              "description": "Customizable permission assignments and multi-approval workflows"
+              "description": "Customizable permission assignments\n and multi-approval workflows"
             },
             "certification": {
               "title": "Comprehensive Certification",
-              "description": "Issuance of compliance certificates for legal, accounting, and tax purposes"
+              "description": "Issuance of compliance certificates\n for legal, accounting, and tax purposes"
             },
             "security": {
               "title": "Multi-layered Security",
-              "description": "Enhanced security with OTP verification, IP whitelisting, and more"
+              "description": "Enhanced security with OTP verification,\n IP whitelisting, and more"
             }
           }
         }
@@ -198,7 +198,7 @@
   },
   "service": {
     "hero": {
-      "title": "Comprehensive Digital Asset Management Solution",
+      "title": "Comprehensive\n Digital Asset Management Solution",
       "description": "Manage your digital assets with the highest level of security and convenience",
       "cta": {
         "contact": "Contact Us"
@@ -235,11 +235,11 @@
         },
         {
           "title": "Withdrawal",
-          "description": "Withdrawals are processed only after proper request verification."
+          "description": "Withdrawals are processed only\n after proper request verification."
         },
         {
           "title": "Staking",
-          "description": "Delegate assets to participate in blockchain networks and earn rewards."
+          "description": "Delegate assets to participate\n in blockchain networks and earn rewards."
         },
         {
           "title": "Circulation Management",
@@ -256,15 +256,15 @@
       "features": [
         {
           "title": "Access Control",
-          "description": "Assign permissions aligned with corporate structures and establish multi-approval workflows."
+          "description": "Assign permissions aligned with corporate structures\n and establish multi-approval workflows."
         },
         {
           "title": "Comprehensive Certification",
-          "description": "Issuance of required certificates for legal, accounting, and tax purposes."
+          "description": "Issuance of required certificates\n for legal, accounting, and tax purposes."
         },
         {
           "title": "Multi-Layered Security",
-          "description": "Enhanced security with OTP authentication, IP whitelisting, and more."
+          "description": "Enhanced security with OTP authentication,\n IP whitelisting, and more."
         }
       ]
     },
