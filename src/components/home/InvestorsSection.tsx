@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
+import { brMap } from '@/brMap';
 
 const InvestorsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -41,9 +42,7 @@ const InvestorsSection = () => {
       <div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-16 items-start">
           <div className="space-y-6">
-            <h2 className="text-left text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">
-              {t('title')}
-            </h2>
+            <h2 className="text-left text-headline-sm lg:text-headline-lg font-bold">{t.rich('title', brMap)}</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 lg:gap-6">

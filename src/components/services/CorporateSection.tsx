@@ -5,6 +5,7 @@ import AuthorizationIcon from '@/public/assets/icons/authorization.svg';
 import ProofIcon from '@/public/assets/icons/proof.svg';
 import SecurityIcon from '@/public/assets/icons/security.svg';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { brMap } from '@/brMap';
 
 const CorporateSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -51,8 +52,8 @@ const CorporateSection = () => {
               </div>
               <div className="flex flex-col space-y-1 lg:space-y-2">
                 <h3 className="text-headline-xs lg:text-headline-sm font-bold">{t(feature.titleKey)}</h3>
-                <p className="text-body-md font-medium lg:font-normal lg:text-body-xl text-gray-700 whitespace-normal lg:whitespace-pre-line">
-                  {t(feature.descriptionKey)}
+                <p className="text-body-md font-medium lg:font-normal lg:text-body-xl text-gray-700">
+                  {t.rich(feature.descriptionKey, brMap)}
                 </p>
               </div>
             </div>

@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { PopupButton } from '@typeform/embed-react';
+import { brMap } from '@/brMap';
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -18,7 +19,7 @@ const ContactSection = () => {
       <div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
         <div className="flex flex-col justify-center items-center space-y-8 lg:space-y-11">
           <h2 className="text-headline-lg lg:text-display-md font-bold text-center lg:whitespace-pre-line">
-            {t('title')}
+            {t.rich('title', brMap)}
           </h2>
           <PopupButton
             id="bZKbfTne"

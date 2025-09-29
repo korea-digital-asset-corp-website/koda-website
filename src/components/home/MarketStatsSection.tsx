@@ -5,6 +5,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
 import GraphStatsImg from '@/public/assets/images/img_graph.png';
 import KodaLogo from '@/public/assets/icons/koda.svg';
+import { brMap } from '@/brMap';
 
 const MarketStatsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -26,9 +27,9 @@ const MarketStatsSection = () => {
         <div className="flex flex-col lg:flex-row lg:min-h-[570px] space-y-12 lg:space-y-0">
           <div className="flex flex-col justify-between h-full lg:min-h-[570px] lg:flex-1">
             <div className="space-y-3 lg:space-y-4">
-              <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
-              <p className="text-body-md font-medium lg:font-normal lg:text-body-xl text-gray-700 lg:whitespace-pre-line">
-                {t('description')}
+              <h2 className="text-headline-sm lg:text-headline-lg font-bold">{t.rich('title', brMap)}</h2>
+              <p className="text-body-md font-medium lg:font-normal lg:text-body-xl text-gray-700">
+                {t.rich('description', brMap)}
               </p>
             </div>
 

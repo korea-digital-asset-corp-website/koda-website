@@ -12,6 +12,7 @@ import ProofIcon from '@/public/assets/icons/proof.svg';
 import SecurityIcon from '@/public/assets/icons/security.svg';
 import IcArrowIcon from '@/public/assets/icons/main_ic_arrow.svg';
 import Link from 'next/link';
+import { brMap } from '@/brMap';
 
 const SolutionsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -25,12 +26,12 @@ const SolutionsSection = () => {
         {
           icon: <ColdWalletIcon />,
           title: t('sections.secureStorage.features.coldWallet.title'),
-          description: t('sections.secureStorage.features.coldWallet.description'),
+          description: t.rich('sections.secureStorage.features.coldWallet.description', brMap),
         },
         {
           icon: <MpcIcon />,
           title: t('sections.secureStorage.features.mpc.title'),
-          description: t('sections.secureStorage.features.mpc.description'),
+          description: t.rich('sections.secureStorage.features.mpc.description', brMap),
         },
       ],
     },
@@ -41,17 +42,17 @@ const SolutionsSection = () => {
         {
           icon: <StorageIcon />,
           title: t('sections.features.list.custody.title'),
-          description: t('sections.features.list.custody.description'),
+          description: t.rich('sections.features.list.custody.description', brMap),
         },
         {
           icon: <StakingIcon />,
           title: t('sections.features.list.staking.title'),
-          description: t('sections.features.list.staking.description'),
+          description: t.rich('sections.features.list.staking.description', brMap),
         },
         {
           icon: <BackUpIcon />,
           title: t('sections.features.list.backup.title'),
-          description: t('sections.features.list.backup.description'),
+          description: t.rich('sections.features.list.backup.description', brMap),
         },
       ],
     },
@@ -62,17 +63,17 @@ const SolutionsSection = () => {
         {
           icon: <AuthorizationIcon />,
           title: t('sections.enterprise.list.authorization.title'),
-          description: t('sections.enterprise.list.authorization.description'),
+          description: t.rich('sections.enterprise.list.authorization.description', brMap),
         },
         {
           icon: <ProofIcon />,
           title: t('sections.enterprise.list.certification.title'),
-          description: t('sections.enterprise.list.certification.description'),
+          description: t.rich('sections.enterprise.list.certification.description', brMap),
         },
         {
           icon: <SecurityIcon />,
           title: t('sections.enterprise.list.security.title'),
-          description: t('sections.enterprise.list.security.description'),
+          description: t.rich('sections.enterprise.list.security.description', brMap),
         },
       ],
     },
@@ -81,7 +82,7 @@ const SolutionsSection = () => {
   interface FeatureCardProps {
     icon: React.ReactNode;
     title: string;
-    description: string;
+    description: React.ReactNode;
   }
 
   const FeatureCard = ({ icon, title, description }: FeatureCardProps) => (
@@ -90,9 +91,7 @@ const SolutionsSection = () => {
         {icon}
       </div>
       <h4 className="text-title-md lg:text-title-lg font-semibold">{title}</h4>
-      <p className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl whitespace-normal lg:whitespace-pre-line">
-        {description}
-      </p>
+      <p className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl">{description}</p>
     </div>
   );
 
@@ -106,7 +105,9 @@ const SolutionsSection = () => {
       <div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
         <div className="flex flex-col">
           <div className="space-y-6 mb-2 lg:mb-[72px]">
-            <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
+            <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">
+              {t.rich('title', brMap)}
+            </h2>
           </div>
 
           {sections.map((section, index) => (
