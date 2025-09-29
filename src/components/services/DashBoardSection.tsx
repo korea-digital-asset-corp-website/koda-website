@@ -10,6 +10,7 @@ import ManageIcon from '@/public/assets/icons/services_manage.svg';
 import LockUpIcon from '@/public/assets/icons/services_lockup.svg';
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { brMap } from '@/brMap';
 
 const DashBoardSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -55,7 +56,7 @@ const DashBoardSection = () => {
     >
       <div className="max-w-[1440px] w-full px-5 lg:px-[40px] mx-auto">
         <h2 className="lg:text-left text-headline-sm lg:text-headline-lg font-bold mb-14 lg:mb-[120px]">
-          {t('title')}
+          {t.rich('title', brMap)}
         </h2>
       </div>
 
@@ -70,7 +71,7 @@ const DashBoardSection = () => {
       </div>
 
       <div className="max-w-[1440px] w-full px-5 lg:px-[40px] mx-auto">
-        <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-3 gap-8 lg:justify-items-center">
+        <div className="flex flex-col items-start lg:grid lg:grid-cols-3 gap-8 lg:justify-items-center">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-row lg:flex-col w-full max-w-[425px] lg:max-w-auto gap-4 lg:gap-6">
               <div className="flex justify-center items-center w-12 h-12 lg:w-[72px] lg:h-[72px] bg-[var(--color-primary-50)] rounded-[4px] aspect-square">
@@ -78,8 +79,8 @@ const DashBoardSection = () => {
               </div>
               <div className="flex flex-col">
                 <h3 className="text-headline-xs lg:text-headline-sm font-bold mb-1 lg:mb-2">{t(feature.titleKey)}</h3>
-                <p className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl whitespace-normal lg:whitespace-pre-line">
-                  {t(feature.descriptionKey)}
+                <p className="text-gray-700 font-medium lg:font-normal text-body-md lg:text-body-xl">
+                  {t.rich(feature.descriptionKey, brMap)}
                 </p>
               </div>
             </div>

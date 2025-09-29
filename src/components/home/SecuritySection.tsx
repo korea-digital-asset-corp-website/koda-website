@@ -7,6 +7,7 @@ import CertificationLogo from '@/public/assets/icons/img_certification_color.svg
 import SecurityCompLogo from '@/public/assets/icons/security_comp.svg';
 import SecurityPplLogo from '@/public/assets/icons/security_ppl.svg';
 import Image from 'next/image';
+import { brMap } from '@/brMap';
 
 const SecuritySection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -22,7 +23,7 @@ const SecuritySection = () => {
       <div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
         <div className="flex flex-col lg:flex-row lg:min-h-[312px] space-y-12 lg:space-y-0">
           <div className="flex flex-col gap-6 mb-14 lg:mb-0 lg:gap-0 justify-between lg:min-h-[312px] lg:flex-1">
-            <h2 className="text-headline-sm lg:text-headline-lg font-bold whitespace-pre-line">{t('title')}</h2>
+            <h2 className="text-headline-sm lg:text-headline-lg font-bold">{t.rich('title', brMap)}</h2>
 
             <div className="flex flex-row gap-6 lg:gap-11 items-center">
               <Image
@@ -43,8 +44,8 @@ const SecuritySection = () => {
               </div>
               <div className="flex flex-col justify-center space-y-1 lg:space-y-2">
                 <h3 className="text-title-md lg:text-title-lg font-semibold">{t('features.compliance.title')}</h3>
-                <p className="text-body-md lg:text-body-xl lg:whitespace-pre-line text-gray-700 font-medium lg:font-normal">
-                  {t('features.compliance.description')}
+                <p className="text-body-md lg:text-body-xl text-gray-700 font-medium lg:font-normal">
+                  {t.rich('features.compliance.description', brMap)}
                 </p>
               </div>
             </div>

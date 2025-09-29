@@ -51,21 +51,21 @@
   },
   "home": {
     "hero": {
-      "title": "법인·기관을 위한\n가장 신뢰할 수 있는\n디지털 자산 파트너",
-      "description": "비트코인부터 스테이블 코인, 자체 발행 코인 등 법인·기관 투자자를 위한\n 디지털 자산 관리 종합 서비스를 제공합니다",
+      "title": "법인·기관을 위한<brPc></brPc> 가장 신뢰할 수 있는<brAll></brAll> 디지털 자산 파트너",
+      "description": "비트코인부터 스테이블 코인, 자체 발행 코인 등<brMo></brMo> 법인·기관 투자자를 위한<brPc></brPc> 디지털 자산 관리 종합 서비스를 제공합니다",
       "cta": {
         "inquiry": "서비스 문의"
       }
     },
     "achievement": {
       "title": "가상자산사업자 1호\n 벤처기업 확인 획득",
-      "description": "「벤처기업육성에 관한 특별법 시행령」 개정 기조에 따른\n 가상자산사업자 최초로 중소벤처기업부의 '벤처기업 확인' 획득",
+      "description": "「벤처기업육성에 관한 특별법 시행령」 개정 기조에<brMo></brMo> 따른<brPc></brPc> 가상자산사업자 최초로 중소벤처기업부의<brMo></brMo> '벤처기업 확인' 획득",
       "badge": {
         "alt": "벤처기업 확인서"
       }
     },
     "investors": {
-      "title": "업계 최고의 주주 구성으로\n가장 신뢰할 수 있는 서비스를 제공합니다",
+      "title": "업계 최고의 주주 구성으로<brPc></brPc> 가장<brMo></brMo> 신뢰할 수 있는 서비스를 제공합니다",
       "list": [
         {
           "description": "국내 1위 은행"
@@ -82,8 +82,8 @@
       ]
     },
     "marketStats": {
-      "title": "압도적으로 시장을 선도하는\nNo.1 커스터디입니다",
-      "description": "24년 상반기 수탁고 기준 90% 이상의 시장점유율로 압도적인 1위*",
+      "title": "압도적으로 시장을 선도하는<brAll></brAll> No.1 커스터디입니다",
+      "description": "24년 상반기 수탁고 기준 90% 이상의 시장점유율로<brMo></brMo> 압도적인 1위*",
       "stats": {
         "total": {
           "label": "전체 수탁고",
@@ -100,7 +100,7 @@
       "source": "*출처 : 2024년 상반기 금융위원회 실태조사"
     },
     "security": {
-      "title": "철저한 내부 통제 체계와\n보안 기준을 갖추었습니다",
+      "title": "철저한 내부 통제 체계와<brAll></brAll> 보안 기준을 갖추었습니다",
       "certifications": {
         "isms": {
           "alt": "ISMS 인증"
@@ -109,7 +109,7 @@
       "features": {
         "compliance": {
           "title": "금융 기관 수준의 컴플라이언스",
-          "description": "ISMS 인증, VASP(가상자산보관사업자 취득),\n 이용자 보호법상 대통령령으로 정하는 보안 기준 충족,\n SOC 인증심사 중(삼일PwC)"
+          "description": "ISMS 인증, VASP(가상자산보관사업자 취득),<brAll></brAll> 이용자 보호법상 대통령령으로 정하는 보안 기준 충족,<brAll></brAll> SOC 인증심사 중(삼일PwC)"
         },
         "team": {
           "title": "은행 부장급 이상의 운영 인력",
@@ -118,29 +118,29 @@
       }
     },
     "insurance": {
-      "title": "삼성화재와 함께 약 300억원* 한도의\n보험으로 고객 자산을 안전하게 보호합니다",
-      "description": "국내 최고 수준의 디지털 자산 보험 가입\n가상자산사업자 중 의무 보험을 제외한 국내 최초 보험",
+      "title": "삼성화재와 함께 약 300억원*<brMo></brMo> 한도의<brPc></brPc> 보험으로 고객 자산을<brMo></brMo> 안전하게 보호합니다",
+      "description": "국내 최고 수준의 디지털 자산 보험 가입<brAll></brAll> 가상자산사업자 중 의무 보험을 제외한 국내 최초 보험",
       "coverage": {
         "amount": "$20M"
       },
       "image": {
         "alt": "보험 보장 안내"
       },
-      "disclaimer": "* 현재 보험 보장 한도는 $20,000,000이며, 자산 규모에 따라 한도 증액 가능"
+      "disclaimer": "* 현재 보험 보장 한도는 $20,000,000이며,<brMo></brMo> 자산 규모에 따라 한도 증액 가능"
     },
     "solutions": {
-      "title": "디지털 자산의 안전한 보관부터 스테이킹, 법인 맞춤형 기능까지\n모두 제공하는 종합 솔루션입니다",
+      "title": "디지털 자산의 안전한 보관부터<brMo></brMo> 스테이킹, 법인 맞춤형 기능까지<brAll></brAll> 모두 제공하는 종합 솔루션입니다",
       "sections": {
         "secureStorage": {
           "title": "안전한 보관",
           "features": {
             "coldWallet": {
               "title": "콜드월렛",
-              "description": "네트워크와 완전히 단절된 콜드월렛에서\n 모든 자산을 안전하게 보관"
+              "description": "네트워크와 완전히 단절된 콜드월렛에서<brPc></brPc> 모든 자산을<brMo></brMo> 안전하게 보관"
             },
             "mpc": {
               "title": "MPC 시스템",
-              "description": "하나의 키를 분실하거나 유출되어도\n 자산이 탈취되지 않으며 복구 가능"
+              "description": "하나의 키를 분실하거나 유출되어도<brPc></brPc> 자산이 탈취되지<brMo></brMo> 않으며 복구 가능"
             }
           }
         },
@@ -149,7 +149,7 @@
           "list": {
             "custody": {
               "title": "보관",
-              "description": "자산을 안전하게 보관할 수 있고,\n 출금 시 올바른 요청인지 검증 후 처리"
+              "description": "자산을 안전하게 보관할 수 있고,<brPc></brPc> 출금 시 올바른 요청<brMo></brMo> 인지 검증 후 처리"
             },
             "staking": {
               "title": "스테이킹",
@@ -166,7 +166,7 @@
           "list": {
             "authorization": {
               "title": "권한 분리",
-              "description": "법인 구조에 맞게 권한을 부여하고,\n 결재선으로 다중 승인 구조 설정 가능"
+              "description": "법인 구조에 맞게 권한을 부여하고,<brPc></brPc> 결재선으로 다중<brMo></brMo> 승인 구조 설정 가능"
             },
             "certification": {
               "title": "각종 증명",
@@ -174,7 +174,7 @@
             },
             "security": {
               "title": "다중 보안",
-              "description": "OTP 인증, IP 주소 화이트리스팅 등\n 다양한 보안 인증 장치 적용"
+              "description": "OTP 인증, IP 주소 화이트리스팅 등<brPc></brPc> 다양한 보안 인증<brMo></brMo> 장치 적용"
             }
           }
         }
@@ -190,7 +190,7 @@
       }
     },
     "contact": {
-      "title": "가장 신뢰할 수 있는 KODA와 함께\n디지털 자산을 안전하게 보관·관리하세요",
+      "title": "가장 신뢰할 수 있는<brMo></brMo> KODA와 함께<brAll></brAll> 디지털 자산을 안전하게<brMo></brMo> 보관·관리하세요",
       "cta": {
         "contact": "서비스 문의"
       }
@@ -198,33 +198,33 @@
   },
   "service": {
     "hero": {
-      "title": "안전한 보관부터 스테이킹,\n법인 맞춤 기능까지\n디지털 자산 종합 솔루션",
+      "title": "안전한 보관부터 스테이킹,<brAll></brAll> 법인 맞춤 기능까지<brAll></brAll> 디지털 자산 종합 솔루션",
       "description": "가장 안전하고 편리하게 디지털 자산을 관리하세요",
       "cta": {
         "contact": "서비스 문의"
       }
     },
     "custody": {
-      "title": "KODA 커스터디로\n디지털 자산을 안전하게 보관할 수 있습니다",
+      "title": "KODA 커스터디로<brPc></brPc>디지털 자산을<brMo></brMo> 안전하게 보관할 수 있습니다",
       "coldWallet": {
         "title": "콜드월렛",
         "alt": "콜드월렛 서비스",
         "features": [
           "고객의 모든 자산은 100% 콜드월렛에 보관됩니다.",
-          "네트워크와 완전히 단절되었을 뿐만 아니라 물리적으로도 격리된 콜드월렛을 통해 관리됩니다."
+          "네트워크와 완전히 단절되었을 뿐만 아니라 물리적<brMo></brMo> 으로도 격리된 콜드월렛을 통해 관리됩니다."
         ]
       },
       "mpc": {
         "title": "MPC",
         "alt": "MPC 시스템",
         "features": [
-          "다중 서명이 필요하여 하나의 키가 유출되어도 자산이 탈취되지 않습니다.",
+          "다중 서명이 필요하여 하나의 키가 유출되어도 자산<brMo></brMo> 이 탈취되지 않습니다.",
           "키가 분실되어도 백업키를 통해 복구 가능합니다."
         ]
       }
     },
     "dashboard": {
-      "title": "디지털 자산을 다양하게 관리할 수 있습니다",
+      "title": "디지털 자산을 다양하게 관리할 수<brMo></brMo> 있습니다",
       "image": {
         "alt": "디지털 자산 관리 대시보드"
       },
@@ -235,11 +235,11 @@
         },
         {
           "title": "출금",
-          "description": "출금 시 올바른 출금 요청인지 검증 후에 처리됩니다."
+          "description": "출금 시 올바른 출금 요청인지 검증 후에 처<brMo></brMo>리됩니다."
         },
         {
           "title": "스테이킹",
-          "description": "자산을 위임하여 블록체인 네트워크에 참여하고\n 보상을 받을 수 있습니다."
+          "description": "자산을 위임하여 블록체인 네트워크에 참여<brMo></brMo>하고<brPc></brPc> 보상을 받을 수 있습니다."
         },
         {
           "title": "유통량 관리",
@@ -247,7 +247,7 @@
         },
         {
           "title": "락업 관리",
-          "description": "락업 물량을 수탁하고 락업 스케줄에 따라 자신을\n 관리할 수 있습니다."
+          "description": "락업 물량을 수탁하고 락업 스케줄에 따라<brMo></brMo> 자산을<brPc></brPc> 관리할 수 있습니다."
         }
       ]
     },
@@ -256,15 +256,15 @@
       "features": [
         {
           "title": "권한 분리",
-          "description": "법인 구조에 맞게 구성원의 권한을 부여하고, 결재선을 설정하여\n 다중 승인 구조를 만들 수 있습니다."
+          "description": "법인 구조에 맞게 구성원의 권한을 부여하고, 결재선을<brMo></brMo> 설정하여<brPc></brPc> 다중 승인 구조를 만들 수 있습니다."
         },
         {
           "title": "각종 증명",
-          "description": "법률, 회계, 세무에 필요한 각종 증명 자료를 발급할 수 있습니다."
+          "description": "법률, 회계, 세무에 필요한 각종 증명 자료를 발급할 수<brMo></brMo> 있습니다."
         },
         {
           "title": "다중 보안",
-          "description": "OTP 인증, IP 주소 화이트리스팅 등 다양한 보안 장치로 안전하게\n 관리할 수 있습니다."
+          "description": "OTP 인증, IP 주소 화이트리스팅 등 다양한 보안 장치<brMo></brMo>로 안전하게<brPc></brPc> 관리할 수 있습니다."
         }
       ]
     },
@@ -277,7 +277,7 @@
       "notice": "현재 지원하지 않는 메인넷도 신속하게 지원됩니다.\n(EVM 계열은 1주 이내, 그외는 2~3주 이내로 지원)"
     },
     "contact": {
-      "title": "가장 신뢰할 수 있는 KODA와 함께\n디지털 자산을 안전하게 보관·관리하세요",
+      "title": "가장 신뢰할 수 있는<brMo></brMo> KODA와 함께<brAll></brAll> 디지털 자산을 안전하게<brMo></brMo> 보관·관리하세요",
       "cta": {
         "contact": "서비스 문의"
       }

@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import SplineScene from '../common/SplineScene';
 import { useEffect, useState } from 'react';
 import { PopupButton } from '@typeform/embed-react';
+import { brMap } from '@/brMap';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -31,8 +32,8 @@ const HeroSection = () => {
           }`}
         >
           <div className="space-y-4 lg:space-y-6 order-2 lg:order-1">
-            <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold lg:whitespace-pre-line">
-              {t('title')}
+            <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold">
+              {t.rich('title', brMap)}
             </h1>
             <p className="text-center font-medium lg:font-normal text-body-md lg:text-left lg:text-body-lg">
               {t('description')}

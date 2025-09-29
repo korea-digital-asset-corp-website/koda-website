@@ -7,6 +7,7 @@ import InsuranceImg from '@/public/assets/images/img_insurance.png';
 import KodaLogo from '@/public/assets/icons/koda.svg';
 import SamsungCiIcon from '@/public/assets/icons/img_samsungci.svg';
 import CloseIcon from '@/public/assets/icons/close.svg';
+import { brMap } from '@/brMap';
 
 const InsuranceSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -23,9 +24,9 @@ const InsuranceSection = () => {
         <div className="flex flex-col lg:flex-row justify-between lg:min-h-[517px] space-y-12 lg:space-y-0">
           <div className="flex flex-col space-y-12 lg:space-y-0 lg:justify-between h-full lg:min-h-[517px] lg:flex-1 lg:pr-8">
             <div className="space-y-3 lg:space-y-3.5">
-              <h2 className="text-headline-sm lg:text-headline-lg font-bold lg:whitespace-pre-line">{t('title')}</h2>
-              <p className="text-gray-700 text-body-md lg:text-body-xl lg:whitespace-pre-line font-medium lg:font-normal">
-                {t('description')}
+              <h2 className="text-headline-sm lg:text-headline-lg font-bold">{t.rich('title', brMap)}</h2>
+              <p className="text-gray-700 text-body-md lg:text-body-xl font-medium lg:font-normal">
+                {t.rich('description', brMap)}
               </p>
             </div>
 
@@ -43,8 +44,8 @@ const InsuranceSection = () => {
                 <Image src={InsuranceImg} alt={t('image.alt')} width={200} height={200} className="w-[200px] h-auto" />
               </div>
               <div className="space-y-4">
-                <p className="text-caption-lg lg:text-body-md font-medium text-center text-[var(--color-gray-500)] lg:whitespace-pre-line">
-                  {t('disclaimer')}
+                <p className="text-caption-lg lg:text-body-md font-medium text-center text-[var(--color-gray-500)]">
+                  {t.rich('disclaimer', brMap)}
                 </p>
               </div>
             </div>
@@ -56,9 +57,7 @@ const InsuranceSection = () => {
             </div>
 
             <div className="space-y-4">
-              <p className="text-body-md text-center text-[var(--color-gray-500)] lg:whitespace-pre-line">
-                {t('disclaimer')}
-              </p>
+              <p className="text-body-md text-center text-[var(--color-gray-500)]">{t.rich('disclaimer', brMap)}</p>
             </div>
           </div>
         </div>

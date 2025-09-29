@@ -6,6 +6,7 @@ import { useModal } from '@/contexts/ModalContext';
 import { DepositWithdrawNoticeModal } from '@/components/modal/DepositWithdrawNoticeModal';
 import SplineScene from '../common/SplineScene';
 import { PopupButton } from '@typeform/embed-react';
+import { brMap } from '@/brMap';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -41,10 +42,10 @@ const HeroSection = () => {
         >
           <div className="space-y-4 lg:space-y-6 order-2 lg:order-1">
             <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold whitespace-pre-line">
-              {t('title')}
+              {t.rich('title', brMap)}
             </h1>
             <p className="text-center text-body-md lg:text-left font-medium lg:font-normal lg:text-body-lg lg:whitespace-pre-line">
-              {t('description')}
+              {t.rich('description', brMap)}
             </p>
 
             <PopupButton
