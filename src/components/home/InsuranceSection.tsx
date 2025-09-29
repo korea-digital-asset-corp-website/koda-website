@@ -1,16 +1,18 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
 import InsuranceImg from '@/public/assets/images/img_insurance.png';
 import KodaLogo from '@/public/assets/icons/koda.svg';
 import SamsungCiIcon from '@/public/assets/icons/img_samsungci.svg';
+import SamsungCiEnIcon from '@/public/assets/icons/img_samsungci_eng.svg';
 import CloseIcon from '@/public/assets/icons/close.svg';
 import { brMap } from '@/brMap';
 
 const InsuranceSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const locale = useLocale();
   const t = useTranslations('home.insurance');
 
   return (
@@ -30,11 +32,19 @@ const InsuranceSection = () => {
               </p>
             </div>
 
-            <div className="flex flex-col justify-center items-center border border-gray-50 rounded-[4px] w-full lg:w-[400px] h-[120px] lg:h-[188px] gap-4 lg:gap-6">
+            <div
+              className={`flex flex-col justify-center items-center border border-gray-50 rounded-[4px] w-full h-[120px] lg:h-[188px] gap-4 lg:gap-6 ${
+                locale === 'en' ? 'lg:max-w-[664px] lg:w-full' : 'lg:w-[400px]'
+              }`}
+            >
               <p className="flex flex-row items-center justify-center gap-3 lg:gap-[20px]">
                 <KodaLogo className="w-[81px] h-[18px] lg:w-[117px] lg:h-[26px]" />
                 <CloseIcon className="w-[10px] h-[10px] lg:w-[16px] lg:h-[16px]" />
-                <SamsungCiIcon className="w-[64px] h-[18px] lg:w-[92px] lg:h-[26px]" />
+                {locale === 'en' ? (
+                  <SamsungCiEnIcon className="w-[175px] h-[30px] lg:w-[233px] lg:h-[40px]" />
+                ) : (
+                  <SamsungCiIcon className="w-[64px] h-[18px] lg:w-[92px] lg:h-[26px]" />
+                )}
               </p>
               <p className="text-headline-md lg:text-display-md font-semibold lg:font-bold">{t('coverage.amount')}</p>
             </div>
