@@ -8,7 +8,8 @@ import MobileSidebar from './MobileSidebar';
 const MobileMenuButton = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleToggle = () => {
+  const handleToggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
     setIsOpen(!isOpen);
   };
 
@@ -19,7 +20,7 @@ const MobileMenuButton = () => {
   return (
     <>
       <button
-        className="lg:hidden w-11 h-11 flex items-center justify-center gap-3 hover:bg-gray-50 rounded-md transition-colors"
+        className="lg:hidden w-11 h-11 flex items-center justify-center gap-3 hover:bg-gray-50 rounded-md transition-colors cursor-pointer"
         onClick={handleToggle}
         aria-label={isOpen ? '메뉴 닫기' : '메뉴 열기'}
         aria-expanded={isOpen}

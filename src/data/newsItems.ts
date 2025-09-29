@@ -4,7 +4,7 @@ export interface NewsItem {
   image?: string;
   publisher: string;
   date: string;
-  link?: string;
+  link: string;
 }
 
 export const newsData: NewsItem[] = [

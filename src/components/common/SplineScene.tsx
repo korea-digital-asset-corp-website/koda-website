@@ -8,9 +8,10 @@ interface SplineSceneProps {
   scene: string;
   className?: string;
   onSplineLoaded?: () => void;
+  showOverlay?: boolean;
 }
 
-const SplineScene = ({ scene, className, onSplineLoaded }: SplineSceneProps) => {
+const SplineScene = ({ scene, className, onSplineLoaded, showOverlay }: SplineSceneProps) => {
   const splineRef = useRef<HTMLDivElement>(null);
   const appRef = useRef<Application | null>(null);
   const isPlayingRef = useRef(true);
@@ -70,7 +71,9 @@ const SplineScene = ({ scene, className, onSplineLoaded }: SplineSceneProps) => 
     <div ref={splineRef} className={`relative ${className}`}>
       <Spline scene={scene} onLoad={onLoad} />
 
-      <div className="absolute bottom-0 right-0 w-[160px] h-[57px] bg-white z-[9] pointer-events-none rounded-[4px] opacity-100" />
+      {showOverlay && (
+        <div className="absolute bottom-0 right-0 w-[160px] h-[57px] bg-white z-[9] pointer-events-none rounded-[4px] opacity-100" />
+      )}
     </div>
   );
 };
