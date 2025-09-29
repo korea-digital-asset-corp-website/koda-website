@@ -49,6 +49,7 @@ const HeroSection = () => {
             scene="https://prod.spline.design/O4BKSZb0nUY-tmcM/scene.splinecode"
             className="order-1 lg:order-2 [&_canvas]:!w-full [&_canvas]:!h-auto pointer-events-none [&_canvas]:!scale-[1.0] lg:[&_canvas]:!scale-[1.2]"
             onSplineLoaded={handleSplineLoaded}
+            showOverlay={true}
           />
         </div>
       </section>

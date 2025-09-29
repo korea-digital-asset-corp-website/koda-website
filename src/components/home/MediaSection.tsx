@@ -24,7 +24,12 @@ const MediaSection = () => {
           <h2 className="text-headline-sm lg:text-headline-lg font-bold">{t('title')}</h2>
           <div className="space-y-0">
             {displayedNews.map((item, index) => (
-              <div key={index}>
+              <Link
+                className="hover:text-primary-700 transition-colors active:text-primary-700"
+                href={item.link}
+                key={index}
+                target="_blank"
+              >
                 <div className="pt-6 pb-4 lg:py-6 flex flex-col space-y-2 lg:space-y-3">
                   <p className="text-headline-xs lg:text-headline-md font-semibold">{item.title}</p>
                   <div className="flex font-medium lg:font-normal items-center space-x-1.5 text-[var(--color-gray-500)]">
@@ -33,7 +38,7 @@ const MediaSection = () => {
                   </div>
                 </div>
                 {index < displayedNews.length - 1 && <hr className="border-gray-50" />}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
