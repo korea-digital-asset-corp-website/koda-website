@@ -35,7 +35,7 @@ export const newsData: NewsItem[] = [
   {
     id: 4,
     title: '비트맥스-한국디지털에셋, 업무협약 체결…비트코인 전략 자산 본격화',
-    image: '/assets/images/news_4.jpg',
+    image: '/assets/images/news_4.png',
     publisher: '이투데이',
     date: '2025.02',
     link: 'https://www.etoday.co.kr/news/view/2447415',
@@ -43,7 +43,7 @@ export const newsData: NewsItem[] = [
   {
     id: 5,
     title: '금융산업 경쟁력 위해 가상자산 ETF 도입해야',
-    image: '/assets/images/news_5.jpg',
+    image: '/assets/images/news_5.png',
     publisher: '뉴시스',
     date: '2024.12',
     link: 'https://www.newsis.com/view/NISX20241220_0003005184',
@@ -67,7 +67,7 @@ export const newsData: NewsItem[] = [
   {
     id: 8,
     title: `가상자산 수탁 기업 '코다', 프리 시리즈 A 투자 유치`,
-    image: '/assets/images/news_8.jpg',
+    image: '/assets/images/news_8.png',
     publisher: '토큰포스트',
     date: '2024.05',
     link: 'https://www.tokenpost.kr/article-179186',
