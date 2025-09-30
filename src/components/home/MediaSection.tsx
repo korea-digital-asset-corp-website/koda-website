@@ -5,9 +5,11 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { newsData } from '@/data/newsItems';
 import Link from 'next/link';
 import IcArrowIcon from '@/public/assets/icons/main_ic_arrow.svg';
+import { useDateFormat } from '@/hooks/useDateFormat';
 
 const MediaSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const { formatDate } = useDateFormat();
   const t = useTranslations('home.media');
 
   const displayedNews = newsData.slice(0, 5);
@@ -34,7 +36,7 @@ const MediaSection = () => {
                   <p className="text-headline-xs lg:text-headline-md font-semibold">{item.title}</p>
                   <div className="flex font-medium lg:font-normal items-center space-x-1.5 text-[var(--color-gray-500)]">
                     <span className="text-body-sm lg:text-body-lg">{item.publisher},</span>
-                    <span className="text-body-sm lg:text-body-lg">{item.date}</span>
+                    <span className="text-body-sm lg:text-body-lg">{formatDate(item.date, 'month')}</span>
                   </div>
                 </div>
                 {index < displayedNews.length - 1 && <hr className="border-gray-50" />}

@@ -8,7 +8,7 @@ export const noticesData: Notice[] = [
   {
     id: 1,
     titleKey: 'depositWithdraw.title',
-    date: '2025-04-18',
+    date: '2022.01.12',
   },
 ];
 
