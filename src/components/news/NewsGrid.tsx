@@ -1,8 +1,12 @@
+'use client';
+
 import { NewsItem } from '@/data/newsItems';
+import { useDateFormat } from '@/hooks/useDateFormat';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const NewsGrid = ({ items }: { items: NewsItem[] }) => {
+  const { formatDate } = useDateFormat();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 lg:gap-y-10">
       {items?.map((item) => (
@@ -28,7 +32,7 @@ const NewsGrid = ({ items }: { items: NewsItem[] }) => {
 
             <div className="text-body-sm font-medium lg:font-normal lg:text-body-md text-[var(--color-gray-500)]">
               <span>
-                {item.publisher}, <time dateTime={item.date}>{item.date}</time>
+                {item.publisher}, <time dateTime={item.date}>{formatDate(item.date)}</time>
               </span>
             </div>
           </article>

@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import BackToListButton from '@/components/notice/BackToListButton';
 import { getNoticeById } from '@/data/notices';
 import { getNoticeContent } from '@/data/noticeContentMap';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
+import { formatDate } from '@/utils/dateFormat';
 
 interface NoticeDetailPageProps {
   params: Promise<{ id: string }>;
@@ -10,6 +11,7 @@ interface NoticeDetailPageProps {
 
 const NoticeDetailPage = async ({ params }: NoticeDetailPageProps) => {
   const t = await getTranslations('modal');
+  const locale = await getLocale();
   const { id } = await params;
   const noticeId = parseInt(id, 10);
 
@@ -30,7 +32,7 @@ const NoticeDetailPage = async ({ params }: NoticeDetailPageProps) => {
         <h1 className="text-headline-sm lg:text-headline-lg font-bold text-gray-900 mb-2 lg:mb-3">
           {t(notice.titleKey)}
         </h1>
-        <p className="text-body-md text-[color:var(--color-gray-500)]">{notice.date}</p>
+        <p className="text-body-md text-[color:var(--color-gray-500)]">{formatDate(notice.date, locale, 'full')}</p>
       </header>
 
       <main className="mt-[22px] mb-8 lg:mt-[40px] lg:mb-12">
