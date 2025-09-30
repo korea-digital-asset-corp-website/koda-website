@@ -8,7 +8,7 @@ interface PreviousVersionsListProps {
 }
 
 const PreviousVersionsList = ({}: PreviousVersionsListProps) => {
-  const t = useTranslations('privacyPolicy.previousVersions');
+  const t = useTranslations();
   const locale = useLocale();
   const allVersions = getAllVersions();
 
@@ -29,7 +29,7 @@ const PreviousVersionsList = ({}: PreviousVersionsListProps) => {
   };
 
   const renderVersionLink = (version: PrivacyPolicyVersion): string => {
-    const policyTitle = t('policyTitle', { version: version.version });
+    const policyTitle = t(version.titleKey);
     const formattedDate = formatDate(version.effectiveDate);
 
     if (locale === 'en') {
@@ -41,7 +41,7 @@ const PreviousVersionsList = ({}: PreviousVersionsListProps) => {
 
   return (
     <>
-      <H3 className="text-headline-xs font-bold mb-3">{t('title')}</H3>
+      <H3 className="text-headline-xs font-bold mb-3">{t('privacyPolicy.previousVersions.title')}</H3>
       <div className="space-y-1">
         {allVersions.map((version) => {
           const linkUrl = version.isLatest ? `/privacy-policy` : `/privacy-policy/${version.version}`;
