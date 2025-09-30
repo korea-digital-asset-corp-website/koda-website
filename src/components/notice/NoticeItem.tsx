@@ -1,7 +1,6 @@
 import { Notice } from '@/data/notices';
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
-
+import { Link } from '@/i18n/navigation';
 interface NoticeItemProps {
   notice: Notice;
 }

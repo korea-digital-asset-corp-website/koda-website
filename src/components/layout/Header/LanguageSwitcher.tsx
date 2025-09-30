@@ -17,7 +17,10 @@ const LanguageSwitcherBase = ({ className }: { className?: string }) => {
   const displayText = locale === 'ko' ? 'KR' : 'EN';
 
   return (
-    <button onClick={toggleLanguage} className={`flex cursor-pointer items-center gap-2 ${className || ''}`}>
+    <button
+      onClick={toggleLanguage}
+      className={`flex cursor-pointer items-center gap-2 font-semibold ${className || ''}`}
+    >
       <Ic_Logo />
       {displayText}
     </button>

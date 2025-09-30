@@ -29,7 +29,7 @@ const FaqAccordion = () => {
         const buttonId = `faq-button-${item.id}`;
 
         return (
-          <article key={item.id} className="border-b border-gray-50 last:border-b-0">
+          <article key={item.id} className="border-b border-gray-50 last:border-b-0 group">
             <header>
               <button
                 id={buttonId}
@@ -38,7 +38,7 @@ const FaqAccordion = () => {
                 aria-expanded={isOpen}
                 aria-controls={contentId}
               >
-                <h3 className="text-headline-xs lg:text-headline-sm font-bold pr-4 text-gray-900">
+                <h3 className="text-headline-xs lg:text-headline-sm font-bold pr-4 text-gray-900 group-hover:text-primary-700 transition-colors">
                   {t(item.questionKey)}
                 </h3>
                 <span

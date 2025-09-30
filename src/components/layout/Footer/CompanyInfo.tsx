@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import KodaWhiteLogo from '@/public/assets/icons/koda_white.svg';
 import CompanyCertifications from './CompanyCertifications';
 
@@ -22,7 +22,7 @@ const CompanyInfo = async () => {
             </Link>
           </div>
           <address className="not-italic">
-            <p className="mb-2">{t('company.name')}</p>
+            <p className="font-semibold mb-2">{t('company.name')}</p>
             <p>{t('company.address')}</p>
             <p>
               {t('company.ceo')} | {t('company.businessNumber')}
@@ -40,7 +40,7 @@ const CompanyInfo = async () => {
           {t('company.infoTitle')}
         </h2>
         <address className="not-italic">
-          <p className="mb-2">{t('company.name')}</p>
+          <p className="font-semibold mb-2">{t('company.name')}</p>
           <p className="whitespace-pre-line lg:whitespace-normal">{t('company.address')}</p>
           <p>
             {t('company.ceo')} | {t('company.businessNumber')}
