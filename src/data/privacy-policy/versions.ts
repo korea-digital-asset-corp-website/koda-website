@@ -13,8 +13,8 @@ export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
   {
     version: 'v7',
     versionNumber: 7,
-    effectiveDate: '2025.09.25',
-    releaseDate: '2025.09.25',
+    effectiveDate: '2025.09.30',
+    releaseDate: '2025.09.30',
     isLatest: true,
     changeReason: '개인정보 열람청구 접수 처리 부서 변경 및 영어 문서 지원',
     title: '개인정보 처리방침 v7',

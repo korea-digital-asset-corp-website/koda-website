@@ -5,7 +5,7 @@ import AuthorizationIcon from '@/public/assets/icons/authorization.svg';
 import ProofIcon from '@/public/assets/icons/proof.svg';
 import SecurityIcon from '@/public/assets/icons/security.svg';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const CorporateSection = () => {
   const { ref, isVisible } = useScrollAnimation();

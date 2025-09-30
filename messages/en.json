@@ -1038,22 +1038,21 @@
           "after": " before proceeding with deposits or withdrawals."
         }
       ],
-      "table": {
-        "supportedNetworks": {
-          "label": "Supported Networks",
-          "value": "Bitcoin, Ethereum, Solana, Polygon, Binance Smart Chain, Arbitrum One, Base, Kaia, Xpla, Over, Story, Core, BizAuto, and others"
-        },
-        "depositProcess": {
-          "label": "Deposit Process",
-          "value": "Verify deposit address and network → Make a test deposit → Confirm deposit (via dashboard or inquiry with our company) → Proceed with full deposit"
-        },
-        "withdrawalProcess": {
-          "label": "Withdrawal Process",
-          "value": "Register client withdrawal address → Company verifies address validity → Test withdrawal → Confirm withdrawal (via client or inquiry with our company) → Proceed with full withdrawal"
-        }
+      "supportedNetworks": {
+        "label": "Supported Networks",
+        "value": "Bitcoin, Ethereum, Solana, Polygon, Binance Smart Chain, Arbitrum One, Base, Kaia, Xpla, Over, Story, Core, BizAuto, and others"
+      },
+      "depositProcess": {
+        "label": "Deposit Process",
+        "value": "Verify deposit address and network → Make a test deposit → Confirm deposit (via dashboard or inquiry with our company) → Proceed with full deposit"
+      },
+      "withdrawalProcess": {
+        "label": "Withdrawal Process",
+        "value": "Register client withdrawal address → Company verifies address validity → Test withdrawal → Confirm withdrawal (via client or inquiry with our company) → Proceed with full withdrawal"
       },
       "contact": {
-        "label": "Contact"
+        "label": "Contact",
+        "value": "support@kodax.com"
       },
       "buttons": {
         "confirm": "Confirm"

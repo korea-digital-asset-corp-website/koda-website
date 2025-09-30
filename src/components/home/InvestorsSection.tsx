@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const InvestorsSection = () => {
   const { ref, isVisible } = useScrollAnimation();

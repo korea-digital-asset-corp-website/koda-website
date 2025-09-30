@@ -5,7 +5,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
 import GraphStatsImg from '@/public/assets/images/img_graph.png';
 import KodaLogo from '@/public/assets/icons/koda.svg';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const MarketStatsSection = () => {
   const { ref, isVisible } = useScrollAnimation();

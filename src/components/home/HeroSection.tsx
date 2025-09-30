@@ -2,27 +2,18 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { useModal } from '@/contexts/ModalContext';
-import { DepositWithdrawNoticeModal } from '@/components/modal/DepositWithdrawNoticeModal';
 import SplineScene from '../common/SplineScene';
 import { PopupButton } from '@typeform/embed-react';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const { openModal } = useModal();
   const t = useTranslations('home.hero');
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  useEffect(() => {
-    if (isMounted) {
-      openModal(<DepositWithdrawNoticeModal />);
-    }
-  }, [isMounted, openModal]);
 
   const handleSplineLoaded = () => {
     setIsLoaded(true);

@@ -8,7 +8,7 @@ import KodaLogo from '@/public/assets/icons/koda.svg';
 import SamsungCiIcon from '@/public/assets/icons/img_samsungci.svg';
 import SamsungCiEnIcon from '@/public/assets/icons/img_samsungci_eng.svg';
 import CloseIcon from '@/public/assets/icons/close.svg';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const InsuranceSection = () => {
   const { ref, isVisible } = useScrollAnimation();

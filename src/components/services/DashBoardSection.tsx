@@ -10,7 +10,7 @@ import ManageIcon from '@/public/assets/icons/services_manage.svg';
 import LockUpIcon from '@/public/assets/icons/services_lockup.svg';
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const DashBoardSection = () => {
   const { ref, isVisible } = useScrollAnimation();
