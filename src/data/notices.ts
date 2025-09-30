@@ -1,13 +1,13 @@
 export interface Notice {
   id: number;
-  title: string;
+  titleKey: string;
   date: string;
 }
 
 export const noticesData: Notice[] = [
   {
     id: 1,
-    title: '가상자산 입출금시 유의사항',
+    titleKey: 'depositWithdraw.title',
     date: '2025-04-18',
   },
 ];

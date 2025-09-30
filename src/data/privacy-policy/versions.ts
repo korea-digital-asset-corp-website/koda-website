@@ -5,8 +5,8 @@ export interface PrivacyPolicyVersion {
   releaseDate: string; // '2025.07.08' (배포일, 현재는 시행일과 동일)
   isLatest: boolean; // 최신 버전 여부
   isUpcoming?: boolean; // 시행예정 여부 (확장성용)
-  changeReason: string; // 변경 내역
-  title: string; // '개인정보 처리방침 v5'
+  changeReasonKey: string; // 변경 내역
+  titleKey: string; // '개인정보 처리방침 v5'
 }
 
 export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
@@ -16,8 +16,8 @@ export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
     effectiveDate: '2025.09.30',
     releaseDate: '2025.09.30',
     isLatest: true,
-    changeReason: '개인정보 열람청구 접수 처리 부서 변경 및 영어 문서 지원',
-    title: '개인정보 처리방침 v7',
+    changeReasonKey: 'privacyPolicy.versions.v7.changeReason',
+    titleKey: 'privacyPolicy.versions.v7.title',
   },
   {
     version: 'v6',
@@ -25,8 +25,8 @@ export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
     effectiveDate: '2025.07.08',
     releaseDate: '2025.07.08',
     isLatest: false,
-    changeReason: 'ISMS 인증심사 결함 조치',
-    title: '개인정보 처리방침 v6',
+    changeReasonKey: 'privacyPolicy.versions.v6.changeReason',
+    titleKey: 'privacyPolicy.versions.v6.title',
   },
   {
     version: 'v5',
@@ -34,8 +34,8 @@ export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
     effectiveDate: '2025.06.04',
     releaseDate: '2025.06.04',
     isLatest: false,
-    changeReason: '[개인정보 처리 위탁 및 국외 이전 추가]',
-    title: '개인정보 처리방침 v5',
+    changeReasonKey: 'privacyPolicy.versions.v5.changeReason',
+    titleKey: 'privacyPolicy.versions.v5.title',
   },
   {
     version: 'v4',
@@ -43,8 +43,8 @@ export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
     effectiveDate: '2025.02.25',
     releaseDate: '2025.02.25',
     isLatest: false,
-    changeReason: '[개인정보 처리위탁 - CODE]',
-    title: '개인정보 처리방침 v4',
+    changeReasonKey: 'privacyPolicy.versions.v4.changeReason',
+    titleKey: 'privacyPolicy.versions.v4.title',
   },
   {
     version: 'v3',
@@ -52,8 +52,8 @@ export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
     effectiveDate: '2024.02.21',
     releaseDate: '2024.02.21',
     isLatest: false,
-    changeReason: '[개인정보 보호 책임자 사항 변경]',
-    title: '개인정보 처리방침 v3',
+    changeReasonKey: 'privacyPolicy.versions.v3.changeReason',
+    titleKey: 'privacyPolicy.versions.v3.title',
   },
   {
     version: 'v2',
@@ -61,8 +61,8 @@ export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
     effectiveDate: '2023.06.16',
     releaseDate: '2023.06.16',
     isLatest: false,
-    changeReason: '[가상자산 수탁 서비스 등 제공 관련 개인정보(대리인 포함)의 항목 추가]',
-    title: '개인정보 처리방침 v2',
+    changeReasonKey: 'privacyPolicy.versions.v2.changeReason',
+    titleKey: 'privacyPolicy.versions.v2.title',
   },
   {
     version: 'v1',
@@ -70,8 +70,8 @@ export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
     effectiveDate: '2022.03.25',
     releaseDate: '2022.03.25',
     isLatest: false,
-    changeReason: '개인정보처리의 위탁 및 개인정보 보호책임자 변경',
-    title: '개인정보 처리방침 v1',
+    changeReasonKey: 'privacyPolicy.versions.v1.changeReason',
+    titleKey: 'privacyPolicy.versions.v1.title',
   },
   {
     version: 'v0',
@@ -79,9 +79,8 @@ export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
     effectiveDate: '2021.01.01',
     releaseDate: '2021.01.01',
     isLatest: false,
-    changeReason:
-      '[특정 금융거래정보의 보고 및 이용에 관한 법률 시행령]에 의거 트래블룰 적용에 따른 자산이동 수집항목 추가',
-    title: '개인정보 처리방침 v0',
+    changeReasonKey: 'privacyPolicy.versions.v0.changeReason',
+    titleKey: 'privacyPolicy.versions.v0.title',
   },
 ];
 

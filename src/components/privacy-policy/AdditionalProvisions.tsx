@@ -8,14 +8,22 @@ interface AdditionalProvisionsProps {
 }
 
 const AdditionalProvisions = ({ version }: AdditionalProvisionsProps) => {
-  const t = useTranslations('privacyPolicy.supplementaryProvisions');
+  const t = useTranslations();
 
   return (
     <div>
-      <H2 className="font-bold">&lt;{t('title')}&gt;</H2>
-      <P className="text-gray-700">{t('effectiveDate', { effectiveDate: version.effectiveDate })}</P>
+      <H2 className="font-bold">&lt;{t('privacyPolicy.supplementaryProvisions.title')}&gt;</H2>
+      <P className="text-gray-700">
+        {t('privacyPolicy.supplementaryProvisions.effectiveDate', {
+          effectiveDate: version.effectiveDate,
+        })}
+      </P>
 
-      <P className="font-bold">{t('changeDetails', { changeReason: version.changeReason })}</P>
+      <P className="font-bold">
+        {t('privacyPolicy.supplementaryProvisions.changeDetails', {
+          changeReason: t(version.changeReasonKey),
+        })}
+      </P>
     </div>
   );
 };
