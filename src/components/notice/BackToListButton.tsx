@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 const BackToListButton = async () => {
   const t = await getTranslations('notice.detail');

@@ -3,7 +3,7 @@
 import { navItems } from '@/data/navItems';
 import { usePathname } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 const Navigation = () => {
   const t = useTranslations('header.navigation');
