@@ -7,7 +7,7 @@ import CertificationLogo from '@/public/assets/icons/img_certification_color.svg
 import SecurityCompLogo from '@/public/assets/icons/security_comp.svg';
 import SecurityPplLogo from '@/public/assets/icons/security_ppl.svg';
 import Image from 'next/image';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const SecuritySection = () => {
   const { ref, isVisible } = useScrollAnimation();

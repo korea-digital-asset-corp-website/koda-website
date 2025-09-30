@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import SplineScene from '../common/SplineScene';
 import { useEffect, useState } from 'react';
 import { PopupButton } from '@typeform/embed-react';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);

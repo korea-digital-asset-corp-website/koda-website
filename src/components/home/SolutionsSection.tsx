@@ -12,7 +12,7 @@ import ProofIcon from '@/public/assets/icons/proof.svg';
 import SecurityIcon from '@/public/assets/icons/security.svg';
 import IcArrowIcon from '@/public/assets/icons/main_ic_arrow.svg';
 import Link from 'next/link';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const SolutionsSection = () => {
   const { ref, isVisible } = useScrollAnimation();

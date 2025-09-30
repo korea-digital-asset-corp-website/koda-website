@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { PopupButton } from '@typeform/embed-react';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();

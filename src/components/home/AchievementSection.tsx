@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
 import Venture_Enterprise_badge from '@/public/assets/images/img_venture_badge_d.png';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const AchievementSection = () => {
   const { ref, isVisible } = useScrollAnimation();

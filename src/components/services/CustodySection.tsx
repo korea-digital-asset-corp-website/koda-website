@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import ColdWalletImg from '@/public/assets/images/img_service_coldwallet.png';
 import MpcImg from '@/public/assets/images/img_service_mpc.png';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { brMap } from '@/brMap';
+import { brMap } from '@/i18n/brMap';
 
 const CustodySection = () => {
   const { ref, isVisible } = useScrollAnimation();
