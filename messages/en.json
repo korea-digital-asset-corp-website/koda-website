@@ -652,7 +652,7 @@
       "changeDetails": "Change Details: {changeReason}"
     },
     "previousVersions": {
-      "title": "[Previous Versions of the Privacy Policy]",
+      "title": "[Updates History of the Privacy Policy]",
       "dateFormat": "Effective {date}",
       "policyTitle": "Privacy Policy {version}"
     }
