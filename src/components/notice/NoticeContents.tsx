@@ -80,10 +80,6 @@ export const NoticeContent1 = () => {
               </a>
             </>
           )}
-          ,{' '}
-          <a target="__blank" href="https://www.kodax.com" className="text-primary-700 underline">
-            www.kodax.com
-          </a>
         </NoticeDetailItem>
       </NoticeDetailList>
     </>
