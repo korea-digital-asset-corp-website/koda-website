@@ -11,8 +11,8 @@ const MarketStatsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const t = useTranslations('home.marketStats');
 
-  const totalAmount = 13.7;
-  const kodaAmount = 13.2;
+  const totalAmount = 1.5;
+  const kodaAmount = 1.3;
 
   const marketShare = Math.floor((kodaAmount / totalAmount) * 1000) / 10;
 

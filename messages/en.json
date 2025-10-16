@@ -83,21 +83,21 @@
     },
     "marketStats": {
       "title": "The Undisputed\n No.1 Digital Asset Custody Provider",
-      "description": "*Holding over 90% market share in assets under custody as of H1 2024,\n we stand as the clear market leader.",
+      "description": "*Holding over 80% market share in assets under custody as of H2 2024,\n we stand as the clear market leader.",
       "stats": {
         "total": {
           "label": "Total Market AUC",
-          "amount": "$9.9B"
+          "amount": "$1.1B"
         },
         "koda": {
           "label": "KODA AUC",
-          "amount": "$9.5B"
+          "amount": "$0.9B"
         }
       },
       "chart": {
         "alt": "Market share chart"
       },
-      "source": "*Source: Results of '1H 2024 Virtual Asset Service Provider Survey',\nFinancial Services Commission"
+      "source": "*Source: Results of '2H 2024 Virtual Asset Service Provider Survey',\nFinancial Services Commission"
     },
     "security": {
       "title": "Robust Internal Control\nand Security Standards",
