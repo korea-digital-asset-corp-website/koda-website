@@ -83,21 +83,21 @@
     },
     "marketStats": {
       "title": "압도적으로 시장을 선도하는<brAll></brAll> No.1 커스터디입니다",
-      "description": "24년 상반기 수탁고 기준 90% 이상의 시장점유율로<brMo></brMo> 압도적인 1위*",
+      "description": "24년 하반기 수탁고 기준 80% 이상의 시장점유율로<brMo></brMo> 압도적인 1위*",
       "stats": {
         "total": {
           "label": "전체 수탁고",
-          "amount": "13.7조 원"
+          "amount": "1.5조 원"
         },
         "koda": {
           "label": "KODA 수탁고",
-          "amount": "13.2조 원"
+          "amount": "1.3조 원"
         }
       },
       "chart": {
         "alt": "시장 점유율 그래프"
       },
-      "source": "*출처 : 2024년 상반기 금융위원회 실태조사"
+      "source": "*출처 : 2024년 하반기 금융위원회 실태조사, 금융위원회"
     },
     "security": {
       "title": "철저한 내부 통제 체계와<brAll></brAll> 보안 기준을 갖추었습니다",
