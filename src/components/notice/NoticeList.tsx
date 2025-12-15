@@ -13,9 +13,13 @@ const NoticeList = ({ notices }: NoticeListProps) => {
     return <EmptyNotice />;
   }
 
+  const sortedNotices = [...notices].sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+
   return (
     <div className="mt-[60px] lg:mt-0 [&>*:last-child_.divider]:hidden">
-      {notices.map((notice) => (
+      {sortedNotices.map((notice) => (
         <NoticeItem key={notice.id} notice={notice} />
       ))}
     </div>
