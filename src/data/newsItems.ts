@@ -9,6 +9,14 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
+    id: 0,
+    title: '가상자산 커스터디 기업 KODA, 100억 규모 시리즈A 투자 유치',
+    image: '/assets/images/news_13.png',
+    publisher: '뉴스1',
+    date: '2025.11',
+    link: 'https://www.news1.kr/finance/blockchain-fintech/5988471',
+  },
+  {
     id: 1,
     title: '한국디지털에셋(KODA), 가상자산사업자 최초 ‘벤처기업 확인’ 획득',
     image: '/assets/images/img_nr_13.png',

@@ -11,8 +11,8 @@ import BinanceSmartChainIcon from '@/public/assets/icons/services_binance.svg';
 import PolygonIcon from '@/public/assets/icons/services_polygon.svg';
 import ArbitriumIcon from '@/public/assets/icons/services_arbitrum.svg';
 import KaiaIcon from '@/public/assets/icons/services_kaia.svg';
-import StoryIcon from '@/public/assets/icons/services_story.svg';
 import CoreIcon from '@/public/assets/icons/services_core.svg';
+import AptosIcon from '@/public/assets/icons/services_aptos.svg';
 import MoreMainnetsIcon from '@/public/assets/icons/services_mainnets.svg';
 
 const AssetsSection = () => {
@@ -24,12 +24,12 @@ const AssetsSection = () => {
     { icon: EthereumIcon, name: 'Ethereum' },
     { icon: BaseIcon, name: 'Base' },
     { icon: SolanaIcon, name: 'Solana' },
-    { icon: Avalanche, name: 'Avalanche' },
     { icon: BinanceSmartChainIcon, name: 'Binance Smart Chain' },
-    { icon: PolygonIcon, name: 'Polygon' },
+    { icon: Avalanche, name: 'Avalanche' },
+    { icon: AptosIcon, name: 'Aptos' },
     { icon: ArbitriumIcon, name: 'Arbitrum' },
+    { icon: PolygonIcon, name: 'Polygon' },
     { icon: KaiaIcon, name: 'Kaia' },
-    { icon: StoryIcon, name: 'Story' },
     { icon: CoreIcon, name: 'Core' },
     { icon: MoreMainnetsIcon, name: t('mainnets.more') },
   ];

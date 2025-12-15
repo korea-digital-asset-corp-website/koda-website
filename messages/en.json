@@ -1091,6 +1091,9 @@
       "buttons": {
         "confirm": "Confirm"
       }
+    },
+    "cryptoWarning": {
+      "title": "Precautions Regarding Virtual Asset Transactions"
     }
   }
 }

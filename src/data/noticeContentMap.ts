@@ -1,8 +1,10 @@
 import React from 'react';
-import { NoticeContent1 } from '@/components/notice/NoticeContents';
+import DepositWithdrawContent from '@/components/notice/NoticeContents/DepositWithdrawContent';
+import CryptoWarningContent from '@/components/notice/NoticeContents/CryptoWarningContent';
 
 const noticeContentsMap: Record<number, React.ComponentType> = {
-  1: NoticeContent1,
+  1: DepositWithdrawContent,
+  2: CryptoWarningContent,
 };
 
 export const getNoticeContent = (id: number): React.ComponentType | null => {
