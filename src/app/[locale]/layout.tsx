@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale,
       images: [
         {
-          url: 'https://kodax.com/assets/images/og-image.png',
+          url: 'https://kodax.com/assets/images/img-ogmeta_img.png',
           width: 1200,
           height: 630,
           alt: t('home.title'),
