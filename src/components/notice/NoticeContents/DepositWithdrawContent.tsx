@@ -1,11 +1,9 @@
-'use client';
+import { NoticeDetailItem, NoticeDetailList } from '../NoticeDetailItem';
+import { getLocale, getTranslations } from 'next-intl/server';
 
-import { NoticeDetailItem, NoticeDetailList } from './NoticeDetailItem';
-import { useLocale, useTranslations } from 'next-intl';
-
-export const NoticeContent1 = () => {
-  const t = useTranslations('modal.depositWithdraw');
-  const locale = useLocale();
+const DepositWithdrawContent = async () => {
+  const t = await getTranslations('modal.depositWithdraw');
+  const locale = await getLocale();
 
   const renderNotice = (index: number) => {
     const notice = t.raw(`notices.${index}`);
@@ -85,3 +83,5 @@ export const NoticeContent1 = () => {
     </>
   );
 };
+
+export default DepositWithdrawContent;

@@ -8,7 +8,6 @@ const TermsMenu = async () => {
     { key: 'privacy', href: '/privacy-policy' },
     { key: 'ethics', href: '/ethical-management' },
     { key: 'guidelines', href: '/work-guidelines' },
-    { key: 'cryptoNotice', href: '/crypto-warning' },
   ];
 
   return (
