@@ -1084,6 +1084,9 @@
       "buttons": {
         "confirm": "확인"
       }
+    },
+    "cryptoWarning": {
+      "title": "가상자산 거래에 관한 유의사항"
     }
   }
 }
