@@ -28,9 +28,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale,
       images: [
         {
-          url: 'https://kodax.com/assets/images/favicon.png',
-          width: 140,
-          height: 140,
+          url: 'https://kodax.com/assets/images/og-image.png',
+          width: 1200,
+          height: 630,
           alt: t('home.title'),
         },
       ],
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title: t('home.title'),
       description: t('home.description'),
-      images: ['https://kodax.com/assets/images/favicon.png'],
+      images: ['https://kodax.com/assets/images/img-ogmeta_img.png'],
     },
 
     alternates: {
