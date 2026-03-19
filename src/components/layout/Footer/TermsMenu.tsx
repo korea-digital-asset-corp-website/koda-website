@@ -18,7 +18,10 @@ const TermsMenu = async () => {
       <ul className="space-y-1" role="list">
         {menuItems.map((item) => (
           <li key={item.key}>
-            <Link href={item.href} className="hover:text-white transition-colors">
+            <Link
+              href={item.href}
+              className={`hover:text-white transition-colors ${item.key === 'privacy' ? 'font-bold text-white' : ''}`}
+            >
               {t(`menu.terms.${item.key}`)}
             </Link>
           </li>
