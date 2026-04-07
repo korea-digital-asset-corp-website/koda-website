@@ -507,7 +507,7 @@
           },
           "typeForm": {
             "name": "TypeForm",
-            "purpose": "For conducting website surveys",
+            "purpose": "Service Inquiry",
             "items": "Email, Mobile Phone Number, Name, Company Name, Position",
             "country": "Spain, Contact : support@typeform.com",
             "period": "Until survey completion or termination of outsourcing contract"
