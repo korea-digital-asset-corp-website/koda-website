@@ -321,6 +321,10 @@
   },
   "privacyPolicy": {
     "versions": {
+      "v8": {
+        "changeReason": "Change of Purpose for Entrustment and Transfer of Typeform Personal Information Processing",
+        "title": "Privacy Policy v8"
+      },
       "v7": {
         "changeReason": "Change of Department Handling Requests for Access to Personal Information and Support for English",
         "title": "Privacy Policy v7"
@@ -508,6 +512,7 @@
           "typeForm": {
             "name": "TypeForm",
             "purpose": "For conducting website surveys",
+            "purposeV8": "Service Inquiry",
             "items": "Email, Mobile Phone Number, Name, Company Name, Position",
             "country": "Spain, Contact : support@typeform.com",
             "period": "Until survey completion or termination of outsourcing contract"
