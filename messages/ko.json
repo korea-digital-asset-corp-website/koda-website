@@ -321,6 +321,10 @@
   },
   "privacyPolicy": {
     "versions": {
+      "v8": {
+        "changeReason": "Typeform 개인정보처리의 위탁 및 이전 목적 변경",
+        "title": "개인정보 처리방침 v8"
+      },
       "v7": {
         "changeReason": "개인정보 열람청구 접수 처리 부서 변경 및 영어 문서 지원",
         "title": "개인정보 처리방침 v7"
@@ -506,6 +510,7 @@
           "typeForm": {
             "name": "Type Form",
             "purpose": "홈페이지설문조사",
+            "purposeV8": "서비스 문의",
             "items": "이메일, 휴대전화번호, 이름, 직책, 회사명",
             "country": "스페인, 연락처 : support@typeform.com",
             "period": "설문조사 완료 및 위탁계약 종료시까지"
