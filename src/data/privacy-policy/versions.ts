@@ -11,11 +11,20 @@ export interface PrivacyPolicyVersion {
 
 export const privacyPolicyVersions: PrivacyPolicyVersion[] = [
   {
+    version: 'v9',
+    versionNumber: 9,
+    effectiveDate: '2026.05.22',
+    releaseDate: '2026.05.22',
+    isLatest: true,
+    changeReasonKey: 'privacyPolicy.versions.v9.changeReason',
+    titleKey: 'privacyPolicy.versions.v9.title',
+  },
+  {
     version: 'v8',
     versionNumber: 8,
     effectiveDate: '2026.04.07',
     releaseDate: '2026.04.07',
-    isLatest: true,
+    isLatest: false,
     changeReasonKey: 'privacyPolicy.versions.v8.changeReason',
     titleKey: 'privacyPolicy.versions.v8.title',
   },

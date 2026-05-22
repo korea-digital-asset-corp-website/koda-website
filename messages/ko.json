@@ -321,6 +321,10 @@
   },
   "privacyPolicy": {
     "versions": {
+      "v9": {
+        "changeReason": "개인정보처리의 위탁 및 국외 이전 수탁업체 변경 (CODE → VerifyVASP)",
+        "title": "개인정보 처리방침 v9"
+      },
       "v8": {
         "changeReason": "Typeform 개인정보처리의 위탁 및 이전 목적 변경",
         "title": "개인정보 처리방침 v8"
@@ -520,6 +524,13 @@
             "purpose": "가상자산트래블룰(자금이동규칙) 수행",
             "items": "송금인/수취인 성명, 가상자산 지갑주소",
             "country": "대한민국, 연락처 : support@codevasp.com",
+            "period": "위탁계약 종료시까지"
+          },
+          "verifyVASP": {
+            "name": "VerifyVASP",
+            "purpose": "가상자산트래블룰(자금이동규칙) 수행",
+            "items": "송금인/수취인 성명, 가상자산 지갑주소",
+            "country": "싱가포르, 대한민국, 연락처 : corporate@verifyvasp.com",
             "period": "위탁계약 종료시까지"
           }
         }
