@@ -321,6 +321,10 @@
   },
   "privacyPolicy": {
     "versions": {
+      "v9": {
+        "changeReason": "Change of Outsourced Service Provider for Personal Information Processing and Cross-border Transfer (CODE → VerifyVASP)",
+        "title": "Privacy Policy v9"
+      },
       "v8": {
         "changeReason": "Change of Purpose for Entrustment and Transfer of Typeform Personal Information Processing",
         "title": "Privacy Policy v8"
@@ -522,6 +526,13 @@
             "purpose": "For virtual asset Travel Rule",
             "items": "Sender/Recipient Name, Virtual Asset Wallet Address",
             "country": "Republic of Korea, Contact : support@codevasp.com",
+            "period": "Until termination of outsourcing contract"
+          },
+          "verifyVASP": {
+            "name": "VerifyVASP",
+            "purpose": "For virtual asset Travel Rule",
+            "items": "Sender/Recipient Name, Virtual Asset Wallet Address",
+            "country": "Singapore, Republic of Korea, Contact : corporate@verifyvasp.com",
             "period": "Until termination of outsourcing contract"
           }
         }
