@@ -9,7 +9,7 @@ const CompanyCertifications = async () => {
   const t = await getTranslations('footer');
 
   return (
-    <div className="flex flex-row gap-7 lg:gap-10">
+    <div className="grid grid-cols-[auto_auto] justify-start place-items-start gap-7 sm:flex sm:flex-row sm:place-items-stretch lg:gap-10">
       <Image src={Isms} width={95} height={86} alt={t('certifications.isms')} className="lg:w-[113px] lg:h-[103px]" />
       <Certification className="w-[72px] h-[86px] lg:w-[85px] lg:h-[102px]" aria-label={t('certifications.other')} />
       <VentureIcon className="w-[101px] h-[85px] lg:w-[120px] lg:h-[101px]" aria-label={t('certifications.venture')} />
