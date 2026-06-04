@@ -13,7 +13,13 @@ const CompanyCertifications = async () => {
       <Image src={Isms} width={95} height={86} alt={t('certifications.isms')} className="lg:w-[113px] lg:h-[103px]" />
       <Certification className="w-[72px] h-[86px] lg:w-[85px] lg:h-[102px]" aria-label={t('certifications.other')} />
       <VentureIcon className="w-[101px] h-[85px] lg:w-[120px] lg:h-[101px]" aria-label={t('certifications.venture')} />
-      <Image src={Soc} width={95} height={86} alt={t('certifications.soc')} className="lg:w-[113px] lg:h-[103px]" />
+      <Image
+        src={Soc}
+        width={104}
+        height={103}
+        alt={t('certifications.soc')}
+        className="w-[87px] h-[86px] sm:w-[104px] sm:h-[103px]"
+      />
     </div>
   );
 };

@@ -37,10 +37,10 @@ const SecuritySection = () => {
               <CertificationLogo className="w-[56px] h-[68px] lg:w-[88px] lg:h-[105px]" />
               <Image
                 src={SocImg}
-                width={65}
-                height={60}
+                width={106}
+                height={105}
                 alt={t('certifications.soc.alt')}
-                className="lg:w-[113px] lg:h-[103px]"
+                className="w-[62px] h-[62px] lg:w-[106px] lg:h-[105px]"
               />
             </div>
           </div>
