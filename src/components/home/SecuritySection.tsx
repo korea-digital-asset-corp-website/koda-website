@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import IsmsImg from '@/public/assets/images/img_isms_color.png';
+import SocImg from '@/public/assets/images/img_soc.png';
 import CertificationLogo from '@/public/assets/icons/img_certification_color.svg';
 import SecurityCompLogo from '@/public/assets/icons/security_comp.svg';
 import SecurityPplLogo from '@/public/assets/icons/security_ppl.svg';
@@ -34,6 +35,13 @@ const SecuritySection = () => {
                 className="lg:w-[113px] lg:h-[103px]"
               />
               <CertificationLogo className="w-[56px] h-[68px] lg:w-[88px] lg:h-[105px]" />
+              <Image
+                src={SocImg}
+                width={65}
+                height={60}
+                alt={t('certifications.soc.alt')}
+                className="lg:w-[113px] lg:h-[103px]"
+              />
             </div>
           </div>
 
