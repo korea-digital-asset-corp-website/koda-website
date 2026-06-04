@@ -45,7 +45,8 @@
     "certifications": {
       "isms": "ISMS Information Security Management System Certification Mark",
       "other": "Other Certification Mark",
-      "venture": "벤처 확인 기업 마크"
+      "venture": "Venture Business Certification Mark",
+      "soc": "SOC Certification Mark"
     },
     "copyright": "Copyright © 2020 - {year} Korea Digital Asset Co., Ltd. All rights reserved."
   },
@@ -104,12 +105,15 @@
       "certifications": {
         "isms": {
           "alt": "ISMS Certification"
+        },
+        "soc": {
+          "alt": "SOC Certification"
         }
       },
       "features": {
         "compliance": {
           "title": "Bank-Grade Compliance Standards",
-          "description": "ISMS Certification, VASP License, Compliance with Presidential Decree Security Standards under the User Protection Act,\nSOC Audit in Progress (by Samil PwC)"
+          "description": "ISMS Certification, VASP License, Compliance with Presidential Decree Security Standards under the User Protection Act,\nSamil PwC SOC Certification"
         },
         "team": {
           "title": "Senior Operations Team with Former Bank Executives",
@@ -321,6 +325,14 @@
   },
   "privacyPolicy": {
     "versions": {
+      "v9": {
+        "changeReason": "Change of Outsourced Service Provider for Personal Information Processing and Cross-border Transfer (CODE → VerifyVASP)",
+        "title": "Privacy Policy v9"
+      },
+      "v8": {
+        "changeReason": "Change of Purpose for Entrustment and Transfer of Typeform Personal Information Processing",
+        "title": "Privacy Policy v8"
+      },
       "v7": {
         "changeReason": "Change of Department Handling Requests for Access to Personal Information and Support for English",
         "title": "Privacy Policy v7"
@@ -508,6 +520,7 @@
           "typeForm": {
             "name": "TypeForm",
             "purpose": "For conducting website surveys",
+            "purposeV8": "Service Inquiry",
             "items": "Email, Mobile Phone Number, Name, Company Name, Position",
             "country": "Spain, Contact : support@typeform.com",
             "period": "Until survey completion or termination of outsourcing contract"
@@ -517,6 +530,13 @@
             "purpose": "For virtual asset Travel Rule",
             "items": "Sender/Recipient Name, Virtual Asset Wallet Address",
             "country": "Republic of Korea, Contact : support@codevasp.com",
+            "period": "Until termination of outsourcing contract"
+          },
+          "verifyVASP": {
+            "name": "VerifyVASP",
+            "purpose": "For virtual asset Travel Rule",
+            "items": "Sender/Recipient Name, Virtual Asset Wallet Address",
+            "country": "Singapore, Republic of Korea, Contact : corporate@verifyvasp.com",
             "period": "Until termination of outsourcing contract"
           }
         }

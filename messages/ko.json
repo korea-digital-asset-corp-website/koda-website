@@ -45,7 +45,8 @@
     "certifications": {
       "isms": "ISMS 정보보호 관리체계 인증 마크",
       "other": "기타 인증 마크",
-      "venture": "벤처 확인 기업 마크"
+      "venture": "벤처 확인 기업 마크",
+      "soc": "SOC 인증 마크"
     },
     "copyright": "Copyright © 2020 - {year} Korea Digital Asset Co., Ltd. All rights reserved."
   },
@@ -104,12 +105,15 @@
       "certifications": {
         "isms": {
           "alt": "ISMS 인증"
+        },
+        "soc": {
+          "alt": "SOC 인증"
         }
       },
       "features": {
         "compliance": {
           "title": "금융 기관 수준의 컴플라이언스",
-          "description": "ISMS 인증, VASP(가상자산보관사업자 취득),<brAll></brAll> 이용자 보호법상 대통령령으로 정하는 보안 기준 충족,<brAll></brAll> SOC 인증심사 중(삼일PwC)"
+          "description": "ISMS 인증, VASP(가상자산보관사업자 취득),<brAll></brAll> 이용자 보호법상 대통령령으로 정하는 보안 기준 충족,<brAll></brAll> 삼일PwC SOC 인증심사 인증"
         },
         "team": {
           "title": "은행 부장급 이상의 운영 인력",
@@ -321,6 +325,14 @@
   },
   "privacyPolicy": {
     "versions": {
+      "v9": {
+        "changeReason": "개인정보처리의 위탁 및 국외 이전 수탁업체 변경 (CODE → VerifyVASP)",
+        "title": "개인정보 처리방침 v9"
+      },
+      "v8": {
+        "changeReason": "Typeform 개인정보처리의 위탁 및 이전 목적 변경",
+        "title": "개인정보 처리방침 v8"
+      },
       "v7": {
         "changeReason": "개인정보 열람청구 접수 처리 부서 변경 및 영어 문서 지원",
         "title": "개인정보 처리방침 v7"
@@ -506,6 +518,7 @@
           "typeForm": {
             "name": "Type Form",
             "purpose": "홈페이지설문조사",
+            "purposeV8": "서비스 문의",
             "items": "이메일, 휴대전화번호, 이름, 직책, 회사명",
             "country": "스페인, 연락처 : support@typeform.com",
             "period": "설문조사 완료 및 위탁계약 종료시까지"
@@ -515,6 +528,13 @@
             "purpose": "가상자산트래블룰(자금이동규칙) 수행",
             "items": "송금인/수취인 성명, 가상자산 지갑주소",
             "country": "대한민국, 연락처 : support@codevasp.com",
+            "period": "위탁계약 종료시까지"
+          },
+          "verifyVASP": {
+            "name": "VerifyVASP",
+            "purpose": "가상자산트래블룰(자금이동규칙) 수행",
+            "items": "송금인/수취인 성명, 가상자산 지갑주소",
+            "country": "싱가포르, 대한민국, 연락처 : corporate@verifyvasp.com",
             "period": "위탁계약 종료시까지"
           }
         }
