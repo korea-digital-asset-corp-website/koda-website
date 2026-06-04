@@ -45,7 +45,8 @@
     "certifications": {
       "isms": "ISMS Information Security Management System Certification Mark",
       "other": "Other Certification Mark",
-      "venture": "벤처 확인 기업 마크"
+      "venture": "Venture Business Certification Mark",
+      "soc": "SOC Certification Mark"
     },
     "copyright": "Copyright © 2020 - {year} Korea Digital Asset Co., Ltd. All rights reserved."
   },
@@ -104,12 +105,15 @@
       "certifications": {
         "isms": {
           "alt": "ISMS Certification"
+        },
+        "soc": {
+          "alt": "SOC Certification"
         }
       },
       "features": {
         "compliance": {
           "title": "Bank-Grade Compliance Standards",
-          "description": "ISMS Certification, VASP License, Compliance with Presidential Decree Security Standards under the User Protection Act,\nSOC Audit in Progress (by Samil PwC)"
+          "description": "ISMS Certification, VASP License, Compliance with Presidential Decree Security Standards under the User Protection Act,\nSamil PwC SOC Certification"
         },
         "team": {
           "title": "Senior Operations Team with Former Bank Executives",
