@@ -11,9 +11,9 @@ export const newsData: NewsItem[] = [
   {
     id: 0,
     title: '삼일PwC, KODA에 국제기준 인증…"가상자산 안전 보관',
-    image: '/assets/images/news_14.png',
+    image: '/assets/images/img_nr_14.png',
     publisher: '이투데이',
-    date: '2026.06',
+    date: '2026.07',
     link: 'https://www.etoday.co.kr/news/view/2598973',
   },
   {
