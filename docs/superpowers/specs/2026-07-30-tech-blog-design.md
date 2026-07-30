@@ -57,7 +57,7 @@ export interface BlogPost {
   title: string; // 한국어 고정
   description: string; // 목록 카드·메타 설명용 1~2문장
   category: BlogCategory;
-  date: string; // 'YYYY-MM-DD'
+  date: string; // 'YYYY.MM.DD' — 레포 관례(notices.ts)와 동일. utils/dateFormat.ts의 formatDate가 이 형식을 파싱한다
   author: BlogAuthor;
   thumbnail?: string; // 옵션. 더미 글은 미사용
 }
@@ -79,6 +79,7 @@ export interface BlogPost {
 
 - **컨테이너**: 문서 본문 컨테이너에서 **`whitespace-pre-line`을 뺀** `max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] px-5 lg:px-[200px] mx-auto`. TSX 본문에서는 소스 개행이 의도치 않은 줄바꿈을 만들기 때문. **가이드가 답하지 못한 첫 사례이므로 검증 결과로 가이드 4.1에 반영한다.**
 - **구조**: `PostHeader`(카테고리 라벨 → h1 제목 `text-headline-sm lg:text-headline-lg font-bold` → 날짜·저자 메타 `text-caption-lg text-gray-500` → 헤어라인 구분선) → 본문 → `AuthorCard` → `RelatedPosts` → 목록으로 버튼(2차 버튼 스타일, `notice/BackToListButton` 패턴).
+- **내부 링크는 `@/i18n/navigation`의 `Link`를 쓴다.** `next/link`를 직접 쓰면 en 로케일에서 `/blog` 이동 시 locale 접두사가 빠진다. `BackToListButton`이 올바른 선례다. (스타일 가이드 8.1이 `next/link`로 안내하고 있어 보강 필요 — 검증 수확 1호)
 - **존재하지 않는 slug**: `notFound()` 호출(Next.js 표준).
 - **generateStaticParams**: `blogPosts`의 slug 전체 반환. **generateMetadata**: 글 메타에서 title·description·OG 생성.
 
