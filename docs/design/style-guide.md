@@ -271,7 +271,9 @@ Display는 항상 모바일 Headline과 짝지어 쓴다 — 55px를 작은 화�
 - **문서형은 컨테이너 하나가 상하 여백까지 겸한다.** `<section>` 자체에 `mt`/`mb`가 붙어 있어 별도 래퍼가 없다.
 - **문서 목록형의 `min-h-[486px] lg:min-h-[788px]`** 은 항목이 적을 때 푸터가 화면 중간으로 올라붙는 것을 막는 장치다. 목록 페이지를 새로 만들 때 빼먹지 않는다.
 
-`/news`는 카드 그리드 배치 때문에 `lg:px-[100px]`을 쓰는 단독 예외다. 그리드형 목록 페이지를 새로 만들면 `lg:px-[100px]`을 따른다.
+`/news`와 `/blog`는 카드 그리드 배치 때문에 `lg:px-[100px]`을 쓴다. 그리드형 목록 페이지를 새로 만들면 `lg:px-[100px]`을 따른다.
+
+**TSX 본문 상세 페이지는 문서 본문 컨테이너에서 `whitespace-pre-line`을 뺀다.** `whitespace-pre-line`은 메시지 JSON의 개행을 살리는 장치인데, 본문이 TSX 컴포넌트인 페이지(블로그 상세 등)에서는 소스 코드의 개행이 의도치 않은 줄바꿈으로 렌더링된다. `src/app/[locale]/blog/[slug]/page.tsx`가 선례다. (테크블로그 검증에서 확인)
 
 ### 4.2 섹션 여백
 
@@ -350,7 +352,7 @@ import { PopupButton } from '@typeform/embed-react';
 </PopupButton>;
 ```
 
-`id="bZKbfTne"`는 현재 사이트가 쓰는 문의 폼 ID다. 다른 폼이 필요하면 담당자에게 새 ID를 받는다. 팝업이 아닌 일반 링크라면 `PopupButton` 대신 `next/link`의 `Link`에 같은 className을 쓴다.
+`id="bZKbfTne"`는 현재 사이트가 쓰는 문의 폼 ID다. 다른 폼이 필요하면 담당자에게 새 ID를 받는다. 팝업이 아닌 일반 링크라면 `PopupButton` 대신 `@/i18n/navigation`의 `Link`에 같은 className을 쓴다(8.1 참조).
 
 모바일에서 `w-full`로 꽉 차고 데스크톱에서 `lg:max-w-[180px]`로 좁아지는 것이 이 사이트 버튼의 기본 거동이다.
 
@@ -359,7 +361,7 @@ import { PopupButton } from '@typeform/embed-react';
 "자세히 보기"처럼 부차적인 이동.
 
 ```tsx
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import IcArrowIcon from '@/public/assets/icons/main_ic_arrow.svg';
 
 <Link
@@ -539,6 +541,10 @@ import { SubCircledLi, SubCircledOl } from '@/components/typography/Lists';
 ```
 
 원형 숫자 목록(①②③)은 `globals.css`의 `@counter-style circled-decimal`과 `.k-circleol`·`.k-subcircled-li` 클래스로 구현돼 있다. 직접 마크업하지 말고 컴포넌트를 쓴다.
+
+### 5.8 블로그 본문 킷
+
+장문 콘텐츠(테크블로그 등)에는 위 문서형 컴포넌트에 더해 `@/components/blog/PostElements`의 5종을 쓴다 — `CodeBlock`(언어 라벨 + 코드 블록), `InlineCode`, `Figure`(이미지+캡션), `Blockquote`, `Callout`. 노션 블록과 1:1 대응하도록 설계돼 있으며, 노션 초안을 글로 변환하는 절차는 `docs/design/blog-post-workflow.md`에 있다.
 
 목록 안에 서브 목록을 넣는 형태:
 
@@ -822,7 +828,17 @@ export default Page;
 
 `src/i18n/routing.ts` 설정: `locales: ['ko', 'en']`, `defaultLocale: 'ko'`, `localePrefix: 'as-needed'`.
 
-`as-needed`라서 한국어는 `/notice`, 영어는 `/en/notice`가 된다. 페이지 파일은 `src/app/[locale]/` 아래에 만든다. 내부 링크는 `next/link`의 `Link`를 쓰되 `href`에 locale을 직접 붙이지 않는다 — next-intl이 처리한다.
+`as-needed`라서 한국어는 `/notice`, 영어는 `/en/notice`가 된다. 페이지 파일은 `src/app/[locale]/` 아래에 만든다.
+
+**내부 링크는 `@/i18n/navigation`의 `Link`를 쓴다.** `next/link`를 직접 쓰면 en 페이지에서 `/blog`로 이동할 때 locale 접두사가 빠져 한국어 페이지로 떨어진다. `href`에는 locale 없는 경로만 적는다 — 접두사는 next-intl이 붙인다.
+
+```tsx
+import { Link } from '@/i18n/navigation';
+
+<Link href="/blog">테크블로그</Link>; // ko에선 /blog, en에선 /en/blog
+```
+
+기존 랜딩 섹션 일부는 `next/link`를 직접 쓰고 있는데 이는 잠재 버그다(9절 참조). 올바른 선례는 `src/components/notice/BackToListButton.tsx`다. (테크블로그 검증에서 확인)
 
 ### 8.2 메시지 파일 동시 수정
 
@@ -938,3 +954,5 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 - **`secondary` 팔레트와 커스텀 브레이크포인트 `xs`·`xl2`는 정의만 있고 실사용이 0건이다.** 편차라기보다 미사용 자산이다. 삭제하지 않되 새로 쓰지도 않는다.
 
 - **제목 색 표기가 갈린다** — 색 생략 32건, `text-gray-900` 명시 9건. 표준은 생략이며 `text-gray-900`은 hover 전환 기점으로만 쓴다(2.3).
+
+- **기존 랜딩 섹션 일부가 내부 링크에 `next/link`를 직접 쓴다** — `home/SolutionsSection.tsx:14`, `home/MediaSection.tsx` 등. en 로케일에서 locale 접두사가 빠지는 잠재 버그이며, 표준은 `@/i18n/navigation`의 `Link`다(8.1). 올바른 선례는 `notice/BackToListButton.tsx`·`blog/*`. (테크블로그 검증에서 확인)

@@ -257,12 +257,13 @@ import { PopupButton } from '@typeform/embed-react';
   {t('cta.inquiry')}
 </PopupButton>;
 ```
-문의는 Typeform 팝업(id="bZKbfTne")으로 연결한다. 일반 링크면 PopupButton 대신 next/link의
-Link에 같은 className을 쓴다. 모바일 w-full → 데스크톱 lg:max-w-[180px]가 기본 거동이다.
+문의는 Typeform 팝업(id="bZKbfTne")으로 연결한다. 일반 링크면 PopupButton 대신
+@/i18n/navigation의 Link에 같은 className을 쓴다. 모바일 w-full → 데스크톱
+lg:max-w-[180px]가 기본 거동이다.
 
 ## 2차 버튼 (테두리 + 화살표) — 부차적 이동
 ```tsx
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import IcArrowIcon from '@/public/assets/icons/main_ic_arrow.svg';
 
 <Link
@@ -481,6 +482,8 @@ export default Page;
 
 - 라우팅: locales ['ko','en'], defaultLocale 'ko', localePrefix 'as-needed'
   → 한국어 /notice, 영어 /en/notice. 페이지는 src/app/[locale]/ 아래에 만든다.
+- 내부 링크는 @/i18n/navigation의 Link를 쓴다 (import { Link } from '@/i18n/navigation').
+  next/link를 직접 쓰면 en 로케일에서 locale 접두사가 빠진다.
 - 새 문구는 messages/ko.json과 messages/en.json에 같은 키를 동시에 넣는다.
   한쪽만 넣으면 다른 언어에서 런타임 오류가 난다.
 - messages/ko.json이 타입의 원천이다. next.config.ts의 createMessagesDeclaration 설정이

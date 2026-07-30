@@ -24,6 +24,7 @@
 - 줄바꿈이 필요하면 `t.rich('key', brMap)` + `<brPc></brPc>`(데스크톱만) / `<brMo></brMo>`(모바일만) / `<brAll></brAll>`(항상)
 - 배열은 `t.raw('key')`로 받고 타입을 명시한다 — `.map((item: string, index: number) => ...)`
 - 클라이언트는 `useTranslations('ns')`, 서버는 `await getTranslations('ns')`
+- 내부 링크는 `@/i18n/navigation`의 `Link`를 쓴다 — `next/link` 직접 사용 금지 (en 로케일에서 locale 접두사 유실)
 
 ## 구조
 
