@@ -1108,5 +1108,20 @@
     "cryptoWarning": {
       "title": "가상자산 거래에 관한 유의사항"
     }
+  },
+  "blog": {
+    "list": {
+      "title": "KODA 테크블로그",
+      "description": "디지털자산 수탁을 만드는 기술과 고민을 기록합니다.",
+      "featuredLabel": "최신 글"
+    },
+    "detail": {
+      "relatedTitle": "함께 읽기",
+      "backToList": "목록으로"
+    },
+    "meta": {
+      "title": "테크블로그",
+      "description": "KODA 기술 조직이 디지털자산 수탁을 만들며 쌓은 기술과 인사이트를 공유합니다."
+    }
   }
 }
