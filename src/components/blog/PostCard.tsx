@@ -1,4 +1,6 @@
-import { getLocale } from 'next-intl/server';
+'use client';
+
+import { useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import type { BlogPost } from '@/data/blogPosts';
 import { formatDate } from '@/utils/dateFormat';
@@ -7,8 +9,10 @@ interface PostCardProps {
   post: BlogPost;
 }
 
-const PostCard = async ({ post }: PostCardProps) => {
-  const locale = await getLocale();
+// 클라이언트 컴포넌트 — 무한 스크롤 컨테이너(BlogListContainer) 안에서
+// 렌더되어야 하므로 getLocale 대신 useLocale 훅을 쓴다 (/news 선례와 동일).
+const PostCard = ({ post }: PostCardProps) => {
+  const locale = useLocale();
 
   return (
     <article className="group border border-gray-50 rounded-[4px] bg-white h-full">

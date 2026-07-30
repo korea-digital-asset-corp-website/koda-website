@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { FeaturedPostCard, PostGrid } from '@/components/blog';
+import { BlogListContainer, FeaturedPostCard } from '@/components/blog';
 import { blogPosts } from '@/data/blogPosts';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -38,7 +38,7 @@ const BlogPage = async () => {
 
       {rest.length > 0 && (
         <div className="mt-8 lg:mt-12">
-          <PostGrid posts={rest} />
+          <BlogListContainer posts={rest} />
         </div>
       )}
     </div>
