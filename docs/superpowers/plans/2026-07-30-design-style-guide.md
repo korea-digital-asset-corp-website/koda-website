@@ -72,7 +72,7 @@ Run:
 sed -n '9,44p' "src/app/[locale]/globals.css"
 ```
 
-Expected: `@theme {`로 시작해 `--color-primary-50` ~ `--color-gray-900`까지 33줄이 출력된다. primary 10개, secondary 10개, gray 13개(`gray-5050`, `gray-5020` 포함).
+Expected: `@theme {`로 시작해 `--color-primary-50` ~ `--color-gray-900`까지 컬러 토큰 32개가 출력된다. primary 10개, secondary 10개, gray 12개(`gray-5050`, `gray-5020` 포함).
 
 이 출력이 섹션 2 컬러 표의 유일한 근거다. 여기 없는 값을 표에 적으면 안 된다.
 
@@ -205,7 +205,7 @@ console.log('소스에 없는 유령 hex:',ghosts.length?ghosts:'없음');
 
 Expected:
 ```
-토큰 총개수: 33
+토큰 총개수: 32
 문서에 없는 토큰: 없음
 hex 불일치: 없음
 소스에 없는 유령 hex: 없음
