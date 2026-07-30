@@ -5,7 +5,8 @@
       "services": "서비스",
       "notice": "공지사항",
       "faq": "자주 묻는 질문",
-      "news": "언론 보도"
+      "news": "언론 보도",
+      "blog": "테크블로그"
     },
     "button": {
       "contact": "서비스 문의"

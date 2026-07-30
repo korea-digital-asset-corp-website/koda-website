@@ -5,7 +5,8 @@
       "services": "Services",
       "notice": "Announcements",
       "faq": "FAQ",
-      "news": "Newsroom"
+      "news": "Newsroom",
+      "blog": "Tech Blog"
     },
     "button": {
       "contact": "Contact Us"
