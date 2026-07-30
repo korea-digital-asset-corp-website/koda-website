@@ -291,6 +291,7 @@
     "title": "공지사항",
     "empty": "등록된 공지사항이 없습니다.",
     "detail": {
+      "backToList": "목록 보기"
     }
   },
   "faq": {
@@ -1116,6 +1117,18 @@
     },
     "detail": {
       "relatedTitle": "함께 읽기"
+    },
+    "share": {
+      "copyLink": "링크 복사",
+      "copied": "복사됨",
+      "shareOnX": "X에 공유",
+      "shareOnFacebook": "페이스북에 공유",
+      "shareOnLinkedIn": "링크드인에 공유"
+    },
+    "toc": {
+      "title": "목차",
+      "hide": "숨기기",
+      "open": "목차 열기"
     },
     "meta": {
       "title": "테크블로그",

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { PostHeader, RelatedPosts } from '@/components/blog';
+import { PostHeader, RelatedPosts, ShareButtons } from '@/components/blog';
 import { getPostBySlug, getRelatedPosts } from '@/data/blogPosts';
 import { getBlogContent } from '@/data/blogContentMap';
 
@@ -53,6 +53,8 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
         <main className="mt-8 lg:mt-12">
           <ContentComponent />
         </main>
+
+        <ShareButtons title={post.title} />
 
         {related.length > 0 && (
           <div className="mt-12 lg:mt-16">

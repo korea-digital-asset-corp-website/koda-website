@@ -291,6 +291,7 @@
     "title": "Announcements",
     "empty": "There is no announcement.",
     "detail": {
+      "backToList": "View List"
     }
   },
   "faq": {
@@ -1123,6 +1124,18 @@
     },
     "detail": {
       "relatedTitle": "Related posts"
+    },
+    "share": {
+      "copyLink": "Copy link",
+      "copied": "Copied",
+      "shareOnX": "Share on X",
+      "shareOnFacebook": "Share on Facebook",
+      "shareOnLinkedIn": "Share on LinkedIn"
+    },
+    "toc": {
+      "title": "Contents",
+      "hide": "Hide",
+      "open": "Show contents"
     },
     "meta": {
       "title": "Tech Blog",
