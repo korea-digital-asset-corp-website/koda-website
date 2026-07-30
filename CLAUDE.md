@@ -16,6 +16,7 @@
 - 반응형은 `lg`(1024px) 하나를 기준선으로 "모바일 값 + `lg:` 값" 2단계로 처리한다
 - 제목에는 색 클래스를 쓰지 않는다. `text-gray-900`은 hover 색 전환의 기점이 필요할 때만
 - `src/app/[locale]/globals.css`의 토큰을 수정·추가하지 않는다
+- Tailwind는 `@source` 설정으로 `src/`만 스캔한다 — 문서(docs/, CLAUDE.md)에 클래스 예시 문자열을 적어도 CSS에 포함되지 않는다. 이 `@source` 설정을 제거하면 dev 서버가 깨진다
 
 ## i18n
 
