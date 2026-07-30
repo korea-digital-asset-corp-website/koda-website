@@ -291,7 +291,6 @@
     "title": "공지사항",
     "empty": "등록된 공지사항이 없습니다.",
     "detail": {
-      "backToList": "목록 보기"
     }
   },
   "faq": {
@@ -1116,8 +1115,7 @@
       "featuredLabel": "최신 글"
     },
     "detail": {
-      "relatedTitle": "함께 읽기",
-      "backToList": "목록으로"
+      "relatedTitle": "함께 읽기"
     },
     "meta": {
       "title": "테크블로그",
