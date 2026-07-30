@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { PostHeader, RelatedPosts, ShareButtons } from '@/components/blog';
+import { PostHeader, RelatedPosts, ShareButtons, TocNav } from '@/components/blog';
 import { getPostBySlug, getRelatedPosts } from '@/data/blogPosts';
 import { getBlogContent } from '@/data/blogContentMap';
 
@@ -62,6 +62,8 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
           </div>
         )}
       </article>
+
+      <TocNav />
     </div>
   );
 };

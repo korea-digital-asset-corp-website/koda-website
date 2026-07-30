@@ -4,3 +4,4 @@ export { default as PostGrid } from './PostGrid';
 export { default as PostHeader } from './PostHeader';
 export { default as RelatedPosts } from './RelatedPosts';
 export { default as ShareButtons } from './ShareButtons';
+export { default as TocNav } from './TocNav';
