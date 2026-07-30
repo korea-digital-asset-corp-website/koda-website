@@ -412,6 +412,8 @@ const FeatureCard = ({ icon, title, description }: FeatureCardProps) => (
 
 아이콘은 SVG를 컴포넌트로 import해 넣는다: `import ColdWalletIcon from '@/public/assets/icons/cold_wallet.svg'` 후 `icon={<ColdWalletIcon />}`.
 
+**경로 별칭이 두 개라는 점에 주의한다** — `@/*`는 `src/*`, `@/public/*`는 `public/*`을 가리킨다(`tsconfig.json`). SVG는 `public/` 아래 있으므로 `@/public/assets/icons/...`로 import해야 하고, `next.config.ts`의 turbopack 규칙이 `@svgr/webpack`으로 React 컴포넌트로 변환한다. `next/image`용 이미지도 같은 별칭으로 static import한다(`import IsmsImg from '@/public/assets/images/img_isms_color.png'`).
+
 ### 5.5 통계 카드 (흰/검정 2분할)
 
 수치 두 개를 대비시킬 때. 오른쪽 검정 칸이 KODA 수치다.
@@ -813,6 +815,8 @@ export default Page;
   }
 }
 ```
+
+**`messages/ko.json`이 타입의 원천이다.** `next.config.ts`의 next-intl 플러그인이 `createMessagesDeclaration: './messages/ko.json'`으로 설정돼 있어, ko.json에서 `messages/ko.d.json.ts`를 자동 생성한다. 따라서 ko.json에 없는 키를 `t()`로 호출하면 타입 오류가 난다. 영어만 먼저 추가하는 순서로 작업하지 않는다 — ko를 먼저 넣는다.
 
 ### 8.3 세 가지 호출 방식
 
