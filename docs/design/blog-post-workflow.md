@@ -55,10 +55,16 @@ npm run lint && npm run build
 | 콜아웃 (callout)  | `Callout`                                                                                    | `@/components/blog/PostElements` |
 | 글머리 기호 목록  | `Ul` + `Li`                                                                                  | `@/components/typography`        |
 | 번호 목록         | `Ol` + `Li`                                                                                  | `@/components/typography`        |
+| 표 (table)        | `TableContainer` + `Thead`/`Tbody`/`Tr`/`Th`/`Td`                                            | `@/components/typography`        |
+| 본문 내 외부 링크 | `TextLink`                                                                                   | `@/components/blog/PostElements` |
+| 굵게/기울임       | `<strong>` / `<em>`                                                                          | — (HTML 그대로)                  |
+| 구분선 (divider)  | 생략 — `H2`가 섹션 경계를 만들므로 옮기지 않는다                                             | —                                |
 
 ## 변환 규칙
 
 - 글 본문 컴포넌트는 서버 컴포넌트다 — `'use client'`를 붙이지 않는다.
 - 본문은 한국어 고정. UI 문자열이 아니므로 `messages/*.json`을 거치지 않는다.
 - 따옴표는 `&ldquo;`/`&rdquo;`(ESLint `react/no-unescaped-entities` 대응), 코드 블록 내용은 템플릿 리터럴로 감싼다.
+- 노션 코드 블록 언어가 `plain text`면 `language` 프롭을 생략한다(라벨이 소음이 된다). 실제 언어(`typescript` 등)일 때만 넘긴다.
+- **노션 이미지 URL은 1시간 만료 서명 URL이다.** 페이지를 읽은 즉시 `public/assets/images/blog/`로 다운로드하고, `sips -g pixelWidth -g pixelHeight`로 실측 크기를 얻어 `Figure`에 넘긴다.
 - 스타일 가이드(`docs/design/style-guide.md`)의 금지 사항이 그대로 적용된다 — 새 색·임의 크기·hex 금지.

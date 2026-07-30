@@ -59,6 +59,26 @@ export function Blockquote({ children }: ChildrenProps) {
 // 노션 callout 블록 대응.
 export function Callout({ children }: ChildrenProps) {
   return (
-    <aside className="my-6 bg-primary-50 rounded-[4px] p-5 text-body-sm lg:text-body-lg text-gray-700">{children}</aside>
+    <aside className="my-6 bg-primary-50 rounded-[4px] p-5 text-body-sm lg:text-body-lg text-gray-700">
+      {children}
+    </aside>
+  );
+}
+
+interface TextLinkProps extends ChildrenProps {
+  href: string;
+}
+
+// 노션 본문 내 외부 링크 대응. 내부 링크는 @/i18n/navigation의 Link를 쓴다.
+export function TextLink({ href, children }: TextLinkProps) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary-700 underline underline-offset-2 hover:text-primary-800 transition-colors"
+    >
+      {children}
+    </a>
   );
 }
