@@ -1119,8 +1119,7 @@
   },
   "blog": {
     "list": {
-      "title": "KODA Tech Blog",
-      "description": "Notes on the engineering behind digital asset custody.",
+      "title": "Tech Blog",
       "featuredLabel": "Latest"
     },
     "detail": {

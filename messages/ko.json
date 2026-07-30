@@ -6,7 +6,7 @@
       "notice": "공지사항",
       "faq": "자주 묻는 질문",
       "news": "언론 보도",
-      "blog": "테크블로그"
+      "blog": "Tech Blog"
     },
     "button": {
       "contact": "서비스 문의"
@@ -1112,8 +1112,7 @@
   },
   "blog": {
     "list": {
-      "title": "KODA 테크블로그",
-      "description": "디지털자산 수탁을 만드는 기술과 고민을 기록합니다.",
+      "title": "Tech Blog",
       "featuredLabel": "최신 글"
     },
     "detail": {
@@ -1132,7 +1131,7 @@
       "open": "목차 열기"
     },
     "meta": {
-      "title": "테크블로그",
+      "title": "Tech Blog",
       "description": "KODA 기술 조직이 디지털자산 수탁을 만들며 쌓은 기술과 인사이트를 공유합니다."
     }
   }

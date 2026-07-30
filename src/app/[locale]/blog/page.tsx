@@ -29,9 +29,6 @@ const BlogPage = async () => {
     <div className="max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[180px] px-5 lg:px-[100px] mx-auto">
       <header className="mb-10 lg:mb-16">
         <h1 className="text-headline-sm lg:text-headline-lg font-bold">{t('title')}</h1>
-        <p className="mt-3 lg:mt-4 text-body-md lg:text-body-lg font-medium lg:font-normal text-gray-700">
-          {t('description')}
-        </p>
       </header>
 
       <FeaturedPostCard post={featured} />
