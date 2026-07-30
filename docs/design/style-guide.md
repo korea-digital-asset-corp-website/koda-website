@@ -133,3 +133,112 @@
 - **`primary-500`(`#00d998`) 을 클래스로 쓰지 않는다.** 밝은 민트는 SVG 아이콘 내부의 포인트 색이다. 배경이나 버튼 면으로 쓰면 사이트 성격에서 벗어난다. 초록 배경이 필요하면 `primary-600`을 쓴다.
 - **`secondary` 계열 금지.** (2.1 참조)
 - **새 색 도입 금지.** 팔레트에 없는 색이 필요하다고 느껴지면 대개 레이아웃이나 위계로 풀어야 하는 문제다.
+
+---
+
+## 3. 타이포그래피
+
+### 3.1 폰트
+
+| 언어 | 1순위 | 2순위 | 로드 방식 |
+|---|---|---|---|
+| 한국어 | Pretendard Variable | Inter | `@font-face` + 로컬 woff2 (`/fonts/PretendardVariable.woff2`), weight 45~920 |
+| 영어 | Inter | Pretendard Variable | `@font-face` + 로컬 ttf variable (`/fonts/Inter-VariableFont_opsz,wght.ttf`), weight 100~900 |
+
+`<html>`에 `font-korean` 또는 `font-english` 클래스가 붙고(`src/app/[locale]/layout.tsx:88-91`), 그 클래스가 `body`의 font-family 순서를 바꾼다.
+
+```tsx
+const fontClass = locale === 'ko' ? 'font-korean' : 'font-english';
+return <html lang={locale || 'ko'} className={fontClass}>
+```
+
+둘 다 variable font이므로 `font-medium`·`font-semibold`·`font-bold`를 자유롭게 쓸 수 있다. 웹폰트 파일을 추가하지 않는다.
+
+### 3.2 스케일
+
+**모든 텍스트는 아래 유틸 클래스로 크기를 지정한다.** `text-[18px]` 같은 임의값이나 `text-lg` 같은 Tailwind 기본 크기를 쓰지 않는다. 유틸 하나가 font-size·line-height·letter-spacing 3개를 함께 고정하므로, 임의값을 쓰면 행간과 자간이 어긋난다.
+
+#### Display — 가장 큰 단계, 언어별 크기 자동 전환
+
+| 유틸 | 한국어 | 영어 | line-height | letter-spacing | 쓰임 |
+|---|---|---|---|---|---|
+| `text-display-lg` | 55px | 57px | 1.2 | -0.25px | 히어로 h1 (홈·서비스) |
+| `text-display-md` | 44px | 45px | 1.2 | 0 | 문의 섹션 h2, 강조 수치 |
+| `text-display-sm` | 34px | 36px | 1.2 | 0 | — (미사용) |
+
+같은 클래스를 쓰면 `<html>`의 언어 클래스에 따라 크기가 알아서 바뀐다. 언어별로 클래스를 나눠 쓸 필요가 없다. Display는 이 3단계만 언어 분기가 있고, 아래 나머지는 전부 언어 공통이다.
+
+Display는 항상 모바일 Headline과 짝지어 쓴다 — 55px를 작은 화면에 그대로 내보내지 않는다.
+
+#### Headline — 섹션 제목 계층
+
+| 유틸 | 크기 | line-height | letter-spacing | 쓰임 |
+|---|---|---|---|---|
+| `text-headline-lg` | 32px | 1.25 | 0 | 데스크톱 섹션 h2, 모바일 히어로 h1 (25건) |
+| `text-headline-md` | 28px | 1.3 | 0 | 데스크톱 하위 그룹 h3, 강조 수치 (9건) |
+| `text-headline-sm` | 24px | 1.3 | 0 | 모바일 섹션 h2, 문서 페이지 h1 (25건) |
+| `text-headline-xs` | 20px | 1.3 | 0 | 모바일 하위 그룹 h3 (12건) |
+
+#### Title — 카드·항목 제목
+
+| 유틸 | 크기 | line-height | letter-spacing | 쓰임 |
+|---|---|---|---|---|
+| `text-title-lg` | 20px | 1.3 | 0 | 데스크톱 카드 제목 h4 (8건) |
+| `text-title-md` | 16px | 1.5 | 0.15px | 모바일 카드 제목 h4 (4건) |
+| `text-title-sm` | 14px | 1.5 | 0.1px | 모바일 통계 라벨 (2건) |
+
+#### Label — 버튼·내비게이션
+
+| 유틸 | 크기 | line-height | letter-spacing | 쓰임 |
+|---|---|---|---|---|
+| `text-label-lg` | 16px | 1.5 | 0 | 데스크톱 버튼, 헤더 내비 (11건) |
+| `text-label-md` | 15px | 1.5 | 0 | 모바일 버튼 (4건) |
+| `text-label-sm` | 14px | 1.5 | 0 | 헤더 문의 버튼 모바일 (1건) |
+
+#### Body — 본문
+
+| 유틸 | 크기 | line-height | letter-spacing | 쓰임 |
+|---|---|---|---|---|
+| `text-body-xl` | 20px | 1.5 | 0 | 데스크톱 랜딩 본문 (12건) |
+| `text-body-lg` | 18px | 1.5 | 0 | 데스크톱 문서 본문, 히어로 설명 (18건) |
+| `text-body-md` | 16px | 1.5 | 0 | 모바일 본문 — 가장 많이 쓰인다 (32건) |
+| `text-body-sm` | 15px | 1.5 | 0 | 모바일 문서 본문, 목록 항목 (26건) |
+
+랜딩형 본문은 `text-body-md lg:text-body-xl`, 문서형 본문은 `text-body-sm lg:text-body-lg`로 짝짓는다. 문서형이 한 단계 작은 이유는 컨테이너가 좁아(4.1) 같은 크기여도 더 커 보이기 때문이다.
+
+#### Caption — 출처·주석
+
+| 유틸 | 크기 | line-height | letter-spacing | 쓰임 |
+|---|---|---|---|---|
+| `text-caption-lg` | 14px | 1.5 | 0 | 출처 표기, 투자자 설명 (4건) |
+| `text-caption-sm` | 12px | 1.5 | 0 | — (미사용) |
+
+### 3.3 계층 조합
+
+반응형은 **모바일 값 + `lg:` 데스크톱 값**을 짝지어 쓴다. 자주 쓰이는 짝:
+
+| 역할 | 클래스 | 근거 |
+|---|---|---|
+| 랜딩 h1 (히어로) | `text-headline-lg lg:text-display-lg font-bold` | `src/components/home/HeroSection.tsx:35` |
+| 랜딩 h2 (일반 섹션) | `text-headline-sm lg:text-headline-lg font-bold` | `src/components/home/SecuritySection.tsx:27` |
+| 랜딩 h2 (문의 섹션) | `text-headline-lg lg:text-display-md font-bold text-center` | `src/components/home/ContactSection.tsx:21` |
+| 랜딩 h3 (하위 그룹) | `text-headline-xs lg:text-headline-md font-bold` | `src/components/home/SolutionsSection.tsx:120` |
+| 카드 제목 h4 | `text-title-md lg:text-title-lg font-semibold` | `src/components/home/SolutionsSection.tsx:93` |
+| 랜딩 본문 | `text-body-md lg:text-body-xl font-medium lg:font-normal text-gray-700` | `src/components/home/SecuritySection.tsx:55` |
+| 문서 h1 | `text-headline-sm lg:text-headline-lg font-bold` | `src/app/[locale]/work-guidelines/page.tsx:10` |
+| 버튼 라벨 | `text-label-md lg:text-label-lg font-semibold` | `src/components/home/HeroSection.tsx:44` |
+| 출처·주석 | `text-caption-lg lg:text-body-md font-medium text-gray-500` | `src/components/home/MarketStatsSection.tsx:82` |
+
+문서형 페이지는 위 조합을 직접 쓰지 않고 `src/components/typography`의 `H1`·`H2`·`H3`·`P`를 쓴다(5.7 참조). 문서 h1만 예외로 직접 클래스를 쓴다.
+
+### 3.4 웨이트 하강 규칙
+
+본문 텍스트는 **모바일에서 `font-medium`, 데스크톱에서 `font-normal`** 로 떨어뜨린다.
+
+```tsx
+<p className="text-body-md lg:text-body-xl font-medium lg:font-normal text-gray-700">
+```
+
+작은 화면에서는 글자가 작아 얇은 웨이트가 흐려 보이고, 큰 화면에서는 굵으면 답답해 보이기 때문이다. `src/**`의 15개 파일에서 쓰이는 확립된 관례다.
+
+제목에는 적용하지 않는다 — 제목은 `font-bold`(섹션 제목) 또는 `font-semibold`(카드 제목·버튼) 고정이다. 수치 강조는 예외적으로 `font-semibold lg:font-bold`로 올린다(`src/components/home/MarketStatsSection.tsx:41`).

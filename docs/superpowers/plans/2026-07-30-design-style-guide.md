@@ -354,7 +354,7 @@ console.log(bad.length?bad:'전부 일치');
 grep -c 'text-\[1[0-9]px\]\|text-\[2[0-9]px\]\|text-xs\b\|text-sm\b\|text-base\b\|text-lg\b\|text-xl\b' docs/design/style-guide.md || echo "임의 크기 예시 없음(정상)"
 ```
 
-Expected: 첫 명령이 `font-size 토큰: 20` / `전부 일치`를 출력한다. 둘째 명령은 `임의 크기 예시 없음(정상)` 또는 `0`을 출력한다 — 금지 예시로 인용한 경우가 있다면 그 줄이 "쓰지 않는다" 문맥인지 눈으로 확인한다.
+Expected: 첫 명령이 `font-size 토큰: 22` / `전부 일치`를 출력한다(Display가 한/영 각 3개로 중복 정의돼 있어 유틸 19개에 대해 토큰은 22개다). 둘째 명령은 `임의 크기 예시 없음(정상)` 또는 `0`을 출력한다 — 금지 예시로 인용한 경우가 있다면 그 줄이 "쓰지 않는다" 문맥인지 눈으로 확인한다.
 
 - [ ] **Step 6: 커밋**
 
