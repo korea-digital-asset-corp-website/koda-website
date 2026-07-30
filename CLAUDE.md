@@ -31,6 +31,8 @@
 - 문서 페이지: `page.tsx` 하나로 끝내고 `src/components/typography`의 `H1`·`H2`·`H3`·`P`·`Ol`·`Li`를 쓴다. 서브 목록(`SubOl`·`SubLi`·`SubCircledOl`·`SubCircledLi`)은 배럴에 없으니 `@/components/typography/Lists`에서 직접 import
 - 경로 별칭이 두 개다 — `@/*` → `src/*`, `@/public/*` → `public/*`. SVG는 `@/public/assets/icons/*.svg`에서 import하면 `@svgr/webpack`이 React 컴포넌트로 변환한다
 - `page.tsx`의 `params`는 `Promise<{ locale: string }>`다 (Next.js 15 시그니처)
+- 라우트 디렉터리 이름을 `_`로 시작하지 않는다 — Next.js가 private folder로 보고 라우팅에서 제외한다 (빌드는 통과하나 라우트가 안 생김)
+- `messages/ko.d.json.ts`는 자동 생성 파일이고 gitignore 대상이다. 직접 편집·커밋하지 않는다
 - 새 라우트를 만들면 `src/app/sitemap.ts`와 `generateMetadata`(`alternates.languages`에 ko/en/x-default)를 함께 추가한다
 
 ## 검증

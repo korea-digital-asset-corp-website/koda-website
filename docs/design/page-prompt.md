@@ -412,6 +412,31 @@ export { default as ContactSection } from './ContactSection';
 ```
 
 params가 Promise인 점에 주의한다 (Next.js 15에서 바뀐 시그니처).
+라우트 디렉터리 이름을 _로 시작하지 않는다 — Next.js가 private folder로 보고 라우팅에서
+제외하므로 빌드는 통과하지만 라우트가 생성되지 않는다.
+
+## 히어로에 3D 씬이 없을 때
+2열 그리드를 쓰지 않는다. 컨테이너 안에 텍스트 블록 하나만 두고 데스크톱에서 왼쪽 정렬한다.
+빈 오른쪽 칸을 남기면 레이아웃이 깨져 보인다. 모바일 가운데 정렬 → 데스크톱 왼쪽 정렬
+(text-center lg:text-left)은 시각물이 있든 없든 히어로의 공통 규칙이다.
+
+```tsx
+<div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
+  <section className="mx-auto overflow-x-hidden">
+    <div className="lg:pt-10">
+      <div className="space-y-4 lg:space-y-6">
+        <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold">
+          {t.rich('title', brMap)}
+        </h1>
+        <p className="text-center lg:text-left text-body-md lg:text-body-lg font-medium lg:font-normal text-gray-700">
+          {t.rich('description', brMap)}
+        </p>
+        {/* 1차 버튼 */}
+      </div>
+    </div>
+  </section>
+</div>
+```
 
 섹션 순서는 홈의 흐름을 따른다:
 히어로 → 신뢰 근거(실적·투자자·수치) → 역량(보안·보험) → 상세(솔루션) → 외부 증빙 → 문의

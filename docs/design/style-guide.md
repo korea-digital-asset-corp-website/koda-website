@@ -645,7 +645,32 @@ const HeroSection = () => {
 - **`pointer-events-none`** — 3D 씬이 스크롤을 가로채지 않게 한다.
 - **`[&_canvas]:!scale-[1.0] lg:[&_canvas]:!scale-[1.2]`** — 씬은 캔버스 크기가 고정이라 데스크톱에서 확대해야 여백이 맞는다.
 
-`scene` URL은 Spline에서 발행한 씬마다 다르다. 새 씬이 없으면 3D를 쓰지 말고 정적 이미지(`next/image`)로 대체한다.
+`scene` URL은 Spline에서 발행한 씬마다 다르다.
+
+**씬이 없을 때는 3D를 억지로 넣지 않는다.** 두 가지 대안이 있다.
+
+- **정적 이미지로 대체** — 위 구조를 그대로 두고 `SplineScene` 자리에 `next/image`를 넣는다. `isMounted` 가드와 `onSplineLoaded` 페이드인은 필요 없어지므로 서버 컴포넌트로 만들 수 있다.
+- **시각물 없이 텍스트만** — 2열 그리드를 쓰지 않는다. 컨테이너 안에 텍스트 블록 하나만 두고, 데스크톱에서 왼쪽 정렬로 둔다. 빈 오른쪽 칸을 남기면 레이아웃이 깨져 보인다.
+
+```tsx
+<div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
+  <section className="mx-auto overflow-x-hidden">
+    <div className="lg:pt-10">
+      <div className="space-y-4 lg:space-y-6">
+        <h1 className="text-center lg:text-left text-headline-lg lg:text-display-lg font-bold">
+          {t.rich('title', brMap)}
+        </h1>
+        <p className="text-center lg:text-left text-body-md lg:text-body-lg font-medium lg:font-normal text-gray-700">
+          {t.rich('description', brMap)}
+        </p>
+        {/* 1차 버튼 (5.1) */}
+      </div>
+    </div>
+  </section>
+</div>
+```
+
+모바일 가운데 정렬 → 데스크톱 왼쪽 정렬(`text-center lg:text-left`)은 시각물이 있든 없든 히어로의 공통 규칙이다.
 
 ### 6.3 hover
 
@@ -697,6 +722,8 @@ export default Page;
 ```
 
 `params`가 `Promise`라는 점에 주의한다 — Next.js 15에서 바뀐 시그니처다. locale을 쓰지 않는 페이지면 `params`를 받지 않아도 된다.
+
+**라우트 디렉터리 이름을 `_`로 시작하지 않는다.** Next.js는 `_`로 시작하는 폴더를 private folder로 보고 라우팅에서 제외한다. `src/app/[locale]/_draft/page.tsx`를 만들면 타입 검사와 빌드는 통과하지만 라우트가 생성되지 않고 빌드 결과의 라우트 목록에도 나타나지 않는다.
 
 배럴은 이렇게 쓴다.
 
@@ -817,6 +844,8 @@ export default Page;
 ```
 
 **`messages/ko.json`이 타입의 원천이다.** `next.config.ts`의 next-intl 플러그인이 `createMessagesDeclaration: './messages/ko.json'`으로 설정돼 있어, ko.json에서 `messages/ko.d.json.ts`를 자동 생성한다. 따라서 ko.json에 없는 키를 `t()`로 호출하면 타입 오류가 난다. 영어만 먼저 추가하는 순서로 작업하지 않는다 — ko를 먼저 넣는다.
+
+`messages/ko.d.json.ts`는 빌드·개발 서버 실행 시 자동으로 다시 만들어지며 `.gitignore`에 등록돼 있다(`.gitignore:44`). 직접 편집하거나 커밋하지 않는다.
 
 ### 8.3 세 가지 호출 방식
 
