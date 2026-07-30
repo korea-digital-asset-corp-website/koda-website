@@ -1,16 +1,17 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { AuthorCard, BackToBlogButton, PostHeader, RelatedPosts } from '@/components/blog';
-import { blogPosts, getPostBySlug, getRelatedPosts } from '@/data/blogPosts';
+import { getPostBySlug, getRelatedPosts } from '@/data/blogPosts';
 import { getBlogContent } from '@/data/blogContentMap';
 
 interface BlogPostPageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
-}
+// generateStaticParams를 쓰지 않는다 — 루트 레이아웃의 getMessages()가 요청
+// 단위 렌더링을 강제해 이 사이트는 전 라우트가 동적이다(모두 ƒ). SSG를
+// 선언해도 실제 산출물 없이 선언만 남아 Netlify 어댑터가 500을 낸다.
+// notice/[id]와 같은 순수 동적 라우트가 검증된 패턴이다.
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
