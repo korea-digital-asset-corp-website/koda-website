@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { blogPosts } from '@/data/blogPosts';
 
 type RouteSpec = {
   path: string;
@@ -19,6 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/ethical-management', changeFrequency: 'yearly', priority: 0.5 },
     { path: '/work-guidelines', changeFrequency: 'yearly', priority: 0.5 },
     { path: '/crypto-warning', changeFrequency: 'yearly', priority: 0.4 },
+    { path: '/blog', changeFrequency: 'weekly', priority: 0.7 },
+    ...blogPosts.map(
+      (post): RouteSpec => ({ path: `/blog/${post.slug}`, changeFrequency: 'monthly', priority: 0.6 }),
+    ),
   ];
 
   const ko = (p: string) => `${baseUrl}/ko${p}`;

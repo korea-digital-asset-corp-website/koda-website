@@ -1115,5 +1115,20 @@
     "cryptoWarning": {
       "title": "Precautions Regarding Virtual Asset Transactions"
     }
+  },
+  "blog": {
+    "list": {
+      "title": "KODA Tech Blog",
+      "description": "Notes on the engineering behind digital asset custody.",
+      "featuredLabel": "Latest"
+    },
+    "detail": {
+      "relatedTitle": "Related posts",
+      "backToList": "Back to list"
+    },
+    "meta": {
+      "title": "Tech Blog",
+      "description": "Engineering write-ups and insights from the team building KODA's digital asset custody."
+    }
   }
 }
