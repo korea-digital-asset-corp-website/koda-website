@@ -242,3 +242,191 @@ Display는 항상 모바일 Headline과 짝지어 쓴다 — 55px를 작은 화�
 작은 화면에서는 글자가 작아 얇은 웨이트가 흐려 보이고, 큰 화면에서는 굵으면 답답해 보이기 때문이다. `src/**`의 15개 파일에서 쓰이는 확립된 관례다.
 
 제목에는 적용하지 않는다 — 제목은 `font-bold`(섹션 제목) 또는 `font-semibold`(카드 제목·버튼) 고정이다. 수치 강조는 예외적으로 `font-semibold lg:font-bold`로 올린다(`src/components/home/MarketStatsSection.tsx:41`).
+
+---
+
+## 4. 레이아웃
+
+### 4.1 컨테이너
+
+컨테이너는 페이지 유형에 따라 3종이다. 아래 문자열을 **그대로** 쓴다.
+
+| 종류 | 클래스 문자열 |
+|---|---|
+| 랜딩 섹션 | `max-w-[1440px] w-full px-5 lg:px-10 mx-auto` |
+| 문서 본문 | `max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] px-5 lg:px-[200px] mx-auto whitespace-pre-line` |
+| 문서 목록 | `max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[180px] px-5 lg:px-[200px] mx-auto min-h-[486px] lg:min-h-[788px]` |
+
+| 종류 | 사용처 |
+|---|---|
+| 랜딩 섹션 | 홈·서비스의 모든 섹션 (11건) |
+| 문서 본문 | 약관, 개인정보처리방침, 업무지침, 투자경고 |
+| 문서 목록 | 공지 목록, 공지 상세, FAQ |
+
+랜딩형은 좌우 여백이 좁아(`lg:px-10` = 40px) 카드 그리드가 넓게 퍼지고, 문서형은 좁혀서(`lg:px-[200px]`) 한 줄 길이를 읽기 편한 범위로 묶는다. 이 차이가 두 트랙의 인상을 가른다.
+
+세 가지 주의점.
+
+- **랜딩 섹션은 `<section>`과 컨테이너 `<div>`를 분리한다.** 배경색과 상하 여백은 `<section>`이, 좌우 여백과 최대폭은 안쪽 `<div>`가 담당한다. 배경을 화면 끝까지 채우면서 내용만 가운데 모으려면 이 분리가 필요하다.
+- **문서형은 컨테이너 하나가 상하 여백까지 겸한다.** `<section>` 자체에 `mt`/`mb`가 붙어 있어 별도 래퍼가 없다.
+- **문서 목록형의 `min-h-[486px] lg:min-h-[788px]`** 은 항목이 적을 때 푸터가 화면 중간으로 올라붙는 것을 막는 장치다. 목록 페이지를 새로 만들 때 빼먹지 않는다.
+
+`/news`는 카드 그리드 배치 때문에 `lg:px-[100px]`을 쓰는 단독 예외다. 그리드형 목록 페이지를 새로 만들면 `lg:px-[100px]`을 따른다.
+
+### 4.2 섹션 여백
+
+| 단계 | 클래스 | 언제 |
+|---|---|---|
+| 기본 | `pt-[72px] pb-20 lg:py-32` | 대부분의 랜딩 섹션 (7건) |
+| 와이드 | `pt-[72px] pb-20 lg:py-[170px]` | 강조 섹션 — 솔루션·문의처럼 페이지의 무게중심이 되는 곳 |
+
+모바일은 두 단계 모두 동일하다(`pt-[72px] pb-20`) — 작은 화면에서 여백을 더 벌리면 스크롤만 길어진다. 데스크톱에서만 128px / 170px로 갈린다.
+
+**히어로 섹션은 이 규칙 밖이다.** 헤더 바로 아래에 붙고 3D 씬 높이가 여백을 대신하므로 `lg:pt-10` 정도만 준다(`src/components/home/HeroSection.tsx:30`).
+
+와이드 단계는 이 문서가 새로 정한 값이다 — 기존 강조 섹션은 상하 비대칭 값을 각각 다르게 쓰고 있다(9절 참조).
+
+### 4.3 그리드 패턴
+
+랜딩 섹션에서 반복되는 3가지 배치.
+
+**2열 분할** — 텍스트와 시각물을 좌우로 나눌 때
+
+```tsx
+<div className="grid lg:grid-cols-2 items-center">
+```
+
+**세로→가로 전환** — 모바일 세로 스택, 데스크톱 가로 배치
+
+```tsx
+<div className="flex flex-col lg:flex-row gap-8">
+```
+
+**모바일 순서 뒤집기** — 데스크톱은 텍스트가 왼쪽, 모바일은 시각물이 위
+
+```tsx
+<div className="order-2 lg:order-1">{/* 텍스트 */}</div>
+<div className="order-1 lg:order-2">{/* 시각물 */}</div>
+```
+
+근거: `src/components/home/HeroSection.tsx:34,51`.
+
+카드를 나열할 때는 `grid` 대신 `flex flex-col lg:flex-row gap-8`을 쓰고 카드에 `w-full lg:w-[432px]` 고정폭을 준다(`src/components/home/SolutionsSection.tsx:89,121`). 좌우 절반을 나란히 세울 때는 양쪽에 `lg:flex-1`과 같은 `lg:min-h-[...]`를 주어 높이를 맞춘다(`src/components/home/SecuritySection.tsx:25-26`).
+
+### 4.4 브레이크포인트
+
+| 이름 | 값 | 비고 |
+|---|---|---|
+| `xs` | 475px | 커스텀. 실사용 0건 |
+| `sm` | 640px | Tailwind 기본 |
+| `md` | 768px | Tailwind 기본 |
+| `lg` | 1024px | **실질적 기준선** |
+| `xl` | 1280px | Tailwind 기본 |
+| `xl2` | 1300px | 커스텀. 실사용 0건 |
+| `2xl` | 1536px | Tailwind 기본 |
+
+**실질적으로 `lg`(1024px) 하나가 기준선이다.** 이 사이트의 반응형은 대부분 "모바일 값 + `lg:` 데스크톱 값" 2단계로 처리된다. `md`나 `xl`로 중간 단계를 추가하는 것은 기존 패턴에서 벗어난다 — 카드 그리드 열 수를 조절할 때처럼 꼭 필요한 경우에만 `sm:`을 끼운다(`src/components/services/AssetsSection.tsx:53`).
+
+커스텀 브레이크포인트 `xs`와 `xl2`는 정의만 되어 있고 쓰이지 않는다. 새로 쓰지 않는다.
+
+---
+
+## 6. 모션
+
+모션은 절제한다. **진입 애니메이션 1종 + hover 색 전환**이 전부다. 회전·스케일·바운스·패럴랙스·스크롤 연동 변형을 쓰지 않는다.
+
+### 6.1 진입 fade-up
+
+랜딩 섹션은 뷰포트에 들어올 때 한 번 나타난다. `useScrollAnimation` 훅과 조건부 클래스를 짝지어 쓴다. `src/**`의 13개 섹션이 이 조합을 쓴다.
+
+```tsx
+'use client';
+
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
+const ExampleSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
+  return (
+    <section
+      ref={ref}
+      className={`pt-[72px] pb-20 lg:py-32 transition-all duration-800 ease-out ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+      }`}
+    >
+      {/* 컨테이너 div와 내용 */}
+    </section>
+  );
+};
+```
+
+훅 기본값은 그대로 쓴다 — `threshold: 0.1`, `rootMargin: '-200px 0px'`, `triggerOnce: true`(`src/hooks/useScrollAnimation.ts:11-15`). `rootMargin`이 -200px이라 섹션이 화면에 충분히 들어온 뒤 시작하고, `triggerOnce`라 되돌아가도 다시 재생되지 않는다. 값을 바꾸면 다른 섹션과 리듬이 어긋난다.
+
+**히어로 섹션에는 쓰지 않는다.** 첫 화면은 스크롤 없이 보이므로 진입 애니메이션이 의미가 없다. 히어로는 대신 3D 씬 로드 완료 시점의 페이드인을 쓴다(6.2).
+
+**문서형 페이지에도 쓰지 않는다.** 읽으러 온 화면에서는 나타나는 연출이 방해가 된다.
+
+### 6.2 Spline 3D
+
+3D 씬은 **히어로에만** 쓴다. 다른 섹션에 넣으면 페이지 무게중심이 흐트러지고 로딩 비용도 커진다.
+
+```tsx
+'use client';
+
+import { useState, useEffect } from 'react';
+import SplineScene from '@/components/common/SplineScene';
+
+const HeroSection = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
+  return (
+    <div className="max-w-[1440px] w-full px-5 lg:px-10 mx-auto">
+      <section className="mx-auto overflow-x-hidden">
+        <div
+          className={`grid lg:grid-cols-2 items-center lg:pt-10 transition-opacity duration-500 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <div className="space-y-4 lg:space-y-6 order-2 lg:order-1">{/* 제목·설명·버튼 */}</div>
+          <SplineScene
+            scene="https://prod.spline.design/<SCENE_ID>/scene.splinecode"
+            className="order-1 lg:order-2 [&_canvas]:!w-full [&_canvas]:!h-auto pointer-events-none [&_canvas]:!scale-[1.0] lg:[&_canvas]:!scale-[1.2]"
+            onSplineLoaded={() => setIsLoaded(true)}
+            showOverlay={false}
+          />
+        </div>
+      </section>
+    </div>
+  );
+};
+```
+
+네 가지가 필수다.
+
+- **`isMounted` 가드** — Spline은 SSR에서 렌더링할 수 없어 hydration 불일치가 난다.
+- **`onSplineLoaded` + `opacity` 전환(`duration-500`)** — 씬이 로드되기 전 빈 캔버스가 보이는 것을 막는다. 텍스트까지 함께 페이드인되도록 래퍼 `<div>`에 걸어야 한다.
+- **`pointer-events-none`** — 3D 씬이 스크롤을 가로채지 않게 한다.
+- **`[&_canvas]:!scale-[1.0] lg:[&_canvas]:!scale-[1.2]`** — 씬은 캔버스 크기가 고정이라 데스크톱에서 확대해야 여백이 맞는다.
+
+`scene` URL은 Spline에서 발행한 씬마다 다르다. 새 씬이 없으면 3D를 쓰지 말고 정적 이미지(`next/image`)로 대체한다.
+
+### 6.3 hover
+
+`transition-colors`만 쓴다. 배경색·글자색 변화 외의 hover 효과(들어올림, 확대, 테두리 굵어짐, 섀도 추가)를 쓰지 않는다.
+
+| 요소 | hover |
+|---|---|
+| 1차 버튼 | `bg-primary-800` → `hover:bg-primary-900` |
+| 2차 버튼 | 배경 없음 → `hover:bg-primary-50` |
+| 역상 버튼 (초록 배경 위) | `bg-gray-900` → `hover:bg-gray-700` |
+| 아코디언 제목 | `text-gray-900` → `group-hover:text-primary-700` |
+| 내비 링크 | `text-gray-800` → `hover:text-primary-700` |
+
+아코디언 펼침만 예외적으로 `transition-all duration-300 ease-in-out`과 `max-h` 전환을 쓴다(5.6 참조). 화살표 회전(`rotate-180`)도 이 경우에만 허용한다 — 열림/닫힘 상태를 알리는 기능적 표시이기 때문이다.
