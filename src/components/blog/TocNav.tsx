@@ -9,19 +9,15 @@ interface TocHeading {
   level: 2 | 3;
 }
 
-const STORAGE_KEY = 'blog-toc-hidden';
-
-// 우측 목차 내비게이션 — 데스크톱(xl+) 전용. 아티클의 h2/h3를 스캔해 목차를
-// 만들고 현재 섹션을 하이라이트한다. 숨김 상태는 localStorage에 기억한다.
+// 우측 목차 내비게이션 — 데스크톱(xl+) 전용, 노션식 호버 레일.
+// 평소에는 헤딩당 가는 바(h2 길게, h3 짧게)만 보이고, 호버·키보드 포커스 시
+// 같은 자리에서 전체 목차 패널이 나타난다. 토글 버튼·저장 상태가 없다.
 const TocNav = () => {
   const t = useTranslations('blog.toc');
   const [headings, setHeadings] = useState<TocHeading[]>([]);
   const [activeId, setActiveId] = useState('');
-  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    setHidden(localStorage.getItem(STORAGE_KEY) === '1');
-
     const article = document.querySelector('article');
     if (!article) return;
 
@@ -53,29 +49,29 @@ const TocNav = () => {
     return () => observer.disconnect();
   }, []);
 
-  const toggle = () => {
-    setHidden((prev) => {
-      localStorage.setItem(STORAGE_KEY, prev ? '0' : '1');
-      return !prev;
-    });
-  };
-
   if (headings.length <= 1) return null;
 
   return (
-    <div className="hidden xl:block absolute right-10 top-0 bottom-0 w-[200px]">
-      <nav className="sticky top-28" aria-label={t('title')}>
-        <div className="flex items-center justify-between mb-2">
-          {!hidden && <span className="text-caption-lg font-semibold text-gray-500">{t('title')}</span>}
-          <button
-            onClick={toggle}
-            className="text-caption-lg text-gray-500 hover:text-primary-700 transition-colors cursor-pointer ml-auto"
-          >
-            {hidden ? t('open') : t('hide')}
-          </button>
+    <div className="hidden xl:block absolute right-10 top-0 bottom-0 w-[220px]">
+      <nav className="sticky top-28 group" aria-label={t('title')}>
+        {/* 레일 — 접힘 상태의 미니멀 표시 */}
+        <div
+          className="flex flex-col items-end gap-2 py-2 pr-1 transition-opacity duration-200 group-hover:opacity-0 group-focus-within:opacity-0"
+          aria-hidden="true"
+        >
+          {headings.map((heading) => (
+            <span
+              key={heading.id}
+              className={`h-0.5 rounded-full transition-colors ${heading.level === 2 ? 'w-5' : 'w-3'} ${
+                activeId === heading.id ? 'bg-primary-700' : 'bg-gray-200'
+              }`}
+            />
+          ))}
         </div>
-        {!hidden && (
-          <ul className="space-y-1.5 max-h-[60vh] overflow-y-auto border-l border-gray-50 pl-3">
+
+        {/* 패널 — 호버·포커스 시 같은 자리에 표시 (떠 있는 요소이므로 섀도 허용) */}
+        <div className="absolute top-0 right-0 w-[220px] max-h-[70vh] overflow-y-auto bg-white border border-gray-50 rounded-[4px] p-4 shadow-lg opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
+          <ul className="space-y-1.5">
             {headings.map((heading) => (
               <li key={heading.id} className={heading.level === 3 ? 'pl-3' : ''}>
                 <button
@@ -89,7 +85,7 @@ const TocNav = () => {
               </li>
             ))}
           </ul>
-        )}
+        </div>
       </nav>
     </div>
   );
