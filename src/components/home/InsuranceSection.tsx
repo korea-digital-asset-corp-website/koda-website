@@ -4,9 +4,9 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
 import InsuranceImg from '@/public/assets/images/img_insurance.png';
+import KbInsuranceKoLogo from '@/public/assets/images/img_kbinsure_ko.png';
+import KbInsuranceEnLogo from '@/public/assets/images/img_kbinsure_en.png';
 import KodaLogo from '@/public/assets/icons/koda.svg';
-import SamsungCiIcon from '@/public/assets/icons/img_samsungci.svg';
-import SamsungCiEnIcon from '@/public/assets/icons/img_samsungci_eng.svg';
 import CloseIcon from '@/public/assets/icons/close.svg';
 import { brMap } from '@/i18n/brMap';
 
@@ -41,9 +41,17 @@ const InsuranceSection = () => {
                 <KodaLogo className="w-[81px] h-[18px] lg:w-[117px] lg:h-[26px]" />
                 <CloseIcon className="w-[10px] h-[10px] lg:w-[16px] lg:h-[16px]" />
                 {locale === 'en' ? (
-                  <SamsungCiEnIcon className="w-[175px] h-[30px] lg:w-[233px] lg:h-[40px]" />
+                  <Image
+                    src={KbInsuranceEnLogo}
+                    alt="KB Insurance"
+                    className="w-auto h-[21px] lg:h-[30px]"
+                  />
                 ) : (
-                  <SamsungCiIcon className="w-[64px] h-[18px] lg:w-[92px] lg:h-[26px]" />
+                  <Image
+                    src={KbInsuranceKoLogo}
+                    alt="KB손해보험"
+                    className="w-auto h-[21px] lg:h-[30px]"
+                  />
                 )}
               </p>
               <p className="text-headline-md lg:text-display-md font-semibold lg:font-bold">{t('coverage.amount')}</p>
