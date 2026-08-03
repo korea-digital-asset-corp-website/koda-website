@@ -9,6 +9,14 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
+    id: 18,
+    title: 'KODA, 디지털자산 커스터디 보험 보장 한도 4000만달러로 확대',
+    image: '/assets/images/img_nr_15.png',
+    publisher: '한경',
+    date: '2026.08.03',
+    link: 'https://www.hankyung.com/article/202608031381B',
+  },
+  {
     id: 0,
     title: '삼일PwC, KODA에 국제기준 인증…"가상자산 안전 보관',
     image: '/assets/images/img_nr_14.png',
