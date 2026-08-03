@@ -47,8 +47,9 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
     // 외곽(1440, relative) + 아티클(960 중앙) 구조. 본문 폭은 장문 가독성을
     // 위해 960px로 제한한다(팀 피드백). whitespace-pre-line은 TSX 본문이라 뺀다.
     <div className="max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] mx-auto relative">
-      {/* px-5(20px×2)를 포함해 본문 실폭이 정확히 960px가 되도록 1000px */}
-      <article className="max-w-[1000px] w-full mx-auto px-5">
+      {/* 패딩 포함 960px(본문 실폭 920px) — 실폭 960 버전(max-w-[1000px])과
+          비교 후 이쪽으로 확정 */}
+      <article className="max-w-[960px] w-full mx-auto px-5">
         <PostHeader post={post} />
 
         {/* 헤딩 위 여백을 계층별로 차등(H2 > H3 > 문단) — 공용 typography 컴포넌트를
