@@ -51,7 +51,9 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
       <article className="max-w-[1000px] w-full mx-auto px-5">
         <PostHeader post={post} />
 
-        <main className="mt-8 lg:mt-12">
+        {/* 헤딩 위 여백을 계층별로 차등(H2 > H3 > 문단) — 공용 typography 컴포넌트를
+            건드리지 않도록 블로그 본문에만 스코프해 오버라이드한다 */}
+        <main className="mt-8 lg:mt-12 [&_h2]:mt-14 lg:[&_h2]:mt-[72px] [&_h3]:mt-10 lg:[&_h3]:mt-12">
           <ContentComponent />
         </main>
 
