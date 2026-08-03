@@ -7,16 +7,34 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'blog.meta' });
 
+  const url = `https://kodax.com/${locale}/blog`;
+  const ogImage = 'https://kodax.com/assets/images/img-ogmeta_img.png';
+
   return {
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: `https://kodax.com/${locale}/blog`,
+      canonical: url,
       languages: {
         ko: 'https://kodax.com/blog',
         en: 'https://kodax.com/en/blog',
         'x-default': 'https://kodax.com/blog',
       },
+    },
+    openGraph: {
+      type: 'website',
+      title: t('title'),
+      description: t('description'),
+      url,
+      siteName: 'KODA',
+      locale,
+      images: [{ url: ogImage, alt: t('title') }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: [ogImage],
     },
   };
 }
