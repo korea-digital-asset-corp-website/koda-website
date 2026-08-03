@@ -69,18 +69,26 @@ const TocNav = () => {
           ))}
         </div>
 
-        {/* 패널 — 호버·포커스 시 같은 자리에 표시 (떠 있는 요소이므로 섀도 허용) */}
-        <div className="absolute top-0 right-0 w-[220px] max-h-[70vh] overflow-y-auto bg-white border border-gray-50 rounded-[4px] p-4 shadow-lg opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
-          <ul className="space-y-1.5">
+        {/* 패널 — 호버·포커스 시 같은 자리에 표시. 박스 없이 레일의 연장선처럼:
+            왼쪽 헤어라인 + 현재 섹션 위치의 딥그린 세그먼트. bg-white는 좁은
+            뷰포트(1280px 부근)에서 본문과 겹칠 때를 위한 바닥색이다. */}
+        <div className="absolute top-0 right-0 w-[220px] max-h-[70vh] overflow-y-auto bg-white py-1 opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
+          <ul className="relative border-l border-gray-50">
             {headings.map((heading) => (
-              <li key={heading.id} className={heading.level === 3 ? 'pl-3' : ''}>
+              <li key={heading.id} className="relative">
+                {activeId === heading.id && (
+                  <span
+                    className="absolute -left-px top-1 bottom-1 w-[2px] rounded-full bg-primary-700"
+                    aria-hidden="true"
+                  />
+                )}
                 <button
                   onClick={() => document.getElementById(heading.id)?.scrollIntoView({ behavior: 'smooth' })}
-                  className={`block w-full text-left text-caption-lg leading-snug transition-colors cursor-pointer ${
-                    activeId === heading.id ? 'text-primary-700 font-semibold' : 'text-gray-500 hover:text-primary-700'
-                  }`}
+                  className={`block w-full text-left text-caption-lg leading-snug py-1 transition-colors cursor-pointer ${
+                    heading.level === 3 ? 'pl-7' : 'pl-4'
+                  } ${activeId === heading.id ? 'text-primary-700 font-medium' : 'text-gray-500 hover:text-primary-700'}`}
                 >
-                  {heading.text}
+                  <span className="line-clamp-2">{heading.text}</span>
                 </button>
               </li>
             ))}

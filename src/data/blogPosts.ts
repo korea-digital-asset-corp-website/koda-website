@@ -25,6 +25,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Security',
     date: '2026.07.30',
     author: { name: '한황제', role: 'Software Engineer' },
+    thumbnail: '/assets/images/blog/01-zone-separation.png',
   },
   {
     slug: 'cold-wallet-withdrawal-automation',
