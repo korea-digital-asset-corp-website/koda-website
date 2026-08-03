@@ -9,14 +9,18 @@ interface PostCardProps {
   post: BlogPost;
 }
 
-// 보더 없는 카드 — 구분은 그리드 여백과 타이포 위계가 맡는다.
+// 에디토리얼 톱룰 카드 — 박스 대신 상단 헤어라인 하나로 구분한다.
+// hover 시 라인이 딥그린으로 물드는 것이 시그니처 마이크로 인터랙션.
 // 무한 스크롤 컨테이너(클라이언트) 안에서 렌더되므로 useLocale 훅을 쓴다.
 const PostCard = ({ post }: PostCardProps) => {
   const locale = useLocale();
 
   return (
     <article className="group h-full">
-      <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
+      <Link
+        href={`/blog/${post.slug}`}
+        className="flex flex-col h-full border-t border-gray-50 pt-4 lg:pt-5 transition-colors group-hover:border-primary-700"
+      >
         <p className="text-label-sm font-semibold text-primary-700">{post.category}</p>
         <h3 className="mt-2 text-headline-xs lg:text-headline-sm font-bold group-hover:text-primary-700 transition-colors">
           {post.title}

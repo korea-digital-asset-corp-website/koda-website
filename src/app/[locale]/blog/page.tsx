@@ -34,7 +34,7 @@ const BlogPage = async () => {
       <FeaturedPostCard post={featured} />
 
       {rest.length > 0 && (
-        <div className="mt-10 lg:mt-16 pt-10 lg:pt-14 border-t border-gray-50">
+        <div className="mt-12 lg:mt-20">
           <BlogListContainer posts={rest} />
         </div>
       )}
