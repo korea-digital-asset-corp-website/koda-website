@@ -34,8 +34,8 @@ export function useDateFormat() {
       const monthName = monthNames[parseInt(month) - 1];
 
       if (format === 'month' || !day) {
-        // 뉴스: "January, 2022"
-        return `${monthName}, ${year}`;
+        // 뉴스: "January 2022"
+        return `${monthName} ${year}`;
       }
 
       // 공지사항: "January 12, 2022"
