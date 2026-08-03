@@ -32,12 +32,13 @@ const FeaturedPostCard = async ({ post }: FeaturedPostCardProps) => {
 
         <div className="order-first lg:order-none relative flex items-center justify-center bg-gray-5020 rounded-[4px] aspect-[3/2] overflow-hidden">
           {post.thumbnail ? (
+            // 개념도·다이어그램이 잘리지 않도록 contain — 워시 면 위 액자 형태
             <Image
               src={post.thumbnail}
               alt={post.title}
               fill
               sizes="(min-width: 1024px) 640px, 100vw"
-              className="object-cover"
+              className="object-contain p-3 lg:p-5"
             />
           ) : (
             <span className="text-headline-lg lg:text-display-md font-bold text-gray-200 select-none">
