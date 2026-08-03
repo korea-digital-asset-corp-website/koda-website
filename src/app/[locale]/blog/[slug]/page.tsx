@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { AuthorCard, BackToBlogButton, PostHeader, RelatedPosts } from '@/components/blog';
+import { PostHeader, RelatedPosts, ShareButtons, TocNav } from '@/components/blog';
 import { getPostBySlug, getRelatedPosts } from '@/data/blogPosts';
 import { getBlogContent } from '@/data/blogContentMap';
 
@@ -44,20 +44,26 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
   const related = getRelatedPosts(slug);
 
   return (
-    // 문서 본문 컨테이너에서 whitespace-pre-line을 뺀 변형 — TSX 본문은 소스
-    // 개행이 그대로 줄바꿈되면 안 된다 (스펙 6절, 스타일 가이드 검증 수확).
-    <div className="max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] px-5 lg:px-[200px] mx-auto">
-      <PostHeader post={post} />
+    // 외곽(1440, relative) + 아티클(960 중앙) 구조. 본문 폭은 장문 가독성을
+    // 위해 960px로 제한한다(팀 피드백). whitespace-pre-line은 TSX 본문이라 뺀다.
+    <div className="max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] mx-auto relative">
+      <article className="max-w-[960px] w-full mx-auto px-5">
+        <PostHeader post={post} />
 
-      <main className="mt-8 lg:mt-12">
-        <ContentComponent />
-      </main>
+        <main className="mt-8 lg:mt-12">
+          <ContentComponent />
+        </main>
 
-      <div className="mt-12 lg:mt-16 space-y-10 lg:space-y-14">
-        <AuthorCard author={post.author} />
-        {related.length > 0 && <RelatedPosts posts={related} />}
-        <BackToBlogButton />
-      </div>
+        <ShareButtons title={post.title} />
+
+        {related.length > 0 && (
+          <div className="mt-12 lg:mt-16">
+            <RelatedPosts posts={related} />
+          </div>
+        )}
+      </article>
+
+      <TocNav />
     </div>
   );
 };

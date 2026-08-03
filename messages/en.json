@@ -5,7 +5,8 @@
       "services": "Services",
       "notice": "Announcements",
       "faq": "FAQ",
-      "news": "Newsroom"
+      "news": "Newsroom",
+      "blog": "Tech Blog"
     },
     "button": {
       "contact": "Contact Us"
@@ -1118,13 +1119,21 @@
   },
   "blog": {
     "list": {
-      "title": "KODA Tech Blog",
-      "description": "Notes on the engineering behind digital asset custody.",
+      "title": "Tech Blog",
       "featuredLabel": "Latest"
     },
     "detail": {
-      "relatedTitle": "Related posts",
-      "backToList": "Back to list"
+      "relatedTitle": "Related posts"
+    },
+    "share": {
+      "copyLink": "Copy link",
+      "copied": "Copied",
+      "shareOnX": "Share on X",
+      "shareOnFacebook": "Share on Facebook",
+      "shareOnLinkedIn": "Share on LinkedIn"
+    },
+    "toc": {
+      "title": "Contents"
     },
     "meta": {
       "title": "Tech Blog",

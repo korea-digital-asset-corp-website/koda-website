@@ -277,6 +277,8 @@ Display는 항상 모바일 Headline과 짝지어 쓴다 — 55px를 작은 화�
 
 **TSX 본문 상세 페이지는 문서 본문 컨테이너에서 `whitespace-pre-line`을 뺀다.** `whitespace-pre-line`은 메시지 JSON의 개행을 살리는 장치인데, 본문이 TSX 컴포넌트인 페이지(블로그 상세 등)에서는 소스 코드의 개행이 의도치 않은 줄바꿈으로 렌더링된다. `src/app/[locale]/blog/[slug]/page.tsx`가 선례다. (테크블로그 검증에서 확인)
 
+**블로그 상세(아티클형)는 별도 3층 구조를 쓴다** — 외곽 `max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] mx-auto relative` + 아티클 `max-w-[960px] w-full mx-auto px-5` + 우측 TOC(`hidden xl:block absolute right-10`, sticky). 장문 가독성을 위해 본문을 960px로 제한한다(팀 피드백 반영). 기존 문서형(약관 등)에는 적용하지 않는다.
+
 ### 4.2 섹션 여백
 
 | 단계   | 클래스                          | 언제                                                    |
@@ -546,7 +548,9 @@ import { SubCircledLi, SubCircledOl } from '@/components/typography/Lists';
 
 ### 5.8 블로그 본문 킷
 
-장문 콘텐츠(테크블로그 등)에는 위 문서형 컴포넌트에 더해 `@/components/blog/PostElements`의 5종을 쓴다 — `CodeBlock`(언어 라벨 + 코드 블록), `InlineCode`, `Figure`(이미지+캡션), `Blockquote`, `Callout`. 노션 블록과 1:1 대응하도록 설계돼 있으며, 노션 초안을 글로 변환하는 절차는 `docs/design/blog-post-workflow.md`에 있다.
+장문 콘텐츠(테크블로그 등)에는 위 문서형 컴포넌트에 더해 `@/components/blog/PostElements`의 6종을 쓴다 — `CodeBlock`(언어 라벨 + 코드 블록), `InlineCode`, `Figure`(이미지+캡션), `Blockquote`, `Callout`, `TextLink`(외부 링크). 노션 블록과 1:1 대응하도록 설계돼 있으며, 노션 초안을 글로 변환하는 절차는 `docs/design/blog-post-workflow.md`(또는 `/blog-post` 스킬)에 있다.
+
+블로그 페이지 구성 컴포넌트(`@/components/blog`): `ShareButtons`(글 하단 공유 — 링크 복사·X·페이스북·링크드인, URL 인텐트 방식이라 SDK 없음), `TocNav`(xl+ 우측 목차, 숨김 토글 localStorage 기억), `BlogListContainer`(목록 무한 스크롤 — 초기 9개, 센티넬 감지 시 9개씩 추가).
 
 목록 안에 서브 목록을 넣는 형태:
 

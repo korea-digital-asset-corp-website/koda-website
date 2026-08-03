@@ -22,9 +22,10 @@ export const blogPosts: BlogPost[] = [
     title: '키 보관을 넘어 서명 통제로 — KODA 커스터디 코어 아키텍처',
     description:
       'MPC·멀티시그·HSM 어느 하나만으로는 전체 위협을 해결할 수 없습니다. 단방향 QR 채널과 쿼럼 빌트인 HSM, 2단 인증을 단일 신뢰 경계로 묶은 KODA 커스터디 코어의 통합 아키텍처를 소개합니다.',
-    category: 'Security',
+    category: 'Engineering',
     date: '2026.07.30',
     author: { name: '한황제', role: 'Software Engineer' },
+    thumbnail: '/assets/images/blog/01-zone-separation.png',
   },
   {
     slug: 'cold-wallet-withdrawal-automation',

@@ -9,4 +9,5 @@ export const navItems: NavItem[] = [
   { key: 'notice', href: '/notice' },
   { key: 'faq', href: '/faq' },
   { key: 'news', href: '/news' },
+  { key: 'blog', href: '/blog' },
 ];
