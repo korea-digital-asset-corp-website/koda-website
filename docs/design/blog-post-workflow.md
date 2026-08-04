@@ -43,22 +43,22 @@ npm run lint && npm run build
 
 ## 노션 블록 → 컴포넌트 대응표
 
-| 노션 블록         | 컴포넌트                                                                                     | import                           |
-| ----------------- | -------------------------------------------------------------------------------------------- | -------------------------------- |
-| 제목2 (heading_2) | `H2`                                                                                         | `@/components/typography`        |
-| 제목3 (heading_3) | `H3`                                                                                         | `@/components/typography`        |
-| 문단 (paragraph)  | `P`                                                                                          | `@/components/typography`        |
-| 코드 (code)       | `CodeBlock`(`language` 프롭에 노션 언어값)                                                   | `@/components/blog/PostElements` |
-| 인라인 코드       | `InlineCode`                                                                                 | `@/components/blog/PostElements` |
-| 이미지 (image)    | `Figure`(이미지는 `public/assets/images/blog/`에 저장 후 경로 지정, `width`·`height` 실측값) | `@/components/blog/PostElements` |
-| 인용 (quote)      | `Blockquote`                                                                                 | `@/components/blog/PostElements` |
-| 콜아웃 (callout)  | `Callout`                                                                                    | `@/components/blog/PostElements` |
-| 글머리 기호 목록  | `Ul` + `Li`                                                                                  | `@/components/typography`        |
-| 번호 목록         | `Ol` + `Li`                                                                                  | `@/components/typography`        |
-| 표 (table)        | `TableContainer` + `Thead`/`Tbody`/`Tr`/`Th`/`Td`                                            | `@/components/typography`        |
-| 본문 내 외부 링크 | `TextLink`                                                                                   | `@/components/blog/PostElements` |
-| 굵게/기울임       | `<strong>` / `<em>`                                                                          | — (HTML 그대로)                  |
-| 구분선 (divider)  | 생략 — `H2`가 섹션 경계를 만들므로 옮기지 않는다                                             | —                                |
+| 노션 블록         | 컴포넌트                                                                                              | import                           |
+| ----------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------- |
+| 제목2 (heading_2) | `H2`                                                                                                  | `@/components/typography`        |
+| 제목3 (heading_3) | `H3`                                                                                                  | `@/components/typography`        |
+| 문단 (paragraph)  | `P`                                                                                                   | `@/components/typography`        |
+| 코드 (code)       | `CodeBlock`(`language` 프롭에 노션 언어값)                                                            | `@/components/blog/PostElements` |
+| 인라인 코드       | `InlineCode`                                                                                          | `@/components/blog/PostElements` |
+| 이미지 (image)    | `Figure`(이미지는 `public/assets/images/blog/`에 저장 후 경로 지정, `width`·`height` 실측값)          | `@/components/blog/PostElements` |
+| 인용 (quote)      | `Blockquote`                                                                                          | `@/components/blog/PostElements` |
+| 콜아웃 (callout)  | `Callout`                                                                                             | `@/components/blog/PostElements` |
+| 글머리 기호 목록  | `Ul` + `Li`                                                                                           | `@/components/typography`        |
+| 번호 목록         | `Ol` + `Li`                                                                                           | `@/components/typography`        |
+| 표 (table)        | `TableContainer` + `Thead`/`Tbody`/`Tr`/`Th`/`Td`                                                     | `@/components/typography`        |
+| 본문 내 외부 링크 | `TextLink`                                                                                            | `@/components/blog/PostElements` |
+| 굵게/기울임       | `<strong>` / `<em>` (em은 상세 페이지가 기울임 대신 색·굵기 강조로 렌더 — 한글 faux italic 겹침 방지) | — (HTML 그대로)                  |
+| 구분선 (divider)  | 생략 — `H2`가 섹션 경계를 만들므로 옮기지 않는다                                                      | —                                |
 
 ## 변환 규칙
 
