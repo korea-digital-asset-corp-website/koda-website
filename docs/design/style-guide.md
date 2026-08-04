@@ -277,7 +277,7 @@ Display는 항상 모바일 Headline과 짝지어 쓴다 — 55px를 작은 화�
 
 **TSX 본문 상세 페이지는 문서 본문 컨테이너에서 `whitespace-pre-line`을 뺀다.** `whitespace-pre-line`은 메시지 JSON의 개행을 살리는 장치인데, 본문이 TSX 컴포넌트인 페이지(블로그 상세 등)에서는 소스 코드의 개행이 의도치 않은 줄바꿈으로 렌더링된다. `src/app/[locale]/blog/[slug]/page.tsx`가 선례다. (테크블로그 검증에서 확인)
 
-**블로그 상세(아티클형)는 별도 3층 구조를 쓴다** — 외곽 `max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] mx-auto relative` + 아티클 `max-w-[960px] w-full mx-auto px-5`(패딩 포함, 본문 실폭 920px) + 우측 TOC(`hidden xl:block absolute right-10`, sticky). 장문 가독성을 위해 본문을 960px로 제한한다(팀 피드백 반영). 기존 문서형(약관 등)에는 적용하지 않는다.
+**블로그 상세(아티클형)는 별도 3층 구조를 쓴다** — 외곽 `max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] mx-auto relative` + 아티클 `max-w-[740px] w-full mx-auto px-5`(패딩 포함, 본문 실폭 700px) + 우측 TOC(`hidden xl:block absolute right-10`, sticky). 장문 가독성을 위해 본문을 700px대로 제한한다(토스 기술블로그 결, 팀 피드백 반영). 기존 문서형(약관 등)에는 적용하지 않는다.
 
 ### 4.2 섹션 여백
 
