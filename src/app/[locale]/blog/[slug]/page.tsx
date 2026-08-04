@@ -88,9 +88,9 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
     // 외곽(1440, relative) + 아티클(960 중앙) 구조. 본문 폭은 장문 가독성을
     // 위해 960px로 제한한다(팀 피드백). whitespace-pre-line은 TSX 본문이라 뺀다.
     <div className="max-w-[1440px] w-full mt-[72px] lg:mt-32 mb-20 lg:mb-[240px] mx-auto relative">
-      {/* 패딩 포함 960px(본문 실폭 920px) — 실폭 960 버전(max-w-[1000px])과
-          비교 후 이쪽으로 확정 */}
-      <article className="max-w-[960px] w-full mx-auto px-5">
+      {/* 컨테이너 740px + 패딩 20px(본문 실폭 700px) — 토스 기술블로그 결의
+          장문 가독 폭. 960px에서 한 번 더 좁혀 확정 */}
+      <article className="max-w-[740px] w-full mx-auto px-5">
         <PostHeader post={post} />
 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
