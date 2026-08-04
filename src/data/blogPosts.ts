@@ -27,33 +27,6 @@ export const blogPosts: BlogPost[] = [
     author: { name: '한황제', role: 'Software Engineer' },
     thumbnail: '/assets/images/blog/01-zone-separation.png',
   },
-  {
-    slug: 'cold-wallet-withdrawal-automation',
-    title: '콜드월렛 출금 승인 파이프라인 자동화',
-    description:
-      '수탁 서비스의 생명선인 출금 승인 과정을 사람의 실수 없이, 그러나 사람의 통제 아래 자동화한 과정을 공유합니다.',
-    category: 'Engineering',
-    date: '2026.06.18',
-    author: { name: '박온체인', role: 'Platform Engineer' },
-  },
-  {
-    slug: 'mpc-key-management',
-    title: 'MPC 기반 키 관리 아키텍처',
-    description:
-      '단일 실패 지점 없는 키 관리를 위해 KODA가 MPC를 도입하며 검토한 설계 원칙과 운영 교훈을 정리했습니다.',
-    category: 'Security',
-    date: '2026.04.02',
-    author: { name: '김커스터디', role: 'Security Engineer' },
-  },
-  {
-    slug: 'digital-asset-custody-trends',
-    title: '디지털자산 수탁 시장의 세 가지 흐름',
-    description:
-      '기관 자금 유입, 규제 정비, 수탁 기술의 표준화 — 2026년 상반기 수탁 시장을 관통하는 흐름을 짚어봅니다.',
-    category: 'Insight',
-    date: '2026.02.11',
-    author: { name: '이애널리스트', role: 'Research Lead' },
-  },
 ];
 
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
