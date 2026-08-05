@@ -123,15 +123,15 @@
       }
     },
     "insurance": {
-      "title": "삼성화재와 함께 약 300억원*<brMo></brMo> 한도의<brPc></brPc> 보험으로 고객 자산을<brMo></brMo> 안전하게 보호합니다",
-      "description": "국내 최고 수준의 디지털 자산 보험 가입<brAll></brAll> 가상자산사업자 중 의무 보험을 제외한 국내 최초 보험",
+      "title": "국내 최대 규모인 약 600억원*<brMo></brMo> 한도의<brPc></brPc> 보험으로 고객 자산을<brMo></brMo> 안전하게 보호합니다.",
+      "description": "국내 최고 수준의 디지털자산 보험 가입<brAll></brAll> 가상자산사업자 중 의무 보험을 제외한 국내 최초 보험",
       "coverage": {
-        "amount": "$20M"
+        "amount": "$40M"
       },
       "image": {
         "alt": "보험 보장 안내"
       },
-      "disclaimer": "* 현재 보험 보장 한도는 $20,000,000이며,<brMo></brMo> 자산 규모에 따라 한도 증액 가능"
+      "disclaimer": "* 현재 보험 보장 한도는 $40,000,000이며,<brMo></brMo> 자산 규모에 따라 한도 증액 예정"
     },
     "solutions": {
       "title": "디지털 자산의 안전한 보관부터<brMo></brMo> 스테이킹, 법인 맞춤형 기능까지<brAll></brAll> 모두 제공하는 종합 솔루션입니다",

@@ -123,15 +123,15 @@
       }
     },
     "insurance": {
-      "title": "$20M* Insurance Protection for Your Asset\nwith Samsung Fire & Marine Insurance",
-      "description": "Korea's Highest Level of Digital Asset Insurance\nThe First Digital Asset Insurance among VASPs in Korea",
+      "title": "$40M* Insurance Protection for Your Assets\nwith KB Insurance",
+      "description": "Korea's Highest Level of Digital Asset Insurance<brAll></brAll>The First Digital Asset Insurance among VASPs in Korea",
       "coverage": {
-        "amount": "$20M"
+        "amount": "$40M"
       },
       "image": {
         "alt": "Insurance coverage information"
       },
-      "disclaimer": "* The coverage limit can be increased depending on the asset size."
+      "disclaimer": "* The current insurance coverage limit is $40,000,000 and is planned to be increased depending on the asset size."
     },
     "solutions": {
       "title": "A Comprehensive Solution Covering Everything\n from Secure Custody to Staking and Enterprise-Customized Features",
