@@ -1,4 +1,8 @@
-@import 'tailwindcss';
+/* 자동 소스 감지를 끄고 src/만 스캔한다.
+   docs/·CLAUDE.md의 클래스 예시 문자열(예: text-[var(--color-*)])이
+   실제 유틸로 생성되어 불법 CSS를 만드는 것을 막기 위함. */
+@import 'tailwindcss' source(none);
+@source '../..';
 
 :root {
   box-sizing: border-box;

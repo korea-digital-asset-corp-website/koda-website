@@ -5,7 +5,8 @@
       "services": "Services",
       "notice": "Announcements",
       "faq": "FAQ",
-      "news": "Newsroom"
+      "news": "Newsroom",
+      "blog": "Tech Blog"
     },
     "button": {
       "contact": "Contact Us"
@@ -1114,6 +1115,29 @@
     },
     "cryptoWarning": {
       "title": "Precautions Regarding Virtual Asset Transactions"
+    }
+  },
+  "blog": {
+    "list": {
+      "title": "Tech Blog",
+      "featuredLabel": "Latest"
+    },
+    "detail": {
+      "relatedTitle": "Related posts"
+    },
+    "share": {
+      "copyLink": "Copy link",
+      "copied": "Copied",
+      "shareOnX": "Share on X",
+      "shareOnFacebook": "Share on Facebook",
+      "shareOnLinkedIn": "Share on LinkedIn"
+    },
+    "toc": {
+      "title": "Contents"
+    },
+    "meta": {
+      "title": "Tech Blog",
+      "description": "Engineering write-ups and insights from the team building KODA's digital asset custody."
     }
   }
 }

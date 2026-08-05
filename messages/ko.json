@@ -5,7 +5,8 @@
       "services": "서비스",
       "notice": "공지사항",
       "faq": "자주 묻는 질문",
-      "news": "언론 보도"
+      "news": "언론 보도",
+      "blog": "기술 블로그"
     },
     "button": {
       "contact": "서비스 문의"
@@ -1107,6 +1108,29 @@
     },
     "cryptoWarning": {
       "title": "가상자산 거래에 관한 유의사항"
+    }
+  },
+  "blog": {
+    "list": {
+      "title": "기술 블로그",
+      "featuredLabel": "최신 글"
+    },
+    "detail": {
+      "relatedTitle": "함께 읽기"
+    },
+    "share": {
+      "copyLink": "링크 복사",
+      "copied": "복사됨",
+      "shareOnX": "X에 공유",
+      "shareOnFacebook": "페이스북에 공유",
+      "shareOnLinkedIn": "링크드인에 공유"
+    },
+    "toc": {
+      "title": "목차"
+    },
+    "meta": {
+      "title": "기술 블로그",
+      "description": "KODA 기술 조직이 디지털자산 수탁을 만들며 쌓은 기술과 인사이트를 공유합니다."
     }
   }
 }
