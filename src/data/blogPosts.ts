@@ -19,7 +19,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'travel-rule-2026-custody',
-    title: '2026 트래블룰 전면 개정 — 소유권과 트래블룰은 별개의 축이다',
+    title: '규제 읽는 블록체인 메이커 #1: 내 코인을 내 지갑으로 보내는데 왜 증빙이 필요할까?',
     description:
       '2026년 전면 개정된 트래블룰의 핵심(100만원 기준 폐지, 수신 사업자 의무, 해외 거래소·개인지갑 규제)을 정리하고, "소유권과 트래블룰은 별개의 축"이라는 관점에서 커스터디 시나리오까지 검증합니다.',
     category: 'Insight',
