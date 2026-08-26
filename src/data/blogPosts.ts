@@ -18,6 +18,15 @@ export interface BlogPost {
 // 최신순 정렬을 데이터가 보장한다 — 맨 앞이 최신이며 목록 히어로가 된다.
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'travel-rule-2026-custody',
+    title: '2026 트래블룰 전면 개정 — 소유권과 트래블룰은 별개의 축이다',
+    description:
+      '2026년 전면 개정된 트래블룰의 핵심(100만원 기준 폐지, 수신 사업자 의무, 해외 거래소·개인지갑 규제)을 정리하고, "소유권과 트래블룰은 별개의 축"이라는 관점에서 커스터디 시나리오까지 검증합니다.',
+    category: 'Insight',
+    date: '2026.08.26',
+    author: { name: '김주형', role: 'Software Engineer' },
+  },
+  {
     slug: 'custody-core-architecture',
     title: '키 보관을 넘어 서명 통제로 — KODA 커스터디 코어 아키텍처',
     description:
