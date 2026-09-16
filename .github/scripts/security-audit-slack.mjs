@@ -91,9 +91,16 @@ const lines = shown.map(
 );
 const more = fresh.length > MAX ? `\n…외 ${fresh.length - MAX}건` : '';
 
+const repository = process.env.GITHUB_REPOSITORY || 'korea-digital-asset-corp-website/koda-website';
+const server = process.env.GITHUB_SERVER_URL || 'https://github.com';
+const repositoryUrl = `${server}/${repository}`;
+const runLink = process.env.GITHUB_RUN_ID
+  ? ` · <${repositoryUrl}/actions/runs/${process.env.GITHUB_RUN_ID}|Audit 실행 보기>`
+  : '';
+
 const text =
   `<@${CHUKCHUK}> :rotating_light: *신규* HIGH+ 취약점 *${fresh.length}건* 감지 ` +
-  `(${process.env.GITHUB_REPOSITORY || 'koda-website'}, prod 의존성).\n` +
+  `\n*레포:* <${repositoryUrl}|${repository}>${runLink}\n*범위:* prod 의존성\n` +
   `각 advisory 를 열어 이 레포의 서비스 *런타임에 조치가 필요한지* 판정해줘 (필요/불요/확인필요 + 근거).\n\n` +
   lines.join('\n') +
   more;
