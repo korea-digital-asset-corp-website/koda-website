@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>접속 제한 | KODA</title>
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <style>
+    @font-face {
+      font-family: "Pretendard Variable";
+      font-weight: 45 920;
+      font-style: normal;
+      font-display: swap;
+      src: url("/fonts/PretendardVariable.woff2") format("woff2-variations");
+    }
+    :root {
+      --white: #ffffff;
+      --mediumgrey-sub: #eaeef1;
+      --darkgrey-dark: #060607;
+      --darkgrey-main: #3a4044;
+      --primary-main: #02794e;
+      --red-main: #f5405b;
+      --bluegrey-pale: #f3f4f6;
+      --green-dark: #018262;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: var(--white);
+      font-family: "Pretendard Variable", "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      height: 52px;
+      padding: 0 20px;
+      background: var(--white);
+      border-bottom: 1px solid var(--mediumgrey-sub);
+    }
+    .header svg { display: block; }
+
+    /* 언어 토글: 헤더 우측 세그먼트 버튼 */
+    .lang-toggle {
+      display: flex;
+      gap: 2px;
+      margin-left: auto;
+      padding: 2px;
+      border-radius: 8px;
+      background: var(--bluegrey-pale);
+    }
+    .lang-toggle button {
+      appearance: none;
+      border: 0;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: transparent;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 20px;
+      color: var(--darkgrey-main);
+      cursor: pointer;
+    }
+    .lang-toggle button[aria-pressed="true"] {
+      background: var(--white);
+      color: var(--darkgrey-dark);
+      box-shadow: 0 0 0 1px var(--mediumgrey-sub);
+    }
+    .lang-toggle button:focus-visible {
+      outline: 2px solid var(--primary-main);
+      outline-offset: 1px;
+    }
+
+    /* 본문: 헤더 아래 영역 상하좌우 중앙 */
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 52px 24px 0;
+    }
+    .content { width: 100%; max-width: 582px; padding: 40px 0; }
+
+    .icon {
+      display: block;
+      width: 44px;
+      height: 44px;
+      margin: 0 auto;
+      color: var(--red-main);
+    }
+    .title {
+      margin: 12px 0 0;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: 0;
+      color: var(--darkgrey-dark);
+      word-break: keep-all;
+    }
+    .body1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.016px;
+      color: var(--darkgrey-main);
+      word-break: keep-all;
+    }
+    .description { margin-top: 12px; }
+    .emphasis { margin-top: 24px; }
+    .ip-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 24px;
+      padding: 24px 28px;
+      border-radius: 8px;
+      background: var(--bluegrey-pale);
+    }
+    .ip-label { flex-shrink: 0; }
+    .ip-label::before { content: "•"; margin-right: 10px; }
+    .ip-value {
+      min-width: 0;
+      text-align: right;
+      overflow-wrap: anywhere;
+      font-weight: 500;
+      color: var(--darkgrey-dark);
+    }
+    .contact { margin-top: 20px; }
+    @media (max-width: 420px) {
+      .ip-panel { padding: 20px; gap: 12px; flex-wrap: wrap; }
+      .ip-value { margin-left: auto; }
+    }
+    .contact a {
+      font-weight: 500;
+      color: var(--primary-main);
+      text-decoration: none;
+      text-underline-offset: 2px;
+    }
+    .contact a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <svg width="90" height="20" viewBox="0 0 90 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KODA">
+      <path d="M24.4424 0V20H0V0H24.4424ZM51.8281 2.76367C56.2314 2.76386 59.3894 5.98994 59.3896 9.96973V10.0098C59.3896 13.9899 56.1908 17.2559 51.7871 17.2559C47.3837 17.2491 44.2258 14.0297 44.2256 10.0498V10.0098C44.2257 6.02974 47.4245 2.76375 51.8281 2.76367ZM34.8994 9.13086L40.6836 3.00781H44.4746L38.6709 8.95215L44.7441 17.0176H40.9736L36.5498 11.0547L34.8994 12.7334V17.0176H31.7617V3.00781H34.8994V9.13086ZM67.1934 3.00781C71.6777 3.00781 74.7751 6.02949 74.7754 9.96973V10.0098C74.7754 13.9502 71.6779 17.0117 67.1934 17.0117H61.6318V3.00781H67.1934ZM89.6299 16.9785H86.3506L85.0439 13.8379H79.0107L77.7041 16.9785H74.5059L80.6201 2.87598H83.5156L89.6299 16.9785ZM51.7871 5.60645C49.2624 5.60664 47.5052 7.5701 47.5049 9.96973V10.0098C47.5049 12.4097 49.2964 14.413 51.8281 14.4131C54.3596 14.4129 56.1102 12.4495 56.1104 10.0498V10.0098C56.1103 7.60985 54.3188 5.60645 51.7871 5.60645ZM64.7695 14.2217H67.1934V14.2275C69.7588 14.2275 71.496 12.5288 71.4961 10.043V10.0029C71.4959 7.52379 69.7654 5.77832 67.1934 5.77832H64.7695V14.2217ZM80.1416 11.1201H83.9258L82.0342 6.57812L80.1416 11.1201Z" fill="black" />
+      <path d="M12.8071 13.7652C13.9711 13.7652 14.9145 14.6917 14.9146 15.8345C14.9146 16.9774 13.9711 17.9039 12.8071 17.9039C11.6432 17.9038 10.6997 16.9774 10.6997 15.8345C10.6998 14.6917 11.6433 13.7653 12.8071 13.7652ZM5.39404 17.8443H1.66357L11.7163 2.16167H15.4399L5.39404 17.8443ZM17.1704 10.9751H13.4399L19.0493 2.16167H22.7798L17.1704 10.9751Z" fill="#00D998" />
+    </svg>
+    <div class="lang-toggle" id="lang-toggle" role="group" aria-label="언어 선택">
+      <button type="button" data-lang="ko" lang="ko" aria-pressed="true">한국어</button>
+      <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="content">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12.8659 3.00017L22.3922 19.5002C22.6684 19.9785 22.5045 20.5901 22.0262 20.8662C21.8742 20.954 21.7017 21.0002 21.5262 21.0002H2.47363C1.92135 21.0002 1.47363 20.5525 1.47363 20.0002C1.47363 19.8246 1.51984 19.6522 1.60761 19.5002L11.1339 3.00017C11.41 2.52187 12.0216 2.358 12.4999 2.63414C12.6519 2.72191 12.7782 2.84815 12.8659 3.00017ZM10.9999 16.0002V18.0002H12.9999V16.0002H10.9999ZM10.9999 9.00017V14.0002H12.9999V9.00017H10.9999Z" />
+      </svg>
+
+      <!-- 기본 마크업은 한국어. 아래 스크립트가 data-i18n 키를 기준으로 선택 언어 문구로 교체한다. -->
+      <h1 class="title" data-i18n="heading">현재 IP 주소에서는 로그인할 수 없습니다.</h1>
+
+      <p class="body1 description" data-i18n="description">보안 정책에 따라 기존 접속 이력이 있으며 화이트리스트에 등록된 IP 주소에서만 KODA 대시보드를 이용할 수 있습니다. 현재 접속한 IP 주소는 허용 목록에 포함되어 있지 않아 로그인이 제한됩니다.</p>
+      <p class="body1 emphasis" data-i18n="emphasis">이전에 이용하신 화이트리스트 등록 IP 주소의 네트워크 환경에서 다시 접속해 주세요.</p>
+
+      <div class="body1 ip-panel" id="ip-panel" role="group" aria-label="현재 접속 IP 주소">
+        <span class="ip-label" data-i18n="ipLabel">현재 접속 IP 주소</span>
+        <span class="ip-value" id="current-ip" role="status" aria-live="polite" aria-atomic="true">확인 중…</span>
+      </div>
+      <noscript>
+        <p class="body1">IP 주소를 확인하려면 JavaScript를 활성화해 주세요.</p>
+        <p class="body1" lang="en">Please enable JavaScript to view this page in English and check your IP address.</p>
+      </noscript>
+
+      <p class="body1 contact"><span data-i18n="contactPrefix">접속이 어렵거나 허용된 IP 주소 확인이 필요한 경우, </span><a href="mailto:support@kodax.com">support@kodax.com</a><span data-i18n="contactSuffix">으로 문의해 주세요.</span></p>
+    </div>
+  </main>
+  <script>
+    (() => {
+      const MESSAGES = {
+        ko: {
+          pageTitle: "접속 제한 | KODA",
+          toggleLabel: "언어 선택",
+          heading: "현재 IP 주소에서는 로그인할 수 없습니다.",
+          description:
+            "보안 정책에 따라 기존 접속 이력이 있으며 화이트리스트에 등록된 IP 주소에서만 KODA 대시보드를 이용할 수 있습니다. 현재 접속한 IP 주소는 허용 목록에 포함되어 있지 않아 로그인이 제한됩니다.",
+          emphasis: "이전에 이용하신 화이트리스트 등록 IP 주소의 네트워크 환경에서 다시 접속해 주세요.",
+          ipLabel: "현재 접속 IP 주소",
+          ipChecking: "확인 중…",
+          ipError: "확인할 수 없습니다",
+          contactPrefix: "접속이 어렵거나 허용된 IP 주소 확인이 필요한 경우, ",
+          contactSuffix: "으로 문의해 주세요.",
+        },
+        en: {
+          pageTitle: "Access Restricted | KODA",
+          toggleLabel: "Select language",
+          heading: "You can't sign in from your current IP address.",
+          description:
+            "Under our security policy, the KODA dashboard is available only from whitelisted IP addresses with a previous access history. Your current IP address is not on the allowlist, so sign-in is restricted.",
+          emphasis: "Please try again from the network of a whitelisted IP address you have used before.",
+          ipLabel: "Current IP address",
+          ipChecking: "Checking…",
+          ipError: "Unavailable",
+          contactPrefix: "If you have trouble connecting or need to confirm your allowed IP addresses, please contact ",
+          contactSuffix: ".",
+        },
+      };
+      const STORAGE_KEY = "koda-access-denied-lang";
+      const isSupported = (value) => value === "ko" || value === "en";
+
+      const output = document.getElementById("current-ip");
+      const toggle = document.getElementById("lang-toggle");
+      // IP 표시 상태: "checking" | "error" | "resolved" (resolved 면 언어를 바꿔도 IP 값을 유지)
+      let ipState = "checking";
+      let lang = detectLang();
+
+      // 우선순위: ?lang= 쿼리 → 이전 선택(localStorage) → 브라우저 언어 → ko
+      function detectLang() {
+        const param = new URLSearchParams(window.location.search).get("lang");
+        if (isSupported(param)) return param;
+        try {
+          const stored = window.localStorage.getItem(STORAGE_KEY);
+          if (isSupported(stored)) return stored;
+        } catch {
+          /* 저장소를 못 쓰는 환경이면 건너뛴다 */
+        }
+        const preferred = (navigator.languages && navigator.languages[0]) || navigator.language || "ko";
+        return preferred.toLowerCase().startsWith("ko") ? "ko" : "en";
+      }
+
+      function renderIp() {
+        if (ipState === "resolved") return;
+        output.textContent = MESSAGES[lang][ipState === "error" ? "ipError" : "ipChecking"];
+      }
+
+      function render() {
+        const messages = MESSAGES[lang];
+        document.documentElement.lang = lang;
+        document.title = messages.pageTitle;
+        document.querySelectorAll("[data-i18n]").forEach((node) => {
+          node.textContent = messages[node.dataset.i18n];
+        });
+        document.getElementById("ip-panel").setAttribute("aria-label", messages.ipLabel);
+        toggle.setAttribute("aria-label", messages.toggleLabel);
+        toggle.querySelectorAll("button").forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.lang === lang));
+        });
+        renderIp();
+      }
+
+      toggle.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-lang]");
+        if (!button || button.dataset.lang === lang) return;
+        lang = button.dataset.lang;
+        try {
+          window.localStorage.setItem(STORAGE_KEY, lang);
+        } catch {
+          /* 저장 실패는 무시한다 */
+        }
+        render();
+      });
+
+      render();
+
+      const IP_LOOKUP_URL = "https://ip-check.sean-01f.workers.dev/";
+      const IP_LOOKUP_TIMEOUT_MS = 5000;
+
+      async function loadCurrentIp() {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), IP_LOOKUP_TIMEOUT_MS);
+        try {
+          const response = await fetch(IP_LOOKUP_URL, {
+            method: "GET",
+            mode: "cors",
+            credentials: "omit",
+            cache: "no-store",
+            referrerPolicy: "no-referrer",
+            signal: controller.signal,
+          });
+          if (!response.ok) throw new Error("IP lookup failed");
+          const ip = (await response.text()).trim();
+          if (!ip || ip.length > 45 || !/^[0-9a-fA-F:.]+$/.test(ip)) {
+            throw new Error("Invalid IP response");
+          }
+          ipState = "resolved";
+          output.textContent = ip;
+        } catch {
+          ipState = "error";
+          renderIp();
+        } finally {
+          clearTimeout(timeout);
+        }
+      }
+
+      loadCurrentIp();
+    })();
+  </script>
+</body>
+</html>
