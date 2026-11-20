@@ -15,6 +15,11 @@ export const noticesData: Notice[] = [
     titleKey: 'cryptoWarning.title',
     date: '2024.07.29',
   },
+  {
+    id: 3,
+    titleKey: 'accessSecurity.title',
+    date: '2026.11.20',
+  },
 ];
 
 export const getNoticeById = (id: number): Notice | undefined => {
