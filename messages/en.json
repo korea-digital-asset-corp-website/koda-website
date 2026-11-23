@@ -1041,6 +1041,28 @@
     }
   },
   "modal": {
+    "accessSecurity": {
+      "title": "[Notice] Enhanced Access Security for KODA’s Client-Only Service",
+      "greeting": "Greetings from KODA, the trusted digital asset partner for corporations and institutions.",
+      "intro": "In response to growing security threats targeting financial institutions and virtual asset service providers, KODA continues to strengthen security to protect client assets and information.",
+      "systemsHeading": "Corporate website and client system",
+      "systemsIntro": "KODA operates its corporate website separately from the custody system where client assets are managed.",
+      "publicLabel": "Corporate website",
+      "publicText": "This public website provides information about KODA and its services. It does not process clients’ personal information or sensitive custody information.",
+      "clientLabel": "Client-only system",
+      "clientText": "This separate system manages client assets and custody information. Access is restricted to authorized clients.",
+      "separation": "Keeping these environments separate minimizes the impact that external threats to the public website could have on the client custody system.",
+      "ipHeading": "Accessing the client system",
+      "ipIntro": "On November 16, 2026, KODA introduced IP-based access restrictions for the client-only system. Clients can now connect only from IP addresses with a verified history of access.",
+      "existingIp": "If you connect from your existing IP address, you can continue using the service without taking any action.",
+      "changedIp": "If your IP address changes and you cannot access the service, please contact Client Support. We will help you regain access after verification.",
+      "support": "Client Support",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "scope": "These measures apply only to the client custody system. The corporate website remains open to everyone and does not process clients’ personal information or sensitive custody information.",
+      "closing": "KODA remains committed to protecting client assets and information and providing a service you can rely on.",
+      "thanks": "Thank you."
+    },
     "depositWithdraw": {
       "title": "Notice on Virtual Asset Deposits and Withdrawals",
       "notices": [
